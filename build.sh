@@ -18,7 +18,17 @@ if [ -d gen/__pycache__ ]; then
     rm -rf gen/__pycache__
 fi
 
-tar zcf release/lorx-src-${VER}.tgz src examples gen templates autogen.py LICENSE README.md
+if [ -d gen/cfg/__pycache__ ]; then
+    rm -rf gen/cfg/__pycache__
+fi
+
+fn=lorx-src-${VER}
+mkdir release/${fn}
+cp src examples gen templates autogen.py LICENSE README.md release/${fn}/ -r
+cd release
+tar zcf ${fn}.tar.gz ${fn}
+cd ..
+rm -rf release/${fn}
 
 cd src
 make -f Makefile.linux clean
@@ -33,7 +43,14 @@ cd doc
 mkdocs build
 cd ..
 
-tar zcf release/lorx-linux64-${VER}.tgz bin examples api doc/site
+fn=lorx-linux64-${VER}
+mkdir release/${fn}
+cp bin examples api release/${fn}/ -r
+cp doc/site release/${fn}/doc -r
+cd release
+tar zcf ${fn}.tar.gz ${fn}
+cd ..
+rm -rf release/${fn}
 
 
 export LUA=${HOME}/workspace/lua-5.3.6/src32
@@ -55,4 +72,11 @@ cd doc
 mkdocs build
 cd ..
 
-tar zcf release/lorx-linux32-${VER}.tgz bin examples api doc/site
+fn=lorx-linux32-${VER}
+mkdir release/${fn}
+cp bin examples api release/${fn}/ -r
+cp doc/site release/${fn}/doc -r
+cd release
+tar zcf ${fn}.tar.gz ${fn}
+cd ..
+rm -rf release/${fn}

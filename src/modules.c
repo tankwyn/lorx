@@ -16,170 +16,18 @@ LORX_API int luaopen_lorx_constants(lua_State *L)
 {
   lorx_insistglobal(L, "lorx");
   lua_newtable(L);
+  lorx_orxU32_to_linteger(L, 0x00000000);
+  lua_setfield(L, -2, "orxANIM_KU32_FLAG_NONE");
   lorx_orxU32_to_linteger(L, 0x00000001);
-  lua_setfield(L, -2, "orxFILE_KU32_FLAG_INFO_NORMAL");
-  lorx_orxU32_to_linteger(L, 0x00000002);
-  lua_setfield(L, -2, "orxFILE_KU32_FLAG_INFO_READONLY");
-  lorx_orxU32_to_linteger(L, 0x00000004);
-  lua_setfield(L, -2, "orxFILE_KU32_FLAG_INFO_HIDDEN");
-  lorx_orxU32_to_linteger(L, 0x00000008);
-  lua_setfield(L, -2, "orxFILE_KU32_FLAG_INFO_DIRECTORY");
-  lorx_orxU32_to_linteger(L, 0x10000000);
-  lua_setfield(L, -2, "orxFILE_KU32_FLAG_OPEN_READ");
-  lorx_orxU32_to_linteger(L, 0x20000000);
-  lua_setfield(L, -2, "orxFILE_KU32_FLAG_OPEN_WRITE");
-  lorx_orxU32_to_linteger(L, 0x40000000);
-  lua_setfield(L, -2, "orxFILE_KU32_FLAG_OPEN_APPEND");
-  lorx_orxU32_to_linteger(L, 0x80000000);
-  lua_setfield(L, -2, "orxFILE_KU32_FLAG_OPEN_BINARY");
-  lorx_orxSTRING_to_lstring(L, "Mouse");
-  lua_setfield(L, -2, "orxMOUSE_KZ_CONFIG_SECTION");
-  lorx_orxSTRING_to_lstring(L, "ShowCursor");
-  lua_setfield(L, -2, "orxMOUSE_KZ_CONFIG_SHOW_CURSOR");
-  lorx_orxSTRING_to_lstring(L, "Grab");
-  lua_setfield(L, -2, "orxMOUSE_KZ_CONFIG_GRAB");
-  lorx_orxU32_to_linteger(L, 1);
-  lua_setfield(L, -2, "orxJOYSTICK_KU32_MIN_ID");
-  lorx_orxU32_to_linteger(L, (orxJOYSTICK_BUTTON_NUMBER / orxJOYSTICK_BUTTON_SINGLE_NUMBER));
-  lua_setfield(L, -2, "orxJOYSTICK_KU32_MAX_ID");
-  lorx_orxSTRING_to_lstring(L, "Input");
-  lua_setfield(L, -2, "orxINPUT_KZ_CONFIG_SECTION");
-  lorx_orxSTRING_to_lstring(L, "DefaultThreshold");
-  lua_setfield(L, -2, "orxINPUT_KZ_CONFIG_DEFAULT_THRESHOLD");
-  lorx_orxSTRING_to_lstring(L, "DefaultMultiplier");
-  lua_setfield(L, -2, "orxINPUT_KZ_CONFIG_DEFAULT_MULTIPLIER");
-  lorx_orxSTRING_to_lstring(L, "CombineList");
-  lua_setfield(L, -2, "orxINPUT_KZ_CONFIG_COMBINE_LIST");
-  lorx_orxSTRING_to_lstring(L, "JoyIDList");
-  lua_setfield(L, -2, "orxINPUT_KZ_CONFIG_JOYSTICK_ID_LIST");
-  lorx_orxU32_to_linteger(L, 16);
-  lua_setfield(L, -2, "orxINPUT_KU32_BINDING_NUMBER");
-  lorx_orxSTRING_to_lstring(L, "-=");
-  lua_setfield(L, -2, "orxINPUT_KZ_INTERNAL_SET_PREFIX");
-  lorx_orxCHAR_to_lstring(L, '+');
-  lua_setfield(L, -2, "orxINPUT_KC_MODE_PREFIX_POSITIVE");
-  lorx_orxCHAR_to_lstring(L, '-');
-  lua_setfield(L, -2, "orxINPUT_KC_MODE_PREFIX_NEGATIVE");
-  lorx_orxU32_to_linteger(L, 0x00000000);
-  lua_setfield(L, -2, "orxINPUT_KU32_FLAG_TYPE_NONE");
-  lorx_orxU32_to_linteger(L, 0x0000FFFF);
-  lua_setfield(L, -2, "orxINPUT_KU32_MASK_TYPE_ALL");
-  lorx_orxU32_to_linteger(L, 2);
-  lua_setfield(L, -2, "orxPROFILER_KU32_HISTORY_LENGTH");
-  lorx_orxS32_to_linteger(L, -1);
-  lua_setfield(L, -2, "orxPROFILER_KS32_MARKER_ID_NONE");
-  lorx_orxSTRING_to_lstring(L, "fps");
-  lua_setfield(L, -2, "orxFPS_KZ_CLOCK_NAME");
-  lorx_orxU32_to_linteger(L, 0x00000000);
-  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_NONE");
-  lorx_orxU32_to_linteger(L, 0x00000001);
-  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_TIMESTAMP");
-  lorx_orxU32_to_linteger(L, 0x00000002);
-  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_FULL_TIMESTAMP");
-  lorx_orxU32_to_linteger(L, 0x00000004);
-  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_TYPE");
-  lorx_orxU32_to_linteger(L, 0x00000008);
-  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_TAGGED");
-  lorx_orxU32_to_linteger(L, 0x00000010);
-  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_FILE");
-  lorx_orxU32_to_linteger(L, 0x00000020);
-  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_TERMINAL");
-  lorx_orxU32_to_linteger(L, 0x00000040);
-  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_CONSOLE");
-  lorx_orxU32_to_linteger(L, 0x00000080);
-  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_CALLBACK");
-  lorx_orxU32_to_linteger(L, 0x000000F5);
-  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_MASK_DEFAULT");
-  lorx_orxU32_to_linteger(L, 0x000000BD);
-  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_MASK_DEBUG");
-  lorx_orxU32_to_linteger(L, 0x0FFFFFFF);
-  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_MASK_USER_ALL");
-  lorx_orxSTRING_to_lstring(L, "orx-debug.log");
-  lua_setfield(L, -2, "orxDEBUG_KZ_DEFAULT_DEBUG_FILE");
-  lorx_orxSTRING_to_lstring(L, "orx.log");
-  lua_setfield(L, -2, "orxDEBUG_KZ_DEFAULT_LOG_FILE");
-  lorx_orxSTRING_to_lstring(L, ".log");
-  lua_setfield(L, -2, "orxDEBUG_KZ_DEFAULT_LOG_SUFFIX");
-  lorx_orxSTRING_to_lstring(L, "-debug.log");
-  lua_setfield(L, -2, "orxDEBUG_KZ_DEFAULT_DEBUG_SUFFIX");
-  lorx_orxS32_to_linteger(L, 2048);
-  lua_setfield(L, -2, "orxDEBUG_KS32_BUFFER_OUTPUT_SIZE");
-  lorx_orxCHAR_to_lstring(L, '"');
-  lua_setfield(L, -2, "orxCOMMAND_KC_BLOCK_MARKER");
-  lorx_orxCHAR_to_lstring(L, '>');
-  lua_setfield(L, -2, "orxCOMMAND_KC_PUSH_MARKER");
-  lorx_orxCHAR_to_lstring(L, '<');
-  lua_setfield(L, -2, "orxCOMMAND_KC_POP_MARKER");
-  lorx_orxCHAR_to_lstring(L, '^');
-  lua_setfield(L, -2, "orxCOMMAND_KC_GUID_MARKER");
-  lorx_orxCHAR_to_lstring(L, ',');
-  lua_setfield(L, -2, "orxCOMMAND_KC_SEPARATOR");
-  lorx_orxU32_to_linteger(L, 0);
-  lua_setfield(L, -2, "orxTHREAD_KU32_MAIN_THREAD_ID");
-  lorx_orxU32_to_linteger(L, 16);
-  lua_setfield(L, -2, "orxTHREAD_KU32_MAX_THREAD_NUMBER");
-  lorx_orxU32_to_linteger(L, 0);
-  lua_setfield(L, -2, "orxTHREAD_KU32_FLAG_NONE");
-  lorx_orxU32_to_linteger(L, (((1 << orxTHREAD_KU32_MAX_THREAD_NUMBER) - 1) & ~(1 << orxTHREAD_KU32_MAIN_THREAD_ID)));
-  lua_setfield(L, -2, "orxTHREAD_KU32_MASK_ALL");
-  lorx_orxSTRING_to_lstring(L, "Config");
-  lua_setfield(L, -2, "orxCONFIG_KZ_RESOURCE_GROUP");
-  lorx_orxU32_to_linteger(L, 16);
-  lua_setfield(L, -2, "orxCLOCK_KU32_CLOCK_BANK_SIZE");
-  lorx_orxU32_to_linteger(L, 32);
-  lua_setfield(L, -2, "orxCLOCK_KU32_TIMER_BANK_SIZE");
-  lorx_orxU32_to_linteger(L, 16);
-  lua_setfield(L, -2, "orxCLOCK_KU32_FUNCTION_BANK_SIZE");
-  lorx_orxSTRING_to_lstring(L, "Frequency");
-  lua_setfield(L, -2, "orxCLOCK_KZ_CONFIG_FREQUENCY");
-  lorx_orxSTRING_to_lstring(L, "ModifierList");
-  lua_setfield(L, -2, "orxCLOCK_KZ_CONFIG_MODIFIER_LIST");
-  lorx_orxSTRING_to_lstring(L, "core");
-  lua_setfield(L, -2, "orxCLOCK_KZ_CORE");
-  lorx_orxCHAR_to_lstring(L, ':');
-  lua_setfield(L, -2, "orxRESOURCE_KC_LOCATION_SEPARATOR");
-  lorx_orxSTRING_to_lstring(L, ".");
-  lua_setfield(L, -2, "orxRESOURCE_KZ_DEFAULT_STORAGE");
-  lorx_orxSTRING_to_lstring(L, "file");
-  lua_setfield(L, -2, "orxRESOURCE_KZ_TYPE_TAG_FILE");
-  lorx_orxU32_to_linteger(L, 0x00000000);
-  lua_setfield(L, -2, "orxEVENT_KU32_FLAG_ID_NONE");
+  lua_setfield(L, -2, "orxANIM_KU32_FLAG_2D");
+  lorx_orxU32_to_linteger(L, 0x0000000F);
+  lua_setfield(L, -2, "orxANIM_KU32_MASK_USER_ALL");
   lorx_orxU32_to_linteger(L, 0xFFFFFFFF);
-  lua_setfield(L, -2, "orxEVENT_KU32_MASK_ID_ALL");
-  lorx_orxSTRING_to_lstring(L, "-=ConsoleSet=-");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_SET");
-  lorx_orxSTRING_to_lstring(L, "Toggle");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_TOGGLE");
-  lorx_orxSTRING_to_lstring(L, "AutoComplete");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_AUTOCOMPLETE");
-  lorx_orxSTRING_to_lstring(L, "Delete");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_DELETE");
-  lorx_orxSTRING_to_lstring(L, "DeleteAfter");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_DELETE_AFTER");
-  lorx_orxSTRING_to_lstring(L, "ToggleMode");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_TOGGLE_MODE");
-  lorx_orxSTRING_to_lstring(L, "Enter");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_ENTER");
-  lorx_orxSTRING_to_lstring(L, "Previous");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_PREVIOUS");
-  lorx_orxSTRING_to_lstring(L, "Next");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_NEXT");
-  lorx_orxSTRING_to_lstring(L, "Left");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_LEFT");
-  lorx_orxSTRING_to_lstring(L, "Right");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_RIGHT");
-  lorx_orxSTRING_to_lstring(L, "Start");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_START");
-  lorx_orxSTRING_to_lstring(L, "End");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_END");
-  lorx_orxSTRING_to_lstring(L, "Paste");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_PASTE");
-  lorx_orxSTRING_to_lstring(L, "ScrollDown");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_SCROLL_DOWN");
-  lorx_orxSTRING_to_lstring(L, "ScrollUp");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_SCROLL_UP");
-  lorx_orxSTRING_to_lstring(L, "cih");
-  lua_setfield(L, -2, "orxCONSOLE_KZ_CONFIG_HISTORY_FILE_EXTENSION");
+  lua_setfield(L, -2, "orxANIM_KU32_MASK_ALL");
+  lorx_orxU32_to_linteger(L, 65535);
+  lua_setfield(L, -2, "orxANIM_KU32_KEY_MAX_NUMBER");
+  lorx_orxU32_to_linteger(L, 65535);
+  lua_setfield(L, -2, "orxANIM_KU32_EVENT_MAX_NUMBER");
   lorx_orxU32_to_linteger(L, 0x00000000);
   lua_setfield(L, -2, "orxANIMSET_KU32_FLAG_NONE");
   lorx_orxU32_to_linteger(L, 0x00100000);
@@ -198,256 +46,6 @@ LORX_API int luaopen_lorx_constants(lua_State *L)
   lua_setfield(L, -2, "orxANIMSET_KU32_LINK_FLAG_CLEAR_TARGET");
   lorx_orxU32_to_linteger(L, 128);
   lua_setfield(L, -2, "orxANIMSET_KU32_MAX_ANIM_NUMBER");
-  lorx_orxU32_to_linteger(L, 0x00000000);
-  lua_setfield(L, -2, "orxANIM_KU32_FLAG_NONE");
-  lorx_orxU32_to_linteger(L, 0x00000001);
-  lua_setfield(L, -2, "orxANIM_KU32_FLAG_2D");
-  lorx_orxU32_to_linteger(L, 0x0000000F);
-  lua_setfield(L, -2, "orxANIM_KU32_MASK_USER_ALL");
-  lorx_orxU32_to_linteger(L, 0xFFFFFFFF);
-  lua_setfield(L, -2, "orxANIM_KU32_MASK_ALL");
-  lorx_orxU32_to_linteger(L, 65535);
-  lua_setfield(L, -2, "orxANIM_KU32_KEY_MAX_NUMBER");
-  lorx_orxU32_to_linteger(L, 65535);
-  lua_setfield(L, -2, "orxANIM_KU32_EVENT_MAX_NUMBER");
-  lorx_orxU32_to_linteger(L, 4);
-  lua_setfield(L, -2, "orxSHADERPOINTER_KU32_SHADER_NUMBER");
-  lorx_orxU32_to_linteger(L, 0x00000000);
-  lua_setfield(L, -2, "orxVIEWPORT_KU32_FLAG_ALIGN_CENTER");
-  lorx_orxU32_to_linteger(L, 0x10000000);
-  lua_setfield(L, -2, "orxVIEWPORT_KU32_FLAG_ALIGN_LEFT");
-  lorx_orxU32_to_linteger(L, 0x20000000);
-  lua_setfield(L, -2, "orxVIEWPORT_KU32_FLAG_ALIGN_RIGHT");
-  lorx_orxU32_to_linteger(L, 0x40000000);
-  lua_setfield(L, -2, "orxVIEWPORT_KU32_FLAG_ALIGN_TOP");
-  lorx_orxU32_to_linteger(L, 0x80000000);
-  lua_setfield(L, -2, "orxVIEWPORT_KU32_FLAG_ALIGN_BOTTOM");
-  lorx_orxU32_to_linteger(L, 0x01000000);
-  lua_setfield(L, -2, "orxVIEWPORT_KU32_FLAG_NO_DEBUG");
-  lorx_orxU32_to_linteger(L, 8);
-  lua_setfield(L, -2, "orxVIEWPORT_KU32_MAX_TEXTURE_NUMBER");
-  lorx_orxU32_to_linteger(L, 0x00000000);
-  lua_setfield(L, -2, "orxCAMERA_KU32_FLAG_NONE");
-  lorx_orxU32_to_linteger(L, 0x00000001);
-  lua_setfield(L, -2, "orxCAMERA_KU32_FLAG_2D");
-  lorx_orxU32_to_linteger(L, 0x000000FF);
-  lua_setfield(L, -2, "orxCAMERA_KU32_MASK_USER_ALL");
-  lorx_orxU32_to_linteger(L, 16);
-  lua_setfield(L, -2, "orxCAMERA_KU32_GROUP_ID_NUMBER");
-  lorx_orxSTRING_to_lstring(L, "Render");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_SECTION");
-  lorx_orxSTRING_to_lstring(L, "ShowFPS");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_SHOW_FPS");
-  lorx_orxSTRING_to_lstring(L, "ShowProfiler");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_SHOW_PROFILER");
-  lorx_orxSTRING_to_lstring(L, "MinFrequency");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_MIN_FREQUENCY");
-  lorx_orxSTRING_to_lstring(L, "ProfilerOrientation");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_PROFILER_ORIENTATION");
-  lorx_orxSTRING_to_lstring(L, "ConsoleColor");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_COLOR");
-  lorx_orxSTRING_to_lstring(L, "ConsoleAlpha");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_ALPHA");
-  lorx_orxSTRING_to_lstring(L, "ConsoleBackgroundColor");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_BACKGROUND_COLOR");
-  lorx_orxSTRING_to_lstring(L, "ConsoleBackgroundAlpha");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_BACKGROUND_ALPHA");
-  lorx_orxSTRING_to_lstring(L, "ConsoleSeparatorColor");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_SEPARATOR_COLOR");
-  lorx_orxSTRING_to_lstring(L, "ConsoleSeparatorAlpha");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_SEPARATOR_ALPHA");
-  lorx_orxSTRING_to_lstring(L, "ConsoleInputColor");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_INPUT_COLOR");
-  lorx_orxSTRING_to_lstring(L, "ConsoleInputAlpha");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_INPUT_ALPHA");
-  lorx_orxSTRING_to_lstring(L, "ConsoleCompletionColor");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_COMPLETION_COLOR");
-  lorx_orxSTRING_to_lstring(L, "ConsoleCompletionAlpha");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_COMPLETION_ALPHA");
-  lorx_orxSTRING_to_lstring(L, "ConsoleLogColor");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_LOG_COLOR");
-  lorx_orxSTRING_to_lstring(L, "ConsoleLogAlpha");
-  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_LOG_ALPHA");
-  lorx_orxSTRING_to_lstring(L, "-=RenderSet=-");
-  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_SET");
-  lorx_orxSTRING_to_lstring(L, "ProfilerToggleHistory");
-  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_TOGGLE_HISTORY");
-  lorx_orxSTRING_to_lstring(L, "ProfilerPause");
-  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_PAUSE");
-  lorx_orxSTRING_to_lstring(L, "ProfilerPreviousFrame");
-  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_PREVIOUS_FRAME");
-  lorx_orxSTRING_to_lstring(L, "ProfilerNextFrame");
-  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_NEXT_FRAME");
-  lorx_orxSTRING_to_lstring(L, "ProfilerPreviousDepth");
-  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_PREVIOUS_DEPTH");
-  lorx_orxSTRING_to_lstring(L, "ProfilerNextDepth");
-  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_NEXT_DEPTH");
-  lorx_orxSTRING_to_lstring(L, "ProfilerPreviousThread");
-  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_PREVIOUS_THREAD");
-  lorx_orxSTRING_to_lstring(L, "ProfilerNextThread");
-  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_NEXT_THREAD");
-  lorx_orxFLOAT_to_lnumber(L, orx2F(1.414213562f));
-  lua_setfield(L, -2, "orxMATH_KF_SQRT_2");
-  lorx_orxFLOAT_to_lnumber(L, orx2F(0.0001f));
-  lua_setfield(L, -2, "orxMATH_KF_EPSILON");
-  lorx_orxFLOAT_to_lnumber(L, orx2F(1.0e-037f));
-  lua_setfield(L, -2, "orxMATH_KF_TINY_EPSILON");
-  lorx_orxFLOAT_to_lnumber(L, orx2F(3.402823466e+38F));
-  lua_setfield(L, -2, "orxMATH_KF_MAX");
-  lorx_orxFLOAT_to_lnumber(L, orx2F(6.283185307f));
-  lua_setfield(L, -2, "orxMATH_KF_2_PI");
-  lorx_orxFLOAT_to_lnumber(L, orx2F(3.141592654f));
-  lua_setfield(L, -2, "orxMATH_KF_PI");
-  lorx_orxFLOAT_to_lnumber(L, orx2F(1.570796327f));
-  lua_setfield(L, -2, "orxMATH_KF_PI_BY_2");
-  lorx_orxFLOAT_to_lnumber(L, orx2F(0.785398163f));
-  lua_setfield(L, -2, "orxMATH_KF_PI_BY_4");
-  lorx_orxFLOAT_to_lnumber(L, orx2F(3.141592654f / 180.0f));
-  lua_setfield(L, -2, "orxMATH_KF_DEG_TO_RAD");
-  lorx_orxFLOAT_to_lnumber(L, orx2F(180.0f / 3.141592654f));
-  lua_setfield(L, -2, "orxMATH_KF_RAD_TO_DEG");
-  lorx_orxSTRING_to_lstring(L, "Display");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_SECTION");
-  lorx_orxSTRING_to_lstring(L, "ScreenWidth");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_WIDTH");
-  lorx_orxSTRING_to_lstring(L, "ScreenHeight");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_HEIGHT");
-  lorx_orxSTRING_to_lstring(L, "ScreenDepth");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_DEPTH");
-  lorx_orxSTRING_to_lstring(L, "ScreenPosition");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_POSITION");
-  lorx_orxSTRING_to_lstring(L, "RefreshRate");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_REFRESH_RATE");
-  lorx_orxSTRING_to_lstring(L, "FullScreen");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_FULLSCREEN");
-  lorx_orxSTRING_to_lstring(L, "AllowResize");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_ALLOW_RESIZE");
-  lorx_orxSTRING_to_lstring(L, "Decoration");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_DECORATION");
-  lorx_orxSTRING_to_lstring(L, "Title");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_TITLE");
-  lorx_orxSTRING_to_lstring(L, "Smoothing");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_SMOOTH");
-  lorx_orxSTRING_to_lstring(L, "VSync");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_VSYNC");
-  lorx_orxSTRING_to_lstring(L, "DepthBuffer");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_DEPTHBUFFER");
-  lorx_orxSTRING_to_lstring(L, "ShaderVersion");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_SHADER_VERSION");
-  lorx_orxSTRING_to_lstring(L, "ShaderExtensionList");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_SHADER_EXTENSION_LIST");
-  lorx_orxSTRING_to_lstring(L, "Monitor");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_MONITOR");
-  lorx_orxSTRING_to_lstring(L, "Cursor");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_CURSOR");
-  lorx_orxSTRING_to_lstring(L, "IconList");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_ICON_LIST");
-  lorx_orxSTRING_to_lstring(L, "FramebufferSize");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_FRAMEBUFFER_SIZE");
-  lorx_orxSTRING_to_lstring(L, "TextureUnitNumber");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_TEXTURE_UNIT_NUMBER");
-  lorx_orxSTRING_to_lstring(L, "DrawBufferNumber");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_DRAW_BUFFER_NUMBER");
-  lorx_orxSTRING_to_lstring(L, "MaxTextureSize");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_MAX_TEXTURE_SIZE");
-  lorx_orxSTRING_to_lstring(L, "DebugOutput");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_DEBUG_OUTPUT");
-  lorx_orxSTRING_to_lstring(L, "Color");
-  lua_setfield(L, -2, "orxCOLOR_KZ_CONFIG_SECTION");
-  lorx_orxSTRING_to_lstring(L, "_top");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_SHADER_SUFFIX_TOP");
-  lorx_orxSTRING_to_lstring(L, "_left");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_SHADER_SUFFIX_LEFT");
-  lorx_orxSTRING_to_lstring(L, "_bottom");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_SHADER_SUFFIX_BOTTOM");
-  lorx_orxSTRING_to_lstring(L, "_right");
-  lua_setfield(L, -2, "orxDISPLAY_KZ_SHADER_SUFFIX_RIGHT");
-  lorx_orxCHAR_to_lstring(L, '+');
-  lua_setfield(L, -2, "orxDISPLAY_KC_SHADER_EXTENSION_ADD");
-  lorx_orxCHAR_to_lstring(L, '-');
-  lua_setfield(L, -2, "orxDISPLAY_KC_SHADER_EXTENSION_REMOVE");
-  lorx_orxSTRING_to_lstring(L, ".");
-  lua_setfield(L, -2, "orxSCREENSHOT_KZ_DEFAULT_DIRECTORY_NAME");
-  lorx_orxSTRING_to_lstring(L, "screenshot-");
-  lua_setfield(L, -2, "orxSCREENSHOT_KZ_DEFAULT_BASE_NAME");
-  lorx_orxSTRING_to_lstring(L, "tga");
-  lua_setfield(L, -2, "orxSCREENSHOT_KZ_DEFAULT_EXTENSION");
-  lorx_orxU32_to_linteger(L, 4);
-  lua_setfield(L, -2, "orxSCREENSHOT_KU32_DEFAULT_DIGITS");
-  lorx_orxSTRING_to_lstring(L, "default");
-  lua_setfield(L, -2, "orxFONT_KZ_DEFAULT_FONT_NAME");
-  lorx_orxSTRING_to_lstring(L, "Texture");
-  lua_setfield(L, -2, "orxTEXTURE_KZ_RESOURCE_GROUP");
-  lorx_orxSTRING_to_lstring(L, "Texture");
-  lua_setfield(L, -2, "orxTEXTURE_KZ_LOCALE_GROUP");
-  lorx_orxSTRING_to_lstring(L, "screen");
-  lua_setfield(L, -2, "orxTEXTURE_KZ_SCREEN");
-  lorx_orxSTRING_to_lstring(L, "pixel");
-  lua_setfield(L, -2, "orxTEXTURE_KZ_PIXEL");
-  lorx_orxSTRING_to_lstring(L, "Text");
-  lua_setfield(L, -2, "orxTEXT_KZ_LOCALE_GROUP");
-  lorx_orxU32_to_linteger(L, 0x00000000);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_NONE");
-  lorx_orxU32_to_linteger(L, 0x00000001);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_2D");
-  lorx_orxU32_to_linteger(L, 0x00000002);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_TEXT");
-  lorx_orxU32_to_linteger(L, 0x00000003);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_MASK_TYPE");
-  lorx_orxU32_to_linteger(L, 0x00000004);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_FLIP_X");
-  lorx_orxU32_to_linteger(L, 0x00000008);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_FLIP_Y");
-  lorx_orxU32_to_linteger(L, 0x0000000C);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_MASK_FLIP_BOTH");
-  lorx_orxU32_to_linteger(L, 0x00000000);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_CENTER");
-  lorx_orxU32_to_linteger(L, 0x00000010);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_LEFT");
-  lorx_orxU32_to_linteger(L, 0x00000020);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_RIGHT");
-  lorx_orxU32_to_linteger(L, 0x00000040);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_TOP");
-  lorx_orxU32_to_linteger(L, 0x00000080);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_BOTTOM");
-  lorx_orxU32_to_linteger(L, 0x00000100);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_TRUNCATE");
-  lorx_orxU32_to_linteger(L, 0x00000200);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_ROUND");
-  lorx_orxU32_to_linteger(L, 0x000003F0);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_MASK_ALIGN");
-  lorx_orxU32_to_linteger(L, 0x00000FFF);
-  lua_setfield(L, -2, "orxGRAPHIC_KU32_MASK_USER_ALL");
-  lorx_orxSTRING_to_lstring(L, "Texture");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_TEXTURE_NAME");
-  lorx_orxSTRING_to_lstring(L, "TextureOrigin");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_TEXTURE_ORIGIN");
-  lorx_orxSTRING_to_lstring(L, "TextureSize");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_TEXTURE_SIZE");
-  lorx_orxSTRING_to_lstring(L, "Text");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_TEXT_NAME");
-  lorx_orxSTRING_to_lstring(L, "Pivot");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_PIVOT");
-  lorx_orxSTRING_to_lstring(L, "Color");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_COLOR");
-  lorx_orxSTRING_to_lstring(L, "Alpha");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_ALPHA");
-  lorx_orxSTRING_to_lstring(L, "RGB");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_RGB");
-  lorx_orxSTRING_to_lstring(L, "HSL");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_HSL");
-  lorx_orxSTRING_to_lstring(L, "HSV");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_HSV");
-  lorx_orxSTRING_to_lstring(L, "Flip");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_FLIP");
-  lorx_orxSTRING_to_lstring(L, "Repeat");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_REPEAT");
-  lorx_orxSTRING_to_lstring(L, "Smoothing");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_SMOOTHING");
-  lorx_orxSTRING_to_lstring(L, "BlendMode");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_BLEND_MODE");
-  lorx_orxSTRING_to_lstring(L, "KeepInCache");
-  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_KEEP_IN_CACHE");
   lorx_orxCHAR_to_lstring(L, '\x1b');
   lua_setfield(L, -2, "orxANSI_KC_MARKER");
   lorx_orxSTRING_to_lstring(L, "\x1b[0m");
@@ -512,6 +110,436 @@ LORX_API int luaopen_lorx_constants(lua_State *L)
   lua_setfield(L, -2, "orxANSI_KZ_COLOR_BG_WHITE");
   lorx_orxSTRING_to_lstring(L, "\x1b[49m");
   lua_setfield(L, -2, "orxANSI_KZ_COLOR_BG_DEFAULT");
+  lorx_orxU32_to_linteger(L, 16);
+  lua_setfield(L, -2, "orxCLOCK_KU32_CLOCK_BANK_SIZE");
+  lorx_orxU32_to_linteger(L, 32);
+  lua_setfield(L, -2, "orxCLOCK_KU32_TIMER_BANK_SIZE");
+  lorx_orxU32_to_linteger(L, 16);
+  lua_setfield(L, -2, "orxCLOCK_KU32_FUNCTION_BANK_SIZE");
+  lorx_orxSTRING_to_lstring(L, "Frequency");
+  lua_setfield(L, -2, "orxCLOCK_KZ_CONFIG_FREQUENCY");
+  lorx_orxSTRING_to_lstring(L, "ModifierList");
+  lua_setfield(L, -2, "orxCLOCK_KZ_CONFIG_MODIFIER_LIST");
+  lorx_orxSTRING_to_lstring(L, "core");
+  lua_setfield(L, -2, "orxCLOCK_KZ_CORE");
+  lorx_orxCHAR_to_lstring(L, '"');
+  lua_setfield(L, -2, "orxCOMMAND_KC_BLOCK_MARKER");
+  lorx_orxCHAR_to_lstring(L, '>');
+  lua_setfield(L, -2, "orxCOMMAND_KC_PUSH_MARKER");
+  lorx_orxCHAR_to_lstring(L, '<');
+  lua_setfield(L, -2, "orxCOMMAND_KC_POP_MARKER");
+  lorx_orxCHAR_to_lstring(L, '^');
+  lua_setfield(L, -2, "orxCOMMAND_KC_GUID_MARKER");
+  lorx_orxCHAR_to_lstring(L, ',');
+  lua_setfield(L, -2, "orxCOMMAND_KC_SEPARATOR");
+  lorx_orxSTRING_to_lstring(L, "Config");
+  lua_setfield(L, -2, "orxCONFIG_KZ_RESOURCE_GROUP");
+  lorx_orxSTRING_to_lstring(L, "-=ConsoleSet=-");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_SET");
+  lorx_orxSTRING_to_lstring(L, "Toggle");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_TOGGLE");
+  lorx_orxSTRING_to_lstring(L, "AutoComplete");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_AUTOCOMPLETE");
+  lorx_orxSTRING_to_lstring(L, "Delete");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_DELETE");
+  lorx_orxSTRING_to_lstring(L, "DeleteAfter");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_DELETE_AFTER");
+  lorx_orxSTRING_to_lstring(L, "ToggleMode");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_TOGGLE_MODE");
+  lorx_orxSTRING_to_lstring(L, "Enter");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_ENTER");
+  lorx_orxSTRING_to_lstring(L, "Previous");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_PREVIOUS");
+  lorx_orxSTRING_to_lstring(L, "Next");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_NEXT");
+  lorx_orxSTRING_to_lstring(L, "Left");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_LEFT");
+  lorx_orxSTRING_to_lstring(L, "Right");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_RIGHT");
+  lorx_orxSTRING_to_lstring(L, "Start");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_START");
+  lorx_orxSTRING_to_lstring(L, "End");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_END");
+  lorx_orxSTRING_to_lstring(L, "Paste");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_PASTE");
+  lorx_orxSTRING_to_lstring(L, "ScrollDown");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_SCROLL_DOWN");
+  lorx_orxSTRING_to_lstring(L, "ScrollUp");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_INPUT_SCROLL_UP");
+  lorx_orxSTRING_to_lstring(L, "cih");
+  lua_setfield(L, -2, "orxCONSOLE_KZ_CONFIG_HISTORY_FILE_EXTENSION");
+  lorx_orxU32_to_linteger(L, 0x00000000);
+  lua_setfield(L, -2, "orxEVENT_KU32_FLAG_ID_NONE");
+  lorx_orxU32_to_linteger(L, 0xFFFFFFFF);
+  lua_setfield(L, -2, "orxEVENT_KU32_MASK_ID_ALL");
+  lorx_orxCHAR_to_lstring(L, ':');
+  lua_setfield(L, -2, "orxRESOURCE_KC_LOCATION_SEPARATOR");
+  lorx_orxSTRING_to_lstring(L, ".");
+  lua_setfield(L, -2, "orxRESOURCE_KZ_DEFAULT_STORAGE");
+  lorx_orxSTRING_to_lstring(L, "file");
+  lua_setfield(L, -2, "orxRESOURCE_KZ_TYPE_TAG_FILE");
+  lorx_orxU32_to_linteger(L, 0);
+  lua_setfield(L, -2, "orxTHREAD_KU32_MAIN_THREAD_ID");
+  lorx_orxU32_to_linteger(L, 16);
+  lua_setfield(L, -2, "orxTHREAD_KU32_MAX_THREAD_NUMBER");
+  lorx_orxU32_to_linteger(L, 0);
+  lua_setfield(L, -2, "orxTHREAD_KU32_FLAG_NONE");
+  lorx_orxU32_to_linteger(L, (((1 << orxTHREAD_KU32_MAX_THREAD_NUMBER) - 1) & ~(1 << orxTHREAD_KU32_MAIN_THREAD_ID)));
+  lua_setfield(L, -2, "orxTHREAD_KU32_MASK_ALL");
+  lorx_orxU32_to_linteger(L, 0x00000000);
+  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_NONE");
+  lorx_orxU32_to_linteger(L, 0x00000001);
+  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_TIMESTAMP");
+  lorx_orxU32_to_linteger(L, 0x00000002);
+  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_FULL_TIMESTAMP");
+  lorx_orxU32_to_linteger(L, 0x00000004);
+  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_TYPE");
+  lorx_orxU32_to_linteger(L, 0x00000008);
+  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_TAGGED");
+  lorx_orxU32_to_linteger(L, 0x00000010);
+  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_FILE");
+  lorx_orxU32_to_linteger(L, 0x00000020);
+  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_TERMINAL");
+  lorx_orxU32_to_linteger(L, 0x00000040);
+  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_CONSOLE");
+  lorx_orxU32_to_linteger(L, 0x00000080);
+  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_FLAG_CALLBACK");
+  lorx_orxU32_to_linteger(L, 0x000000F5);
+  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_MASK_DEFAULT");
+  lorx_orxU32_to_linteger(L, 0x000000BD);
+  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_MASK_DEBUG");
+  lorx_orxU32_to_linteger(L, 0x0FFFFFFF);
+  lua_setfield(L, -2, "orxDEBUG_KU32_STATIC_MASK_USER_ALL");
+  lorx_orxSTRING_to_lstring(L, "orx-debug.log");
+  lua_setfield(L, -2, "orxDEBUG_KZ_DEFAULT_DEBUG_FILE");
+  lorx_orxSTRING_to_lstring(L, "orx.log");
+  lua_setfield(L, -2, "orxDEBUG_KZ_DEFAULT_LOG_FILE");
+  lorx_orxSTRING_to_lstring(L, ".log");
+  lua_setfield(L, -2, "orxDEBUG_KZ_DEFAULT_LOG_SUFFIX");
+  lorx_orxSTRING_to_lstring(L, "-debug.log");
+  lua_setfield(L, -2, "orxDEBUG_KZ_DEFAULT_DEBUG_SUFFIX");
+  lorx_orxS32_to_linteger(L, 2048);
+  lua_setfield(L, -2, "orxDEBUG_KS32_BUFFER_OUTPUT_SIZE");
+  lorx_orxSTRING_to_lstring(L, "fps");
+  lua_setfield(L, -2, "orxFPS_KZ_CLOCK_NAME");
+  lorx_orxU32_to_linteger(L, 2);
+  lua_setfield(L, -2, "orxPROFILER_KU32_HISTORY_LENGTH");
+  lorx_orxS32_to_linteger(L, -1);
+  lua_setfield(L, -2, "orxPROFILER_KS32_MARKER_ID_NONE");
+  lorx_orxSTRING_to_lstring(L, "Display");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_SECTION");
+  lorx_orxSTRING_to_lstring(L, "ScreenWidth");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_WIDTH");
+  lorx_orxSTRING_to_lstring(L, "ScreenHeight");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_HEIGHT");
+  lorx_orxSTRING_to_lstring(L, "ScreenDepth");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_DEPTH");
+  lorx_orxSTRING_to_lstring(L, "ScreenPosition");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_POSITION");
+  lorx_orxSTRING_to_lstring(L, "RefreshRate");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_REFRESH_RATE");
+  lorx_orxSTRING_to_lstring(L, "FullScreen");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_FULLSCREEN");
+  lorx_orxSTRING_to_lstring(L, "AllowResize");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_ALLOW_RESIZE");
+  lorx_orxSTRING_to_lstring(L, "Decoration");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_DECORATION");
+  lorx_orxSTRING_to_lstring(L, "Title");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_TITLE");
+  lorx_orxSTRING_to_lstring(L, "Smoothing");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_SMOOTH");
+  lorx_orxSTRING_to_lstring(L, "VSync");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_VSYNC");
+  lorx_orxSTRING_to_lstring(L, "DepthBuffer");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_DEPTHBUFFER");
+  lorx_orxSTRING_to_lstring(L, "ShaderVersion");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_SHADER_VERSION");
+  lorx_orxSTRING_to_lstring(L, "ShaderExtensionList");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_SHADER_EXTENSION_LIST");
+  lorx_orxSTRING_to_lstring(L, "Monitor");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_MONITOR");
+  lorx_orxSTRING_to_lstring(L, "Cursor");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_CURSOR");
+  lorx_orxSTRING_to_lstring(L, "IconList");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_ICON_LIST");
+  lorx_orxSTRING_to_lstring(L, "FramebufferSize");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_FRAMEBUFFER_SIZE");
+  lorx_orxSTRING_to_lstring(L, "TextureUnitNumber");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_TEXTURE_UNIT_NUMBER");
+  lorx_orxSTRING_to_lstring(L, "DrawBufferNumber");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_DRAW_BUFFER_NUMBER");
+  lorx_orxSTRING_to_lstring(L, "MaxTextureSize");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_MAX_TEXTURE_SIZE");
+  lorx_orxSTRING_to_lstring(L, "DebugOutput");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_CONFIG_DEBUG_OUTPUT");
+  lorx_orxSTRING_to_lstring(L, "Color");
+  lua_setfield(L, -2, "orxCOLOR_KZ_CONFIG_SECTION");
+  lorx_orxSTRING_to_lstring(L, "_top");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_SHADER_SUFFIX_TOP");
+  lorx_orxSTRING_to_lstring(L, "_left");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_SHADER_SUFFIX_LEFT");
+  lorx_orxSTRING_to_lstring(L, "_bottom");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_SHADER_SUFFIX_BOTTOM");
+  lorx_orxSTRING_to_lstring(L, "_right");
+  lua_setfield(L, -2, "orxDISPLAY_KZ_SHADER_SUFFIX_RIGHT");
+  lorx_orxCHAR_to_lstring(L, '+');
+  lua_setfield(L, -2, "orxDISPLAY_KC_SHADER_EXTENSION_ADD");
+  lorx_orxCHAR_to_lstring(L, '-');
+  lua_setfield(L, -2, "orxDISPLAY_KC_SHADER_EXTENSION_REMOVE");
+  lorx_orxSTRING_to_lstring(L, "default");
+  lua_setfield(L, -2, "orxFONT_KZ_DEFAULT_FONT_NAME");
+  lorx_orxU32_to_linteger(L, 0x00000000);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_NONE");
+  lorx_orxU32_to_linteger(L, 0x00000001);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_2D");
+  lorx_orxU32_to_linteger(L, 0x00000002);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_TEXT");
+  lorx_orxU32_to_linteger(L, 0x00000003);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_MASK_TYPE");
+  lorx_orxU32_to_linteger(L, 0x00000004);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_FLIP_X");
+  lorx_orxU32_to_linteger(L, 0x00000008);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_FLIP_Y");
+  lorx_orxU32_to_linteger(L, 0x0000000C);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_MASK_FLIP_BOTH");
+  lorx_orxU32_to_linteger(L, 0x00000000);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_CENTER");
+  lorx_orxU32_to_linteger(L, 0x00000010);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_LEFT");
+  lorx_orxU32_to_linteger(L, 0x00000020);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_RIGHT");
+  lorx_orxU32_to_linteger(L, 0x00000040);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_TOP");
+  lorx_orxU32_to_linteger(L, 0x00000080);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_BOTTOM");
+  lorx_orxU32_to_linteger(L, 0x00000100);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_TRUNCATE");
+  lorx_orxU32_to_linteger(L, 0x00000200);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_FLAG_ALIGN_ROUND");
+  lorx_orxU32_to_linteger(L, 0x000003F0);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_MASK_ALIGN");
+  lorx_orxU32_to_linteger(L, 0x00000FFF);
+  lua_setfield(L, -2, "orxGRAPHIC_KU32_MASK_USER_ALL");
+  lorx_orxSTRING_to_lstring(L, "Texture");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_TEXTURE_NAME");
+  lorx_orxSTRING_to_lstring(L, "TextureOrigin");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_TEXTURE_ORIGIN");
+  lorx_orxSTRING_to_lstring(L, "TextureSize");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_TEXTURE_SIZE");
+  lorx_orxSTRING_to_lstring(L, "Text");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_TEXT_NAME");
+  lorx_orxSTRING_to_lstring(L, "Pivot");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_PIVOT");
+  lorx_orxSTRING_to_lstring(L, "Color");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_COLOR");
+  lorx_orxSTRING_to_lstring(L, "Alpha");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_ALPHA");
+  lorx_orxSTRING_to_lstring(L, "RGB");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_RGB");
+  lorx_orxSTRING_to_lstring(L, "HSL");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_HSL");
+  lorx_orxSTRING_to_lstring(L, "HSV");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_HSV");
+  lorx_orxSTRING_to_lstring(L, "Flip");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_FLIP");
+  lorx_orxSTRING_to_lstring(L, "Repeat");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_REPEAT");
+  lorx_orxSTRING_to_lstring(L, "Smoothing");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_SMOOTHING");
+  lorx_orxSTRING_to_lstring(L, "BlendMode");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_BLEND_MODE");
+  lorx_orxSTRING_to_lstring(L, "KeepInCache");
+  lua_setfield(L, -2, "orxGRAPHIC_KZ_CONFIG_KEEP_IN_CACHE");
+  lorx_orxSTRING_to_lstring(L, ".");
+  lua_setfield(L, -2, "orxSCREENSHOT_KZ_DEFAULT_DIRECTORY_NAME");
+  lorx_orxSTRING_to_lstring(L, "screenshot-");
+  lua_setfield(L, -2, "orxSCREENSHOT_KZ_DEFAULT_BASE_NAME");
+  lorx_orxSTRING_to_lstring(L, "tga");
+  lua_setfield(L, -2, "orxSCREENSHOT_KZ_DEFAULT_EXTENSION");
+  lorx_orxU32_to_linteger(L, 4);
+  lua_setfield(L, -2, "orxSCREENSHOT_KU32_DEFAULT_DIGITS");
+  lorx_orxSTRING_to_lstring(L, "Text");
+  lua_setfield(L, -2, "orxTEXT_KZ_LOCALE_GROUP");
+  lorx_orxSTRING_to_lstring(L, "Texture");
+  lua_setfield(L, -2, "orxTEXTURE_KZ_RESOURCE_GROUP");
+  lorx_orxSTRING_to_lstring(L, "Texture");
+  lua_setfield(L, -2, "orxTEXTURE_KZ_LOCALE_GROUP");
+  lorx_orxSTRING_to_lstring(L, "screen");
+  lua_setfield(L, -2, "orxTEXTURE_KZ_SCREEN");
+  lorx_orxSTRING_to_lstring(L, "pixel");
+  lua_setfield(L, -2, "orxTEXTURE_KZ_PIXEL");
+  lorx_orxU32_to_linteger(L, 0x00000001);
+  lua_setfield(L, -2, "orxFILE_KU32_FLAG_INFO_NORMAL");
+  lorx_orxU32_to_linteger(L, 0x00000002);
+  lua_setfield(L, -2, "orxFILE_KU32_FLAG_INFO_READONLY");
+  lorx_orxU32_to_linteger(L, 0x00000004);
+  lua_setfield(L, -2, "orxFILE_KU32_FLAG_INFO_HIDDEN");
+  lorx_orxU32_to_linteger(L, 0x00000008);
+  lua_setfield(L, -2, "orxFILE_KU32_FLAG_INFO_DIRECTORY");
+  lorx_orxU32_to_linteger(L, 0x10000000);
+  lua_setfield(L, -2, "orxFILE_KU32_FLAG_OPEN_READ");
+  lorx_orxU32_to_linteger(L, 0x20000000);
+  lua_setfield(L, -2, "orxFILE_KU32_FLAG_OPEN_WRITE");
+  lorx_orxU32_to_linteger(L, 0x40000000);
+  lua_setfield(L, -2, "orxFILE_KU32_FLAG_OPEN_APPEND");
+  lorx_orxU32_to_linteger(L, 0x80000000);
+  lua_setfield(L, -2, "orxFILE_KU32_FLAG_OPEN_BINARY");
+  lorx_orxSTRING_to_lstring(L, "Input");
+  lua_setfield(L, -2, "orxINPUT_KZ_CONFIG_SECTION");
+  lorx_orxSTRING_to_lstring(L, "DefaultThreshold");
+  lua_setfield(L, -2, "orxINPUT_KZ_CONFIG_DEFAULT_THRESHOLD");
+  lorx_orxSTRING_to_lstring(L, "DefaultMultiplier");
+  lua_setfield(L, -2, "orxINPUT_KZ_CONFIG_DEFAULT_MULTIPLIER");
+  lorx_orxSTRING_to_lstring(L, "CombineList");
+  lua_setfield(L, -2, "orxINPUT_KZ_CONFIG_COMBINE_LIST");
+  lorx_orxSTRING_to_lstring(L, "JoyIDList");
+  lua_setfield(L, -2, "orxINPUT_KZ_CONFIG_JOYSTICK_ID_LIST");
+  lorx_orxU32_to_linteger(L, 16);
+  lua_setfield(L, -2, "orxINPUT_KU32_BINDING_NUMBER");
+  lorx_orxSTRING_to_lstring(L, "-=");
+  lua_setfield(L, -2, "orxINPUT_KZ_INTERNAL_SET_PREFIX");
+  lorx_orxCHAR_to_lstring(L, '+');
+  lua_setfield(L, -2, "orxINPUT_KC_MODE_PREFIX_POSITIVE");
+  lorx_orxCHAR_to_lstring(L, '-');
+  lua_setfield(L, -2, "orxINPUT_KC_MODE_PREFIX_NEGATIVE");
+  lorx_orxU32_to_linteger(L, 0x00000000);
+  lua_setfield(L, -2, "orxINPUT_KU32_FLAG_TYPE_NONE");
+  lorx_orxU32_to_linteger(L, 0x0000FFFF);
+  lua_setfield(L, -2, "orxINPUT_KU32_MASK_TYPE_ALL");
+  lorx_orxU32_to_linteger(L, 1);
+  lua_setfield(L, -2, "orxJOYSTICK_KU32_MIN_ID");
+  lorx_orxU32_to_linteger(L, (orxJOYSTICK_BUTTON_NUMBER / orxJOYSTICK_BUTTON_SINGLE_NUMBER));
+  lua_setfield(L, -2, "orxJOYSTICK_KU32_MAX_ID");
+  lorx_orxSTRING_to_lstring(L, "Mouse");
+  lua_setfield(L, -2, "orxMOUSE_KZ_CONFIG_SECTION");
+  lorx_orxSTRING_to_lstring(L, "ShowCursor");
+  lua_setfield(L, -2, "orxMOUSE_KZ_CONFIG_SHOW_CURSOR");
+  lorx_orxSTRING_to_lstring(L, "Grab");
+  lua_setfield(L, -2, "orxMOUSE_KZ_CONFIG_GRAB");
+  lorx_orxFLOAT_to_lnumber(L, orx2F(1.414213562f));
+  lua_setfield(L, -2, "orxMATH_KF_SQRT_2");
+  lorx_orxFLOAT_to_lnumber(L, orx2F(0.0001f));
+  lua_setfield(L, -2, "orxMATH_KF_EPSILON");
+  lorx_orxFLOAT_to_lnumber(L, orx2F(1.0e-037f));
+  lua_setfield(L, -2, "orxMATH_KF_TINY_EPSILON");
+  lorx_orxFLOAT_to_lnumber(L, orx2F(3.402823466e+38F));
+  lua_setfield(L, -2, "orxMATH_KF_MAX");
+  lorx_orxFLOAT_to_lnumber(L, orx2F(6.283185307f));
+  lua_setfield(L, -2, "orxMATH_KF_2_PI");
+  lorx_orxFLOAT_to_lnumber(L, orx2F(3.141592654f));
+  lua_setfield(L, -2, "orxMATH_KF_PI");
+  lorx_orxFLOAT_to_lnumber(L, orx2F(1.570796327f));
+  lua_setfield(L, -2, "orxMATH_KF_PI_BY_2");
+  lorx_orxFLOAT_to_lnumber(L, orx2F(0.785398163f));
+  lua_setfield(L, -2, "orxMATH_KF_PI_BY_4");
+  lorx_orxFLOAT_to_lnumber(L, orx2F(3.141592654f / 180.0f));
+  lua_setfield(L, -2, "orxMATH_KF_DEG_TO_RAD");
+  lorx_orxFLOAT_to_lnumber(L, orx2F(180.0f / 3.141592654f));
+  lua_setfield(L, -2, "orxMATH_KF_RAD_TO_DEG");
+  lorx_orxU32_to_linteger(L, 0x00000000);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_NONE");
+  lorx_orxU32_to_linteger(L, 0x00000001);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_SCROLL_X");
+  lorx_orxU32_to_linteger(L, 0x00000002);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_SCROLL_Y");
+  lorx_orxU32_to_linteger(L, 0x00000003);
+  lua_setfield(L, -2, "orxFRAME_KU32_MASK_SCROLL_BOTH");
+  lorx_orxU32_to_linteger(L, 0x00000004);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_DEPTH_SCALE");
+  lorx_orxU32_to_linteger(L, 0x00000010);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_FLIP_X");
+  lorx_orxU32_to_linteger(L, 0x00000020);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_FLIP_Y");
+  lorx_orxU32_to_linteger(L, 0x00000030);
+  lua_setfield(L, -2, "orxFRAME_KU32_MASK_FLIP_BOTH");
+  lorx_orxU32_to_linteger(L, 0x00000000);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_NONE");
+  lorx_orxU32_to_linteger(L, 0x00000100);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_ROTATION");
+  lorx_orxU32_to_linteger(L, 0x00000200);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_SCALE_X");
+  lorx_orxU32_to_linteger(L, 0x00000400);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_SCALE_Y");
+  lorx_orxU32_to_linteger(L, 0x00000800);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_SCALE_Z");
+  lorx_orxU32_to_linteger(L, 0x00000E00);
+  lua_setfield(L, -2, "orxFRAME_KU32_MASK_IGNORE_SCALE");
+  lorx_orxU32_to_linteger(L, 0x00001000);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_ROTATION");
+  lorx_orxU32_to_linteger(L, 0x00002000);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_SCALE_X");
+  lorx_orxU32_to_linteger(L, 0x00004000);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_SCALE_Y");
+  lorx_orxU32_to_linteger(L, 0x00008000);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_SCALE_Z");
+  lorx_orxU32_to_linteger(L, 0x0000E000);
+  lua_setfield(L, -2, "orxFRAME_KU32_MASK_IGNORE_POSITION_SCALE");
+  lorx_orxU32_to_linteger(L, 0x00010000);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_POSITION_X");
+  lorx_orxU32_to_linteger(L, 0x00020000);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_POSITION_Y");
+  lorx_orxU32_to_linteger(L, 0x00040000);
+  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_POSITION_Z");
+  lorx_orxU32_to_linteger(L, 0x00070000);
+  lua_setfield(L, -2, "orxFRAME_KU32_MASK_IGNORE_POSITION_POSITION");
+  lorx_orxU32_to_linteger(L, 0x0007F000);
+  lua_setfield(L, -2, "orxFRAME_KU32_MASK_IGNORE_POSITION");
+  lorx_orxU32_to_linteger(L, 0x0007FF00);
+  lua_setfield(L, -2, "orxFRAME_KU32_MASK_IGNORE_ALL");
+  lorx_orxU32_to_linteger(L, 0x0007FFFF);
+  lua_setfield(L, -2, "orxFRAME_KU32_MASK_USER_ALL");
+  lorx_orxU32_to_linteger(L, 0x00000100);
+  lua_setfield(L, -2, "orxFX_SLOT_KU32_FLAG_ABSOLUTE");
+  lorx_orxU32_to_linteger(L, 0x00000200);
+  lua_setfield(L, -2, "orxFX_SLOT_KU32_FLAG_USE_ROTATION");
+  lorx_orxU32_to_linteger(L, 0x00000400);
+  lua_setfield(L, -2, "orxFX_SLOT_KU32_FLAG_USE_SCALE");
+  lorx_orxU32_to_linteger(L, 8);
+  lua_setfield(L, -2, "orxFXPOINTER_KU32_FX_NUMBER");
+  lorx_orxSTRING_to_lstring(L, "default");
+  lua_setfield(L, -2, "orxOBJECT_KZ_DEFAULT_GROUP");
+  lorx_orxU32_to_linteger(L, 0x00000000);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_NONE");
+  lorx_orxU32_to_linteger(L, 0x00000001);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_AUTO_DELETE");
+  lorx_orxU32_to_linteger(L, 0x00000002);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_AUTO_RESET");
+  lorx_orxU32_to_linteger(L, 0x00000004);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_ALPHA");
+  lorx_orxU32_to_linteger(L, 0x00000008);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_COLOR");
+  lorx_orxU32_to_linteger(L, 0x00000010);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_ROTATION");
+  lorx_orxU32_to_linteger(L, 0x00000020);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_SCALE");
+  lorx_orxU32_to_linteger(L, 0x00000040);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_RELATIVE_SPEED_OBJECT");
+  lorx_orxU32_to_linteger(L, 0x00000080);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_RELATIVE_SPEED_SPAWNER");
+  lorx_orxU32_to_linteger(L, 0x000000C0);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_MASK_USE_RELATIVE_SPEED");
+  lorx_orxU32_to_linteger(L, 0x00000100);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_SELF_AS_PARENT");
+  lorx_orxU32_to_linteger(L, 0x00000200);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_CLEAN_ON_DELETE");
+  lorx_orxU32_to_linteger(L, 0x00000400);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_INTERPOLATE");
+  lorx_orxU32_to_linteger(L, 0x000004FF);
+  lua_setfield(L, -2, "orxSPAWNER_KU32_MASK_USER_ALL");
+  lorx_orxU64_to_linteger(L, 0xDEFACED0DEADC0DEULL);
+  lua_setfield(L, -2, "orxSTRUCTURE_GUID_MAGIC_TAG_DELETED");
+  lorx_orxU64_to_linteger(L, 0x00000000000000FFULL);
+  lua_setfield(L, -2, "orxSTRUCTURE_GUID_MASK_STRUCTURE_ID");
+  lorx_orxU64_to_linteger(L, 0);
+  lua_setfield(L, -2, "orxSTRUCTURE_GUID_SHIFT_STRUCTURE_ID");
+  lorx_orxU64_to_linteger(L, 0x00000000FFFFFF00ULL);
+  lua_setfield(L, -2, "orxSTRUCTURE_GUID_MASK_ITEM_ID");
+  lorx_orxU64_to_linteger(L, 8);
+  lua_setfield(L, -2, "orxSTRUCTURE_GUID_SHIFT_ITEM_ID");
+  lorx_orxU64_to_linteger(L, 0xFFFFFFFF00000000ULL);
+  lua_setfield(L, -2, "orxSTRUCTURE_GUID_MASK_INSTANCE_ID");
+  lorx_orxU64_to_linteger(L, 32);
+  lua_setfield(L, -2, "orxSTRUCTURE_GUID_SHIFT_INSTANCE_ID");
   lorx_orxU32_to_linteger(L, 0x00000000);
   lua_setfield(L, -2, "orxBODY_DEF_KU32_FLAG_NONE");
   lorx_orxU32_to_linteger(L, 0x00000001);
@@ -598,6 +626,98 @@ LORX_API int luaopen_lorx_constants(lua_State *L)
   lua_setfield(L, -2, "orxPHYSICS_KZ_CONFIG_COLLISION_FLAG_LIST");
   lorx_orxSTRING_to_lstring(L, "Interpolate");
   lua_setfield(L, -2, "orxPHYSICS_KZ_CONFIG_INTERPOLATE");
+  lorx_orxU32_to_linteger(L, 0x00000000);
+  lua_setfield(L, -2, "orxCAMERA_KU32_FLAG_NONE");
+  lorx_orxU32_to_linteger(L, 0x00000001);
+  lua_setfield(L, -2, "orxCAMERA_KU32_FLAG_2D");
+  lorx_orxU32_to_linteger(L, 0x000000FF);
+  lua_setfield(L, -2, "orxCAMERA_KU32_MASK_USER_ALL");
+  lorx_orxU32_to_linteger(L, 16);
+  lua_setfield(L, -2, "orxCAMERA_KU32_GROUP_ID_NUMBER");
+  lorx_orxSTRING_to_lstring(L, "Render");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_SECTION");
+  lorx_orxSTRING_to_lstring(L, "ShowFPS");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_SHOW_FPS");
+  lorx_orxSTRING_to_lstring(L, "ShowProfiler");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_SHOW_PROFILER");
+  lorx_orxSTRING_to_lstring(L, "MinFrequency");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_MIN_FREQUENCY");
+  lorx_orxSTRING_to_lstring(L, "ProfilerOrientation");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_PROFILER_ORIENTATION");
+  lorx_orxSTRING_to_lstring(L, "ConsoleColor");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_COLOR");
+  lorx_orxSTRING_to_lstring(L, "ConsoleAlpha");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_ALPHA");
+  lorx_orxSTRING_to_lstring(L, "ConsoleBackgroundColor");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_BACKGROUND_COLOR");
+  lorx_orxSTRING_to_lstring(L, "ConsoleBackgroundAlpha");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_BACKGROUND_ALPHA");
+  lorx_orxSTRING_to_lstring(L, "ConsoleSeparatorColor");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_SEPARATOR_COLOR");
+  lorx_orxSTRING_to_lstring(L, "ConsoleSeparatorAlpha");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_SEPARATOR_ALPHA");
+  lorx_orxSTRING_to_lstring(L, "ConsoleInputColor");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_INPUT_COLOR");
+  lorx_orxSTRING_to_lstring(L, "ConsoleInputAlpha");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_INPUT_ALPHA");
+  lorx_orxSTRING_to_lstring(L, "ConsoleCompletionColor");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_COMPLETION_COLOR");
+  lorx_orxSTRING_to_lstring(L, "ConsoleCompletionAlpha");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_COMPLETION_ALPHA");
+  lorx_orxSTRING_to_lstring(L, "ConsoleLogColor");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_LOG_COLOR");
+  lorx_orxSTRING_to_lstring(L, "ConsoleLogAlpha");
+  lua_setfield(L, -2, "orxRENDER_KZ_CONFIG_CONSOLE_LOG_ALPHA");
+  lorx_orxSTRING_to_lstring(L, "-=RenderSet=-");
+  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_SET");
+  lorx_orxSTRING_to_lstring(L, "ProfilerToggleHistory");
+  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_TOGGLE_HISTORY");
+  lorx_orxSTRING_to_lstring(L, "ProfilerPause");
+  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_PAUSE");
+  lorx_orxSTRING_to_lstring(L, "ProfilerPreviousFrame");
+  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_PREVIOUS_FRAME");
+  lorx_orxSTRING_to_lstring(L, "ProfilerNextFrame");
+  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_NEXT_FRAME");
+  lorx_orxSTRING_to_lstring(L, "ProfilerPreviousDepth");
+  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_PREVIOUS_DEPTH");
+  lorx_orxSTRING_to_lstring(L, "ProfilerNextDepth");
+  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_NEXT_DEPTH");
+  lorx_orxSTRING_to_lstring(L, "ProfilerPreviousThread");
+  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_PREVIOUS_THREAD");
+  lorx_orxSTRING_to_lstring(L, "ProfilerNextThread");
+  lua_setfield(L, -2, "orxRENDER_KZ_INPUT_PROFILER_NEXT_THREAD");
+  lorx_orxU32_to_linteger(L, 4);
+  lua_setfield(L, -2, "orxSHADERPOINTER_KU32_SHADER_NUMBER");
+  lorx_orxU32_to_linteger(L, 0x00000000);
+  lua_setfield(L, -2, "orxVIEWPORT_KU32_FLAG_ALIGN_CENTER");
+  lorx_orxU32_to_linteger(L, 0x10000000);
+  lua_setfield(L, -2, "orxVIEWPORT_KU32_FLAG_ALIGN_LEFT");
+  lorx_orxU32_to_linteger(L, 0x20000000);
+  lua_setfield(L, -2, "orxVIEWPORT_KU32_FLAG_ALIGN_RIGHT");
+  lorx_orxU32_to_linteger(L, 0x40000000);
+  lua_setfield(L, -2, "orxVIEWPORT_KU32_FLAG_ALIGN_TOP");
+  lorx_orxU32_to_linteger(L, 0x80000000);
+  lua_setfield(L, -2, "orxVIEWPORT_KU32_FLAG_ALIGN_BOTTOM");
+  lorx_orxU32_to_linteger(L, 0x01000000);
+  lua_setfield(L, -2, "orxVIEWPORT_KU32_FLAG_NO_DEBUG");
+  lorx_orxU32_to_linteger(L, 8);
+  lua_setfield(L, -2, "orxVIEWPORT_KU32_MAX_TEXTURE_NUMBER");
+  lorx_orxSTRING_to_lstring(L, "Sound");
+  lua_setfield(L, -2, "orxSOUND_KZ_RESOURCE_GROUP");
+  lorx_orxSTRING_to_lstring(L, "Sound");
+  lua_setfield(L, -2, "orxSOUND_KZ_LOCALE_GROUP");
+  lorx_orxSTRING_to_lstring(L, "master");
+  lua_setfield(L, -2, "orxSOUND_KZ_MASTER_BUS");
+  lorx_orxU32_to_linteger(L, 4);
+  lua_setfield(L, -2, "orxSOUNDPOINTER_KU32_SOUND_NUMBER");
+  lorx_orxSTRING_to_lstring(L, "SoundSystem");
+  lua_setfield(L, -2, "orxSOUNDSYSTEM_KZ_CONFIG_SECTION");
+  lorx_orxSTRING_to_lstring(L, "DimensionRatio");
+  lua_setfield(L, -2, "orxSOUNDSYSTEM_KZ_CONFIG_RATIO");
+  lorx_orxSTRING_to_lstring(L, "MuteInBackground");
+  lua_setfield(L, -2, "orxSOUNDSYSTEM_KZ_CONFIG_MUTE_IN_BACKGROUND");
+  lorx_orxSTRING_to_lstring(L, "Listeners");
+  lua_setfield(L, -2, "orxSOUNDSYSTEM_KZ_CONFIG_LISTENERS");
   lorx_orxCHAR_to_lstring(L, '(');
   lua_setfield(L, -2, "orxSTRING_KC_VECTOR_START");
   lorx_orxCHAR_to_lstring(L, '{');
@@ -608,126 +728,6 @@ LORX_API int luaopen_lorx_constants(lua_State *L)
   lua_setfield(L, -2, "orxSTRING_KC_VECTOR_END");
   lorx_orxCHAR_to_lstring(L, '}');
   lua_setfield(L, -2, "orxSTRING_KC_VECTOR_END_ALT");
-  lorx_orxSTRING_to_lstring(L, "SoundSystem");
-  lua_setfield(L, -2, "orxSOUNDSYSTEM_KZ_CONFIG_SECTION");
-  lorx_orxSTRING_to_lstring(L, "DimensionRatio");
-  lua_setfield(L, -2, "orxSOUNDSYSTEM_KZ_CONFIG_RATIO");
-  lorx_orxSTRING_to_lstring(L, "MuteInBackground");
-  lua_setfield(L, -2, "orxSOUNDSYSTEM_KZ_CONFIG_MUTE_IN_BACKGROUND");
-  lorx_orxSTRING_to_lstring(L, "Listeners");
-  lua_setfield(L, -2, "orxSOUNDSYSTEM_KZ_CONFIG_LISTENERS");
-  lorx_orxSTRING_to_lstring(L, "Sound");
-  lua_setfield(L, -2, "orxSOUND_KZ_RESOURCE_GROUP");
-  lorx_orxSTRING_to_lstring(L, "Sound");
-  lua_setfield(L, -2, "orxSOUND_KZ_LOCALE_GROUP");
-  lorx_orxSTRING_to_lstring(L, "master");
-  lua_setfield(L, -2, "orxSOUND_KZ_MASTER_BUS");
-  lorx_orxU32_to_linteger(L, 4);
-  lua_setfield(L, -2, "orxSOUNDPOINTER_KU32_SOUND_NUMBER");
-  lorx_orxU64_to_linteger(L, 0xDEFACED0DEADC0DEULL);
-  lua_setfield(L, -2, "orxSTRUCTURE_GUID_MAGIC_TAG_DELETED");
-  lorx_orxU64_to_linteger(L, 0x00000000000000FFULL);
-  lua_setfield(L, -2, "orxSTRUCTURE_GUID_MASK_STRUCTURE_ID");
-  lorx_orxU64_to_linteger(L, 0);
-  lua_setfield(L, -2, "orxSTRUCTURE_GUID_SHIFT_STRUCTURE_ID");
-  lorx_orxU64_to_linteger(L, 0x00000000FFFFFF00ULL);
-  lua_setfield(L, -2, "orxSTRUCTURE_GUID_MASK_ITEM_ID");
-  lorx_orxU64_to_linteger(L, 8);
-  lua_setfield(L, -2, "orxSTRUCTURE_GUID_SHIFT_ITEM_ID");
-  lorx_orxU64_to_linteger(L, 0xFFFFFFFF00000000ULL);
-  lua_setfield(L, -2, "orxSTRUCTURE_GUID_MASK_INSTANCE_ID");
-  lorx_orxU64_to_linteger(L, 32);
-  lua_setfield(L, -2, "orxSTRUCTURE_GUID_SHIFT_INSTANCE_ID");
-  lorx_orxU32_to_linteger(L, 0x00000000);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_NONE");
-  lorx_orxU32_to_linteger(L, 0x00000001);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_AUTO_DELETE");
-  lorx_orxU32_to_linteger(L, 0x00000002);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_AUTO_RESET");
-  lorx_orxU32_to_linteger(L, 0x00000004);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_ALPHA");
-  lorx_orxU32_to_linteger(L, 0x00000008);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_COLOR");
-  lorx_orxU32_to_linteger(L, 0x00000010);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_ROTATION");
-  lorx_orxU32_to_linteger(L, 0x00000020);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_SCALE");
-  lorx_orxU32_to_linteger(L, 0x00000040);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_RELATIVE_SPEED_OBJECT");
-  lorx_orxU32_to_linteger(L, 0x00000080);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_RELATIVE_SPEED_SPAWNER");
-  lorx_orxU32_to_linteger(L, 0x000000C0);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_MASK_USE_RELATIVE_SPEED");
-  lorx_orxU32_to_linteger(L, 0x00000100);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_USE_SELF_AS_PARENT");
-  lorx_orxU32_to_linteger(L, 0x00000200);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_CLEAN_ON_DELETE");
-  lorx_orxU32_to_linteger(L, 0x00000400);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_FLAG_INTERPOLATE");
-  lorx_orxU32_to_linteger(L, 0x000004FF);
-  lua_setfield(L, -2, "orxSPAWNER_KU32_MASK_USER_ALL");
-  lorx_orxU32_to_linteger(L, 0x00000000);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_NONE");
-  lorx_orxU32_to_linteger(L, 0x00000001);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_SCROLL_X");
-  lorx_orxU32_to_linteger(L, 0x00000002);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_SCROLL_Y");
-  lorx_orxU32_to_linteger(L, 0x00000003);
-  lua_setfield(L, -2, "orxFRAME_KU32_MASK_SCROLL_BOTH");
-  lorx_orxU32_to_linteger(L, 0x00000004);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_DEPTH_SCALE");
-  lorx_orxU32_to_linteger(L, 0x00000010);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_FLIP_X");
-  lorx_orxU32_to_linteger(L, 0x00000020);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_FLIP_Y");
-  lorx_orxU32_to_linteger(L, 0x00000030);
-  lua_setfield(L, -2, "orxFRAME_KU32_MASK_FLIP_BOTH");
-  lorx_orxU32_to_linteger(L, 0x00000000);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_NONE");
-  lorx_orxU32_to_linteger(L, 0x00000100);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_ROTATION");
-  lorx_orxU32_to_linteger(L, 0x00000200);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_SCALE_X");
-  lorx_orxU32_to_linteger(L, 0x00000400);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_SCALE_Y");
-  lorx_orxU32_to_linteger(L, 0x00000800);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_SCALE_Z");
-  lorx_orxU32_to_linteger(L, 0x00000E00);
-  lua_setfield(L, -2, "orxFRAME_KU32_MASK_IGNORE_SCALE");
-  lorx_orxU32_to_linteger(L, 0x00001000);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_ROTATION");
-  lorx_orxU32_to_linteger(L, 0x00002000);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_SCALE_X");
-  lorx_orxU32_to_linteger(L, 0x00004000);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_SCALE_Y");
-  lorx_orxU32_to_linteger(L, 0x00008000);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_SCALE_Z");
-  lorx_orxU32_to_linteger(L, 0x0000E000);
-  lua_setfield(L, -2, "orxFRAME_KU32_MASK_IGNORE_POSITION_SCALE");
-  lorx_orxU32_to_linteger(L, 0x00010000);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_POSITION_X");
-  lorx_orxU32_to_linteger(L, 0x00020000);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_POSITION_Y");
-  lorx_orxU32_to_linteger(L, 0x00040000);
-  lua_setfield(L, -2, "orxFRAME_KU32_FLAG_IGNORE_POSITION_POSITION_Z");
-  lorx_orxU32_to_linteger(L, 0x00070000);
-  lua_setfield(L, -2, "orxFRAME_KU32_MASK_IGNORE_POSITION_POSITION");
-  lorx_orxU32_to_linteger(L, 0x0007F000);
-  lua_setfield(L, -2, "orxFRAME_KU32_MASK_IGNORE_POSITION");
-  lorx_orxU32_to_linteger(L, 0x0007FF00);
-  lua_setfield(L, -2, "orxFRAME_KU32_MASK_IGNORE_ALL");
-  lorx_orxU32_to_linteger(L, 0x0007FFFF);
-  lua_setfield(L, -2, "orxFRAME_KU32_MASK_USER_ALL");
-  lorx_orxU32_to_linteger(L, 8);
-  lua_setfield(L, -2, "orxFXPOINTER_KU32_FX_NUMBER");
-  lorx_orxSTRING_to_lstring(L, "default");
-  lua_setfield(L, -2, "orxOBJECT_KZ_DEFAULT_GROUP");
-  lorx_orxU32_to_linteger(L, 0x00000100);
-  lua_setfield(L, -2, "orxFX_SLOT_KU32_FLAG_ABSOLUTE");
-  lorx_orxU32_to_linteger(L, 0x00000200);
-  lua_setfield(L, -2, "orxFX_SLOT_KU32_FLAG_USE_ROTATION");
-  lorx_orxU32_to_linteger(L, 0x00000400);
-  lua_setfield(L, -2, "orxFX_SLOT_KU32_FLAG_USE_SCALE");
   lorx_orxU64_to_linteger(L, (orxU64)(-1));
   lua_setfield(L, -2, "orxU64_UNDEFINED");
   lorx_orxU32_to_linteger(L, (orxU32)(-1));
@@ -750,212 +750,89 @@ LORX_API int luaopen_lorx_constants(lua_State *L)
 
 
 
-// Sub-module: file
-static const struct luaL_Reg l_lorx_file[] = {
-  { "setup", l_File_Setup },
-  { "init", l_File_Init },
-  { "exit", l_File_Exit },
-  { "getHomeDirectory", l_File_GetHomeDirectory },
-  { "getApplicationSaveDirectory", l_File_GetApplicationSaveDirectory },
-  { "exists", l_File_Exists },
-  { "findFirst", l_File_FindFirst },
-  { "getInfo", l_File_GetInfo },
-  { "remove", l_File_Remove },
-  { "makeDirectory", l_File_MakeDirectory },
-  { "open", l_File_Open },
-  { "read", l_File_Read },
-  { "write", l_File_Write },
-  { "delete", l_File_Delete },
-  { "fileInfo", l_lorx_orxFILE_INFO_create },
+// Sub-module: anim
+static const struct luaL_Reg l_lorx_anim[] = {
+  { "setup", l_Anim_Setup },
+  { "init", l_Anim_Init },
+  { "exit", l_Anim_Exit },
+  { "create", l_Anim_Create },
+  { "animCustomEvent", l_lorx_orxANIM_CUSTOM_EVENT_create },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_file(lua_State *L)
+LORX_API int luaopen_lorx_anim(lua_State *L)
 {
-  return lorx_register_submodule(L, "file", l_lorx_file);
+  return lorx_register_submodule(L, "anim", l_lorx_anim);
 }
 
 
-// Sub-module: mouse
-static const struct luaL_Reg l_lorx_mouse[] = {
-  { "setup", l_Mouse_Setup },
-  { "init", l_Mouse_Init },
-  { "exit", l_Mouse_Exit },
-  { "setPosition", l_Mouse_SetPosition },
-  { "getPosition", l_Mouse_GetPosition },
-  { "isButtonPressed", l_Mouse_IsButtonPressed },
-  { "getMoveDelta", l_Mouse_GetMoveDelta },
-  { "getWheelDelta", l_Mouse_GetWheelDelta },
-  { "showCursor", l_Mouse_ShowCursor },
-  { "grab", l_Mouse_Grab },
-  { "setCursor", l_Mouse_SetCursor },
-  { "getButtonName", l_Mouse_GetButtonName },
-  { "getAxisName", l_Mouse_GetAxisName },
+// Sub-module: animpointer
+static const struct luaL_Reg l_lorx_animpointer[] = {
+  { "setup", l_AnimPointer_Setup },
+  { "init", l_AnimPointer_Init },
+  { "exit", l_AnimPointer_Exit },
+  { "create", l_AnimPointer_Create },
+  { "createFromConfig", l_AnimPointer_CreateFromConfig },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_mouse(lua_State *L)
+LORX_API int luaopen_lorx_animpointer(lua_State *L)
 {
-  return lorx_register_submodule(L, "mouse", l_lorx_mouse);
+  return lorx_register_submodule(L, "animpointer", l_lorx_animpointer);
 }
 
 
-// Sub-module: joystick
-static const struct luaL_Reg l_lorx_joystick[] = {
-  { "setup", l_Joystick_Setup },
-  { "init", l_Joystick_Init },
-  { "exit", l_Joystick_Exit },
-  { "getAxisValue", l_Joystick_GetAxisValue },
-  { "isButtonPressed", l_Joystick_IsButtonPressed },
-  { "getButtonName", l_Joystick_GetButtonName },
-  { "getAxisName", l_Joystick_GetAxisName },
-  { "isConnected", l_Joystick_IsConnected },
+// Sub-module: animset
+static const struct luaL_Reg l_lorx_animset[] = {
+  { "setup", l_AnimSet_Setup },
+  { "init", l_AnimSet_Init },
+  { "exit", l_AnimSet_Exit },
+  { "create", l_AnimSet_Create },
+  { "createFromConfig", l_AnimSet_CreateFromConfig },
+  { "clearCache", l_AnimSet_ClearCache },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_joystick(lua_State *L)
+LORX_API int luaopen_lorx_animset(lua_State *L)
 {
-  return lorx_register_submodule(L, "joystick", l_lorx_joystick);
+  return lorx_register_submodule(L, "animset", l_lorx_animset);
 }
 
 
-// Sub-module: keyboard
-static const struct luaL_Reg l_lorx_keyboard[] = {
-  { "setup", l_Keyboard_Setup },
-  { "init", l_Keyboard_Init },
-  { "exit", l_Keyboard_Exit },
-  { "isKeyPressed", l_Keyboard_IsKeyPressed },
-  { "getKeyDisplayName", l_Keyboard_GetKeyDisplayName },
-  { "readKey", l_Keyboard_ReadKey },
-  { "readString", l_Keyboard_ReadString },
-  { "clearBuffer", l_Keyboard_ClearBuffer },
-  { "getKeyName", l_Keyboard_GetKeyName },
-  { "show", l_Keyboard_Show },
+// Sub-module: module
+static const struct luaL_Reg l_lorx_module[] = {
+  { "addDependency", l_Module_AddDependency },
+  { "addOptionalDependency", l_Module_AddOptionalDependency },
+  { "init", l_Module_Init },
+  { "exit", l_Module_Exit },
+  { "isInitialized", l_Module_IsInitialized },
+  { "getName", l_Module_GetName },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_keyboard(lua_State *L)
+LORX_API int luaopen_lorx_module(lua_State *L)
 {
-  return lorx_register_submodule(L, "keyboard", l_lorx_keyboard);
+  return lorx_register_submodule(L, "module", l_lorx_module);
 }
 
 
-// Sub-module: input
-static const struct luaL_Reg l_lorx_input[] = {
-  { "setup", l_Input_Setup },
-  { "init", l_Input_Init },
-  { "exit", l_Input_Exit },
-  { "load", l_Input_Load },
-  { "save", l_Input_Save },
-  { "selectSet", l_Input_SelectSet },
-  { "getCurrentSet", l_Input_GetCurrentSet },
-  { "removeSet", l_Input_RemoveSet },
-  { "enableSet", l_Input_EnableSet },
-  { "isSetEnabled", l_Input_IsSetEnabled },
-  { "setTypeFlags", l_Input_SetTypeFlags },
-  { "isActive", l_Input_IsActive },
-  { "hasBeenActivated", l_Input_HasBeenActivated },
-  { "hasBeenDeactivated", l_Input_HasBeenDeactivated },
-  { "hasNewStatus", l_Input_HasNewStatus },
-  { "getValue", l_Input_GetValue },
-  { "setValue", l_Input_SetValue },
-  { "setPermanentValue", l_Input_SetPermanentValue },
-  { "resetValue", l_Input_ResetValue },
-  { "getThreshold", l_Input_GetThreshold },
-  { "setThreshold", l_Input_SetThreshold },
-  { "getMultiplier", l_Input_GetMultiplier },
-  { "setMultiplier", l_Input_SetMultiplier },
-  { "setCombineMode", l_Input_SetCombineMode },
-  { "isInCombineMode", l_Input_IsInCombineMode },
-  { "bind", l_Input_Bind },
-  { "unbind", l_Input_Unbind },
-  { "getBoundInputCount", l_Input_GetBoundInputCount },
-  { "getBoundInput", l_Input_GetBoundInput },
-  { "getBinding", l_Input_GetBinding },
-  { "getBindingList", l_Input_GetBindingList },
-  { "getBindingName", l_Input_GetBindingName },
-  { "getBindingType", l_Input_GetBindingType },
-  { "getActiveBinding", l_Input_GetActiveBinding },
+// Sub-module: clock
+static const struct luaL_Reg l_lorx_clock[] = {
+  { "setup", l_Clock_Setup },
+  { "init", l_Clock_Init },
+  { "exit", l_Clock_Exit },
+  { "update", l_Clock_Update },
+  { "create", l_Clock_Create },
+  { "createFromConfig", l_Clock_CreateFromConfig },
+  { "resyncAll", l_Clock_ResyncAll },
+  { "getFromInfo", l_Clock_GetFromInfo },
+  { "get", l_Clock_Get },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_input(lua_State *L)
+LORX_API int luaopen_lorx_clock(lua_State *L)
 {
-  return lorx_register_submodule(L, "input", l_lorx_input);
-}
-
-
-// Sub-module: profiler
-static const struct luaL_Reg l_lorx_profiler[] = {
-  { "setup", l_Profiler_Setup },
-  { "init", l_Profiler_Init },
-  { "exit", l_Profiler_Exit },
-  { "getIDFromName", l_Profiler_GetIDFromName },
-  { "isMarkerIDValid", l_Profiler_IsMarkerIDValid },
-  { "pushMarker", l_Profiler_PushMarker },
-  { "popMarker", l_Profiler_PopMarker },
-  { "enableMarkerOperations", l_Profiler_EnableMarkerOperations },
-  { "areMarkerOperationsEnabled", l_Profiler_AreMarkerOperationsEnabled },
-  { "pause", l_Profiler_Pause },
-  { "isPaused", l_Profiler_IsPaused },
-  { "resetAllMarkers", l_Profiler_ResetAllMarkers },
-  { "resetAllMaxima", l_Profiler_ResetAllMaxima },
-  { "getResetTime", l_Profiler_GetResetTime },
-  { "getMaxResetTime", l_Profiler_GetMaxResetTime },
-  { "getMarkerCount", l_Profiler_GetMarkerCount },
-  { "getNextMarkerID", l_Profiler_GetNextMarkerID },
-  { "getNextSortedMarkerID", l_Profiler_GetNextSortedMarkerID },
-  { "selectQueryFrame", l_Profiler_SelectQueryFrame },
-  { "getMarkerTime", l_Profiler_GetMarkerTime },
-  { "getMarkerMaxTime", l_Profiler_GetMarkerMaxTime },
-  { "getMarkerName", l_Profiler_GetMarkerName },
-  { "getMarkerPushCount", l_Profiler_GetMarkerPushCount },
-  { "isUniqueMarker", l_Profiler_IsUniqueMarker },
-  { "getUniqueMarkerStartTime", l_Profiler_GetUniqueMarkerStartTime },
-  { "getUniqueMarkerDepth", l_Profiler_GetUniqueMarkerDepth },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_profiler(lua_State *L)
-{
-  return lorx_register_submodule(L, "profiler", l_lorx_profiler);
-}
-
-
-// Sub-module: fps
-static const struct luaL_Reg l_lorx_fps[] = {
-  { "setup", l_FPS_Setup },
-  { "init", l_FPS_Init },
-  { "exit", l_FPS_Exit },
-  { "increaseFrameCount", l_FPS_IncreaseFrameCount },
-  { "getFPS", l_FPS_GetFPS },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_fps(lua_State *L)
-{
-  return lorx_register_submodule(L, "fps", l_lorx_fps);
-}
-
-
-// Sub-module: debug
-static const struct luaL_Reg l_lorx_debug[] = {
-  { "init", l__orxDebug_Init },
-  { "exit", l__orxDebug_Exit },
-  { "log", l__orxDebug_Log },
-  { "enableLevel", l__orxDebug_EnableLevel },
-  { "isLevelEnabled", l__orxDebug_IsLevelEnabled },
-  { "setFlags", l__orxDebug_SetFlags },
-  { "getFlags", l__orxDebug_GetFlags },
-  { "_break", l__orxDebug_Break },
-  { "setDebugFile", l__orxDebug_SetDebugFile },
-  { "setLogFile", l__orxDebug_SetLogFile },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_debug(lua_State *L)
-{
-  return lorx_register_submodule(L, "debug", l_lorx_debug);
+  return lorx_register_submodule(L, "clock", l_lorx_clock);
 }
 
 
@@ -982,75 +859,6 @@ static const struct luaL_Reg l_lorx_command[] = {
 LORX_API int luaopen_lorx_command(lua_State *L)
 {
   return lorx_register_submodule(L, "command", l_lorx_command);
-}
-
-
-// Sub-module: thread
-static const struct luaL_Reg l_lorx_thread[] = {
-  { "setup", l_Thread_Setup },
-  { "init", l_Thread_Init },
-  { "exit", l_Thread_Exit },
-  { "join", l_Thread_Join },
-  { "joinAll", l_Thread_JoinAll },
-  { "getName", l_Thread_GetName },
-  { "enable", l_Thread_Enable },
-  { "getCurrent", l_Thread_GetCurrent },
-  { "yield", l_Thread_Yield },
-  { "createSemaphore", l_Thread_CreateSemaphore },
-  { "getTaskCount", l_Thread_GetTaskCount },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_thread(lua_State *L)
-{
-  return lorx_register_submodule(L, "thread", l_lorx_thread);
-}
-
-
-// Sub-module: system
-static const struct luaL_Reg l_lorx_system[] = {
-  { "setup", l_System_Setup },
-  { "init", l_System_Init },
-  { "exit", l_System_Exit },
-  { "getTime", l_System_GetTime },
-  { "getRealTime", l_System_GetRealTime },
-  { "getSystemTime", l_System_GetSystemTime },
-  { "delay", l_System_Delay },
-  { "getVersionString", l_System_GetVersionString },
-  { "getVersionFullString", l_System_GetVersionFullString },
-  { "getVersionNumeric", l_System_GetVersionNumeric },
-  { "getClipboard", l_System_GetClipboard },
-  { "setClipboard", l_System_SetClipboard },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_system(lua_State *L)
-{
-  return lorx_register_submodule(L, "system", l_lorx_system);
-}
-
-
-// Sub-module: locale
-static const struct luaL_Reg l_lorx_locale[] = {
-  { "setup", l_Locale_Setup },
-  { "init", l_Locale_Init },
-  { "exit", l_Locale_Exit },
-  { "selectLanguage", l_Locale_SelectLanguage },
-  { "getCurrentLanguage", l_Locale_GetCurrentLanguage },
-  { "hasLanguage", l_Locale_HasLanguage },
-  { "getLanguageCount", l_Locale_GetLanguageCount },
-  { "getLanguage", l_Locale_GetLanguage },
-  { "hasString", l_Locale_HasString },
-  { "getString", l_Locale_GetString },
-  { "setString", l_Locale_SetString },
-  { "getKeyCount", l_Locale_GetKeyCount },
-  { "getKey", l_Locale_GetKey },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_locale(lua_State *L)
-{
-  return lorx_register_submodule(L, "locale", l_lorx_locale);
 }
 
 
@@ -1132,23 +940,71 @@ LORX_API int luaopen_lorx_config(lua_State *L)
 }
 
 
-// Sub-module: clock
-static const struct luaL_Reg l_lorx_clock[] = {
-  { "setup", l_Clock_Setup },
-  { "init", l_Clock_Init },
-  { "exit", l_Clock_Exit },
-  { "update", l_Clock_Update },
-  { "create", l_Clock_Create },
-  { "createFromConfig", l_Clock_CreateFromConfig },
-  { "resyncAll", l_Clock_ResyncAll },
-  { "getFromInfo", l_Clock_GetFromInfo },
-  { "get", l_Clock_Get },
+// Sub-module: console
+static const struct luaL_Reg l_lorx_console[] = {
+  { "setup", l_Console_Setup },
+  { "init", l_Console_Init },
+  { "exit", l_Console_Exit },
+  { "enable", l_Console_Enable },
+  { "isEnabled", l_Console_IsEnabled },
+  { "isInsertMode", l_Console_IsInsertMode },
+  { "setToggle", l_Console_SetToggle },
+  { "log", l_Console_Log },
+  { "setFont", l_Console_SetFont },
+  { "getFontConst", l_Console_GetFont },
+  { "setLogLineLength", l_Console_SetLogLineLength },
+  { "getLogLineLength", l_Console_GetLogLineLength },
+  { "getCompletionCount", l_Console_GetCompletionCount },
+  { "getCompletion", l_Console_GetCompletion },
+  { "getTrailLogLine", l_Console_GetTrailLogLine },
+  { "getTrailLogLineOffset", l_Console_GetTrailLogLineOffset },
+  { "getInput", l_Console_GetInput },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_clock(lua_State *L)
+LORX_API int luaopen_lorx_console(lua_State *L)
 {
-  return lorx_register_submodule(L, "clock", l_lorx_clock);
+  return lorx_register_submodule(L, "console", l_lorx_console);
+}
+
+
+// Sub-module: event
+static const struct luaL_Reg l_lorx_event[] = {
+  { "setup", l_Event_Setup },
+  { "init", l_Event_Init },
+  { "exit", l_Event_Exit },
+  { "sendShort", l_Event_SendShort },
+  { "isSending", l_Event_IsSending },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_event(lua_State *L)
+{
+  return lorx_register_submodule(L, "event", l_lorx_event);
+}
+
+
+// Sub-module: locale
+static const struct luaL_Reg l_lorx_locale[] = {
+  { "setup", l_Locale_Setup },
+  { "init", l_Locale_Init },
+  { "exit", l_Locale_Exit },
+  { "selectLanguage", l_Locale_SelectLanguage },
+  { "getCurrentLanguage", l_Locale_GetCurrentLanguage },
+  { "hasLanguage", l_Locale_HasLanguage },
+  { "getLanguageCount", l_Locale_GetLanguageCount },
+  { "getLanguage", l_Locale_GetLanguage },
+  { "hasString", l_Locale_HasString },
+  { "getString", l_Locale_GetString },
+  { "setString", l_Locale_SetString },
+  { "getKeyCount", l_Locale_GetKeyCount },
+  { "getKey", l_Locale_GetKey },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_locale(lua_State *L)
+{
+  return lorx_register_submodule(L, "locale", l_lorx_locale);
 }
 
 
@@ -1190,222 +1046,122 @@ LORX_API int luaopen_lorx_resource(lua_State *L)
 }
 
 
-// Sub-module: event
-static const struct luaL_Reg l_lorx_event[] = {
-  { "setup", l_Event_Setup },
-  { "init", l_Event_Init },
-  { "exit", l_Event_Exit },
-  { "sendShort", l_Event_SendShort },
-  { "isSending", l_Event_IsSending },
+// Sub-module: system
+static const struct luaL_Reg l_lorx_system[] = {
+  { "setup", l_System_Setup },
+  { "init", l_System_Init },
+  { "exit", l_System_Exit },
+  { "getTime", l_System_GetTime },
+  { "getRealTime", l_System_GetRealTime },
+  { "getSystemTime", l_System_GetSystemTime },
+  { "delay", l_System_Delay },
+  { "getVersionString", l_System_GetVersionString },
+  { "getVersionFullString", l_System_GetVersionFullString },
+  { "getVersionNumeric", l_System_GetVersionNumeric },
+  { "getClipboard", l_System_GetClipboard },
+  { "setClipboard", l_System_SetClipboard },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_event(lua_State *L)
+LORX_API int luaopen_lorx_system(lua_State *L)
 {
-  return lorx_register_submodule(L, "event", l_lorx_event);
+  return lorx_register_submodule(L, "system", l_lorx_system);
 }
 
 
-// Sub-module: console
-static const struct luaL_Reg l_lorx_console[] = {
-  { "setup", l_Console_Setup },
-  { "init", l_Console_Init },
-  { "exit", l_Console_Exit },
-  { "enable", l_Console_Enable },
-  { "isEnabled", l_Console_IsEnabled },
-  { "isInsertMode", l_Console_IsInsertMode },
-  { "setToggle", l_Console_SetToggle },
-  { "log", l_Console_Log },
-  { "setFont", l_Console_SetFont },
-  { "getFontConst", l_Console_GetFont },
-  { "setLogLineLength", l_Console_SetLogLineLength },
-  { "getLogLineLength", l_Console_GetLogLineLength },
-  { "getCompletionCount", l_Console_GetCompletionCount },
-  { "getCompletion", l_Console_GetCompletion },
-  { "getTrailLogLine", l_Console_GetTrailLogLine },
-  { "getTrailLogLineOffset", l_Console_GetTrailLogLineOffset },
-  { "getInput", l_Console_GetInput },
+// Sub-module: thread
+static const struct luaL_Reg l_lorx_thread[] = {
+  { "setup", l_Thread_Setup },
+  { "init", l_Thread_Init },
+  { "exit", l_Thread_Exit },
+  { "join", l_Thread_Join },
+  { "joinAll", l_Thread_JoinAll },
+  { "getName", l_Thread_GetName },
+  { "enable", l_Thread_Enable },
+  { "getCurrent", l_Thread_GetCurrent },
+  { "yield", l_Thread_Yield },
+  { "createSemaphore", l_Thread_CreateSemaphore },
+  { "getTaskCount", l_Thread_GetTaskCount },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_console(lua_State *L)
+LORX_API int luaopen_lorx_thread(lua_State *L)
 {
-  return lorx_register_submodule(L, "console", l_lorx_console);
+  return lorx_register_submodule(L, "thread", l_lorx_thread);
 }
 
 
-// Sub-module: animpointer
-static const struct luaL_Reg l_lorx_animpointer[] = {
-  { "setup", l_AnimPointer_Setup },
-  { "init", l_AnimPointer_Init },
-  { "exit", l_AnimPointer_Exit },
-  { "create", l_AnimPointer_Create },
-  { "createFromConfig", l_AnimPointer_CreateFromConfig },
+// Sub-module: debug
+static const struct luaL_Reg l_lorx_debug[] = {
+  { "init", l__orxDebug_Init },
+  { "exit", l__orxDebug_Exit },
+  { "log", l__orxDebug_Log },
+  { "enableLevel", l__orxDebug_EnableLevel },
+  { "isLevelEnabled", l__orxDebug_IsLevelEnabled },
+  { "setFlags", l__orxDebug_SetFlags },
+  { "getFlags", l__orxDebug_GetFlags },
+  { "_break", l__orxDebug_Break },
+  { "setDebugFile", l__orxDebug_SetDebugFile },
+  { "setLogFile", l__orxDebug_SetLogFile },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_animpointer(lua_State *L)
+LORX_API int luaopen_lorx_debug(lua_State *L)
 {
-  return lorx_register_submodule(L, "animpointer", l_lorx_animpointer);
+  return lorx_register_submodule(L, "debug", l_lorx_debug);
 }
 
 
-// Sub-module: animset
-static const struct luaL_Reg l_lorx_animset[] = {
-  { "setup", l_AnimSet_Setup },
-  { "init", l_AnimSet_Init },
-  { "exit", l_AnimSet_Exit },
-  { "create", l_AnimSet_Create },
-  { "createFromConfig", l_AnimSet_CreateFromConfig },
-  { "clearCache", l_AnimSet_ClearCache },
+// Sub-module: fps
+static const struct luaL_Reg l_lorx_fps[] = {
+  { "setup", l_FPS_Setup },
+  { "init", l_FPS_Init },
+  { "exit", l_FPS_Exit },
+  { "increaseFrameCount", l_FPS_IncreaseFrameCount },
+  { "getFPS", l_FPS_GetFPS },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_animset(lua_State *L)
+LORX_API int luaopen_lorx_fps(lua_State *L)
 {
-  return lorx_register_submodule(L, "animset", l_lorx_animset);
+  return lorx_register_submodule(L, "fps", l_lorx_fps);
 }
 
 
-// Sub-module: anim
-static const struct luaL_Reg l_lorx_anim[] = {
-  { "setup", l_Anim_Setup },
-  { "init", l_Anim_Init },
-  { "exit", l_Anim_Exit },
-  { "create", l_Anim_Create },
-  { "animCustomEvent", l_lorx_orxANIM_CUSTOM_EVENT_create },
+// Sub-module: profiler
+static const struct luaL_Reg l_lorx_profiler[] = {
+  { "setup", l_Profiler_Setup },
+  { "init", l_Profiler_Init },
+  { "exit", l_Profiler_Exit },
+  { "getIDFromName", l_Profiler_GetIDFromName },
+  { "isMarkerIDValid", l_Profiler_IsMarkerIDValid },
+  { "pushMarker", l_Profiler_PushMarker },
+  { "popMarker", l_Profiler_PopMarker },
+  { "enableMarkerOperations", l_Profiler_EnableMarkerOperations },
+  { "areMarkerOperationsEnabled", l_Profiler_AreMarkerOperationsEnabled },
+  { "pause", l_Profiler_Pause },
+  { "isPaused", l_Profiler_IsPaused },
+  { "resetAllMarkers", l_Profiler_ResetAllMarkers },
+  { "resetAllMaxima", l_Profiler_ResetAllMaxima },
+  { "getResetTime", l_Profiler_GetResetTime },
+  { "getMaxResetTime", l_Profiler_GetMaxResetTime },
+  { "getMarkerCount", l_Profiler_GetMarkerCount },
+  { "getNextMarkerID", l_Profiler_GetNextMarkerID },
+  { "getNextSortedMarkerID", l_Profiler_GetNextSortedMarkerID },
+  { "selectQueryFrame", l_Profiler_SelectQueryFrame },
+  { "getMarkerTime", l_Profiler_GetMarkerTime },
+  { "getMarkerMaxTime", l_Profiler_GetMarkerMaxTime },
+  { "getMarkerName", l_Profiler_GetMarkerName },
+  { "getMarkerPushCount", l_Profiler_GetMarkerPushCount },
+  { "isUniqueMarker", l_Profiler_IsUniqueMarker },
+  { "getUniqueMarkerStartTime", l_Profiler_GetUniqueMarkerStartTime },
+  { "getUniqueMarkerDepth", l_Profiler_GetUniqueMarkerDepth },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_anim(lua_State *L)
+LORX_API int luaopen_lorx_profiler(lua_State *L)
 {
-  return lorx_register_submodule(L, "anim", l_lorx_anim);
-}
-
-
-// Sub-module: shaderpointer
-static const struct luaL_Reg l_lorx_shaderpointer[] = {
-  { "setup", l_ShaderPointer_Setup },
-  { "init", l_ShaderPointer_Init },
-  { "exit", l_ShaderPointer_Exit },
-  { "create", l_ShaderPointer_Create },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_shaderpointer(lua_State *L)
-{
-  return lorx_register_submodule(L, "shaderpointer", l_lorx_shaderpointer);
-}
-
-
-// Sub-module: shader
-static const struct luaL_Reg l_lorx_shader[] = {
-  { "setup", l_Shader_Setup },
-  { "init", l_Shader_Init },
-  { "exit", l_Shader_Exit },
-  { "create", l_Shader_Create },
-  { "createFromConfig", l_Shader_CreateFromConfig },
-  { "clearCache", l_Shader_ClearCache },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_shader(lua_State *L)
-{
-  return lorx_register_submodule(L, "shader", l_lorx_shader);
-}
-
-
-// Sub-module: viewport
-static const struct luaL_Reg l_lorx_viewport[] = {
-  { "setup", l_Viewport_Setup },
-  { "init", l_Viewport_Init },
-  { "exit", l_Viewport_Exit },
-  { "create", l_Viewport_Create },
-  { "createFromConfig", l_Viewport_CreateFromConfig },
-  { "get", l_Viewport_Get },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_viewport(lua_State *L)
-{
-  return lorx_register_submodule(L, "viewport", l_lorx_viewport);
-}
-
-
-// Sub-module: camera
-static const struct luaL_Reg l_lorx_camera[] = {
-  { "setup", l_Camera_Setup },
-  { "init", l_Camera_Init },
-  { "exit", l_Camera_Exit },
-  { "create", l_Camera_Create },
-  { "createFromConfig", l_Camera_CreateFromConfig },
-  { "get", l_Camera_Get },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_camera(lua_State *L)
-{
-  return lorx_register_submodule(L, "camera", l_lorx_camera);
-}
-
-
-// Sub-module: render
-static const struct luaL_Reg l_lorx_render[] = {
-  { "setup", l_Render_Setup },
-  { "init", l_Render_Init },
-  { "exit", l_Render_Exit },
-  { "getWorldPosition", l_Render_GetWorldPosition },
-  { "getScreenPosition", l_Render_GetScreenPosition },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_render(lua_State *L)
-{
-  return lorx_register_submodule(L, "render", l_lorx_render);
-}
-
-
-// Sub-module: math
-static const struct luaL_Reg l_lorx_math[] = {
-  { "initRandom", l_Math_InitRandom },
-  { "getRandomFloat", l_Math_GetRandomFloat },
-  { "getSteppedRandomFloat", l_Math_GetSteppedRandomFloat },
-  { "getRandomU32", l_Math_GetRandomU32 },
-  { "getSteppedRandomU32", l_Math_GetSteppedRandomU32 },
-  { "getRandomS32", l_Math_GetRandomS32 },
-  { "getSteppedRandomS32", l_Math_GetSteppedRandomS32 },
-  { "getRandomU64", l_Math_GetRandomU64 },
-  { "getSteppedRandomU64", l_Math_GetSteppedRandomU64 },
-  { "getRandomS64", l_Math_GetRandomS64 },
-  { "getSteppedRandomS64", l_Math_GetSteppedRandomS64 },
-  { "getRandomSeeds", l_Math_GetRandomSeeds },
-  { "setRandomSeeds", l_Math_SetRandomSeeds },
-  { "getBitCount", l_Math_GetBitCount },
-  { "getTrailingZeroCount", l_Math_GetTrailingZeroCount },
-  { "getTrailingZeroCount64", l_Math_GetTrailingZeroCount64 },
-  { "isPowerOfTwo", l_Math_IsPowerOfTwo },
-  { "getNextPowerOfTwo", l_Math_GetNextPowerOfTwo },
-  { "smoothStep", l_Math_SmoothStep },
-  { "smootherStep", l_Math_SmootherStep },
-  { "sin", l_Math_Sin },
-  { "cos", l_Math_Cos },
-  { "tan", l_Math_Tan },
-  { "aCos", l_Math_ACos },
-  { "aSin", l_Math_ASin },
-  { "aTan", l_Math_ATan },
-  { "sqrt", l_Math_Sqrt },
-  { "floor", l_Math_Floor },
-  { "ceil", l_Math_Ceil },
-  { "round", l_Math_Round },
-  { "mod", l_Math_Mod },
-  { "pow", l_Math_Pow },
-  { "abs", l_Math_Abs },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_math(lua_State *L)
-{
-  return lorx_register_submodule(L, "math", l_lorx_math);
+  return lorx_register_submodule(L, "profiler", l_lorx_profiler);
 }
 
 
@@ -1466,6 +1222,41 @@ LORX_API int luaopen_lorx_display(lua_State *L)
 }
 
 
+// Sub-module: font
+static const struct luaL_Reg l_lorx_font[] = {
+  { "setup", l_Font_Setup },
+  { "init", l_Font_Init },
+  { "exit", l_Font_Exit },
+  { "create", l_Font_Create },
+  { "createFromConfig", l_Font_CreateFromConfig },
+  { "getDefaultFontConst", l_Font_GetDefaultFont },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_font(lua_State *L)
+{
+  return lorx_register_submodule(L, "font", l_lorx_font);
+}
+
+
+// Sub-module: graphic
+static const struct luaL_Reg l_lorx_graphic[] = {
+  { "setup", l_Graphic_Setup },
+  { "init", l_Graphic_Init },
+  { "exit", l_Graphic_Exit },
+  { "getAlignFlags", l_Graphic_GetAlignFlags },
+  { "alignVector", l_Graphic_AlignVector },
+  { "create", l_Graphic_Create },
+  { "createFromConfig", l_Graphic_CreateFromConfig },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_graphic(lua_State *L)
+{
+  return lorx_register_submodule(L, "graphic", l_lorx_graphic);
+}
+
+
 // Sub-module: screenshot
 static const struct luaL_Reg l_lorx_screenshot[] = {
   { "setup", l_Screenshot_Setup },
@@ -1481,20 +1272,19 @@ LORX_API int luaopen_lorx_screenshot(lua_State *L)
 }
 
 
-// Sub-module: font
-static const struct luaL_Reg l_lorx_font[] = {
-  { "setup", l_Font_Setup },
-  { "init", l_Font_Init },
-  { "exit", l_Font_Exit },
-  { "create", l_Font_Create },
-  { "createFromConfig", l_Font_CreateFromConfig },
-  { "getDefaultFontConst", l_Font_GetDefaultFont },
+// Sub-module: text
+static const struct luaL_Reg l_lorx_text[] = {
+  { "setup", l_Text_Setup },
+  { "init", l_Text_Init },
+  { "exit", l_Text_Exit },
+  { "create", l_Text_Create },
+  { "createFromConfig", l_Text_CreateFromConfig },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_font(lua_State *L)
+LORX_API int luaopen_lorx_text(lua_State *L)
 {
-  return lorx_register_submodule(L, "font", l_lorx_font);
+  return lorx_register_submodule(L, "text", l_lorx_text);
 }
 
 
@@ -1518,54 +1308,330 @@ LORX_API int luaopen_lorx_texture(lua_State *L)
 }
 
 
-// Sub-module: text
-static const struct luaL_Reg l_lorx_text[] = {
-  { "setup", l_Text_Setup },
-  { "init", l_Text_Init },
-  { "exit", l_Text_Exit },
-  { "create", l_Text_Create },
-  { "createFromConfig", l_Text_CreateFromConfig },
+// Sub-module: file
+static const struct luaL_Reg l_lorx_file[] = {
+  { "setup", l_File_Setup },
+  { "init", l_File_Init },
+  { "exit", l_File_Exit },
+  { "getHomeDirectory", l_File_GetHomeDirectory },
+  { "getApplicationSaveDirectory", l_File_GetApplicationSaveDirectory },
+  { "exists", l_File_Exists },
+  { "findFirst", l_File_FindFirst },
+  { "getInfo", l_File_GetInfo },
+  { "remove", l_File_Remove },
+  { "makeDirectory", l_File_MakeDirectory },
+  { "open", l_File_Open },
+  { "read", l_File_Read },
+  { "write", l_File_Write },
+  { "delete", l_File_Delete },
+  { "fileInfo", l_lorx_orxFILE_INFO_create },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_text(lua_State *L)
+LORX_API int luaopen_lorx_file(lua_State *L)
 {
-  return lorx_register_submodule(L, "text", l_lorx_text);
+  return lorx_register_submodule(L, "file", l_lorx_file);
 }
 
 
-// Sub-module: graphic
-static const struct luaL_Reg l_lorx_graphic[] = {
-  { "setup", l_Graphic_Setup },
-  { "init", l_Graphic_Init },
-  { "exit", l_Graphic_Exit },
-  { "getAlignFlags", l_Graphic_GetAlignFlags },
-  { "alignVector", l_Graphic_AlignVector },
-  { "create", l_Graphic_Create },
-  { "createFromConfig", l_Graphic_CreateFromConfig },
+// Sub-module: input
+static const struct luaL_Reg l_lorx_input[] = {
+  { "setup", l_Input_Setup },
+  { "init", l_Input_Init },
+  { "exit", l_Input_Exit },
+  { "load", l_Input_Load },
+  { "save", l_Input_Save },
+  { "selectSet", l_Input_SelectSet },
+  { "getCurrentSet", l_Input_GetCurrentSet },
+  { "removeSet", l_Input_RemoveSet },
+  { "enableSet", l_Input_EnableSet },
+  { "isSetEnabled", l_Input_IsSetEnabled },
+  { "setTypeFlags", l_Input_SetTypeFlags },
+  { "isActive", l_Input_IsActive },
+  { "hasBeenActivated", l_Input_HasBeenActivated },
+  { "hasBeenDeactivated", l_Input_HasBeenDeactivated },
+  { "hasNewStatus", l_Input_HasNewStatus },
+  { "getValue", l_Input_GetValue },
+  { "setValue", l_Input_SetValue },
+  { "setPermanentValue", l_Input_SetPermanentValue },
+  { "resetValue", l_Input_ResetValue },
+  { "getThreshold", l_Input_GetThreshold },
+  { "setThreshold", l_Input_SetThreshold },
+  { "getMultiplier", l_Input_GetMultiplier },
+  { "setMultiplier", l_Input_SetMultiplier },
+  { "setCombineMode", l_Input_SetCombineMode },
+  { "isInCombineMode", l_Input_IsInCombineMode },
+  { "bind", l_Input_Bind },
+  { "unbind", l_Input_Unbind },
+  { "getBoundInputCount", l_Input_GetBoundInputCount },
+  { "getBoundInput", l_Input_GetBoundInput },
+  { "getBinding", l_Input_GetBinding },
+  { "getBindingList", l_Input_GetBindingList },
+  { "getBindingName", l_Input_GetBindingName },
+  { "getBindingType", l_Input_GetBindingType },
+  { "getActiveBinding", l_Input_GetActiveBinding },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_graphic(lua_State *L)
+LORX_API int luaopen_lorx_input(lua_State *L)
 {
-  return lorx_register_submodule(L, "graphic", l_lorx_graphic);
+  return lorx_register_submodule(L, "input", l_lorx_input);
 }
 
 
-// Sub-module: module
-static const struct luaL_Reg l_lorx_module[] = {
-  { "addDependency", l_Module_AddDependency },
-  { "addOptionalDependency", l_Module_AddOptionalDependency },
-  { "init", l_Module_Init },
-  { "exit", l_Module_Exit },
-  { "isInitialized", l_Module_IsInitialized },
-  { "getName", l_Module_GetName },
+// Sub-module: joystick
+static const struct luaL_Reg l_lorx_joystick[] = {
+  { "setup", l_Joystick_Setup },
+  { "init", l_Joystick_Init },
+  { "exit", l_Joystick_Exit },
+  { "getAxisValue", l_Joystick_GetAxisValue },
+  { "isButtonPressed", l_Joystick_IsButtonPressed },
+  { "getButtonName", l_Joystick_GetButtonName },
+  { "getAxisName", l_Joystick_GetAxisName },
+  { "isConnected", l_Joystick_IsConnected },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_module(lua_State *L)
+LORX_API int luaopen_lorx_joystick(lua_State *L)
 {
-  return lorx_register_submodule(L, "module", l_lorx_module);
+  return lorx_register_submodule(L, "joystick", l_lorx_joystick);
+}
+
+
+// Sub-module: keyboard
+static const struct luaL_Reg l_lorx_keyboard[] = {
+  { "setup", l_Keyboard_Setup },
+  { "init", l_Keyboard_Init },
+  { "exit", l_Keyboard_Exit },
+  { "isKeyPressed", l_Keyboard_IsKeyPressed },
+  { "getKeyDisplayName", l_Keyboard_GetKeyDisplayName },
+  { "readKey", l_Keyboard_ReadKey },
+  { "readString", l_Keyboard_ReadString },
+  { "clearBuffer", l_Keyboard_ClearBuffer },
+  { "getKeyName", l_Keyboard_GetKeyName },
+  { "show", l_Keyboard_Show },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_keyboard(lua_State *L)
+{
+  return lorx_register_submodule(L, "keyboard", l_lorx_keyboard);
+}
+
+
+// Sub-module: mouse
+static const struct luaL_Reg l_lorx_mouse[] = {
+  { "setup", l_Mouse_Setup },
+  { "init", l_Mouse_Init },
+  { "exit", l_Mouse_Exit },
+  { "setPosition", l_Mouse_SetPosition },
+  { "getPosition", l_Mouse_GetPosition },
+  { "isButtonPressed", l_Mouse_IsButtonPressed },
+  { "getMoveDelta", l_Mouse_GetMoveDelta },
+  { "getWheelDelta", l_Mouse_GetWheelDelta },
+  { "showCursor", l_Mouse_ShowCursor },
+  { "grab", l_Mouse_Grab },
+  { "setCursor", l_Mouse_SetCursor },
+  { "getButtonName", l_Mouse_GetButtonName },
+  { "getAxisName", l_Mouse_GetAxisName },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_mouse(lua_State *L)
+{
+  return lorx_register_submodule(L, "mouse", l_lorx_mouse);
+}
+
+
+// Sub-module: math
+static const struct luaL_Reg l_lorx_math[] = {
+  { "initRandom", l_Math_InitRandom },
+  { "getRandomFloat", l_Math_GetRandomFloat },
+  { "getSteppedRandomFloat", l_Math_GetSteppedRandomFloat },
+  { "getRandomU32", l_Math_GetRandomU32 },
+  { "getSteppedRandomU32", l_Math_GetSteppedRandomU32 },
+  { "getRandomS32", l_Math_GetRandomS32 },
+  { "getSteppedRandomS32", l_Math_GetSteppedRandomS32 },
+  { "getRandomU64", l_Math_GetRandomU64 },
+  { "getSteppedRandomU64", l_Math_GetSteppedRandomU64 },
+  { "getRandomS64", l_Math_GetRandomS64 },
+  { "getSteppedRandomS64", l_Math_GetSteppedRandomS64 },
+  { "getRandomSeeds", l_Math_GetRandomSeeds },
+  { "setRandomSeeds", l_Math_SetRandomSeeds },
+  { "getBitCount", l_Math_GetBitCount },
+  { "getTrailingZeroCount", l_Math_GetTrailingZeroCount },
+  { "getTrailingZeroCount64", l_Math_GetTrailingZeroCount64 },
+  { "isPowerOfTwo", l_Math_IsPowerOfTwo },
+  { "getNextPowerOfTwo", l_Math_GetNextPowerOfTwo },
+  { "smoothStep", l_Math_SmoothStep },
+  { "smootherStep", l_Math_SmootherStep },
+  { "sin", l_Math_Sin },
+  { "cos", l_Math_Cos },
+  { "tan", l_Math_Tan },
+  { "aCos", l_Math_ACos },
+  { "aSin", l_Math_ASin },
+  { "aTan", l_Math_ATan },
+  { "sqrt", l_Math_Sqrt },
+  { "floor", l_Math_Floor },
+  { "ceil", l_Math_Ceil },
+  { "round", l_Math_Round },
+  { "mod", l_Math_Mod },
+  { "pow", l_Math_Pow },
+  { "abs", l_Math_Abs },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_math(lua_State *L)
+{
+  return lorx_register_submodule(L, "math", l_lorx_math);
+}
+
+
+// Sub-module: frame
+static const struct luaL_Reg l_lorx_frame[] = {
+  { "getIgnoreFlagValues", l_Frame_GetIgnoreFlagValues },
+  { "getIgnoreFlagNames", l_Frame_GetIgnoreFlagNames },
+  { "setup", l_Frame_Setup },
+  { "init", l_Frame_Init },
+  { "exit", l_Frame_Exit },
+  { "create", l_Frame_Create },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_frame(lua_State *L)
+{
+  return lorx_register_submodule(L, "frame", l_lorx_frame);
+}
+
+
+// Sub-module: fx
+static const struct luaL_Reg l_lorx_fx[] = {
+  { "setup", l_FX_Setup },
+  { "init", l_FX_Init },
+  { "exit", l_FX_Exit },
+  { "create", l_FX_Create },
+  { "createFromConfig", l_FX_CreateFromConfig },
+  { "clearCache", l_FX_ClearCache },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_fx(lua_State *L)
+{
+  return lorx_register_submodule(L, "fx", l_lorx_fx);
+}
+
+
+// Sub-module: fxpointer
+static const struct luaL_Reg l_lorx_fxpointer[] = {
+  { "setup", l_FXPointer_Setup },
+  { "init", l_FXPointer_Init },
+  { "exit", l_FXPointer_Exit },
+  { "create", l_FXPointer_Create },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_fxpointer(lua_State *L)
+{
+  return lorx_register_submodule(L, "fxpointer", l_lorx_fxpointer);
+}
+
+
+// Sub-module: object
+static const struct luaL_Reg l_lorx_object[] = {
+  { "setup", l_Object_Setup },
+  { "init", l_Object_Init },
+  { "exit", l_Object_Exit },
+  { "create", l_Object_Create },
+  { "createFromConfig", l_Object_CreateFromConfig },
+  { "getStructure", l__orxObject_GetStructure },
+  { "raycast", l_Object_Raycast },
+  { "getDefaultGroupID", l_Object_GetDefaultGroupID },
+  { "getNext", l_Object_GetNext },
+  { "getNextEnabled", l_Object_GetNextEnabled },
+  { "pick", l_Object_Pick },
+  { "boxPick", l_Object_BoxPick },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_object(lua_State *L)
+{
+  return lorx_register_submodule(L, "object", l_lorx_object);
+}
+
+
+// Sub-module: spawner
+static const struct luaL_Reg l_lorx_spawner[] = {
+  { "setup", l_Spawner_Setup },
+  { "init", l_Spawner_Init },
+  { "exit", l_Spawner_Exit },
+  { "create", l_Spawner_Create },
+  { "createFromConfig", l_Spawner_CreateFromConfig },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_spawner(lua_State *L)
+{
+  return lorx_register_submodule(L, "spawner", l_lorx_spawner);
+}
+
+
+// Sub-module: structure
+static const struct luaL_Reg l_lorx_structure[] = {
+  { "setup", l_Structure_Setup },
+  { "init", l_Structure_Init },
+  { "exit", l_Structure_Exit },
+  { "unregister", l_Structure_Unregister },
+  { "create", l_Structure_Create },
+  { "delete", l_Structure_Delete },
+  { "getStorageType", l_Structure_GetStorageType },
+  { "getCount", l_Structure_GetCount },
+  { "update", l_Structure_Update },
+  { "get", l_Structure_Get },
+  { "getOwner", l_Structure_GetOwner },
+  { "setOwner", l_Structure_SetOwner },
+  { "getFirst", l_Structure_GetFirst },
+  { "getLast", l_Structure_GetLast },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "setParent", l_Structure_SetParent },
+  { "logAll", l_Structure_LogAll },
+  { "getPointer", l__orxStructure_GetPointer },
+  { "getIDString", l_Structure_GetIDString },
+  { "increaseCount", l_Structure_IncreaseCount },
+  { "decreaseCount", l_Structure_DecreaseCount },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  { "setFlags", l_Structure_SetFlags },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_structure(lua_State *L)
+{
+  return lorx_register_submodule(L, "structure", l_lorx_structure);
+}
+
+
+// Sub-module: timeline
+static const struct luaL_Reg l_lorx_timeline[] = {
+  { "setup", l_TimeLine_Setup },
+  { "init", l_TimeLine_Init },
+  { "exit", l_TimeLine_Exit },
+  { "create", l_TimeLine_Create },
+  { "clearCache", l_TimeLine_ClearCache },
+  { "getTrackDuration", l_TimeLine_GetTrackDuration },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_timeline(lua_State *L)
+{
+  return lorx_register_submodule(L, "timeline", l_lorx_timeline);
 }
 
 
@@ -1607,87 +1673,85 @@ LORX_API int luaopen_lorx_physics(lua_State *L)
 }
 
 
-// Sub-module: string
-static const struct luaL_Reg l_lorx_string[] = {
-  { "setup", l_String_Setup },
-  { "init", l_String_Init },
-  { "exit", l_String_Exit },
-  { "nHash", l_String_NHash },
-  { "hash", l_String_Hash },
-  { "getID", l_String_GetID },
-  { "getFromID", l_String_GetFromID },
-  { "store", l_String_Store },
-  { "skipWhiteSpaces", l_String_SkipWhiteSpaces },
-  { "skipPath", l_String_SkipPath },
-  { "getLength", l_String_GetLength },
-  { "isCharacterASCII", l_String_IsCharacterASCII },
-  { "isCharacterAlphaNumeric", l_String_IsCharacterAlphaNumeric },
-  { "getUTF8CharacterLength", l_String_GetUTF8CharacterLength },
-  { "getFirstCharacterCodePoint", l_String_GetFirstCharacterCodePoint },
-  { "getCharacterCount", l_String_GetCharacterCount },
-  { "duplicate", l_String_Duplicate },
-  { "compare", l_String_Compare },
-  { "nCompare", l_String_NCompare },
-  { "iCompare", l_String_ICompare },
-  { "nICompare", l_String_NICompare },
-  { "extractBase", l_String_ExtractBase },
-  { "toS32Base", l_String_ToS32Base },
-  { "toS32", l_String_ToS32 },
-  { "toU32Base", l_String_ToU32Base },
-  { "toU32", l_String_ToU32 },
-  { "toS64Base", l_String_ToS64Base },
-  { "toS64", l_String_ToS64 },
-  { "toU64Base", l_String_ToU64Base },
-  { "toU64", l_String_ToU64 },
-  { "toFloat", l_String_ToFloat },
-  { "toVector", l_String_ToVector },
-  { "toBool", l_String_ToBool },
-  { "searchString", l_String_SearchString },
-  { "searchChar", l_String_SearchChar },
-  { "searchCharIndex", l_String_SearchCharIndex },
-  { "scan", l_String_Scan },
-  { "getExtension", l_String_GetExtension },
+// Sub-module: camera
+static const struct luaL_Reg l_lorx_camera[] = {
+  { "setup", l_Camera_Setup },
+  { "init", l_Camera_Init },
+  { "exit", l_Camera_Exit },
+  { "create", l_Camera_Create },
+  { "createFromConfig", l_Camera_CreateFromConfig },
+  { "get", l_Camera_Get },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_string(lua_State *L)
+LORX_API int luaopen_lorx_camera(lua_State *L)
 {
-  return lorx_register_submodule(L, "string", l_lorx_string);
+  return lorx_register_submodule(L, "camera", l_lorx_camera);
 }
 
 
-// Sub-module: soundsystem
-static const struct luaL_Reg l_lorx_soundsystem[] = {
-  { "setup", l_SoundSystem_Setup },
-  { "init", l_SoundSystem_Init },
-  { "exit", l_SoundSystem_Exit },
-  { "createSample", l_SoundSystem_CreateSample },
-  { "loadSample", l_SoundSystem_LoadSample },
-  { "createFromSample", l_SoundSystem_CreateFromSample },
-  { "createStream", l_SoundSystem_CreateStream },
-  { "createStreamFromFile", l_SoundSystem_CreateStreamFromFile },
-  { "createBus", l_SoundSystem_CreateBus },
-  { "deleteBus", l_SoundSystem_DeleteBus },
-  { "setBusParent", l_SoundSystem_SetBusParent },
-  { "addBusFilter", l_SoundSystem_AddBusFilter },
-  { "removeLastBusFilter", l_SoundSystem_RemoveLastBusFilter },
-  { "removeAllBusFilters", l_SoundSystem_RemoveAllBusFilters },
-  { "startRecording", l_SoundSystem_StartRecording },
-  { "stopRecording", l_SoundSystem_StopRecording },
-  { "hasRecordingSupport", l_SoundSystem_HasRecordingSupport },
-  { "setGlobalVolume", l_SoundSystem_SetGlobalVolume },
-  { "getGlobalVolume", l_SoundSystem_GetGlobalVolume },
-  { "getListenerCount", l_SoundSystem_GetListenerCount },
-  { "enableListener", l_SoundSystem_EnableListener },
-  { "isListenerEnabled", l_SoundSystem_IsListenerEnabled },
-  { "setListenerPosition", l_SoundSystem_SetListenerPosition },
-  { "getListenerPosition", l_SoundSystem_GetListenerPosition },
+// Sub-module: render
+static const struct luaL_Reg l_lorx_render[] = {
+  { "setup", l_Render_Setup },
+  { "init", l_Render_Init },
+  { "exit", l_Render_Exit },
+  { "getWorldPosition", l_Render_GetWorldPosition },
+  { "getScreenPosition", l_Render_GetScreenPosition },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_soundsystem(lua_State *L)
+LORX_API int luaopen_lorx_render(lua_State *L)
 {
-  return lorx_register_submodule(L, "soundsystem", l_lorx_soundsystem);
+  return lorx_register_submodule(L, "render", l_lorx_render);
+}
+
+
+// Sub-module: shader
+static const struct luaL_Reg l_lorx_shader[] = {
+  { "setup", l_Shader_Setup },
+  { "init", l_Shader_Init },
+  { "exit", l_Shader_Exit },
+  { "create", l_Shader_Create },
+  { "createFromConfig", l_Shader_CreateFromConfig },
+  { "clearCache", l_Shader_ClearCache },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_shader(lua_State *L)
+{
+  return lorx_register_submodule(L, "shader", l_lorx_shader);
+}
+
+
+// Sub-module: shaderpointer
+static const struct luaL_Reg l_lorx_shaderpointer[] = {
+  { "setup", l_ShaderPointer_Setup },
+  { "init", l_ShaderPointer_Init },
+  { "exit", l_ShaderPointer_Exit },
+  { "create", l_ShaderPointer_Create },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_shaderpointer(lua_State *L)
+{
+  return lorx_register_submodule(L, "shaderpointer", l_lorx_shaderpointer);
+}
+
+
+// Sub-module: viewport
+static const struct luaL_Reg l_lorx_viewport[] = {
+  { "setup", l_Viewport_Setup },
+  { "init", l_Viewport_Init },
+  { "exit", l_Viewport_Exit },
+  { "create", l_Viewport_Create },
+  { "createFromConfig", l_Viewport_CreateFromConfig },
+  { "get", l_Viewport_Get },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_viewport(lua_State *L)
+{
+  return lorx_register_submodule(L, "viewport", l_lorx_viewport);
 }
 
 
@@ -1746,151 +1810,87 @@ LORX_API int luaopen_lorx_soundpointer(lua_State *L)
 }
 
 
-// Sub-module: structure
-static const struct luaL_Reg l_lorx_structure[] = {
-  { "setup", l_Structure_Setup },
-  { "init", l_Structure_Init },
-  { "exit", l_Structure_Exit },
-  { "unregister", l_Structure_Unregister },
-  { "create", l_Structure_Create },
-  { "delete", l_Structure_Delete },
-  { "getStorageType", l_Structure_GetStorageType },
-  { "getCount", l_Structure_GetCount },
-  { "update", l_Structure_Update },
-  { "get", l_Structure_Get },
-  { "getOwner", l_Structure_GetOwner },
-  { "setOwner", l_Structure_SetOwner },
-  { "getFirst", l_Structure_GetFirst },
-  { "getLast", l_Structure_GetLast },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "setParent", l_Structure_SetParent },
-  { "logAll", l_Structure_LogAll },
-  { "getPointer", l__orxStructure_GetPointer },
-  { "getIDString", l_Structure_GetIDString },
-  { "increaseCount", l_Structure_IncreaseCount },
-  { "decreaseCount", l_Structure_DecreaseCount },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  { "setFlags", l_Structure_SetFlags },
+// Sub-module: soundsystem
+static const struct luaL_Reg l_lorx_soundsystem[] = {
+  { "setup", l_SoundSystem_Setup },
+  { "init", l_SoundSystem_Init },
+  { "exit", l_SoundSystem_Exit },
+  { "createSample", l_SoundSystem_CreateSample },
+  { "loadSample", l_SoundSystem_LoadSample },
+  { "createFromSample", l_SoundSystem_CreateFromSample },
+  { "createStream", l_SoundSystem_CreateStream },
+  { "createStreamFromFile", l_SoundSystem_CreateStreamFromFile },
+  { "createBus", l_SoundSystem_CreateBus },
+  { "deleteBus", l_SoundSystem_DeleteBus },
+  { "setBusParent", l_SoundSystem_SetBusParent },
+  { "addBusFilter", l_SoundSystem_AddBusFilter },
+  { "removeLastBusFilter", l_SoundSystem_RemoveLastBusFilter },
+  { "removeAllBusFilters", l_SoundSystem_RemoveAllBusFilters },
+  { "startRecording", l_SoundSystem_StartRecording },
+  { "stopRecording", l_SoundSystem_StopRecording },
+  { "hasRecordingSupport", l_SoundSystem_HasRecordingSupport },
+  { "setGlobalVolume", l_SoundSystem_SetGlobalVolume },
+  { "getGlobalVolume", l_SoundSystem_GetGlobalVolume },
+  { "getListenerCount", l_SoundSystem_GetListenerCount },
+  { "enableListener", l_SoundSystem_EnableListener },
+  { "isListenerEnabled", l_SoundSystem_IsListenerEnabled },
+  { "setListenerPosition", l_SoundSystem_SetListenerPosition },
+  { "getListenerPosition", l_SoundSystem_GetListenerPosition },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_structure(lua_State *L)
+LORX_API int luaopen_lorx_soundsystem(lua_State *L)
 {
-  return lorx_register_submodule(L, "structure", l_lorx_structure);
+  return lorx_register_submodule(L, "soundsystem", l_lorx_soundsystem);
 }
 
 
-// Sub-module: spawner
-static const struct luaL_Reg l_lorx_spawner[] = {
-  { "setup", l_Spawner_Setup },
-  { "init", l_Spawner_Init },
-  { "exit", l_Spawner_Exit },
-  { "create", l_Spawner_Create },
-  { "createFromConfig", l_Spawner_CreateFromConfig },
+// Sub-module: string
+static const struct luaL_Reg l_lorx_string[] = {
+  { "setup", l_String_Setup },
+  { "init", l_String_Init },
+  { "exit", l_String_Exit },
+  { "nHash", l_String_NHash },
+  { "hash", l_String_Hash },
+  { "getID", l_String_GetID },
+  { "getFromID", l_String_GetFromID },
+  { "store", l_String_Store },
+  { "skipWhiteSpaces", l_String_SkipWhiteSpaces },
+  { "skipPath", l_String_SkipPath },
+  { "getLength", l_String_GetLength },
+  { "isCharacterASCII", l_String_IsCharacterASCII },
+  { "isCharacterAlphaNumeric", l_String_IsCharacterAlphaNumeric },
+  { "getUTF8CharacterLength", l_String_GetUTF8CharacterLength },
+  { "getFirstCharacterCodePoint", l_String_GetFirstCharacterCodePoint },
+  { "getCharacterCount", l_String_GetCharacterCount },
+  { "duplicate", l_String_Duplicate },
+  { "compare", l_String_Compare },
+  { "nCompare", l_String_NCompare },
+  { "iCompare", l_String_ICompare },
+  { "nICompare", l_String_NICompare },
+  { "extractBase", l_String_ExtractBase },
+  { "toS32Base", l_String_ToS32Base },
+  { "toS32", l_String_ToS32 },
+  { "toU32Base", l_String_ToU32Base },
+  { "toU32", l_String_ToU32 },
+  { "toS64Base", l_String_ToS64Base },
+  { "toS64", l_String_ToS64 },
+  { "toU64Base", l_String_ToU64Base },
+  { "toU64", l_String_ToU64 },
+  { "toFloat", l_String_ToFloat },
+  { "toVector", l_String_ToVector },
+  { "toBool", l_String_ToBool },
+  { "searchString", l_String_SearchString },
+  { "searchChar", l_String_SearchChar },
+  { "searchCharIndex", l_String_SearchCharIndex },
+  { "scan", l_String_Scan },
+  { "getExtension", l_String_GetExtension },
   { NULL, NULL }
 };
 
-LORX_API int luaopen_lorx_spawner(lua_State *L)
+LORX_API int luaopen_lorx_string(lua_State *L)
 {
-  return lorx_register_submodule(L, "spawner", l_lorx_spawner);
-}
-
-
-// Sub-module: frame
-static const struct luaL_Reg l_lorx_frame[] = {
-  { "getIgnoreFlagValues", l_Frame_GetIgnoreFlagValues },
-  { "getIgnoreFlagNames", l_Frame_GetIgnoreFlagNames },
-  { "setup", l_Frame_Setup },
-  { "init", l_Frame_Init },
-  { "exit", l_Frame_Exit },
-  { "create", l_Frame_Create },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_frame(lua_State *L)
-{
-  return lorx_register_submodule(L, "frame", l_lorx_frame);
-}
-
-
-// Sub-module: fxpointer
-static const struct luaL_Reg l_lorx_fxpointer[] = {
-  { "setup", l_FXPointer_Setup },
-  { "init", l_FXPointer_Init },
-  { "exit", l_FXPointer_Exit },
-  { "create", l_FXPointer_Create },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_fxpointer(lua_State *L)
-{
-  return lorx_register_submodule(L, "fxpointer", l_lorx_fxpointer);
-}
-
-
-// Sub-module: object
-static const struct luaL_Reg l_lorx_object[] = {
-  { "setup", l_Object_Setup },
-  { "init", l_Object_Init },
-  { "exit", l_Object_Exit },
-  { "create", l_Object_Create },
-  { "createFromConfig", l_Object_CreateFromConfig },
-  { "getStructure", l__orxObject_GetStructure },
-  { "raycast", l_Object_Raycast },
-  { "getDefaultGroupID", l_Object_GetDefaultGroupID },
-  { "getNext", l_Object_GetNext },
-  { "getNextEnabled", l_Object_GetNextEnabled },
-  { "pick", l_Object_Pick },
-  { "boxPick", l_Object_BoxPick },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_object(lua_State *L)
-{
-  return lorx_register_submodule(L, "object", l_lorx_object);
-}
-
-
-// Sub-module: fx
-static const struct luaL_Reg l_lorx_fx[] = {
-  { "setup", l_FX_Setup },
-  { "init", l_FX_Init },
-  { "exit", l_FX_Exit },
-  { "create", l_FX_Create },
-  { "createFromConfig", l_FX_CreateFromConfig },
-  { "clearCache", l_FX_ClearCache },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_fx(lua_State *L)
-{
-  return lorx_register_submodule(L, "fx", l_lorx_fx);
-}
-
-
-// Sub-module: timeline
-static const struct luaL_Reg l_lorx_timeline[] = {
-  { "setup", l_TimeLine_Setup },
-  { "init", l_TimeLine_Init },
-  { "exit", l_TimeLine_Exit },
-  { "create", l_TimeLine_Create },
-  { "clearCache", l_TimeLine_ClearCache },
-  { "getTrackDuration", l_TimeLine_GetTrackDuration },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_timeline(lua_State *L)
-{
-  return lorx_register_submodule(L, "timeline", l_lorx_timeline);
+  return lorx_register_submodule(L, "string", l_lorx_string);
 }
 
 
@@ -1921,18 +1921,6 @@ LORX_API int luaopen_lorx_vector(lua_State *L)
 }
 
 
-// Sub-module: obox
-static const struct luaL_Reg l_lorx_obox[] = {
-  { "obox", l_lorx_orxOBOX_create },
-  { NULL, NULL }
-};
-
-LORX_API int luaopen_lorx_obox(lua_State *L)
-{
-  return lorx_register_submodule(L, "obox", l_lorx_obox);
-}
-
-
 // Sub-module: aabox
 static const struct luaL_Reg l_lorx_aabox[] = {
   { "aabox", l_lorx_orxAABOX_create },
@@ -1942,4 +1930,16 @@ static const struct luaL_Reg l_lorx_aabox[] = {
 LORX_API int luaopen_lorx_aabox(lua_State *L)
 {
   return lorx_register_submodule(L, "aabox", l_lorx_aabox);
+}
+
+
+// Sub-module: obox
+static const struct luaL_Reg l_lorx_obox[] = {
+  { "obox", l_lorx_orxOBOX_create },
+  { NULL, NULL }
+};
+
+LORX_API int luaopen_lorx_obox(lua_State *L)
+{
+  return lorx_register_submodule(L, "obox", l_lorx_obox);
 }

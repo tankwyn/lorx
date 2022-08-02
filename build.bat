@@ -10,8 +10,21 @@ python.exe autogen.py clean
 python.exe autogen.py
 
 @rmdir /S /Q gen\__pycache__
+@rmdir /S /Q gen\cfg\__pycache__
 
-tar zcf release\lorx-src-%VER%.tgz src examples gen templates autogen.py LICENSE README.md
+set fn=lorx-src-%VER%
+mkdir release\%fn%
+xcopy /E src\ release\%fn%\src\
+xcopy /E examples\ release\%fn%\examples\
+xcopy /E gen\ release\%fn%\gen\
+xcopy /E templates\ release\%fn%\templates\
+copy autogen.py release\%fn%\
+copy LICENSE release\%fn%\
+copy README.md release\%fn%\ 
+cd release
+tar zcf %fn%.tar.gz %fn%
+cd ..
+rmdir /S /Q release\%fn%
 
 cd src
 call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
@@ -27,7 +40,16 @@ cd doc
 mkdocs build
 cd ..
 
-tar zcf release\lorx-win64-%VER%.tgz bin examples api doc\site
+set fn=lorx-win64-%VER%
+mkdir release\%fn%
+xcopy /E bin\ release\%fn%\bin\
+xcopy /E examples\ release\%fn%\examples\
+xcopy /E api\ release\%fn%\api\
+xcopy /E doc\site\ release\%fn%\doc\
+cd release
+tar zcf %fn%.tar.gz %fn%
+cd ..
+rmdir /S /Q release\%fn%
 
 endlocal
 
@@ -52,6 +74,15 @@ cd doc
 mkdocs build
 cd ..
 
-tar zcf release\lorx-win32-%VER%.tgz bin examples api doc\site
+set fn=lorx-win32-%VER%
+mkdir release\%fn%
+xcopy /E bin\ release\%fn%\bin\
+xcopy /E examples\ release\%fn%\examples\
+xcopy /E api\ release\%fn%\api\
+xcopy /E doc\site\ release\%fn%\doc\
+cd release
+tar zcf %fn%.tar.gz %fn%
+cd ..
+rmdir /S /Q release\%fn%
 
 endlocal

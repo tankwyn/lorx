@@ -16,53 +16,37 @@
 /*
  * Conversion functions for converting a lua enum string to an Orx enum variable (strictly typed)
  */
-LORX_API orxMOUSE_BUTTON lorx_lenumstr_to_orxMOUSE_BUTTON(lua_State *L, int i)
+LORX_API orxANIM_EVENT lorx_lenumstr_to_orxANIM_EVENT(lua_State *L, int i)
 {
   const char* s = luaL_checkstring(L, i);
-  orxMOUSE_BUTTON _retval = orxENUM_NONE;
-  if (strcmp(s, "left") == 0)
+  orxANIM_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "start") == 0)
   {
-    _retval = orxMOUSE_BUTTON_LEFT;
+    _retval = orxANIM_EVENT_START;
   }
-  else if (strcmp(s, "right") == 0)
+  else if (strcmp(s, "stop") == 0)
   {
-    _retval = orxMOUSE_BUTTON_RIGHT;
+    _retval = orxANIM_EVENT_STOP;
   }
-  else if (strcmp(s, "middle") == 0)
+  else if (strcmp(s, "cut") == 0)
   {
-    _retval = orxMOUSE_BUTTON_MIDDLE;
+    _retval = orxANIM_EVENT_CUT;
   }
-  else if (strcmp(s, "extra_1") == 0)
+  else if (strcmp(s, "loop") == 0)
   {
-    _retval = orxMOUSE_BUTTON_EXTRA_1;
+    _retval = orxANIM_EVENT_LOOP;
   }
-  else if (strcmp(s, "extra_2") == 0)
+  else if (strcmp(s, "update") == 0)
   {
-    _retval = orxMOUSE_BUTTON_EXTRA_2;
+    _retval = orxANIM_EVENT_UPDATE;
   }
-  else if (strcmp(s, "extra_3") == 0)
+  else if (strcmp(s, "custom_event") == 0)
   {
-    _retval = orxMOUSE_BUTTON_EXTRA_3;
-  }
-  else if (strcmp(s, "extra_4") == 0)
-  {
-    _retval = orxMOUSE_BUTTON_EXTRA_4;
-  }
-  else if (strcmp(s, "extra_5") == 0)
-  {
-    _retval = orxMOUSE_BUTTON_EXTRA_5;
-  }
-  else if (strcmp(s, "wheel_up") == 0)
-  {
-    _retval = orxMOUSE_BUTTON_WHEEL_UP;
-  }
-  else if (strcmp(s, "wheel_down") == 0)
-  {
-    _retval = orxMOUSE_BUTTON_WHEEL_DOWN;
+    _retval = orxANIM_EVENT_CUSTOM_EVENT;
   }
   else if (strcmp(s, "none") == 0)
   {
-    _retval = orxMOUSE_BUTTON_NONE;
+    _retval = orxANIM_EVENT_NONE;
   }
   else
   {
@@ -71,21 +55,1021 @@ LORX_API orxMOUSE_BUTTON lorx_lenumstr_to_orxMOUSE_BUTTON(lua_State *L, int i)
   return _retval;
 }
 
-LORX_API orxMOUSE_AXIS lorx_lenumstr_to_orxMOUSE_AXIS(lua_State *L, int i)
+LORX_API orxMODULE_ID lorx_lenumstr_to_orxMODULE_ID(lua_State *L, int i)
 {
   const char* s = luaL_checkstring(L, i);
-  orxMOUSE_AXIS _retval = orxENUM_NONE;
-  if (strcmp(s, "x") == 0)
+  orxMODULE_ID _retval = orxENUM_NONE;
+  if (strcmp(s, "anim") == 0)
   {
-    _retval = orxMOUSE_AXIS_X;
+    _retval = orxMODULE_ID_ANIM;
   }
-  else if (strcmp(s, "y") == 0)
+  else if (strcmp(s, "animpointer") == 0)
   {
-    _retval = orxMOUSE_AXIS_Y;
+    _retval = orxMODULE_ID_ANIMPOINTER;
+  }
+  else if (strcmp(s, "animset") == 0)
+  {
+    _retval = orxMODULE_ID_ANIMSET;
+  }
+  else if (strcmp(s, "bank") == 0)
+  {
+    _retval = orxMODULE_ID_BANK;
+  }
+  else if (strcmp(s, "body") == 0)
+  {
+    _retval = orxMODULE_ID_BODY;
+  }
+  else if (strcmp(s, "camera") == 0)
+  {
+    _retval = orxMODULE_ID_CAMERA;
+  }
+  else if (strcmp(s, "clock") == 0)
+  {
+    _retval = orxMODULE_ID_CLOCK;
+  }
+  else if (strcmp(s, "command") == 0)
+  {
+    _retval = orxMODULE_ID_COMMAND;
+  }
+  else if (strcmp(s, "config") == 0)
+  {
+    _retval = orxMODULE_ID_CONFIG;
+  }
+  else if (strcmp(s, "console") == 0)
+  {
+    _retval = orxMODULE_ID_CONSOLE;
+  }
+  else if (strcmp(s, "display") == 0)
+  {
+    _retval = orxMODULE_ID_DISPLAY;
+  }
+  else if (strcmp(s, "event") == 0)
+  {
+    _retval = orxMODULE_ID_EVENT;
+  }
+  else if (strcmp(s, "file") == 0)
+  {
+    _retval = orxMODULE_ID_FILE;
+  }
+  else if (strcmp(s, "font") == 0)
+  {
+    _retval = orxMODULE_ID_FONT;
+  }
+  else if (strcmp(s, "fps") == 0)
+  {
+    _retval = orxMODULE_ID_FPS;
+  }
+  else if (strcmp(s, "frame") == 0)
+  {
+    _retval = orxMODULE_ID_FRAME;
+  }
+  else if (strcmp(s, "fx") == 0)
+  {
+    _retval = orxMODULE_ID_FX;
+  }
+  else if (strcmp(s, "fxpointer") == 0)
+  {
+    _retval = orxMODULE_ID_FXPOINTER;
+  }
+  else if (strcmp(s, "graphic") == 0)
+  {
+    _retval = orxMODULE_ID_GRAPHIC;
+  }
+  else if (strcmp(s, "input") == 0)
+  {
+    _retval = orxMODULE_ID_INPUT;
+  }
+  else if (strcmp(s, "joystick") == 0)
+  {
+    _retval = orxMODULE_ID_JOYSTICK;
+  }
+  else if (strcmp(s, "keyboard") == 0)
+  {
+    _retval = orxMODULE_ID_KEYBOARD;
+  }
+  else if (strcmp(s, "locale") == 0)
+  {
+    _retval = orxMODULE_ID_LOCALE;
+  }
+  else if (strcmp(s, "main") == 0)
+  {
+    _retval = orxMODULE_ID_MAIN;
+  }
+  else if (strcmp(s, "memory") == 0)
+  {
+    _retval = orxMODULE_ID_MEMORY;
+  }
+  else if (strcmp(s, "mouse") == 0)
+  {
+    _retval = orxMODULE_ID_MOUSE;
+  }
+  else if (strcmp(s, "object") == 0)
+  {
+    _retval = orxMODULE_ID_OBJECT;
+  }
+  else if (strcmp(s, "param") == 0)
+  {
+    _retval = orxMODULE_ID_PARAM;
+  }
+  else if (strcmp(s, "physics") == 0)
+  {
+    _retval = orxMODULE_ID_PHYSICS;
+  }
+  else if (strcmp(s, "plugin") == 0)
+  {
+    _retval = orxMODULE_ID_PLUGIN;
+  }
+  else if (strcmp(s, "profiler") == 0)
+  {
+    _retval = orxMODULE_ID_PROFILER;
+  }
+  else if (strcmp(s, "render") == 0)
+  {
+    _retval = orxMODULE_ID_RENDER;
+  }
+  else if (strcmp(s, "resource") == 0)
+  {
+    _retval = orxMODULE_ID_RESOURCE;
+  }
+  else if (strcmp(s, "screenshot") == 0)
+  {
+    _retval = orxMODULE_ID_SCREENSHOT;
+  }
+  else if (strcmp(s, "shader") == 0)
+  {
+    _retval = orxMODULE_ID_SHADER;
+  }
+  else if (strcmp(s, "shaderpointer") == 0)
+  {
+    _retval = orxMODULE_ID_SHADERPOINTER;
+  }
+  else if (strcmp(s, "sound") == 0)
+  {
+    _retval = orxMODULE_ID_SOUND;
+  }
+  else if (strcmp(s, "soundpointer") == 0)
+  {
+    _retval = orxMODULE_ID_SOUNDPOINTER;
+  }
+  else if (strcmp(s, "soundsystem") == 0)
+  {
+    _retval = orxMODULE_ID_SOUNDSYSTEM;
+  }
+  else if (strcmp(s, "spawner") == 0)
+  {
+    _retval = orxMODULE_ID_SPAWNER;
+  }
+  else if (strcmp(s, "string") == 0)
+  {
+    _retval = orxMODULE_ID_STRING;
+  }
+  else if (strcmp(s, "structure") == 0)
+  {
+    _retval = orxMODULE_ID_STRUCTURE;
+  }
+  else if (strcmp(s, "system") == 0)
+  {
+    _retval = orxMODULE_ID_SYSTEM;
+  }
+  else if (strcmp(s, "text") == 0)
+  {
+    _retval = orxMODULE_ID_TEXT;
+  }
+  else if (strcmp(s, "texture") == 0)
+  {
+    _retval = orxMODULE_ID_TEXTURE;
+  }
+  else if (strcmp(s, "thread") == 0)
+  {
+    _retval = orxMODULE_ID_THREAD;
+  }
+  else if (strcmp(s, "timeline") == 0)
+  {
+    _retval = orxMODULE_ID_TIMELINE;
+  }
+  else if (strcmp(s, "viewport") == 0)
+  {
+    _retval = orxMODULE_ID_VIEWPORT;
+  }
+  else if (strcmp(s, "user_defined") == 0)
+  {
+    _retval = orxMODULE_ID_USER_DEFINED;
   }
   else if (strcmp(s, "none") == 0)
   {
-    _retval = orxMOUSE_AXIS_NONE;
+    _retval = orxMODULE_ID_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxSEEK_OFFSET_WHENCE lorx_lenumstr_to_orxSEEK_OFFSET_WHENCE(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxSEEK_OFFSET_WHENCE _retval = orxENUM_NONE;
+  if (strcmp(s, "start") == 0)
+  {
+    _retval = orxSEEK_OFFSET_WHENCE_START;
+  }
+  else if (strcmp(s, "current") == 0)
+  {
+    _retval = orxSEEK_OFFSET_WHENCE_CURRENT;
+  }
+  else if (strcmp(s, "end") == 0)
+  {
+    _retval = orxSEEK_OFFSET_WHENCE_END;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxSEEK_OFFSET_WHENCE_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxSTATUS lorx_lenumstr_to_orxSTATUS(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxSTATUS _retval = orxENUM_NONE;
+  if (strcmp(s, "failure") == 0)
+  {
+    _retval = orxSTATUS_FAILURE;
+  }
+  else if (strcmp(s, "success") == 0)
+  {
+    _retval = orxSTATUS_SUCCESS;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxSTATUS_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxCLOCK_MODIFIER lorx_lenumstr_to_orxCLOCK_MODIFIER(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxCLOCK_MODIFIER _retval = orxENUM_NONE;
+  if (strcmp(s, "fixed") == 0)
+  {
+    _retval = orxCLOCK_MODIFIER_FIXED;
+  }
+  else if (strcmp(s, "multiply") == 0)
+  {
+    _retval = orxCLOCK_MODIFIER_MULTIPLY;
+  }
+  else if (strcmp(s, "maxed") == 0)
+  {
+    _retval = orxCLOCK_MODIFIER_MAXED;
+  }
+  else if (strcmp(s, "average") == 0)
+  {
+    _retval = orxCLOCK_MODIFIER_AVERAGE;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxCLOCK_MODIFIER_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxCLOCK_PRIORITY lorx_lenumstr_to_orxCLOCK_PRIORITY(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxCLOCK_PRIORITY _retval = orxENUM_NONE;
+  if (strcmp(s, "lowest") == 0)
+  {
+    _retval = orxCLOCK_PRIORITY_LOWEST;
+  }
+  else if (strcmp(s, "lower") == 0)
+  {
+    _retval = orxCLOCK_PRIORITY_LOWER;
+  }
+  else if (strcmp(s, "low") == 0)
+  {
+    _retval = orxCLOCK_PRIORITY_LOW;
+  }
+  else if (strcmp(s, "normal") == 0)
+  {
+    _retval = orxCLOCK_PRIORITY_NORMAL;
+  }
+  else if (strcmp(s, "high") == 0)
+  {
+    _retval = orxCLOCK_PRIORITY_HIGH;
+  }
+  else if (strcmp(s, "higher") == 0)
+  {
+    _retval = orxCLOCK_PRIORITY_HIGHER;
+  }
+  else if (strcmp(s, "highest") == 0)
+  {
+    _retval = orxCLOCK_PRIORITY_HIGHEST;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxCLOCK_PRIORITY_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxCLOCK_EVENT lorx_lenumstr_to_orxCLOCK_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxCLOCK_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "restart") == 0)
+  {
+    _retval = orxCLOCK_EVENT_RESTART;
+  }
+  else if (strcmp(s, "resync") == 0)
+  {
+    _retval = orxCLOCK_EVENT_RESYNC;
+  }
+  else if (strcmp(s, "pause") == 0)
+  {
+    _retval = orxCLOCK_EVENT_PAUSE;
+  }
+  else if (strcmp(s, "unpause") == 0)
+  {
+    _retval = orxCLOCK_EVENT_UNPAUSE;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxCLOCK_EVENT_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxCOMMAND_VAR_TYPE lorx_lenumstr_to_orxCOMMAND_VAR_TYPE(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxCOMMAND_VAR_TYPE _retval = orxENUM_NONE;
+  if (strcmp(s, "string") == 0)
+  {
+    _retval = orxCOMMAND_VAR_TYPE_STRING;
+  }
+  else if (strcmp(s, "float") == 0)
+  {
+    _retval = orxCOMMAND_VAR_TYPE_FLOAT;
+  }
+  else if (strcmp(s, "s32") == 0)
+  {
+    _retval = orxCOMMAND_VAR_TYPE_S32;
+  }
+  else if (strcmp(s, "u32") == 0)
+  {
+    _retval = orxCOMMAND_VAR_TYPE_U32;
+  }
+  else if (strcmp(s, "s64") == 0)
+  {
+    _retval = orxCOMMAND_VAR_TYPE_S64;
+  }
+  else if (strcmp(s, "u64") == 0)
+  {
+    _retval = orxCOMMAND_VAR_TYPE_U64;
+  }
+  else if (strcmp(s, "bool") == 0)
+  {
+    _retval = orxCOMMAND_VAR_TYPE_BOOL;
+  }
+  else if (strcmp(s, "vector") == 0)
+  {
+    _retval = orxCOMMAND_VAR_TYPE_VECTOR;
+  }
+  else if (strcmp(s, "numeric") == 0)
+  {
+    _retval = orxCOMMAND_VAR_TYPE_NUMERIC;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxCOMMAND_VAR_TYPE_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxCONFIG_EVENT lorx_lenumstr_to_orxCONFIG_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxCONFIG_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "reload_start") == 0)
+  {
+    _retval = orxCONFIG_EVENT_RELOAD_START;
+  }
+  else if (strcmp(s, "reload_stop") == 0)
+  {
+    _retval = orxCONFIG_EVENT_RELOAD_STOP;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxCONFIG_EVENT_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxEVENT_TYPE lorx_lenumstr_to_orxEVENT_TYPE(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxEVENT_TYPE _retval = orxENUM_NONE;
+  if (strcmp(s, "anim") == 0)
+  {
+    _retval = orxEVENT_TYPE_ANIM;
+  }
+  else if (strcmp(s, "clock") == 0)
+  {
+    _retval = orxEVENT_TYPE_CLOCK;
+  }
+  else if (strcmp(s, "config") == 0)
+  {
+    _retval = orxEVENT_TYPE_CONFIG;
+  }
+  else if (strcmp(s, "display") == 0)
+  {
+    _retval = orxEVENT_TYPE_DISPLAY;
+  }
+  else if (strcmp(s, "fx") == 0)
+  {
+    _retval = orxEVENT_TYPE_FX;
+  }
+  else if (strcmp(s, "input") == 0)
+  {
+    _retval = orxEVENT_TYPE_INPUT;
+  }
+  else if (strcmp(s, "locale") == 0)
+  {
+    _retval = orxEVENT_TYPE_LOCALE;
+  }
+  else if (strcmp(s, "object") == 0)
+  {
+    _retval = orxEVENT_TYPE_OBJECT;
+  }
+  else if (strcmp(s, "render") == 0)
+  {
+    _retval = orxEVENT_TYPE_RENDER;
+  }
+  else if (strcmp(s, "physics") == 0)
+  {
+    _retval = orxEVENT_TYPE_PHYSICS;
+  }
+  else if (strcmp(s, "resource") == 0)
+  {
+    _retval = orxEVENT_TYPE_RESOURCE;
+  }
+  else if (strcmp(s, "shader") == 0)
+  {
+    _retval = orxEVENT_TYPE_SHADER;
+  }
+  else if (strcmp(s, "sound") == 0)
+  {
+    _retval = orxEVENT_TYPE_SOUND;
+  }
+  else if (strcmp(s, "spawner") == 0)
+  {
+    _retval = orxEVENT_TYPE_SPAWNER;
+  }
+  else if (strcmp(s, "system") == 0)
+  {
+    _retval = orxEVENT_TYPE_SYSTEM;
+  }
+  else if (strcmp(s, "texture") == 0)
+  {
+    _retval = orxEVENT_TYPE_TEXTURE;
+  }
+  else if (strcmp(s, "timeline") == 0)
+  {
+    _retval = orxEVENT_TYPE_TIMELINE;
+  }
+  else if (strcmp(s, "viewport") == 0)
+  {
+    _retval = orxEVENT_TYPE_VIEWPORT;
+  }
+  else if (strcmp(s, "first_reserved") == 0)
+  {
+    _retval = orxEVENT_TYPE_FIRST_RESERVED;
+  }
+  else if (strcmp(s, "last_reserved") == 0)
+  {
+    _retval = orxEVENT_TYPE_LAST_RESERVED;
+  }
+  else if (strcmp(s, "user_defined") == 0)
+  {
+    _retval = orxEVENT_TYPE_USER_DEFINED;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxEVENT_TYPE_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxLOCALE_EVENT lorx_lenumstr_to_orxLOCALE_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxLOCALE_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "select_language") == 0)
+  {
+    _retval = orxLOCALE_EVENT_SELECT_LANGUAGE;
+  }
+  else if (strcmp(s, "set_string") == 0)
+  {
+    _retval = orxLOCALE_EVENT_SET_STRING;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxLOCALE_EVENT_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxRESOURCE_EVENT lorx_lenumstr_to_orxRESOURCE_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxRESOURCE_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "update") == 0)
+  {
+    _retval = orxRESOURCE_EVENT_UPDATE;
+  }
+  else if (strcmp(s, "add") == 0)
+  {
+    _retval = orxRESOURCE_EVENT_ADD;
+  }
+  else if (strcmp(s, "remove") == 0)
+  {
+    _retval = orxRESOURCE_EVENT_REMOVE;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxRESOURCE_EVENT_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxSYSTEM_EVENT lorx_lenumstr_to_orxSYSTEM_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxSYSTEM_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "close") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_CLOSE;
+  }
+  else if (strcmp(s, "focus_gained") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_FOCUS_GAINED;
+  }
+  else if (strcmp(s, "focus_lost") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_FOCUS_LOST;
+  }
+  else if (strcmp(s, "background") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_BACKGROUND;
+  }
+  else if (strcmp(s, "foreground") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_FOREGROUND;
+  }
+  else if (strcmp(s, "game_loop_start") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_GAME_LOOP_START;
+  }
+  else if (strcmp(s, "game_loop_stop") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_GAME_LOOP_STOP;
+  }
+  else if (strcmp(s, "touch_begin") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_TOUCH_BEGIN;
+  }
+  else if (strcmp(s, "touch_move") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_TOUCH_MOVE;
+  }
+  else if (strcmp(s, "touch_end") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_TOUCH_END;
+  }
+  else if (strcmp(s, "accelerate") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_ACCELERATE;
+  }
+  else if (strcmp(s, "motion_shake") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_MOTION_SHAKE;
+  }
+  else if (strcmp(s, "drop") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_DROP;
+  }
+  else if (strcmp(s, "clipboard") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_CLIPBOARD;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxSYSTEM_EVENT_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxDEBUG_LEVEL lorx_lenumstr_to_orxDEBUG_LEVEL(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxDEBUG_LEVEL _retval = orxENUM_NONE;
+  if (strcmp(s, "anim") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_ANIM;
+  }
+  else if (strcmp(s, "config") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_CONFIG;
+  }
+  else if (strcmp(s, "clock") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_CLOCK;
+  }
+  else if (strcmp(s, "command") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_COMMAND;
+  }
+  else if (strcmp(s, "display") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_DISPLAY;
+  }
+  else if (strcmp(s, "file") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_FILE;
+  }
+  else if (strcmp(s, "input") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_INPUT;
+  }
+  else if (strcmp(s, "joystick") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_JOYSTICK;
+  }
+  else if (strcmp(s, "keyboard") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_KEYBOARD;
+  }
+  else if (strcmp(s, "memory") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_MEMORY;
+  }
+  else if (strcmp(s, "mouse") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_MOUSE;
+  }
+  else if (strcmp(s, "object") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_OBJECT;
+  }
+  else if (strcmp(s, "param") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_PARAM;
+  }
+  else if (strcmp(s, "physics") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_PHYSICS;
+  }
+  else if (strcmp(s, "plugin") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_PLUGIN;
+  }
+  else if (strcmp(s, "profiler") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_PROFILER;
+  }
+  else if (strcmp(s, "render") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_RENDER;
+  }
+  else if (strcmp(s, "screenshot") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_SCREENSHOT;
+  }
+  else if (strcmp(s, "sound") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_SOUND;
+  }
+  else if (strcmp(s, "system") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_SYSTEM;
+  }
+  else if (strcmp(s, "timer") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_TIMER;
+  }
+  else if (strcmp(s, "log") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_LOG;
+  }
+  else if (strcmp(s, "assert") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_ASSERT;
+  }
+  else if (strcmp(s, "user") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_USER;
+  }
+  else if (strcmp(s, "all") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_ALL;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxDEBUG_LEVEL_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxDISPLAY_PRIMITIVE lorx_lenumstr_to_orxDISPLAY_PRIMITIVE(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxDISPLAY_PRIMITIVE _retval = orxENUM_NONE;
+  if (strcmp(s, "points") == 0)
+  {
+    _retval = orxDISPLAY_PRIMITIVE_POINTS;
+  }
+  else if (strcmp(s, "lines") == 0)
+  {
+    _retval = orxDISPLAY_PRIMITIVE_LINES;
+  }
+  else if (strcmp(s, "line_loop") == 0)
+  {
+    _retval = orxDISPLAY_PRIMITIVE_LINE_LOOP;
+  }
+  else if (strcmp(s, "line_strip") == 0)
+  {
+    _retval = orxDISPLAY_PRIMITIVE_LINE_STRIP;
+  }
+  else if (strcmp(s, "triangles") == 0)
+  {
+    _retval = orxDISPLAY_PRIMITIVE_TRIANGLES;
+  }
+  else if (strcmp(s, "triangle_strip") == 0)
+  {
+    _retval = orxDISPLAY_PRIMITIVE_TRIANGLE_STRIP;
+  }
+  else if (strcmp(s, "triangle_fan") == 0)
+  {
+    _retval = orxDISPLAY_PRIMITIVE_TRIANGLE_FAN;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxDISPLAY_PRIMITIVE_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxDISPLAY_SMOOTHING lorx_lenumstr_to_orxDISPLAY_SMOOTHING(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxDISPLAY_SMOOTHING _retval = orxENUM_NONE;
+  if (strcmp(s, "default") == 0)
+  {
+    _retval = orxDISPLAY_SMOOTHING_DEFAULT;
+  }
+  else if (strcmp(s, "on") == 0)
+  {
+    _retval = orxDISPLAY_SMOOTHING_ON;
+  }
+  else if (strcmp(s, "off") == 0)
+  {
+    _retval = orxDISPLAY_SMOOTHING_OFF;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxDISPLAY_SMOOTHING_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxDISPLAY_BLEND_MODE lorx_lenumstr_to_orxDISPLAY_BLEND_MODE(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxDISPLAY_BLEND_MODE _retval = orxENUM_NONE;
+  if (strcmp(s, "alpha") == 0)
+  {
+    _retval = orxDISPLAY_BLEND_MODE_ALPHA;
+  }
+  else if (strcmp(s, "multiply") == 0)
+  {
+    _retval = orxDISPLAY_BLEND_MODE_MULTIPLY;
+  }
+  else if (strcmp(s, "add") == 0)
+  {
+    _retval = orxDISPLAY_BLEND_MODE_ADD;
+  }
+  else if (strcmp(s, "premul") == 0)
+  {
+    _retval = orxDISPLAY_BLEND_MODE_PREMUL;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxDISPLAY_BLEND_MODE_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxDISPLAY_EVENT lorx_lenumstr_to_orxDISPLAY_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxDISPLAY_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "set_video_mode") == 0)
+  {
+    _retval = orxDISPLAY_EVENT_SET_VIDEO_MODE;
+  }
+  else if (strcmp(s, "load_bitmap") == 0)
+  {
+    _retval = orxDISPLAY_EVENT_LOAD_BITMAP;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxDISPLAY_EVENT_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxTEXTURE_EVENT lorx_lenumstr_to_orxTEXTURE_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxTEXTURE_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "create") == 0)
+  {
+    _retval = orxTEXTURE_EVENT_CREATE;
+  }
+  else if (strcmp(s, "delete") == 0)
+  {
+    _retval = orxTEXTURE_EVENT_DELETE;
+  }
+  else if (strcmp(s, "load") == 0)
+  {
+    _retval = orxTEXTURE_EVENT_LOAD;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxTEXTURE_EVENT_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxINPUT_TYPE lorx_lenumstr_to_orxINPUT_TYPE(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxINPUT_TYPE _retval = orxENUM_NONE;
+  if (strcmp(s, "keyboard_key") == 0)
+  {
+    _retval = orxINPUT_TYPE_KEYBOARD_KEY;
+  }
+  else if (strcmp(s, "mouse_button") == 0)
+  {
+    _retval = orxINPUT_TYPE_MOUSE_BUTTON;
+  }
+  else if (strcmp(s, "mouse_axis") == 0)
+  {
+    _retval = orxINPUT_TYPE_MOUSE_AXIS;
+  }
+  else if (strcmp(s, "joystick_button") == 0)
+  {
+    _retval = orxINPUT_TYPE_JOYSTICK_BUTTON;
+  }
+  else if (strcmp(s, "joystick_axis") == 0)
+  {
+    _retval = orxINPUT_TYPE_JOYSTICK_AXIS;
+  }
+  else if (strcmp(s, "external") == 0)
+  {
+    _retval = orxINPUT_TYPE_EXTERNAL;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxINPUT_TYPE_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxINPUT_MODE lorx_lenumstr_to_orxINPUT_MODE(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxINPUT_MODE _retval = orxENUM_NONE;
+  if (strcmp(s, "full") == 0)
+  {
+    _retval = orxINPUT_MODE_FULL;
+  }
+  else if (strcmp(s, "positive") == 0)
+  {
+    _retval = orxINPUT_MODE_POSITIVE;
+  }
+  else if (strcmp(s, "negative") == 0)
+  {
+    _retval = orxINPUT_MODE_NEGATIVE;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxINPUT_MODE_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxINPUT_EVENT lorx_lenumstr_to_orxINPUT_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxINPUT_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "on") == 0)
+  {
+    _retval = orxINPUT_EVENT_ON;
+  }
+  else if (strcmp(s, "off") == 0)
+  {
+    _retval = orxINPUT_EVENT_OFF;
+  }
+  else if (strcmp(s, "select_set") == 0)
+  {
+    _retval = orxINPUT_EVENT_SELECT_SET;
+  }
+  else if (strcmp(s, "remove_set") == 0)
+  {
+    _retval = orxINPUT_EVENT_REMOVE_SET;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxINPUT_EVENT_NONE;
   }
   else
   {
@@ -3617,37 +4601,53 @@ LORX_API orxKEYBOARD_KEY lorx_lenumstr_to_orxKEYBOARD_KEY(lua_State *L, int i)
   return _retval;
 }
 
-LORX_API orxINPUT_TYPE lorx_lenumstr_to_orxINPUT_TYPE(lua_State *L, int i)
+LORX_API orxMOUSE_BUTTON lorx_lenumstr_to_orxMOUSE_BUTTON(lua_State *L, int i)
 {
   const char* s = luaL_checkstring(L, i);
-  orxINPUT_TYPE _retval = orxENUM_NONE;
-  if (strcmp(s, "keyboard_key") == 0)
+  orxMOUSE_BUTTON _retval = orxENUM_NONE;
+  if (strcmp(s, "left") == 0)
   {
-    _retval = orxINPUT_TYPE_KEYBOARD_KEY;
+    _retval = orxMOUSE_BUTTON_LEFT;
   }
-  else if (strcmp(s, "mouse_button") == 0)
+  else if (strcmp(s, "right") == 0)
   {
-    _retval = orxINPUT_TYPE_MOUSE_BUTTON;
+    _retval = orxMOUSE_BUTTON_RIGHT;
   }
-  else if (strcmp(s, "mouse_axis") == 0)
+  else if (strcmp(s, "middle") == 0)
   {
-    _retval = orxINPUT_TYPE_MOUSE_AXIS;
+    _retval = orxMOUSE_BUTTON_MIDDLE;
   }
-  else if (strcmp(s, "joystick_button") == 0)
+  else if (strcmp(s, "extra_1") == 0)
   {
-    _retval = orxINPUT_TYPE_JOYSTICK_BUTTON;
+    _retval = orxMOUSE_BUTTON_EXTRA_1;
   }
-  else if (strcmp(s, "joystick_axis") == 0)
+  else if (strcmp(s, "extra_2") == 0)
   {
-    _retval = orxINPUT_TYPE_JOYSTICK_AXIS;
+    _retval = orxMOUSE_BUTTON_EXTRA_2;
   }
-  else if (strcmp(s, "external") == 0)
+  else if (strcmp(s, "extra_3") == 0)
   {
-    _retval = orxINPUT_TYPE_EXTERNAL;
+    _retval = orxMOUSE_BUTTON_EXTRA_3;
+  }
+  else if (strcmp(s, "extra_4") == 0)
+  {
+    _retval = orxMOUSE_BUTTON_EXTRA_4;
+  }
+  else if (strcmp(s, "extra_5") == 0)
+  {
+    _retval = orxMOUSE_BUTTON_EXTRA_5;
+  }
+  else if (strcmp(s, "wheel_up") == 0)
+  {
+    _retval = orxMOUSE_BUTTON_WHEEL_UP;
+  }
+  else if (strcmp(s, "wheel_down") == 0)
+  {
+    _retval = orxMOUSE_BUTTON_WHEEL_DOWN;
   }
   else if (strcmp(s, "none") == 0)
   {
-    _retval = orxINPUT_TYPE_NONE;
+    _retval = orxMOUSE_BUTTON_NONE;
   }
   else
   {
@@ -3656,25 +4656,21 @@ LORX_API orxINPUT_TYPE lorx_lenumstr_to_orxINPUT_TYPE(lua_State *L, int i)
   return _retval;
 }
 
-LORX_API orxINPUT_MODE lorx_lenumstr_to_orxINPUT_MODE(lua_State *L, int i)
+LORX_API orxMOUSE_AXIS lorx_lenumstr_to_orxMOUSE_AXIS(lua_State *L, int i)
 {
   const char* s = luaL_checkstring(L, i);
-  orxINPUT_MODE _retval = orxENUM_NONE;
-  if (strcmp(s, "full") == 0)
+  orxMOUSE_AXIS _retval = orxENUM_NONE;
+  if (strcmp(s, "x") == 0)
   {
-    _retval = orxINPUT_MODE_FULL;
+    _retval = orxMOUSE_AXIS_X;
   }
-  else if (strcmp(s, "positive") == 0)
+  else if (strcmp(s, "y") == 0)
   {
-    _retval = orxINPUT_MODE_POSITIVE;
-  }
-  else if (strcmp(s, "negative") == 0)
-  {
-    _retval = orxINPUT_MODE_NEGATIVE;
+    _retval = orxMOUSE_AXIS_Y;
   }
   else if (strcmp(s, "none") == 0)
   {
-    _retval = orxINPUT_MODE_NONE;
+    _retval = orxMOUSE_AXIS_NONE;
   }
   else
   {
@@ -3683,29 +4679,21 @@ LORX_API orxINPUT_MODE lorx_lenumstr_to_orxINPUT_MODE(lua_State *L, int i)
   return _retval;
 }
 
-LORX_API orxINPUT_EVENT lorx_lenumstr_to_orxINPUT_EVENT(lua_State *L, int i)
+LORX_API orxFRAME_SPACE lorx_lenumstr_to_orxFRAME_SPACE(lua_State *L, int i)
 {
   const char* s = luaL_checkstring(L, i);
-  orxINPUT_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "on") == 0)
+  orxFRAME_SPACE _retval = orxENUM_NONE;
+  if (strcmp(s, "global") == 0)
   {
-    _retval = orxINPUT_EVENT_ON;
+    _retval = orxFRAME_SPACE_GLOBAL;
   }
-  else if (strcmp(s, "off") == 0)
+  else if (strcmp(s, "local") == 0)
   {
-    _retval = orxINPUT_EVENT_OFF;
-  }
-  else if (strcmp(s, "select_set") == 0)
-  {
-    _retval = orxINPUT_EVENT_SELECT_SET;
-  }
-  else if (strcmp(s, "remove_set") == 0)
-  {
-    _retval = orxINPUT_EVENT_REMOVE_SET;
+    _retval = orxFRAME_SPACE_LOCAL;
   }
   else if (strcmp(s, "none") == 0)
   {
-    _retval = orxINPUT_EVENT_NONE;
+    _retval = orxFRAME_SPACE_NONE;
   }
   else
   {
@@ -3714,113 +4702,37 @@ LORX_API orxINPUT_EVENT lorx_lenumstr_to_orxINPUT_EVENT(lua_State *L, int i)
   return _retval;
 }
 
-LORX_API orxDEBUG_LEVEL lorx_lenumstr_to_orxDEBUG_LEVEL(lua_State *L, int i)
+LORX_API orxFX_CURVE lorx_lenumstr_to_orxFX_CURVE(lua_State *L, int i)
 {
   const char* s = luaL_checkstring(L, i);
-  orxDEBUG_LEVEL _retval = orxENUM_NONE;
-  if (strcmp(s, "anim") == 0)
+  orxFX_CURVE _retval = orxENUM_NONE;
+  if (strcmp(s, "linear") == 0)
   {
-    _retval = orxDEBUG_LEVEL_ANIM;
+    _retval = orxFX_CURVE_LINEAR;
   }
-  else if (strcmp(s, "config") == 0)
+  else if (strcmp(s, "smooth") == 0)
   {
-    _retval = orxDEBUG_LEVEL_CONFIG;
+    _retval = orxFX_CURVE_SMOOTH;
   }
-  else if (strcmp(s, "clock") == 0)
+  else if (strcmp(s, "smoother") == 0)
   {
-    _retval = orxDEBUG_LEVEL_CLOCK;
+    _retval = orxFX_CURVE_SMOOTHER;
   }
-  else if (strcmp(s, "command") == 0)
+  else if (strcmp(s, "triangle") == 0)
   {
-    _retval = orxDEBUG_LEVEL_COMMAND;
+    _retval = orxFX_CURVE_TRIANGLE;
   }
-  else if (strcmp(s, "display") == 0)
+  else if (strcmp(s, "sine") == 0)
   {
-    _retval = orxDEBUG_LEVEL_DISPLAY;
+    _retval = orxFX_CURVE_SINE;
   }
-  else if (strcmp(s, "file") == 0)
+  else if (strcmp(s, "square") == 0)
   {
-    _retval = orxDEBUG_LEVEL_FILE;
-  }
-  else if (strcmp(s, "input") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_INPUT;
-  }
-  else if (strcmp(s, "joystick") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_JOYSTICK;
-  }
-  else if (strcmp(s, "keyboard") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_KEYBOARD;
-  }
-  else if (strcmp(s, "memory") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_MEMORY;
-  }
-  else if (strcmp(s, "mouse") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_MOUSE;
-  }
-  else if (strcmp(s, "object") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_OBJECT;
-  }
-  else if (strcmp(s, "param") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_PARAM;
-  }
-  else if (strcmp(s, "physics") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_PHYSICS;
-  }
-  else if (strcmp(s, "plugin") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_PLUGIN;
-  }
-  else if (strcmp(s, "profiler") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_PROFILER;
-  }
-  else if (strcmp(s, "render") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_RENDER;
-  }
-  else if (strcmp(s, "screenshot") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_SCREENSHOT;
-  }
-  else if (strcmp(s, "sound") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_SOUND;
-  }
-  else if (strcmp(s, "system") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_SYSTEM;
-  }
-  else if (strcmp(s, "timer") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_TIMER;
-  }
-  else if (strcmp(s, "log") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_LOG;
-  }
-  else if (strcmp(s, "assert") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_ASSERT;
-  }
-  else if (strcmp(s, "user") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_USER;
-  }
-  else if (strcmp(s, "all") == 0)
-  {
-    _retval = orxDEBUG_LEVEL_ALL;
+    _retval = orxFX_CURVE_SQUARE;
   }
   else if (strcmp(s, "none") == 0)
   {
-    _retval = orxDEBUG_LEVEL_NONE;
+    _retval = orxFX_CURVE_NONE;
   }
   else
   {
@@ -3829,436 +4741,33 @@ LORX_API orxDEBUG_LEVEL lorx_lenumstr_to_orxDEBUG_LEVEL(lua_State *L, int i)
   return _retval;
 }
 
-LORX_API orxCOMMAND_VAR_TYPE lorx_lenumstr_to_orxCOMMAND_VAR_TYPE(lua_State *L, int i)
+LORX_API orxFX_EVENT lorx_lenumstr_to_orxFX_EVENT(lua_State *L, int i)
 {
   const char* s = luaL_checkstring(L, i);
-  orxCOMMAND_VAR_TYPE _retval = orxENUM_NONE;
-  if (strcmp(s, "string") == 0)
-  {
-    _retval = orxCOMMAND_VAR_TYPE_STRING;
-  }
-  else if (strcmp(s, "float") == 0)
-  {
-    _retval = orxCOMMAND_VAR_TYPE_FLOAT;
-  }
-  else if (strcmp(s, "s32") == 0)
-  {
-    _retval = orxCOMMAND_VAR_TYPE_S32;
-  }
-  else if (strcmp(s, "u32") == 0)
-  {
-    _retval = orxCOMMAND_VAR_TYPE_U32;
-  }
-  else if (strcmp(s, "s64") == 0)
-  {
-    _retval = orxCOMMAND_VAR_TYPE_S64;
-  }
-  else if (strcmp(s, "u64") == 0)
-  {
-    _retval = orxCOMMAND_VAR_TYPE_U64;
-  }
-  else if (strcmp(s, "bool") == 0)
-  {
-    _retval = orxCOMMAND_VAR_TYPE_BOOL;
-  }
-  else if (strcmp(s, "vector") == 0)
-  {
-    _retval = orxCOMMAND_VAR_TYPE_VECTOR;
-  }
-  else if (strcmp(s, "numeric") == 0)
-  {
-    _retval = orxCOMMAND_VAR_TYPE_NUMERIC;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxCOMMAND_VAR_TYPE_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxSYSTEM_EVENT lorx_lenumstr_to_orxSYSTEM_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxSYSTEM_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "close") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_CLOSE;
-  }
-  else if (strcmp(s, "focus_gained") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_FOCUS_GAINED;
-  }
-  else if (strcmp(s, "focus_lost") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_FOCUS_LOST;
-  }
-  else if (strcmp(s, "background") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_BACKGROUND;
-  }
-  else if (strcmp(s, "foreground") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_FOREGROUND;
-  }
-  else if (strcmp(s, "game_loop_start") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_GAME_LOOP_START;
-  }
-  else if (strcmp(s, "game_loop_stop") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_GAME_LOOP_STOP;
-  }
-  else if (strcmp(s, "touch_begin") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_TOUCH_BEGIN;
-  }
-  else if (strcmp(s, "touch_move") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_TOUCH_MOVE;
-  }
-  else if (strcmp(s, "touch_end") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_TOUCH_END;
-  }
-  else if (strcmp(s, "accelerate") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_ACCELERATE;
-  }
-  else if (strcmp(s, "motion_shake") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_MOTION_SHAKE;
-  }
-  else if (strcmp(s, "drop") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_DROP;
-  }
-  else if (strcmp(s, "clipboard") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_CLIPBOARD;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxSYSTEM_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxLOCALE_EVENT lorx_lenumstr_to_orxLOCALE_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxLOCALE_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "select_language") == 0)
-  {
-    _retval = orxLOCALE_EVENT_SELECT_LANGUAGE;
-  }
-  else if (strcmp(s, "set_string") == 0)
-  {
-    _retval = orxLOCALE_EVENT_SET_STRING;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxLOCALE_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxCONFIG_EVENT lorx_lenumstr_to_orxCONFIG_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxCONFIG_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "reload_start") == 0)
-  {
-    _retval = orxCONFIG_EVENT_RELOAD_START;
-  }
-  else if (strcmp(s, "reload_stop") == 0)
-  {
-    _retval = orxCONFIG_EVENT_RELOAD_STOP;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxCONFIG_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxCLOCK_MODIFIER lorx_lenumstr_to_orxCLOCK_MODIFIER(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxCLOCK_MODIFIER _retval = orxENUM_NONE;
-  if (strcmp(s, "fixed") == 0)
-  {
-    _retval = orxCLOCK_MODIFIER_FIXED;
-  }
-  else if (strcmp(s, "multiply") == 0)
-  {
-    _retval = orxCLOCK_MODIFIER_MULTIPLY;
-  }
-  else if (strcmp(s, "maxed") == 0)
-  {
-    _retval = orxCLOCK_MODIFIER_MAXED;
-  }
-  else if (strcmp(s, "average") == 0)
-  {
-    _retval = orxCLOCK_MODIFIER_AVERAGE;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxCLOCK_MODIFIER_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxCLOCK_PRIORITY lorx_lenumstr_to_orxCLOCK_PRIORITY(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxCLOCK_PRIORITY _retval = orxENUM_NONE;
-  if (strcmp(s, "lowest") == 0)
-  {
-    _retval = orxCLOCK_PRIORITY_LOWEST;
-  }
-  else if (strcmp(s, "lower") == 0)
-  {
-    _retval = orxCLOCK_PRIORITY_LOWER;
-  }
-  else if (strcmp(s, "low") == 0)
-  {
-    _retval = orxCLOCK_PRIORITY_LOW;
-  }
-  else if (strcmp(s, "normal") == 0)
-  {
-    _retval = orxCLOCK_PRIORITY_NORMAL;
-  }
-  else if (strcmp(s, "high") == 0)
-  {
-    _retval = orxCLOCK_PRIORITY_HIGH;
-  }
-  else if (strcmp(s, "higher") == 0)
-  {
-    _retval = orxCLOCK_PRIORITY_HIGHER;
-  }
-  else if (strcmp(s, "highest") == 0)
-  {
-    _retval = orxCLOCK_PRIORITY_HIGHEST;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxCLOCK_PRIORITY_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxCLOCK_EVENT lorx_lenumstr_to_orxCLOCK_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxCLOCK_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "restart") == 0)
-  {
-    _retval = orxCLOCK_EVENT_RESTART;
-  }
-  else if (strcmp(s, "resync") == 0)
-  {
-    _retval = orxCLOCK_EVENT_RESYNC;
-  }
-  else if (strcmp(s, "pause") == 0)
-  {
-    _retval = orxCLOCK_EVENT_PAUSE;
-  }
-  else if (strcmp(s, "unpause") == 0)
-  {
-    _retval = orxCLOCK_EVENT_UNPAUSE;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxCLOCK_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxRESOURCE_EVENT lorx_lenumstr_to_orxRESOURCE_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxRESOURCE_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "update") == 0)
-  {
-    _retval = orxRESOURCE_EVENT_UPDATE;
-  }
-  else if (strcmp(s, "add") == 0)
-  {
-    _retval = orxRESOURCE_EVENT_ADD;
-  }
-  else if (strcmp(s, "remove") == 0)
-  {
-    _retval = orxRESOURCE_EVENT_REMOVE;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxRESOURCE_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxEVENT_TYPE lorx_lenumstr_to_orxEVENT_TYPE(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxEVENT_TYPE _retval = orxENUM_NONE;
-  if (strcmp(s, "anim") == 0)
-  {
-    _retval = orxEVENT_TYPE_ANIM;
-  }
-  else if (strcmp(s, "clock") == 0)
-  {
-    _retval = orxEVENT_TYPE_CLOCK;
-  }
-  else if (strcmp(s, "config") == 0)
-  {
-    _retval = orxEVENT_TYPE_CONFIG;
-  }
-  else if (strcmp(s, "display") == 0)
-  {
-    _retval = orxEVENT_TYPE_DISPLAY;
-  }
-  else if (strcmp(s, "fx") == 0)
-  {
-    _retval = orxEVENT_TYPE_FX;
-  }
-  else if (strcmp(s, "input") == 0)
-  {
-    _retval = orxEVENT_TYPE_INPUT;
-  }
-  else if (strcmp(s, "locale") == 0)
-  {
-    _retval = orxEVENT_TYPE_LOCALE;
-  }
-  else if (strcmp(s, "object") == 0)
-  {
-    _retval = orxEVENT_TYPE_OBJECT;
-  }
-  else if (strcmp(s, "render") == 0)
-  {
-    _retval = orxEVENT_TYPE_RENDER;
-  }
-  else if (strcmp(s, "physics") == 0)
-  {
-    _retval = orxEVENT_TYPE_PHYSICS;
-  }
-  else if (strcmp(s, "resource") == 0)
-  {
-    _retval = orxEVENT_TYPE_RESOURCE;
-  }
-  else if (strcmp(s, "shader") == 0)
-  {
-    _retval = orxEVENT_TYPE_SHADER;
-  }
-  else if (strcmp(s, "sound") == 0)
-  {
-    _retval = orxEVENT_TYPE_SOUND;
-  }
-  else if (strcmp(s, "spawner") == 0)
-  {
-    _retval = orxEVENT_TYPE_SPAWNER;
-  }
-  else if (strcmp(s, "system") == 0)
-  {
-    _retval = orxEVENT_TYPE_SYSTEM;
-  }
-  else if (strcmp(s, "texture") == 0)
-  {
-    _retval = orxEVENT_TYPE_TEXTURE;
-  }
-  else if (strcmp(s, "timeline") == 0)
-  {
-    _retval = orxEVENT_TYPE_TIMELINE;
-  }
-  else if (strcmp(s, "viewport") == 0)
-  {
-    _retval = orxEVENT_TYPE_VIEWPORT;
-  }
-  else if (strcmp(s, "first_reserved") == 0)
-  {
-    _retval = orxEVENT_TYPE_FIRST_RESERVED;
-  }
-  else if (strcmp(s, "last_reserved") == 0)
-  {
-    _retval = orxEVENT_TYPE_LAST_RESERVED;
-  }
-  else if (strcmp(s, "user_defined") == 0)
-  {
-    _retval = orxEVENT_TYPE_USER_DEFINED;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxEVENT_TYPE_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxANIM_EVENT lorx_lenumstr_to_orxANIM_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxANIM_EVENT _retval = orxENUM_NONE;
+  orxFX_EVENT _retval = orxENUM_NONE;
   if (strcmp(s, "start") == 0)
   {
-    _retval = orxANIM_EVENT_START;
+    _retval = orxFX_EVENT_START;
   }
   else if (strcmp(s, "stop") == 0)
   {
-    _retval = orxANIM_EVENT_STOP;
+    _retval = orxFX_EVENT_STOP;
   }
-  else if (strcmp(s, "cut") == 0)
+  else if (strcmp(s, "add") == 0)
   {
-    _retval = orxANIM_EVENT_CUT;
+    _retval = orxFX_EVENT_ADD;
+  }
+  else if (strcmp(s, "remove") == 0)
+  {
+    _retval = orxFX_EVENT_REMOVE;
   }
   else if (strcmp(s, "loop") == 0)
   {
-    _retval = orxANIM_EVENT_LOOP;
-  }
-  else if (strcmp(s, "update") == 0)
-  {
-    _retval = orxANIM_EVENT_UPDATE;
-  }
-  else if (strcmp(s, "custom_event") == 0)
-  {
-    _retval = orxANIM_EVENT_CUSTOM_EVENT;
+    _retval = orxFX_EVENT_LOOP;
   }
   else if (strcmp(s, "none") == 0)
   {
-    _retval = orxANIM_EVENT_NONE;
+    _retval = orxFX_EVENT_NONE;
   }
   else
   {
@@ -4267,584 +4776,41 @@ LORX_API orxANIM_EVENT lorx_lenumstr_to_orxANIM_EVENT(lua_State *L, int i)
   return _retval;
 }
 
-LORX_API orxSHADER_PARAM_TYPE lorx_lenumstr_to_orxSHADER_PARAM_TYPE(lua_State *L, int i)
+LORX_API orxOBJECT_EVENT lorx_lenumstr_to_orxOBJECT_EVENT(lua_State *L, int i)
 {
   const char* s = luaL_checkstring(L, i);
-  orxSHADER_PARAM_TYPE _retval = orxENUM_NONE;
-  if (strcmp(s, "float") == 0)
-  {
-    _retval = orxSHADER_PARAM_TYPE_FLOAT;
-  }
-  else if (strcmp(s, "texture") == 0)
-  {
-    _retval = orxSHADER_PARAM_TYPE_TEXTURE;
-  }
-  else if (strcmp(s, "vector") == 0)
-  {
-    _retval = orxSHADER_PARAM_TYPE_VECTOR;
-  }
-  else if (strcmp(s, "time") == 0)
-  {
-    _retval = orxSHADER_PARAM_TYPE_TIME;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxSHADER_PARAM_TYPE_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxSHADER_EVENT lorx_lenumstr_to_orxSHADER_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxSHADER_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "set_param") == 0)
-  {
-    _retval = orxSHADER_EVENT_SET_PARAM;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxSHADER_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxVIEWPORT_EVENT lorx_lenumstr_to_orxVIEWPORT_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxVIEWPORT_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "resize") == 0)
-  {
-    _retval = orxVIEWPORT_EVENT_RESIZE;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxVIEWPORT_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxRENDER_EVENT lorx_lenumstr_to_orxRENDER_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxRENDER_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "start") == 0)
-  {
-    _retval = orxRENDER_EVENT_START;
-  }
-  else if (strcmp(s, "stop") == 0)
-  {
-    _retval = orxRENDER_EVENT_STOP;
-  }
-  else if (strcmp(s, "viewport_start") == 0)
-  {
-    _retval = orxRENDER_EVENT_VIEWPORT_START;
-  }
-  else if (strcmp(s, "viewport_stop") == 0)
-  {
-    _retval = orxRENDER_EVENT_VIEWPORT_STOP;
-  }
-  else if (strcmp(s, "object_start") == 0)
-  {
-    _retval = orxRENDER_EVENT_OBJECT_START;
-  }
-  else if (strcmp(s, "object_stop") == 0)
-  {
-    _retval = orxRENDER_EVENT_OBJECT_STOP;
-  }
-  else if (strcmp(s, "console_start") == 0)
-  {
-    _retval = orxRENDER_EVENT_CONSOLE_START;
-  }
-  else if (strcmp(s, "console_stop") == 0)
-  {
-    _retval = orxRENDER_EVENT_CONSOLE_STOP;
-  }
-  else if (strcmp(s, "profiler_start") == 0)
-  {
-    _retval = orxRENDER_EVENT_PROFILER_START;
-  }
-  else if (strcmp(s, "profiler_stop") == 0)
-  {
-    _retval = orxRENDER_EVENT_PROFILER_STOP;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxRENDER_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxDISPLAY_PRIMITIVE lorx_lenumstr_to_orxDISPLAY_PRIMITIVE(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxDISPLAY_PRIMITIVE _retval = orxENUM_NONE;
-  if (strcmp(s, "points") == 0)
-  {
-    _retval = orxDISPLAY_PRIMITIVE_POINTS;
-  }
-  else if (strcmp(s, "lines") == 0)
-  {
-    _retval = orxDISPLAY_PRIMITIVE_LINES;
-  }
-  else if (strcmp(s, "line_loop") == 0)
-  {
-    _retval = orxDISPLAY_PRIMITIVE_LINE_LOOP;
-  }
-  else if (strcmp(s, "line_strip") == 0)
-  {
-    _retval = orxDISPLAY_PRIMITIVE_LINE_STRIP;
-  }
-  else if (strcmp(s, "triangles") == 0)
-  {
-    _retval = orxDISPLAY_PRIMITIVE_TRIANGLES;
-  }
-  else if (strcmp(s, "triangle_strip") == 0)
-  {
-    _retval = orxDISPLAY_PRIMITIVE_TRIANGLE_STRIP;
-  }
-  else if (strcmp(s, "triangle_fan") == 0)
-  {
-    _retval = orxDISPLAY_PRIMITIVE_TRIANGLE_FAN;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxDISPLAY_PRIMITIVE_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxDISPLAY_SMOOTHING lorx_lenumstr_to_orxDISPLAY_SMOOTHING(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxDISPLAY_SMOOTHING _retval = orxENUM_NONE;
-  if (strcmp(s, "default") == 0)
-  {
-    _retval = orxDISPLAY_SMOOTHING_DEFAULT;
-  }
-  else if (strcmp(s, "on") == 0)
-  {
-    _retval = orxDISPLAY_SMOOTHING_ON;
-  }
-  else if (strcmp(s, "off") == 0)
-  {
-    _retval = orxDISPLAY_SMOOTHING_OFF;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxDISPLAY_SMOOTHING_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxDISPLAY_BLEND_MODE lorx_lenumstr_to_orxDISPLAY_BLEND_MODE(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxDISPLAY_BLEND_MODE _retval = orxENUM_NONE;
-  if (strcmp(s, "alpha") == 0)
-  {
-    _retval = orxDISPLAY_BLEND_MODE_ALPHA;
-  }
-  else if (strcmp(s, "multiply") == 0)
-  {
-    _retval = orxDISPLAY_BLEND_MODE_MULTIPLY;
-  }
-  else if (strcmp(s, "add") == 0)
-  {
-    _retval = orxDISPLAY_BLEND_MODE_ADD;
-  }
-  else if (strcmp(s, "premul") == 0)
-  {
-    _retval = orxDISPLAY_BLEND_MODE_PREMUL;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxDISPLAY_BLEND_MODE_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxDISPLAY_EVENT lorx_lenumstr_to_orxDISPLAY_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxDISPLAY_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "set_video_mode") == 0)
-  {
-    _retval = orxDISPLAY_EVENT_SET_VIDEO_MODE;
-  }
-  else if (strcmp(s, "load_bitmap") == 0)
-  {
-    _retval = orxDISPLAY_EVENT_LOAD_BITMAP;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxDISPLAY_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxTEXTURE_EVENT lorx_lenumstr_to_orxTEXTURE_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxTEXTURE_EVENT _retval = orxENUM_NONE;
+  orxOBJECT_EVENT _retval = orxENUM_NONE;
   if (strcmp(s, "create") == 0)
   {
-    _retval = orxTEXTURE_EVENT_CREATE;
+    _retval = orxOBJECT_EVENT_CREATE;
   }
   else if (strcmp(s, "delete") == 0)
   {
-    _retval = orxTEXTURE_EVENT_DELETE;
+    _retval = orxOBJECT_EVENT_DELETE;
   }
-  else if (strcmp(s, "load") == 0)
+  else if (strcmp(s, "prepare") == 0)
   {
-    _retval = orxTEXTURE_EVENT_LOAD;
+    _retval = orxOBJECT_EVENT_PREPARE;
   }
-  else if (strcmp(s, "none") == 0)
+  else if (strcmp(s, "enable") == 0)
   {
-    _retval = orxTEXTURE_EVENT_NONE;
+    _retval = orxOBJECT_EVENT_ENABLE;
   }
-  else
+  else if (strcmp(s, "disable") == 0)
   {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxMODULE_ID lorx_lenumstr_to_orxMODULE_ID(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxMODULE_ID _retval = orxENUM_NONE;
-  if (strcmp(s, "anim") == 0)
-  {
-    _retval = orxMODULE_ID_ANIM;
-  }
-  else if (strcmp(s, "animpointer") == 0)
-  {
-    _retval = orxMODULE_ID_ANIMPOINTER;
-  }
-  else if (strcmp(s, "animset") == 0)
-  {
-    _retval = orxMODULE_ID_ANIMSET;
-  }
-  else if (strcmp(s, "bank") == 0)
-  {
-    _retval = orxMODULE_ID_BANK;
-  }
-  else if (strcmp(s, "body") == 0)
-  {
-    _retval = orxMODULE_ID_BODY;
-  }
-  else if (strcmp(s, "camera") == 0)
-  {
-    _retval = orxMODULE_ID_CAMERA;
-  }
-  else if (strcmp(s, "clock") == 0)
-  {
-    _retval = orxMODULE_ID_CLOCK;
-  }
-  else if (strcmp(s, "command") == 0)
-  {
-    _retval = orxMODULE_ID_COMMAND;
-  }
-  else if (strcmp(s, "config") == 0)
-  {
-    _retval = orxMODULE_ID_CONFIG;
-  }
-  else if (strcmp(s, "console") == 0)
-  {
-    _retval = orxMODULE_ID_CONSOLE;
-  }
-  else if (strcmp(s, "display") == 0)
-  {
-    _retval = orxMODULE_ID_DISPLAY;
-  }
-  else if (strcmp(s, "event") == 0)
-  {
-    _retval = orxMODULE_ID_EVENT;
-  }
-  else if (strcmp(s, "file") == 0)
-  {
-    _retval = orxMODULE_ID_FILE;
-  }
-  else if (strcmp(s, "font") == 0)
-  {
-    _retval = orxMODULE_ID_FONT;
-  }
-  else if (strcmp(s, "fps") == 0)
-  {
-    _retval = orxMODULE_ID_FPS;
-  }
-  else if (strcmp(s, "frame") == 0)
-  {
-    _retval = orxMODULE_ID_FRAME;
-  }
-  else if (strcmp(s, "fx") == 0)
-  {
-    _retval = orxMODULE_ID_FX;
-  }
-  else if (strcmp(s, "fxpointer") == 0)
-  {
-    _retval = orxMODULE_ID_FXPOINTER;
-  }
-  else if (strcmp(s, "graphic") == 0)
-  {
-    _retval = orxMODULE_ID_GRAPHIC;
-  }
-  else if (strcmp(s, "input") == 0)
-  {
-    _retval = orxMODULE_ID_INPUT;
-  }
-  else if (strcmp(s, "joystick") == 0)
-  {
-    _retval = orxMODULE_ID_JOYSTICK;
-  }
-  else if (strcmp(s, "keyboard") == 0)
-  {
-    _retval = orxMODULE_ID_KEYBOARD;
-  }
-  else if (strcmp(s, "locale") == 0)
-  {
-    _retval = orxMODULE_ID_LOCALE;
-  }
-  else if (strcmp(s, "main") == 0)
-  {
-    _retval = orxMODULE_ID_MAIN;
-  }
-  else if (strcmp(s, "memory") == 0)
-  {
-    _retval = orxMODULE_ID_MEMORY;
-  }
-  else if (strcmp(s, "mouse") == 0)
-  {
-    _retval = orxMODULE_ID_MOUSE;
-  }
-  else if (strcmp(s, "object") == 0)
-  {
-    _retval = orxMODULE_ID_OBJECT;
-  }
-  else if (strcmp(s, "param") == 0)
-  {
-    _retval = orxMODULE_ID_PARAM;
-  }
-  else if (strcmp(s, "physics") == 0)
-  {
-    _retval = orxMODULE_ID_PHYSICS;
-  }
-  else if (strcmp(s, "plugin") == 0)
-  {
-    _retval = orxMODULE_ID_PLUGIN;
-  }
-  else if (strcmp(s, "profiler") == 0)
-  {
-    _retval = orxMODULE_ID_PROFILER;
-  }
-  else if (strcmp(s, "render") == 0)
-  {
-    _retval = orxMODULE_ID_RENDER;
-  }
-  else if (strcmp(s, "resource") == 0)
-  {
-    _retval = orxMODULE_ID_RESOURCE;
-  }
-  else if (strcmp(s, "screenshot") == 0)
-  {
-    _retval = orxMODULE_ID_SCREENSHOT;
-  }
-  else if (strcmp(s, "shader") == 0)
-  {
-    _retval = orxMODULE_ID_SHADER;
-  }
-  else if (strcmp(s, "shaderpointer") == 0)
-  {
-    _retval = orxMODULE_ID_SHADERPOINTER;
-  }
-  else if (strcmp(s, "sound") == 0)
-  {
-    _retval = orxMODULE_ID_SOUND;
-  }
-  else if (strcmp(s, "soundpointer") == 0)
-  {
-    _retval = orxMODULE_ID_SOUNDPOINTER;
-  }
-  else if (strcmp(s, "soundsystem") == 0)
-  {
-    _retval = orxMODULE_ID_SOUNDSYSTEM;
-  }
-  else if (strcmp(s, "spawner") == 0)
-  {
-    _retval = orxMODULE_ID_SPAWNER;
-  }
-  else if (strcmp(s, "string") == 0)
-  {
-    _retval = orxMODULE_ID_STRING;
-  }
-  else if (strcmp(s, "structure") == 0)
-  {
-    _retval = orxMODULE_ID_STRUCTURE;
-  }
-  else if (strcmp(s, "system") == 0)
-  {
-    _retval = orxMODULE_ID_SYSTEM;
-  }
-  else if (strcmp(s, "text") == 0)
-  {
-    _retval = orxMODULE_ID_TEXT;
-  }
-  else if (strcmp(s, "texture") == 0)
-  {
-    _retval = orxMODULE_ID_TEXTURE;
-  }
-  else if (strcmp(s, "thread") == 0)
-  {
-    _retval = orxMODULE_ID_THREAD;
-  }
-  else if (strcmp(s, "timeline") == 0)
-  {
-    _retval = orxMODULE_ID_TIMELINE;
-  }
-  else if (strcmp(s, "viewport") == 0)
-  {
-    _retval = orxMODULE_ID_VIEWPORT;
-  }
-  else if (strcmp(s, "user_defined") == 0)
-  {
-    _retval = orxMODULE_ID_USER_DEFINED;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxMODULE_ID_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxSEEK_OFFSET_WHENCE lorx_lenumstr_to_orxSEEK_OFFSET_WHENCE(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxSEEK_OFFSET_WHENCE _retval = orxENUM_NONE;
-  if (strcmp(s, "start") == 0)
-  {
-    _retval = orxSEEK_OFFSET_WHENCE_START;
-  }
-  else if (strcmp(s, "current") == 0)
-  {
-    _retval = orxSEEK_OFFSET_WHENCE_CURRENT;
-  }
-  else if (strcmp(s, "end") == 0)
-  {
-    _retval = orxSEEK_OFFSET_WHENCE_END;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxSEEK_OFFSET_WHENCE_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxSTATUS lorx_lenumstr_to_orxSTATUS(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxSTATUS _retval = orxENUM_NONE;
-  if (strcmp(s, "failure") == 0)
-  {
-    _retval = orxSTATUS_FAILURE;
-  }
-  else if (strcmp(s, "success") == 0)
-  {
-    _retval = orxSTATUS_SUCCESS;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxSTATUS_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxPHYSICS_EVENT lorx_lenumstr_to_orxPHYSICS_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxPHYSICS_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "contact_add") == 0)
-  {
-    _retval = orxPHYSICS_EVENT_CONTACT_ADD;
-  }
-  else if (strcmp(s, "contact_remove") == 0)
-  {
-    _retval = orxPHYSICS_EVENT_CONTACT_REMOVE;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxPHYSICS_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxSOUNDSYSTEM_STATUS lorx_lenumstr_to_orxSOUNDSYSTEM_STATUS(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxSOUNDSYSTEM_STATUS _retval = orxENUM_NONE;
-  if (strcmp(s, "play") == 0)
-  {
-    _retval = orxSOUNDSYSTEM_STATUS_PLAY;
+    _retval = orxOBJECT_EVENT_DISABLE;
   }
   else if (strcmp(s, "pause") == 0)
   {
-    _retval = orxSOUNDSYSTEM_STATUS_PAUSE;
+    _retval = orxOBJECT_EVENT_PAUSE;
   }
-  else if (strcmp(s, "stop") == 0)
+  else if (strcmp(s, "unpause") == 0)
   {
-    _retval = orxSOUNDSYSTEM_STATUS_STOP;
+    _retval = orxOBJECT_EVENT_UNPAUSE;
   }
   else if (strcmp(s, "none") == 0)
   {
-    _retval = orxSOUNDSYSTEM_STATUS_NONE;
+    _retval = orxOBJECT_EVENT_NONE;
   }
   else
   {
@@ -4853,131 +4819,41 @@ LORX_API orxSOUNDSYSTEM_STATUS lorx_lenumstr_to_orxSOUNDSYSTEM_STATUS(lua_State 
   return _retval;
 }
 
-LORX_API orxSOUND_FILTER_TYPE lorx_lenumstr_to_orxSOUND_FILTER_TYPE(lua_State *L, int i)
+LORX_API orxSPAWNER_EVENT lorx_lenumstr_to_orxSPAWNER_EVENT(lua_State *L, int i)
 {
   const char* s = luaL_checkstring(L, i);
-  orxSOUND_FILTER_TYPE _retval = orxENUM_NONE;
-  if (strcmp(s, "biquad") == 0)
+  orxSPAWNER_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "spawn") == 0)
   {
-    _retval = orxSOUND_FILTER_TYPE_BIQUAD;
+    _retval = orxSPAWNER_EVENT_SPAWN;
   }
-  else if (strcmp(s, "low_pass") == 0)
+  else if (strcmp(s, "create") == 0)
   {
-    _retval = orxSOUND_FILTER_TYPE_LOW_PASS;
+    _retval = orxSPAWNER_EVENT_CREATE;
   }
-  else if (strcmp(s, "high_pass") == 0)
+  else if (strcmp(s, "delete") == 0)
   {
-    _retval = orxSOUND_FILTER_TYPE_HIGH_PASS;
+    _retval = orxSPAWNER_EVENT_DELETE;
   }
-  else if (strcmp(s, "band_pass") == 0)
+  else if (strcmp(s, "reset") == 0)
   {
-    _retval = orxSOUND_FILTER_TYPE_BAND_PASS;
+    _retval = orxSPAWNER_EVENT_RESET;
   }
-  else if (strcmp(s, "low_shelf") == 0)
+  else if (strcmp(s, "empty") == 0)
   {
-    _retval = orxSOUND_FILTER_TYPE_LOW_SHELF;
+    _retval = orxSPAWNER_EVENT_EMPTY;
   }
-  else if (strcmp(s, "high_shelf") == 0)
+  else if (strcmp(s, "wave_start") == 0)
   {
-    _retval = orxSOUND_FILTER_TYPE_HIGH_SHELF;
+    _retval = orxSPAWNER_EVENT_WAVE_START;
   }
-  else if (strcmp(s, "notch") == 0)
+  else if (strcmp(s, "wave_stop") == 0)
   {
-    _retval = orxSOUND_FILTER_TYPE_NOTCH;
-  }
-  else if (strcmp(s, "peaking") == 0)
-  {
-    _retval = orxSOUND_FILTER_TYPE_PEAKING;
-  }
-  else if (strcmp(s, "delay") == 0)
-  {
-    _retval = orxSOUND_FILTER_TYPE_DELAY;
-  }
-  else if (strcmp(s, "custom") == 0)
-  {
-    _retval = orxSOUND_FILTER_TYPE_CUSTOM;
+    _retval = orxSPAWNER_EVENT_WAVE_STOP;
   }
   else if (strcmp(s, "none") == 0)
   {
-    _retval = orxSOUND_FILTER_TYPE_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxSOUND_STATUS lorx_lenumstr_to_orxSOUND_STATUS(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxSOUND_STATUS _retval = orxENUM_NONE;
-  if (strcmp(s, "play") == 0)
-  {
-    _retval = orxSOUND_STATUS_PLAY;
-  }
-  else if (strcmp(s, "pause") == 0)
-  {
-    _retval = orxSOUND_STATUS_PAUSE;
-  }
-  else if (strcmp(s, "stop") == 0)
-  {
-    _retval = orxSOUND_STATUS_STOP;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxSOUND_STATUS_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxSOUND_EVENT lorx_lenumstr_to_orxSOUND_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxSOUND_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "start") == 0)
-  {
-    _retval = orxSOUND_EVENT_START;
-  }
-  else if (strcmp(s, "stop") == 0)
-  {
-    _retval = orxSOUND_EVENT_STOP;
-  }
-  else if (strcmp(s, "add") == 0)
-  {
-    _retval = orxSOUND_EVENT_ADD;
-  }
-  else if (strcmp(s, "remove") == 0)
-  {
-    _retval = orxSOUND_EVENT_REMOVE;
-  }
-  else if (strcmp(s, "packet") == 0)
-  {
-    _retval = orxSOUND_EVENT_PACKET;
-  }
-  else if (strcmp(s, "recording_start") == 0)
-  {
-    _retval = orxSOUND_EVENT_RECORDING_START;
-  }
-  else if (strcmp(s, "recording_stop") == 0)
-  {
-    _retval = orxSOUND_EVENT_RECORDING_STOP;
-  }
-  else if (strcmp(s, "recording_packet") == 0)
-  {
-    _retval = orxSOUND_EVENT_RECORDING_PACKET;
-  }
-  else if (strcmp(s, "set_filter_param") == 0)
-  {
-    _retval = orxSOUND_EVENT_SET_FILTER_PARAM;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxSOUND_EVENT_NONE;
+    _retval = orxSPAWNER_EVENT_NONE;
   }
   else
   {
@@ -5108,189 +4984,6 @@ LORX_API orxSTRUCTURE_STORAGE_TYPE lorx_lenumstr_to_orxSTRUCTURE_STORAGE_TYPE(lu
   return _retval;
 }
 
-LORX_API orxSPAWNER_EVENT lorx_lenumstr_to_orxSPAWNER_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxSPAWNER_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "spawn") == 0)
-  {
-    _retval = orxSPAWNER_EVENT_SPAWN;
-  }
-  else if (strcmp(s, "create") == 0)
-  {
-    _retval = orxSPAWNER_EVENT_CREATE;
-  }
-  else if (strcmp(s, "delete") == 0)
-  {
-    _retval = orxSPAWNER_EVENT_DELETE;
-  }
-  else if (strcmp(s, "reset") == 0)
-  {
-    _retval = orxSPAWNER_EVENT_RESET;
-  }
-  else if (strcmp(s, "empty") == 0)
-  {
-    _retval = orxSPAWNER_EVENT_EMPTY;
-  }
-  else if (strcmp(s, "wave_start") == 0)
-  {
-    _retval = orxSPAWNER_EVENT_WAVE_START;
-  }
-  else if (strcmp(s, "wave_stop") == 0)
-  {
-    _retval = orxSPAWNER_EVENT_WAVE_STOP;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxSPAWNER_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxFRAME_SPACE lorx_lenumstr_to_orxFRAME_SPACE(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxFRAME_SPACE _retval = orxENUM_NONE;
-  if (strcmp(s, "global") == 0)
-  {
-    _retval = orxFRAME_SPACE_GLOBAL;
-  }
-  else if (strcmp(s, "local") == 0)
-  {
-    _retval = orxFRAME_SPACE_LOCAL;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxFRAME_SPACE_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxOBJECT_EVENT lorx_lenumstr_to_orxOBJECT_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxOBJECT_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "create") == 0)
-  {
-    _retval = orxOBJECT_EVENT_CREATE;
-  }
-  else if (strcmp(s, "delete") == 0)
-  {
-    _retval = orxOBJECT_EVENT_DELETE;
-  }
-  else if (strcmp(s, "prepare") == 0)
-  {
-    _retval = orxOBJECT_EVENT_PREPARE;
-  }
-  else if (strcmp(s, "enable") == 0)
-  {
-    _retval = orxOBJECT_EVENT_ENABLE;
-  }
-  else if (strcmp(s, "disable") == 0)
-  {
-    _retval = orxOBJECT_EVENT_DISABLE;
-  }
-  else if (strcmp(s, "pause") == 0)
-  {
-    _retval = orxOBJECT_EVENT_PAUSE;
-  }
-  else if (strcmp(s, "unpause") == 0)
-  {
-    _retval = orxOBJECT_EVENT_UNPAUSE;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxOBJECT_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxFX_CURVE lorx_lenumstr_to_orxFX_CURVE(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxFX_CURVE _retval = orxENUM_NONE;
-  if (strcmp(s, "linear") == 0)
-  {
-    _retval = orxFX_CURVE_LINEAR;
-  }
-  else if (strcmp(s, "smooth") == 0)
-  {
-    _retval = orxFX_CURVE_SMOOTH;
-  }
-  else if (strcmp(s, "smoother") == 0)
-  {
-    _retval = orxFX_CURVE_SMOOTHER;
-  }
-  else if (strcmp(s, "triangle") == 0)
-  {
-    _retval = orxFX_CURVE_TRIANGLE;
-  }
-  else if (strcmp(s, "sine") == 0)
-  {
-    _retval = orxFX_CURVE_SINE;
-  }
-  else if (strcmp(s, "square") == 0)
-  {
-    _retval = orxFX_CURVE_SQUARE;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxFX_CURVE_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
-LORX_API orxFX_EVENT lorx_lenumstr_to_orxFX_EVENT(lua_State *L, int i)
-{
-  const char* s = luaL_checkstring(L, i);
-  orxFX_EVENT _retval = orxENUM_NONE;
-  if (strcmp(s, "start") == 0)
-  {
-    _retval = orxFX_EVENT_START;
-  }
-  else if (strcmp(s, "stop") == 0)
-  {
-    _retval = orxFX_EVENT_STOP;
-  }
-  else if (strcmp(s, "add") == 0)
-  {
-    _retval = orxFX_EVENT_ADD;
-  }
-  else if (strcmp(s, "remove") == 0)
-  {
-    _retval = orxFX_EVENT_REMOVE;
-  }
-  else if (strcmp(s, "loop") == 0)
-  {
-    _retval = orxFX_EVENT_LOOP;
-  }
-  else if (strcmp(s, "none") == 0)
-  {
-    _retval = orxFX_EVENT_NONE;
-  }
-  else
-  {
-    luaL_error(L, "unrecognized enum %s!", s);
-  }
-  return _retval;
-}
-
 LORX_API orxTIMELINE_EVENT lorx_lenumstr_to_orxTIMELINE_EVENT(lua_State *L, int i)
 {
   const char* s = luaL_checkstring(L, i);
@@ -5330,54 +5023,345 @@ LORX_API orxTIMELINE_EVENT lorx_lenumstr_to_orxTIMELINE_EVENT(lua_State *L, int 
   return _retval;
 }
 
+LORX_API orxPHYSICS_EVENT lorx_lenumstr_to_orxPHYSICS_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxPHYSICS_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "contact_add") == 0)
+  {
+    _retval = orxPHYSICS_EVENT_CONTACT_ADD;
+  }
+  else if (strcmp(s, "contact_remove") == 0)
+  {
+    _retval = orxPHYSICS_EVENT_CONTACT_REMOVE;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxPHYSICS_EVENT_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxRENDER_EVENT lorx_lenumstr_to_orxRENDER_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxRENDER_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "start") == 0)
+  {
+    _retval = orxRENDER_EVENT_START;
+  }
+  else if (strcmp(s, "stop") == 0)
+  {
+    _retval = orxRENDER_EVENT_STOP;
+  }
+  else if (strcmp(s, "viewport_start") == 0)
+  {
+    _retval = orxRENDER_EVENT_VIEWPORT_START;
+  }
+  else if (strcmp(s, "viewport_stop") == 0)
+  {
+    _retval = orxRENDER_EVENT_VIEWPORT_STOP;
+  }
+  else if (strcmp(s, "object_start") == 0)
+  {
+    _retval = orxRENDER_EVENT_OBJECT_START;
+  }
+  else if (strcmp(s, "object_stop") == 0)
+  {
+    _retval = orxRENDER_EVENT_OBJECT_STOP;
+  }
+  else if (strcmp(s, "console_start") == 0)
+  {
+    _retval = orxRENDER_EVENT_CONSOLE_START;
+  }
+  else if (strcmp(s, "console_stop") == 0)
+  {
+    _retval = orxRENDER_EVENT_CONSOLE_STOP;
+  }
+  else if (strcmp(s, "profiler_start") == 0)
+  {
+    _retval = orxRENDER_EVENT_PROFILER_START;
+  }
+  else if (strcmp(s, "profiler_stop") == 0)
+  {
+    _retval = orxRENDER_EVENT_PROFILER_STOP;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxRENDER_EVENT_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxSHADER_PARAM_TYPE lorx_lenumstr_to_orxSHADER_PARAM_TYPE(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxSHADER_PARAM_TYPE _retval = orxENUM_NONE;
+  if (strcmp(s, "float") == 0)
+  {
+    _retval = orxSHADER_PARAM_TYPE_FLOAT;
+  }
+  else if (strcmp(s, "texture") == 0)
+  {
+    _retval = orxSHADER_PARAM_TYPE_TEXTURE;
+  }
+  else if (strcmp(s, "vector") == 0)
+  {
+    _retval = orxSHADER_PARAM_TYPE_VECTOR;
+  }
+  else if (strcmp(s, "time") == 0)
+  {
+    _retval = orxSHADER_PARAM_TYPE_TIME;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxSHADER_PARAM_TYPE_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxSHADER_EVENT lorx_lenumstr_to_orxSHADER_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxSHADER_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "set_param") == 0)
+  {
+    _retval = orxSHADER_EVENT_SET_PARAM;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxSHADER_EVENT_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxVIEWPORT_EVENT lorx_lenumstr_to_orxVIEWPORT_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxVIEWPORT_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "resize") == 0)
+  {
+    _retval = orxVIEWPORT_EVENT_RESIZE;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxVIEWPORT_EVENT_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxSOUND_STATUS lorx_lenumstr_to_orxSOUND_STATUS(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxSOUND_STATUS _retval = orxENUM_NONE;
+  if (strcmp(s, "play") == 0)
+  {
+    _retval = orxSOUND_STATUS_PLAY;
+  }
+  else if (strcmp(s, "pause") == 0)
+  {
+    _retval = orxSOUND_STATUS_PAUSE;
+  }
+  else if (strcmp(s, "stop") == 0)
+  {
+    _retval = orxSOUND_STATUS_STOP;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxSOUND_STATUS_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxSOUND_EVENT lorx_lenumstr_to_orxSOUND_EVENT(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxSOUND_EVENT _retval = orxENUM_NONE;
+  if (strcmp(s, "start") == 0)
+  {
+    _retval = orxSOUND_EVENT_START;
+  }
+  else if (strcmp(s, "stop") == 0)
+  {
+    _retval = orxSOUND_EVENT_STOP;
+  }
+  else if (strcmp(s, "add") == 0)
+  {
+    _retval = orxSOUND_EVENT_ADD;
+  }
+  else if (strcmp(s, "remove") == 0)
+  {
+    _retval = orxSOUND_EVENT_REMOVE;
+  }
+  else if (strcmp(s, "packet") == 0)
+  {
+    _retval = orxSOUND_EVENT_PACKET;
+  }
+  else if (strcmp(s, "recording_start") == 0)
+  {
+    _retval = orxSOUND_EVENT_RECORDING_START;
+  }
+  else if (strcmp(s, "recording_stop") == 0)
+  {
+    _retval = orxSOUND_EVENT_RECORDING_STOP;
+  }
+  else if (strcmp(s, "recording_packet") == 0)
+  {
+    _retval = orxSOUND_EVENT_RECORDING_PACKET;
+  }
+  else if (strcmp(s, "set_filter_param") == 0)
+  {
+    _retval = orxSOUND_EVENT_SET_FILTER_PARAM;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxSOUND_EVENT_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxSOUNDSYSTEM_STATUS lorx_lenumstr_to_orxSOUNDSYSTEM_STATUS(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxSOUNDSYSTEM_STATUS _retval = orxENUM_NONE;
+  if (strcmp(s, "play") == 0)
+  {
+    _retval = orxSOUNDSYSTEM_STATUS_PLAY;
+  }
+  else if (strcmp(s, "pause") == 0)
+  {
+    _retval = orxSOUNDSYSTEM_STATUS_PAUSE;
+  }
+  else if (strcmp(s, "stop") == 0)
+  {
+    _retval = orxSOUNDSYSTEM_STATUS_STOP;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxSOUNDSYSTEM_STATUS_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
+LORX_API orxSOUND_FILTER_TYPE lorx_lenumstr_to_orxSOUND_FILTER_TYPE(lua_State *L, int i)
+{
+  const char* s = luaL_checkstring(L, i);
+  orxSOUND_FILTER_TYPE _retval = orxENUM_NONE;
+  if (strcmp(s, "biquad") == 0)
+  {
+    _retval = orxSOUND_FILTER_TYPE_BIQUAD;
+  }
+  else if (strcmp(s, "low_pass") == 0)
+  {
+    _retval = orxSOUND_FILTER_TYPE_LOW_PASS;
+  }
+  else if (strcmp(s, "high_pass") == 0)
+  {
+    _retval = orxSOUND_FILTER_TYPE_HIGH_PASS;
+  }
+  else if (strcmp(s, "band_pass") == 0)
+  {
+    _retval = orxSOUND_FILTER_TYPE_BAND_PASS;
+  }
+  else if (strcmp(s, "low_shelf") == 0)
+  {
+    _retval = orxSOUND_FILTER_TYPE_LOW_SHELF;
+  }
+  else if (strcmp(s, "high_shelf") == 0)
+  {
+    _retval = orxSOUND_FILTER_TYPE_HIGH_SHELF;
+  }
+  else if (strcmp(s, "notch") == 0)
+  {
+    _retval = orxSOUND_FILTER_TYPE_NOTCH;
+  }
+  else if (strcmp(s, "peaking") == 0)
+  {
+    _retval = orxSOUND_FILTER_TYPE_PEAKING;
+  }
+  else if (strcmp(s, "delay") == 0)
+  {
+    _retval = orxSOUND_FILTER_TYPE_DELAY;
+  }
+  else if (strcmp(s, "custom") == 0)
+  {
+    _retval = orxSOUND_FILTER_TYPE_CUSTOM;
+  }
+  else if (strcmp(s, "none") == 0)
+  {
+    _retval = orxSOUND_FILTER_TYPE_NONE;
+  }
+  else
+  {
+    luaL_error(L, "unrecognized enum %s!", s);
+  }
+  return _retval;
+}
+
 
 /*
  * Conversion functions for converting an Orx enum variable to a lua enum string (strictly typed)
  */
-LORX_API int lorx_orxMOUSE_BUTTON_to_lenumstr(lua_State *L, orxMOUSE_BUTTON src)
+LORX_API int lorx_orxANIM_EVENT_to_lenumstr(lua_State *L, orxANIM_EVENT src)
 {
   const char* src_str = NULL;
-  if (src == orxMOUSE_BUTTON_LEFT)
+  if (src == orxANIM_EVENT_START)
   {
-    src_str = "left";
+    src_str = "start";
   }
-  else if (src == orxMOUSE_BUTTON_RIGHT)
+  else if (src == orxANIM_EVENT_STOP)
   {
-    src_str = "right";
+    src_str = "stop";
   }
-  else if (src == orxMOUSE_BUTTON_MIDDLE)
+  else if (src == orxANIM_EVENT_CUT)
   {
-    src_str = "middle";
+    src_str = "cut";
   }
-  else if (src == orxMOUSE_BUTTON_EXTRA_1)
+  else if (src == orxANIM_EVENT_LOOP)
   {
-    src_str = "extra_1";
+    src_str = "loop";
   }
-  else if (src == orxMOUSE_BUTTON_EXTRA_2)
+  else if (src == orxANIM_EVENT_UPDATE)
   {
-    src_str = "extra_2";
+    src_str = "update";
   }
-  else if (src == orxMOUSE_BUTTON_EXTRA_3)
+  else if (src == orxANIM_EVENT_CUSTOM_EVENT)
   {
-    src_str = "extra_3";
+    src_str = "custom_event";
   }
-  else if (src == orxMOUSE_BUTTON_EXTRA_4)
-  {
-    src_str = "extra_4";
-  }
-  else if (src == orxMOUSE_BUTTON_EXTRA_5)
-  {
-    src_str = "extra_5";
-  }
-  else if (src == orxMOUSE_BUTTON_WHEEL_UP)
-  {
-    src_str = "wheel_up";
-  }
-  else if (src == orxMOUSE_BUTTON_WHEEL_DOWN)
-  {
-    src_str = "wheel_down";
-  }
-  else if (src == orxMOUSE_BUTTON_NONE)
+  else if (src == orxANIM_EVENT_NONE)
   {
     src_str = "none";
   }
@@ -5390,18 +5374,1038 @@ LORX_API int lorx_orxMOUSE_BUTTON_to_lenumstr(lua_State *L, orxMOUSE_BUTTON src)
   return 1;
 }
 
-LORX_API int lorx_orxMOUSE_AXIS_to_lenumstr(lua_State *L, orxMOUSE_AXIS src)
+LORX_API int lorx_orxMODULE_ID_to_lenumstr(lua_State *L, orxMODULE_ID src)
 {
   const char* src_str = NULL;
-  if (src == orxMOUSE_AXIS_X)
+  if (src == orxMODULE_ID_ANIM)
   {
-    src_str = "x";
+    src_str = "anim";
   }
-  else if (src == orxMOUSE_AXIS_Y)
+  else if (src == orxMODULE_ID_ANIMPOINTER)
   {
-    src_str = "y";
+    src_str = "animpointer";
   }
-  else if (src == orxMOUSE_AXIS_NONE)
+  else if (src == orxMODULE_ID_ANIMSET)
+  {
+    src_str = "animset";
+  }
+  else if (src == orxMODULE_ID_BANK)
+  {
+    src_str = "bank";
+  }
+  else if (src == orxMODULE_ID_BODY)
+  {
+    src_str = "body";
+  }
+  else if (src == orxMODULE_ID_CAMERA)
+  {
+    src_str = "camera";
+  }
+  else if (src == orxMODULE_ID_CLOCK)
+  {
+    src_str = "clock";
+  }
+  else if (src == orxMODULE_ID_COMMAND)
+  {
+    src_str = "command";
+  }
+  else if (src == orxMODULE_ID_CONFIG)
+  {
+    src_str = "config";
+  }
+  else if (src == orxMODULE_ID_CONSOLE)
+  {
+    src_str = "console";
+  }
+  else if (src == orxMODULE_ID_DISPLAY)
+  {
+    src_str = "display";
+  }
+  else if (src == orxMODULE_ID_EVENT)
+  {
+    src_str = "event";
+  }
+  else if (src == orxMODULE_ID_FILE)
+  {
+    src_str = "file";
+  }
+  else if (src == orxMODULE_ID_FONT)
+  {
+    src_str = "font";
+  }
+  else if (src == orxMODULE_ID_FPS)
+  {
+    src_str = "fps";
+  }
+  else if (src == orxMODULE_ID_FRAME)
+  {
+    src_str = "frame";
+  }
+  else if (src == orxMODULE_ID_FX)
+  {
+    src_str = "fx";
+  }
+  else if (src == orxMODULE_ID_FXPOINTER)
+  {
+    src_str = "fxpointer";
+  }
+  else if (src == orxMODULE_ID_GRAPHIC)
+  {
+    src_str = "graphic";
+  }
+  else if (src == orxMODULE_ID_INPUT)
+  {
+    src_str = "input";
+  }
+  else if (src == orxMODULE_ID_JOYSTICK)
+  {
+    src_str = "joystick";
+  }
+  else if (src == orxMODULE_ID_KEYBOARD)
+  {
+    src_str = "keyboard";
+  }
+  else if (src == orxMODULE_ID_LOCALE)
+  {
+    src_str = "locale";
+  }
+  else if (src == orxMODULE_ID_MAIN)
+  {
+    src_str = "main";
+  }
+  else if (src == orxMODULE_ID_MEMORY)
+  {
+    src_str = "memory";
+  }
+  else if (src == orxMODULE_ID_MOUSE)
+  {
+    src_str = "mouse";
+  }
+  else if (src == orxMODULE_ID_OBJECT)
+  {
+    src_str = "object";
+  }
+  else if (src == orxMODULE_ID_PARAM)
+  {
+    src_str = "param";
+  }
+  else if (src == orxMODULE_ID_PHYSICS)
+  {
+    src_str = "physics";
+  }
+  else if (src == orxMODULE_ID_PLUGIN)
+  {
+    src_str = "plugin";
+  }
+  else if (src == orxMODULE_ID_PROFILER)
+  {
+    src_str = "profiler";
+  }
+  else if (src == orxMODULE_ID_RENDER)
+  {
+    src_str = "render";
+  }
+  else if (src == orxMODULE_ID_RESOURCE)
+  {
+    src_str = "resource";
+  }
+  else if (src == orxMODULE_ID_SCREENSHOT)
+  {
+    src_str = "screenshot";
+  }
+  else if (src == orxMODULE_ID_SHADER)
+  {
+    src_str = "shader";
+  }
+  else if (src == orxMODULE_ID_SHADERPOINTER)
+  {
+    src_str = "shaderpointer";
+  }
+  else if (src == orxMODULE_ID_SOUND)
+  {
+    src_str = "sound";
+  }
+  else if (src == orxMODULE_ID_SOUNDPOINTER)
+  {
+    src_str = "soundpointer";
+  }
+  else if (src == orxMODULE_ID_SOUNDSYSTEM)
+  {
+    src_str = "soundsystem";
+  }
+  else if (src == orxMODULE_ID_SPAWNER)
+  {
+    src_str = "spawner";
+  }
+  else if (src == orxMODULE_ID_STRING)
+  {
+    src_str = "string";
+  }
+  else if (src == orxMODULE_ID_STRUCTURE)
+  {
+    src_str = "structure";
+  }
+  else if (src == orxMODULE_ID_SYSTEM)
+  {
+    src_str = "system";
+  }
+  else if (src == orxMODULE_ID_TEXT)
+  {
+    src_str = "text";
+  }
+  else if (src == orxMODULE_ID_TEXTURE)
+  {
+    src_str = "texture";
+  }
+  else if (src == orxMODULE_ID_THREAD)
+  {
+    src_str = "thread";
+  }
+  else if (src == orxMODULE_ID_TIMELINE)
+  {
+    src_str = "timeline";
+  }
+  else if (src == orxMODULE_ID_VIEWPORT)
+  {
+    src_str = "viewport";
+  }
+  else if (src == orxMODULE_ID_USER_DEFINED)
+  {
+    src_str = "user_defined";
+  }
+  else if (src == orxMODULE_ID_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxSEEK_OFFSET_WHENCE_to_lenumstr(lua_State *L, orxSEEK_OFFSET_WHENCE src)
+{
+  const char* src_str = NULL;
+  if (src == orxSEEK_OFFSET_WHENCE_START)
+  {
+    src_str = "start";
+  }
+  else if (src == orxSEEK_OFFSET_WHENCE_CURRENT)
+  {
+    src_str = "current";
+  }
+  else if (src == orxSEEK_OFFSET_WHENCE_END)
+  {
+    src_str = "end";
+  }
+  else if (src == orxSEEK_OFFSET_WHENCE_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxSTATUS_to_lenumstr(lua_State *L, orxSTATUS src)
+{
+  const char* src_str = NULL;
+  if (src == orxSTATUS_FAILURE)
+  {
+    src_str = "failure";
+  }
+  else if (src == orxSTATUS_SUCCESS)
+  {
+    src_str = "success";
+  }
+  else if (src == orxSTATUS_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxCLOCK_MODIFIER_to_lenumstr(lua_State *L, orxCLOCK_MODIFIER src)
+{
+  const char* src_str = NULL;
+  if (src == orxCLOCK_MODIFIER_FIXED)
+  {
+    src_str = "fixed";
+  }
+  else if (src == orxCLOCK_MODIFIER_MULTIPLY)
+  {
+    src_str = "multiply";
+  }
+  else if (src == orxCLOCK_MODIFIER_MAXED)
+  {
+    src_str = "maxed";
+  }
+  else if (src == orxCLOCK_MODIFIER_AVERAGE)
+  {
+    src_str = "average";
+  }
+  else if (src == orxCLOCK_MODIFIER_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxCLOCK_PRIORITY_to_lenumstr(lua_State *L, orxCLOCK_PRIORITY src)
+{
+  const char* src_str = NULL;
+  if (src == orxCLOCK_PRIORITY_LOWEST)
+  {
+    src_str = "lowest";
+  }
+  else if (src == orxCLOCK_PRIORITY_LOWER)
+  {
+    src_str = "lower";
+  }
+  else if (src == orxCLOCK_PRIORITY_LOW)
+  {
+    src_str = "low";
+  }
+  else if (src == orxCLOCK_PRIORITY_NORMAL)
+  {
+    src_str = "normal";
+  }
+  else if (src == orxCLOCK_PRIORITY_HIGH)
+  {
+    src_str = "high";
+  }
+  else if (src == orxCLOCK_PRIORITY_HIGHER)
+  {
+    src_str = "higher";
+  }
+  else if (src == orxCLOCK_PRIORITY_HIGHEST)
+  {
+    src_str = "highest";
+  }
+  else if (src == orxCLOCK_PRIORITY_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxCLOCK_EVENT_to_lenumstr(lua_State *L, orxCLOCK_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxCLOCK_EVENT_RESTART)
+  {
+    src_str = "restart";
+  }
+  else if (src == orxCLOCK_EVENT_RESYNC)
+  {
+    src_str = "resync";
+  }
+  else if (src == orxCLOCK_EVENT_PAUSE)
+  {
+    src_str = "pause";
+  }
+  else if (src == orxCLOCK_EVENT_UNPAUSE)
+  {
+    src_str = "unpause";
+  }
+  else if (src == orxCLOCK_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxCOMMAND_VAR_TYPE_to_lenumstr(lua_State *L, orxCOMMAND_VAR_TYPE src)
+{
+  const char* src_str = NULL;
+  if (src == orxCOMMAND_VAR_TYPE_STRING)
+  {
+    src_str = "string";
+  }
+  else if (src == orxCOMMAND_VAR_TYPE_FLOAT)
+  {
+    src_str = "float";
+  }
+  else if (src == orxCOMMAND_VAR_TYPE_S32)
+  {
+    src_str = "s32";
+  }
+  else if (src == orxCOMMAND_VAR_TYPE_U32)
+  {
+    src_str = "u32";
+  }
+  else if (src == orxCOMMAND_VAR_TYPE_S64)
+  {
+    src_str = "s64";
+  }
+  else if (src == orxCOMMAND_VAR_TYPE_U64)
+  {
+    src_str = "u64";
+  }
+  else if (src == orxCOMMAND_VAR_TYPE_BOOL)
+  {
+    src_str = "bool";
+  }
+  else if (src == orxCOMMAND_VAR_TYPE_VECTOR)
+  {
+    src_str = "vector";
+  }
+  else if (src == orxCOMMAND_VAR_TYPE_NUMERIC)
+  {
+    src_str = "numeric";
+  }
+  else if (src == orxCOMMAND_VAR_TYPE_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxCONFIG_EVENT_to_lenumstr(lua_State *L, orxCONFIG_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxCONFIG_EVENT_RELOAD_START)
+  {
+    src_str = "reload_start";
+  }
+  else if (src == orxCONFIG_EVENT_RELOAD_STOP)
+  {
+    src_str = "reload_stop";
+  }
+  else if (src == orxCONFIG_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxEVENT_TYPE_to_lenumstr(lua_State *L, orxEVENT_TYPE src)
+{
+  const char* src_str = NULL;
+  if (src == orxEVENT_TYPE_ANIM)
+  {
+    src_str = "anim";
+  }
+  else if (src == orxEVENT_TYPE_CLOCK)
+  {
+    src_str = "clock";
+  }
+  else if (src == orxEVENT_TYPE_CONFIG)
+  {
+    src_str = "config";
+  }
+  else if (src == orxEVENT_TYPE_DISPLAY)
+  {
+    src_str = "display";
+  }
+  else if (src == orxEVENT_TYPE_FX)
+  {
+    src_str = "fx";
+  }
+  else if (src == orxEVENT_TYPE_INPUT)
+  {
+    src_str = "input";
+  }
+  else if (src == orxEVENT_TYPE_LOCALE)
+  {
+    src_str = "locale";
+  }
+  else if (src == orxEVENT_TYPE_OBJECT)
+  {
+    src_str = "object";
+  }
+  else if (src == orxEVENT_TYPE_RENDER)
+  {
+    src_str = "render";
+  }
+  else if (src == orxEVENT_TYPE_PHYSICS)
+  {
+    src_str = "physics";
+  }
+  else if (src == orxEVENT_TYPE_RESOURCE)
+  {
+    src_str = "resource";
+  }
+  else if (src == orxEVENT_TYPE_SHADER)
+  {
+    src_str = "shader";
+  }
+  else if (src == orxEVENT_TYPE_SOUND)
+  {
+    src_str = "sound";
+  }
+  else if (src == orxEVENT_TYPE_SPAWNER)
+  {
+    src_str = "spawner";
+  }
+  else if (src == orxEVENT_TYPE_SYSTEM)
+  {
+    src_str = "system";
+  }
+  else if (src == orxEVENT_TYPE_TEXTURE)
+  {
+    src_str = "texture";
+  }
+  else if (src == orxEVENT_TYPE_TIMELINE)
+  {
+    src_str = "timeline";
+  }
+  else if (src == orxEVENT_TYPE_VIEWPORT)
+  {
+    src_str = "viewport";
+  }
+  else if (src == orxEVENT_TYPE_FIRST_RESERVED)
+  {
+    src_str = "first_reserved";
+  }
+  else if (src == orxEVENT_TYPE_LAST_RESERVED)
+  {
+    src_str = "last_reserved";
+  }
+  else if (src == orxEVENT_TYPE_USER_DEFINED)
+  {
+    src_str = "user_defined";
+  }
+  else if (src == orxEVENT_TYPE_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxLOCALE_EVENT_to_lenumstr(lua_State *L, orxLOCALE_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxLOCALE_EVENT_SELECT_LANGUAGE)
+  {
+    src_str = "select_language";
+  }
+  else if (src == orxLOCALE_EVENT_SET_STRING)
+  {
+    src_str = "set_string";
+  }
+  else if (src == orxLOCALE_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxRESOURCE_EVENT_to_lenumstr(lua_State *L, orxRESOURCE_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxRESOURCE_EVENT_UPDATE)
+  {
+    src_str = "update";
+  }
+  else if (src == orxRESOURCE_EVENT_ADD)
+  {
+    src_str = "add";
+  }
+  else if (src == orxRESOURCE_EVENT_REMOVE)
+  {
+    src_str = "remove";
+  }
+  else if (src == orxRESOURCE_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxSYSTEM_EVENT_to_lenumstr(lua_State *L, orxSYSTEM_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxSYSTEM_EVENT_CLOSE)
+  {
+    src_str = "close";
+  }
+  else if (src == orxSYSTEM_EVENT_FOCUS_GAINED)
+  {
+    src_str = "focus_gained";
+  }
+  else if (src == orxSYSTEM_EVENT_FOCUS_LOST)
+  {
+    src_str = "focus_lost";
+  }
+  else if (src == orxSYSTEM_EVENT_BACKGROUND)
+  {
+    src_str = "background";
+  }
+  else if (src == orxSYSTEM_EVENT_FOREGROUND)
+  {
+    src_str = "foreground";
+  }
+  else if (src == orxSYSTEM_EVENT_GAME_LOOP_START)
+  {
+    src_str = "game_loop_start";
+  }
+  else if (src == orxSYSTEM_EVENT_GAME_LOOP_STOP)
+  {
+    src_str = "game_loop_stop";
+  }
+  else if (src == orxSYSTEM_EVENT_TOUCH_BEGIN)
+  {
+    src_str = "touch_begin";
+  }
+  else if (src == orxSYSTEM_EVENT_TOUCH_MOVE)
+  {
+    src_str = "touch_move";
+  }
+  else if (src == orxSYSTEM_EVENT_TOUCH_END)
+  {
+    src_str = "touch_end";
+  }
+  else if (src == orxSYSTEM_EVENT_ACCELERATE)
+  {
+    src_str = "accelerate";
+  }
+  else if (src == orxSYSTEM_EVENT_MOTION_SHAKE)
+  {
+    src_str = "motion_shake";
+  }
+  else if (src == orxSYSTEM_EVENT_DROP)
+  {
+    src_str = "drop";
+  }
+  else if (src == orxSYSTEM_EVENT_CLIPBOARD)
+  {
+    src_str = "clipboard";
+  }
+  else if (src == orxSYSTEM_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxDEBUG_LEVEL_to_lenumstr(lua_State *L, orxDEBUG_LEVEL src)
+{
+  const char* src_str = NULL;
+  if (src == orxDEBUG_LEVEL_ANIM)
+  {
+    src_str = "anim";
+  }
+  else if (src == orxDEBUG_LEVEL_CONFIG)
+  {
+    src_str = "config";
+  }
+  else if (src == orxDEBUG_LEVEL_CLOCK)
+  {
+    src_str = "clock";
+  }
+  else if (src == orxDEBUG_LEVEL_COMMAND)
+  {
+    src_str = "command";
+  }
+  else if (src == orxDEBUG_LEVEL_DISPLAY)
+  {
+    src_str = "display";
+  }
+  else if (src == orxDEBUG_LEVEL_FILE)
+  {
+    src_str = "file";
+  }
+  else if (src == orxDEBUG_LEVEL_INPUT)
+  {
+    src_str = "input";
+  }
+  else if (src == orxDEBUG_LEVEL_JOYSTICK)
+  {
+    src_str = "joystick";
+  }
+  else if (src == orxDEBUG_LEVEL_KEYBOARD)
+  {
+    src_str = "keyboard";
+  }
+  else if (src == orxDEBUG_LEVEL_MEMORY)
+  {
+    src_str = "memory";
+  }
+  else if (src == orxDEBUG_LEVEL_MOUSE)
+  {
+    src_str = "mouse";
+  }
+  else if (src == orxDEBUG_LEVEL_OBJECT)
+  {
+    src_str = "object";
+  }
+  else if (src == orxDEBUG_LEVEL_PARAM)
+  {
+    src_str = "param";
+  }
+  else if (src == orxDEBUG_LEVEL_PHYSICS)
+  {
+    src_str = "physics";
+  }
+  else if (src == orxDEBUG_LEVEL_PLUGIN)
+  {
+    src_str = "plugin";
+  }
+  else if (src == orxDEBUG_LEVEL_PROFILER)
+  {
+    src_str = "profiler";
+  }
+  else if (src == orxDEBUG_LEVEL_RENDER)
+  {
+    src_str = "render";
+  }
+  else if (src == orxDEBUG_LEVEL_SCREENSHOT)
+  {
+    src_str = "screenshot";
+  }
+  else if (src == orxDEBUG_LEVEL_SOUND)
+  {
+    src_str = "sound";
+  }
+  else if (src == orxDEBUG_LEVEL_SYSTEM)
+  {
+    src_str = "system";
+  }
+  else if (src == orxDEBUG_LEVEL_TIMER)
+  {
+    src_str = "timer";
+  }
+  else if (src == orxDEBUG_LEVEL_LOG)
+  {
+    src_str = "log";
+  }
+  else if (src == orxDEBUG_LEVEL_ASSERT)
+  {
+    src_str = "assert";
+  }
+  else if (src == orxDEBUG_LEVEL_USER)
+  {
+    src_str = "user";
+  }
+  else if (src == orxDEBUG_LEVEL_ALL)
+  {
+    src_str = "all";
+  }
+  else if (src == orxDEBUG_LEVEL_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxDISPLAY_PRIMITIVE_to_lenumstr(lua_State *L, orxDISPLAY_PRIMITIVE src)
+{
+  const char* src_str = NULL;
+  if (src == orxDISPLAY_PRIMITIVE_POINTS)
+  {
+    src_str = "points";
+  }
+  else if (src == orxDISPLAY_PRIMITIVE_LINES)
+  {
+    src_str = "lines";
+  }
+  else if (src == orxDISPLAY_PRIMITIVE_LINE_LOOP)
+  {
+    src_str = "line_loop";
+  }
+  else if (src == orxDISPLAY_PRIMITIVE_LINE_STRIP)
+  {
+    src_str = "line_strip";
+  }
+  else if (src == orxDISPLAY_PRIMITIVE_TRIANGLES)
+  {
+    src_str = "triangles";
+  }
+  else if (src == orxDISPLAY_PRIMITIVE_TRIANGLE_STRIP)
+  {
+    src_str = "triangle_strip";
+  }
+  else if (src == orxDISPLAY_PRIMITIVE_TRIANGLE_FAN)
+  {
+    src_str = "triangle_fan";
+  }
+  else if (src == orxDISPLAY_PRIMITIVE_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxDISPLAY_SMOOTHING_to_lenumstr(lua_State *L, orxDISPLAY_SMOOTHING src)
+{
+  const char* src_str = NULL;
+  if (src == orxDISPLAY_SMOOTHING_DEFAULT)
+  {
+    src_str = "default";
+  }
+  else if (src == orxDISPLAY_SMOOTHING_ON)
+  {
+    src_str = "on";
+  }
+  else if (src == orxDISPLAY_SMOOTHING_OFF)
+  {
+    src_str = "off";
+  }
+  else if (src == orxDISPLAY_SMOOTHING_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxDISPLAY_BLEND_MODE_to_lenumstr(lua_State *L, orxDISPLAY_BLEND_MODE src)
+{
+  const char* src_str = NULL;
+  if (src == orxDISPLAY_BLEND_MODE_ALPHA)
+  {
+    src_str = "alpha";
+  }
+  else if (src == orxDISPLAY_BLEND_MODE_MULTIPLY)
+  {
+    src_str = "multiply";
+  }
+  else if (src == orxDISPLAY_BLEND_MODE_ADD)
+  {
+    src_str = "add";
+  }
+  else if (src == orxDISPLAY_BLEND_MODE_PREMUL)
+  {
+    src_str = "premul";
+  }
+  else if (src == orxDISPLAY_BLEND_MODE_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxDISPLAY_EVENT_to_lenumstr(lua_State *L, orxDISPLAY_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxDISPLAY_EVENT_SET_VIDEO_MODE)
+  {
+    src_str = "set_video_mode";
+  }
+  else if (src == orxDISPLAY_EVENT_LOAD_BITMAP)
+  {
+    src_str = "load_bitmap";
+  }
+  else if (src == orxDISPLAY_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxTEXTURE_EVENT_to_lenumstr(lua_State *L, orxTEXTURE_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxTEXTURE_EVENT_CREATE)
+  {
+    src_str = "create";
+  }
+  else if (src == orxTEXTURE_EVENT_DELETE)
+  {
+    src_str = "delete";
+  }
+  else if (src == orxTEXTURE_EVENT_LOAD)
+  {
+    src_str = "load";
+  }
+  else if (src == orxTEXTURE_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxINPUT_TYPE_to_lenumstr(lua_State *L, orxINPUT_TYPE src)
+{
+  const char* src_str = NULL;
+  if (src == orxINPUT_TYPE_KEYBOARD_KEY)
+  {
+    src_str = "keyboard_key";
+  }
+  else if (src == orxINPUT_TYPE_MOUSE_BUTTON)
+  {
+    src_str = "mouse_button";
+  }
+  else if (src == orxINPUT_TYPE_MOUSE_AXIS)
+  {
+    src_str = "mouse_axis";
+  }
+  else if (src == orxINPUT_TYPE_JOYSTICK_BUTTON)
+  {
+    src_str = "joystick_button";
+  }
+  else if (src == orxINPUT_TYPE_JOYSTICK_AXIS)
+  {
+    src_str = "joystick_axis";
+  }
+  else if (src == orxINPUT_TYPE_EXTERNAL)
+  {
+    src_str = "external";
+  }
+  else if (src == orxINPUT_TYPE_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxINPUT_MODE_to_lenumstr(lua_State *L, orxINPUT_MODE src)
+{
+  const char* src_str = NULL;
+  if (src == orxINPUT_MODE_FULL)
+  {
+    src_str = "full";
+  }
+  else if (src == orxINPUT_MODE_POSITIVE)
+  {
+    src_str = "positive";
+  }
+  else if (src == orxINPUT_MODE_NEGATIVE)
+  {
+    src_str = "negative";
+  }
+  else if (src == orxINPUT_MODE_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxINPUT_EVENT_to_lenumstr(lua_State *L, orxINPUT_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxINPUT_EVENT_ON)
+  {
+    src_str = "on";
+  }
+  else if (src == orxINPUT_EVENT_OFF)
+  {
+    src_str = "off";
+  }
+  else if (src == orxINPUT_EVENT_SELECT_SET)
+  {
+    src_str = "select_set";
+  }
+  else if (src == orxINPUT_EVENT_REMOVE_SET)
+  {
+    src_str = "remove_set";
+  }
+  else if (src == orxINPUT_EVENT_NONE)
   {
     src_str = "none";
   }
@@ -8939,34 +9943,50 @@ LORX_API int lorx_orxKEYBOARD_KEY_to_lenumstr(lua_State *L, orxKEYBOARD_KEY src)
   return 1;
 }
 
-LORX_API int lorx_orxINPUT_TYPE_to_lenumstr(lua_State *L, orxINPUT_TYPE src)
+LORX_API int lorx_orxMOUSE_BUTTON_to_lenumstr(lua_State *L, orxMOUSE_BUTTON src)
 {
   const char* src_str = NULL;
-  if (src == orxINPUT_TYPE_KEYBOARD_KEY)
+  if (src == orxMOUSE_BUTTON_LEFT)
   {
-    src_str = "keyboard_key";
+    src_str = "left";
   }
-  else if (src == orxINPUT_TYPE_MOUSE_BUTTON)
+  else if (src == orxMOUSE_BUTTON_RIGHT)
   {
-    src_str = "mouse_button";
+    src_str = "right";
   }
-  else if (src == orxINPUT_TYPE_MOUSE_AXIS)
+  else if (src == orxMOUSE_BUTTON_MIDDLE)
   {
-    src_str = "mouse_axis";
+    src_str = "middle";
   }
-  else if (src == orxINPUT_TYPE_JOYSTICK_BUTTON)
+  else if (src == orxMOUSE_BUTTON_EXTRA_1)
   {
-    src_str = "joystick_button";
+    src_str = "extra_1";
   }
-  else if (src == orxINPUT_TYPE_JOYSTICK_AXIS)
+  else if (src == orxMOUSE_BUTTON_EXTRA_2)
   {
-    src_str = "joystick_axis";
+    src_str = "extra_2";
   }
-  else if (src == orxINPUT_TYPE_EXTERNAL)
+  else if (src == orxMOUSE_BUTTON_EXTRA_3)
   {
-    src_str = "external";
+    src_str = "extra_3";
   }
-  else if (src == orxINPUT_TYPE_NONE)
+  else if (src == orxMOUSE_BUTTON_EXTRA_4)
+  {
+    src_str = "extra_4";
+  }
+  else if (src == orxMOUSE_BUTTON_EXTRA_5)
+  {
+    src_str = "extra_5";
+  }
+  else if (src == orxMOUSE_BUTTON_WHEEL_UP)
+  {
+    src_str = "wheel_up";
+  }
+  else if (src == orxMOUSE_BUTTON_WHEEL_DOWN)
+  {
+    src_str = "wheel_down";
+  }
+  else if (src == orxMOUSE_BUTTON_NONE)
   {
     src_str = "none";
   }
@@ -8979,22 +9999,18 @@ LORX_API int lorx_orxINPUT_TYPE_to_lenumstr(lua_State *L, orxINPUT_TYPE src)
   return 1;
 }
 
-LORX_API int lorx_orxINPUT_MODE_to_lenumstr(lua_State *L, orxINPUT_MODE src)
+LORX_API int lorx_orxMOUSE_AXIS_to_lenumstr(lua_State *L, orxMOUSE_AXIS src)
 {
   const char* src_str = NULL;
-  if (src == orxINPUT_MODE_FULL)
+  if (src == orxMOUSE_AXIS_X)
   {
-    src_str = "full";
+    src_str = "x";
   }
-  else if (src == orxINPUT_MODE_POSITIVE)
+  else if (src == orxMOUSE_AXIS_Y)
   {
-    src_str = "positive";
+    src_str = "y";
   }
-  else if (src == orxINPUT_MODE_NEGATIVE)
-  {
-    src_str = "negative";
-  }
-  else if (src == orxINPUT_MODE_NONE)
+  else if (src == orxMOUSE_AXIS_NONE)
   {
     src_str = "none";
   }
@@ -9007,26 +10023,18 @@ LORX_API int lorx_orxINPUT_MODE_to_lenumstr(lua_State *L, orxINPUT_MODE src)
   return 1;
 }
 
-LORX_API int lorx_orxINPUT_EVENT_to_lenumstr(lua_State *L, orxINPUT_EVENT src)
+LORX_API int lorx_orxFRAME_SPACE_to_lenumstr(lua_State *L, orxFRAME_SPACE src)
 {
   const char* src_str = NULL;
-  if (src == orxINPUT_EVENT_ON)
+  if (src == orxFRAME_SPACE_GLOBAL)
   {
-    src_str = "on";
+    src_str = "global";
   }
-  else if (src == orxINPUT_EVENT_OFF)
+  else if (src == orxFRAME_SPACE_LOCAL)
   {
-    src_str = "off";
+    src_str = "local";
   }
-  else if (src == orxINPUT_EVENT_SELECT_SET)
-  {
-    src_str = "select_set";
-  }
-  else if (src == orxINPUT_EVENT_REMOVE_SET)
-  {
-    src_str = "remove_set";
-  }
-  else if (src == orxINPUT_EVENT_NONE)
+  else if (src == orxFRAME_SPACE_NONE)
   {
     src_str = "none";
   }
@@ -9039,110 +10047,34 @@ LORX_API int lorx_orxINPUT_EVENT_to_lenumstr(lua_State *L, orxINPUT_EVENT src)
   return 1;
 }
 
-LORX_API int lorx_orxDEBUG_LEVEL_to_lenumstr(lua_State *L, orxDEBUG_LEVEL src)
+LORX_API int lorx_orxFX_CURVE_to_lenumstr(lua_State *L, orxFX_CURVE src)
 {
   const char* src_str = NULL;
-  if (src == orxDEBUG_LEVEL_ANIM)
+  if (src == orxFX_CURVE_LINEAR)
   {
-    src_str = "anim";
+    src_str = "linear";
   }
-  else if (src == orxDEBUG_LEVEL_CONFIG)
+  else if (src == orxFX_CURVE_SMOOTH)
   {
-    src_str = "config";
+    src_str = "smooth";
   }
-  else if (src == orxDEBUG_LEVEL_CLOCK)
+  else if (src == orxFX_CURVE_SMOOTHER)
   {
-    src_str = "clock";
+    src_str = "smoother";
   }
-  else if (src == orxDEBUG_LEVEL_COMMAND)
+  else if (src == orxFX_CURVE_TRIANGLE)
   {
-    src_str = "command";
+    src_str = "triangle";
   }
-  else if (src == orxDEBUG_LEVEL_DISPLAY)
+  else if (src == orxFX_CURVE_SINE)
   {
-    src_str = "display";
+    src_str = "sine";
   }
-  else if (src == orxDEBUG_LEVEL_FILE)
+  else if (src == orxFX_CURVE_SQUARE)
   {
-    src_str = "file";
+    src_str = "square";
   }
-  else if (src == orxDEBUG_LEVEL_INPUT)
-  {
-    src_str = "input";
-  }
-  else if (src == orxDEBUG_LEVEL_JOYSTICK)
-  {
-    src_str = "joystick";
-  }
-  else if (src == orxDEBUG_LEVEL_KEYBOARD)
-  {
-    src_str = "keyboard";
-  }
-  else if (src == orxDEBUG_LEVEL_MEMORY)
-  {
-    src_str = "memory";
-  }
-  else if (src == orxDEBUG_LEVEL_MOUSE)
-  {
-    src_str = "mouse";
-  }
-  else if (src == orxDEBUG_LEVEL_OBJECT)
-  {
-    src_str = "object";
-  }
-  else if (src == orxDEBUG_LEVEL_PARAM)
-  {
-    src_str = "param";
-  }
-  else if (src == orxDEBUG_LEVEL_PHYSICS)
-  {
-    src_str = "physics";
-  }
-  else if (src == orxDEBUG_LEVEL_PLUGIN)
-  {
-    src_str = "plugin";
-  }
-  else if (src == orxDEBUG_LEVEL_PROFILER)
-  {
-    src_str = "profiler";
-  }
-  else if (src == orxDEBUG_LEVEL_RENDER)
-  {
-    src_str = "render";
-  }
-  else if (src == orxDEBUG_LEVEL_SCREENSHOT)
-  {
-    src_str = "screenshot";
-  }
-  else if (src == orxDEBUG_LEVEL_SOUND)
-  {
-    src_str = "sound";
-  }
-  else if (src == orxDEBUG_LEVEL_SYSTEM)
-  {
-    src_str = "system";
-  }
-  else if (src == orxDEBUG_LEVEL_TIMER)
-  {
-    src_str = "timer";
-  }
-  else if (src == orxDEBUG_LEVEL_LOG)
-  {
-    src_str = "log";
-  }
-  else if (src == orxDEBUG_LEVEL_ASSERT)
-  {
-    src_str = "assert";
-  }
-  else if (src == orxDEBUG_LEVEL_USER)
-  {
-    src_str = "user";
-  }
-  else if (src == orxDEBUG_LEVEL_ALL)
-  {
-    src_str = "all";
-  }
-  else if (src == orxDEBUG_LEVEL_NONE)
+  else if (src == orxFX_CURVE_NONE)
   {
     src_str = "none";
   }
@@ -9155,442 +10087,30 @@ LORX_API int lorx_orxDEBUG_LEVEL_to_lenumstr(lua_State *L, orxDEBUG_LEVEL src)
   return 1;
 }
 
-LORX_API int lorx_orxCOMMAND_VAR_TYPE_to_lenumstr(lua_State *L, orxCOMMAND_VAR_TYPE src)
+LORX_API int lorx_orxFX_EVENT_to_lenumstr(lua_State *L, orxFX_EVENT src)
 {
   const char* src_str = NULL;
-  if (src == orxCOMMAND_VAR_TYPE_STRING)
-  {
-    src_str = "string";
-  }
-  else if (src == orxCOMMAND_VAR_TYPE_FLOAT)
-  {
-    src_str = "float";
-  }
-  else if (src == orxCOMMAND_VAR_TYPE_S32)
-  {
-    src_str = "s32";
-  }
-  else if (src == orxCOMMAND_VAR_TYPE_U32)
-  {
-    src_str = "u32";
-  }
-  else if (src == orxCOMMAND_VAR_TYPE_S64)
-  {
-    src_str = "s64";
-  }
-  else if (src == orxCOMMAND_VAR_TYPE_U64)
-  {
-    src_str = "u64";
-  }
-  else if (src == orxCOMMAND_VAR_TYPE_BOOL)
-  {
-    src_str = "bool";
-  }
-  else if (src == orxCOMMAND_VAR_TYPE_VECTOR)
-  {
-    src_str = "vector";
-  }
-  else if (src == orxCOMMAND_VAR_TYPE_NUMERIC)
-  {
-    src_str = "numeric";
-  }
-  else if (src == orxCOMMAND_VAR_TYPE_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxSYSTEM_EVENT_to_lenumstr(lua_State *L, orxSYSTEM_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxSYSTEM_EVENT_CLOSE)
-  {
-    src_str = "close";
-  }
-  else if (src == orxSYSTEM_EVENT_FOCUS_GAINED)
-  {
-    src_str = "focus_gained";
-  }
-  else if (src == orxSYSTEM_EVENT_FOCUS_LOST)
-  {
-    src_str = "focus_lost";
-  }
-  else if (src == orxSYSTEM_EVENT_BACKGROUND)
-  {
-    src_str = "background";
-  }
-  else if (src == orxSYSTEM_EVENT_FOREGROUND)
-  {
-    src_str = "foreground";
-  }
-  else if (src == orxSYSTEM_EVENT_GAME_LOOP_START)
-  {
-    src_str = "game_loop_start";
-  }
-  else if (src == orxSYSTEM_EVENT_GAME_LOOP_STOP)
-  {
-    src_str = "game_loop_stop";
-  }
-  else if (src == orxSYSTEM_EVENT_TOUCH_BEGIN)
-  {
-    src_str = "touch_begin";
-  }
-  else if (src == orxSYSTEM_EVENT_TOUCH_MOVE)
-  {
-    src_str = "touch_move";
-  }
-  else if (src == orxSYSTEM_EVENT_TOUCH_END)
-  {
-    src_str = "touch_end";
-  }
-  else if (src == orxSYSTEM_EVENT_ACCELERATE)
-  {
-    src_str = "accelerate";
-  }
-  else if (src == orxSYSTEM_EVENT_MOTION_SHAKE)
-  {
-    src_str = "motion_shake";
-  }
-  else if (src == orxSYSTEM_EVENT_DROP)
-  {
-    src_str = "drop";
-  }
-  else if (src == orxSYSTEM_EVENT_CLIPBOARD)
-  {
-    src_str = "clipboard";
-  }
-  else if (src == orxSYSTEM_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxLOCALE_EVENT_to_lenumstr(lua_State *L, orxLOCALE_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxLOCALE_EVENT_SELECT_LANGUAGE)
-  {
-    src_str = "select_language";
-  }
-  else if (src == orxLOCALE_EVENT_SET_STRING)
-  {
-    src_str = "set_string";
-  }
-  else if (src == orxLOCALE_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxCONFIG_EVENT_to_lenumstr(lua_State *L, orxCONFIG_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxCONFIG_EVENT_RELOAD_START)
-  {
-    src_str = "reload_start";
-  }
-  else if (src == orxCONFIG_EVENT_RELOAD_STOP)
-  {
-    src_str = "reload_stop";
-  }
-  else if (src == orxCONFIG_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxCLOCK_MODIFIER_to_lenumstr(lua_State *L, orxCLOCK_MODIFIER src)
-{
-  const char* src_str = NULL;
-  if (src == orxCLOCK_MODIFIER_FIXED)
-  {
-    src_str = "fixed";
-  }
-  else if (src == orxCLOCK_MODIFIER_MULTIPLY)
-  {
-    src_str = "multiply";
-  }
-  else if (src == orxCLOCK_MODIFIER_MAXED)
-  {
-    src_str = "maxed";
-  }
-  else if (src == orxCLOCK_MODIFIER_AVERAGE)
-  {
-    src_str = "average";
-  }
-  else if (src == orxCLOCK_MODIFIER_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxCLOCK_PRIORITY_to_lenumstr(lua_State *L, orxCLOCK_PRIORITY src)
-{
-  const char* src_str = NULL;
-  if (src == orxCLOCK_PRIORITY_LOWEST)
-  {
-    src_str = "lowest";
-  }
-  else if (src == orxCLOCK_PRIORITY_LOWER)
-  {
-    src_str = "lower";
-  }
-  else if (src == orxCLOCK_PRIORITY_LOW)
-  {
-    src_str = "low";
-  }
-  else if (src == orxCLOCK_PRIORITY_NORMAL)
-  {
-    src_str = "normal";
-  }
-  else if (src == orxCLOCK_PRIORITY_HIGH)
-  {
-    src_str = "high";
-  }
-  else if (src == orxCLOCK_PRIORITY_HIGHER)
-  {
-    src_str = "higher";
-  }
-  else if (src == orxCLOCK_PRIORITY_HIGHEST)
-  {
-    src_str = "highest";
-  }
-  else if (src == orxCLOCK_PRIORITY_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxCLOCK_EVENT_to_lenumstr(lua_State *L, orxCLOCK_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxCLOCK_EVENT_RESTART)
-  {
-    src_str = "restart";
-  }
-  else if (src == orxCLOCK_EVENT_RESYNC)
-  {
-    src_str = "resync";
-  }
-  else if (src == orxCLOCK_EVENT_PAUSE)
-  {
-    src_str = "pause";
-  }
-  else if (src == orxCLOCK_EVENT_UNPAUSE)
-  {
-    src_str = "unpause";
-  }
-  else if (src == orxCLOCK_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxRESOURCE_EVENT_to_lenumstr(lua_State *L, orxRESOURCE_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxRESOURCE_EVENT_UPDATE)
-  {
-    src_str = "update";
-  }
-  else if (src == orxRESOURCE_EVENT_ADD)
-  {
-    src_str = "add";
-  }
-  else if (src == orxRESOURCE_EVENT_REMOVE)
-  {
-    src_str = "remove";
-  }
-  else if (src == orxRESOURCE_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxEVENT_TYPE_to_lenumstr(lua_State *L, orxEVENT_TYPE src)
-{
-  const char* src_str = NULL;
-  if (src == orxEVENT_TYPE_ANIM)
-  {
-    src_str = "anim";
-  }
-  else if (src == orxEVENT_TYPE_CLOCK)
-  {
-    src_str = "clock";
-  }
-  else if (src == orxEVENT_TYPE_CONFIG)
-  {
-    src_str = "config";
-  }
-  else if (src == orxEVENT_TYPE_DISPLAY)
-  {
-    src_str = "display";
-  }
-  else if (src == orxEVENT_TYPE_FX)
-  {
-    src_str = "fx";
-  }
-  else if (src == orxEVENT_TYPE_INPUT)
-  {
-    src_str = "input";
-  }
-  else if (src == orxEVENT_TYPE_LOCALE)
-  {
-    src_str = "locale";
-  }
-  else if (src == orxEVENT_TYPE_OBJECT)
-  {
-    src_str = "object";
-  }
-  else if (src == orxEVENT_TYPE_RENDER)
-  {
-    src_str = "render";
-  }
-  else if (src == orxEVENT_TYPE_PHYSICS)
-  {
-    src_str = "physics";
-  }
-  else if (src == orxEVENT_TYPE_RESOURCE)
-  {
-    src_str = "resource";
-  }
-  else if (src == orxEVENT_TYPE_SHADER)
-  {
-    src_str = "shader";
-  }
-  else if (src == orxEVENT_TYPE_SOUND)
-  {
-    src_str = "sound";
-  }
-  else if (src == orxEVENT_TYPE_SPAWNER)
-  {
-    src_str = "spawner";
-  }
-  else if (src == orxEVENT_TYPE_SYSTEM)
-  {
-    src_str = "system";
-  }
-  else if (src == orxEVENT_TYPE_TEXTURE)
-  {
-    src_str = "texture";
-  }
-  else if (src == orxEVENT_TYPE_TIMELINE)
-  {
-    src_str = "timeline";
-  }
-  else if (src == orxEVENT_TYPE_VIEWPORT)
-  {
-    src_str = "viewport";
-  }
-  else if (src == orxEVENT_TYPE_FIRST_RESERVED)
-  {
-    src_str = "first_reserved";
-  }
-  else if (src == orxEVENT_TYPE_LAST_RESERVED)
-  {
-    src_str = "last_reserved";
-  }
-  else if (src == orxEVENT_TYPE_USER_DEFINED)
-  {
-    src_str = "user_defined";
-  }
-  else if (src == orxEVENT_TYPE_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxANIM_EVENT_to_lenumstr(lua_State *L, orxANIM_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxANIM_EVENT_START)
+  if (src == orxFX_EVENT_START)
   {
     src_str = "start";
   }
-  else if (src == orxANIM_EVENT_STOP)
+  else if (src == orxFX_EVENT_STOP)
   {
     src_str = "stop";
   }
-  else if (src == orxANIM_EVENT_CUT)
+  else if (src == orxFX_EVENT_ADD)
   {
-    src_str = "cut";
+    src_str = "add";
   }
-  else if (src == orxANIM_EVENT_LOOP)
+  else if (src == orxFX_EVENT_REMOVE)
+  {
+    src_str = "remove";
+  }
+  else if (src == orxFX_EVENT_LOOP)
   {
     src_str = "loop";
   }
-  else if (src == orxANIM_EVENT_UPDATE)
-  {
-    src_str = "update";
-  }
-  else if (src == orxANIM_EVENT_CUSTOM_EVENT)
-  {
-    src_str = "custom_event";
-  }
-  else if (src == orxANIM_EVENT_NONE)
+  else if (src == orxFX_EVENT_NONE)
   {
     src_str = "none";
   }
@@ -9603,650 +10123,38 @@ LORX_API int lorx_orxANIM_EVENT_to_lenumstr(lua_State *L, orxANIM_EVENT src)
   return 1;
 }
 
-LORX_API int lorx_orxSHADER_PARAM_TYPE_to_lenumstr(lua_State *L, orxSHADER_PARAM_TYPE src)
+LORX_API int lorx_orxOBJECT_EVENT_to_lenumstr(lua_State *L, orxOBJECT_EVENT src)
 {
   const char* src_str = NULL;
-  if (src == orxSHADER_PARAM_TYPE_FLOAT)
-  {
-    src_str = "float";
-  }
-  else if (src == orxSHADER_PARAM_TYPE_TEXTURE)
-  {
-    src_str = "texture";
-  }
-  else if (src == orxSHADER_PARAM_TYPE_VECTOR)
-  {
-    src_str = "vector";
-  }
-  else if (src == orxSHADER_PARAM_TYPE_TIME)
-  {
-    src_str = "time";
-  }
-  else if (src == orxSHADER_PARAM_TYPE_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxSHADER_EVENT_to_lenumstr(lua_State *L, orxSHADER_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxSHADER_EVENT_SET_PARAM)
-  {
-    src_str = "set_param";
-  }
-  else if (src == orxSHADER_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxVIEWPORT_EVENT_to_lenumstr(lua_State *L, orxVIEWPORT_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxVIEWPORT_EVENT_RESIZE)
-  {
-    src_str = "resize";
-  }
-  else if (src == orxVIEWPORT_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxRENDER_EVENT_to_lenumstr(lua_State *L, orxRENDER_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxRENDER_EVENT_START)
-  {
-    src_str = "start";
-  }
-  else if (src == orxRENDER_EVENT_STOP)
-  {
-    src_str = "stop";
-  }
-  else if (src == orxRENDER_EVENT_VIEWPORT_START)
-  {
-    src_str = "viewport_start";
-  }
-  else if (src == orxRENDER_EVENT_VIEWPORT_STOP)
-  {
-    src_str = "viewport_stop";
-  }
-  else if (src == orxRENDER_EVENT_OBJECT_START)
-  {
-    src_str = "object_start";
-  }
-  else if (src == orxRENDER_EVENT_OBJECT_STOP)
-  {
-    src_str = "object_stop";
-  }
-  else if (src == orxRENDER_EVENT_CONSOLE_START)
-  {
-    src_str = "console_start";
-  }
-  else if (src == orxRENDER_EVENT_CONSOLE_STOP)
-  {
-    src_str = "console_stop";
-  }
-  else if (src == orxRENDER_EVENT_PROFILER_START)
-  {
-    src_str = "profiler_start";
-  }
-  else if (src == orxRENDER_EVENT_PROFILER_STOP)
-  {
-    src_str = "profiler_stop";
-  }
-  else if (src == orxRENDER_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxDISPLAY_PRIMITIVE_to_lenumstr(lua_State *L, orxDISPLAY_PRIMITIVE src)
-{
-  const char* src_str = NULL;
-  if (src == orxDISPLAY_PRIMITIVE_POINTS)
-  {
-    src_str = "points";
-  }
-  else if (src == orxDISPLAY_PRIMITIVE_LINES)
-  {
-    src_str = "lines";
-  }
-  else if (src == orxDISPLAY_PRIMITIVE_LINE_LOOP)
-  {
-    src_str = "line_loop";
-  }
-  else if (src == orxDISPLAY_PRIMITIVE_LINE_STRIP)
-  {
-    src_str = "line_strip";
-  }
-  else if (src == orxDISPLAY_PRIMITIVE_TRIANGLES)
-  {
-    src_str = "triangles";
-  }
-  else if (src == orxDISPLAY_PRIMITIVE_TRIANGLE_STRIP)
-  {
-    src_str = "triangle_strip";
-  }
-  else if (src == orxDISPLAY_PRIMITIVE_TRIANGLE_FAN)
-  {
-    src_str = "triangle_fan";
-  }
-  else if (src == orxDISPLAY_PRIMITIVE_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxDISPLAY_SMOOTHING_to_lenumstr(lua_State *L, orxDISPLAY_SMOOTHING src)
-{
-  const char* src_str = NULL;
-  if (src == orxDISPLAY_SMOOTHING_DEFAULT)
-  {
-    src_str = "default";
-  }
-  else if (src == orxDISPLAY_SMOOTHING_ON)
-  {
-    src_str = "on";
-  }
-  else if (src == orxDISPLAY_SMOOTHING_OFF)
-  {
-    src_str = "off";
-  }
-  else if (src == orxDISPLAY_SMOOTHING_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxDISPLAY_BLEND_MODE_to_lenumstr(lua_State *L, orxDISPLAY_BLEND_MODE src)
-{
-  const char* src_str = NULL;
-  if (src == orxDISPLAY_BLEND_MODE_ALPHA)
-  {
-    src_str = "alpha";
-  }
-  else if (src == orxDISPLAY_BLEND_MODE_MULTIPLY)
-  {
-    src_str = "multiply";
-  }
-  else if (src == orxDISPLAY_BLEND_MODE_ADD)
-  {
-    src_str = "add";
-  }
-  else if (src == orxDISPLAY_BLEND_MODE_PREMUL)
-  {
-    src_str = "premul";
-  }
-  else if (src == orxDISPLAY_BLEND_MODE_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxDISPLAY_EVENT_to_lenumstr(lua_State *L, orxDISPLAY_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxDISPLAY_EVENT_SET_VIDEO_MODE)
-  {
-    src_str = "set_video_mode";
-  }
-  else if (src == orxDISPLAY_EVENT_LOAD_BITMAP)
-  {
-    src_str = "load_bitmap";
-  }
-  else if (src == orxDISPLAY_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxTEXTURE_EVENT_to_lenumstr(lua_State *L, orxTEXTURE_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxTEXTURE_EVENT_CREATE)
+  if (src == orxOBJECT_EVENT_CREATE)
   {
     src_str = "create";
   }
-  else if (src == orxTEXTURE_EVENT_DELETE)
+  else if (src == orxOBJECT_EVENT_DELETE)
   {
     src_str = "delete";
   }
-  else if (src == orxTEXTURE_EVENT_LOAD)
+  else if (src == orxOBJECT_EVENT_PREPARE)
   {
-    src_str = "load";
+    src_str = "prepare";
   }
-  else if (src == orxTEXTURE_EVENT_NONE)
+  else if (src == orxOBJECT_EVENT_ENABLE)
   {
-    src_str = "none";
+    src_str = "enable";
   }
-  else
+  else if (src == orxOBJECT_EVENT_DISABLE)
   {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
+    src_str = "disable";
   }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxMODULE_ID_to_lenumstr(lua_State *L, orxMODULE_ID src)
-{
-  const char* src_str = NULL;
-  if (src == orxMODULE_ID_ANIM)
-  {
-    src_str = "anim";
-  }
-  else if (src == orxMODULE_ID_ANIMPOINTER)
-  {
-    src_str = "animpointer";
-  }
-  else if (src == orxMODULE_ID_ANIMSET)
-  {
-    src_str = "animset";
-  }
-  else if (src == orxMODULE_ID_BANK)
-  {
-    src_str = "bank";
-  }
-  else if (src == orxMODULE_ID_BODY)
-  {
-    src_str = "body";
-  }
-  else if (src == orxMODULE_ID_CAMERA)
-  {
-    src_str = "camera";
-  }
-  else if (src == orxMODULE_ID_CLOCK)
-  {
-    src_str = "clock";
-  }
-  else if (src == orxMODULE_ID_COMMAND)
-  {
-    src_str = "command";
-  }
-  else if (src == orxMODULE_ID_CONFIG)
-  {
-    src_str = "config";
-  }
-  else if (src == orxMODULE_ID_CONSOLE)
-  {
-    src_str = "console";
-  }
-  else if (src == orxMODULE_ID_DISPLAY)
-  {
-    src_str = "display";
-  }
-  else if (src == orxMODULE_ID_EVENT)
-  {
-    src_str = "event";
-  }
-  else if (src == orxMODULE_ID_FILE)
-  {
-    src_str = "file";
-  }
-  else if (src == orxMODULE_ID_FONT)
-  {
-    src_str = "font";
-  }
-  else if (src == orxMODULE_ID_FPS)
-  {
-    src_str = "fps";
-  }
-  else if (src == orxMODULE_ID_FRAME)
-  {
-    src_str = "frame";
-  }
-  else if (src == orxMODULE_ID_FX)
-  {
-    src_str = "fx";
-  }
-  else if (src == orxMODULE_ID_FXPOINTER)
-  {
-    src_str = "fxpointer";
-  }
-  else if (src == orxMODULE_ID_GRAPHIC)
-  {
-    src_str = "graphic";
-  }
-  else if (src == orxMODULE_ID_INPUT)
-  {
-    src_str = "input";
-  }
-  else if (src == orxMODULE_ID_JOYSTICK)
-  {
-    src_str = "joystick";
-  }
-  else if (src == orxMODULE_ID_KEYBOARD)
-  {
-    src_str = "keyboard";
-  }
-  else if (src == orxMODULE_ID_LOCALE)
-  {
-    src_str = "locale";
-  }
-  else if (src == orxMODULE_ID_MAIN)
-  {
-    src_str = "main";
-  }
-  else if (src == orxMODULE_ID_MEMORY)
-  {
-    src_str = "memory";
-  }
-  else if (src == orxMODULE_ID_MOUSE)
-  {
-    src_str = "mouse";
-  }
-  else if (src == orxMODULE_ID_OBJECT)
-  {
-    src_str = "object";
-  }
-  else if (src == orxMODULE_ID_PARAM)
-  {
-    src_str = "param";
-  }
-  else if (src == orxMODULE_ID_PHYSICS)
-  {
-    src_str = "physics";
-  }
-  else if (src == orxMODULE_ID_PLUGIN)
-  {
-    src_str = "plugin";
-  }
-  else if (src == orxMODULE_ID_PROFILER)
-  {
-    src_str = "profiler";
-  }
-  else if (src == orxMODULE_ID_RENDER)
-  {
-    src_str = "render";
-  }
-  else if (src == orxMODULE_ID_RESOURCE)
-  {
-    src_str = "resource";
-  }
-  else if (src == orxMODULE_ID_SCREENSHOT)
-  {
-    src_str = "screenshot";
-  }
-  else if (src == orxMODULE_ID_SHADER)
-  {
-    src_str = "shader";
-  }
-  else if (src == orxMODULE_ID_SHADERPOINTER)
-  {
-    src_str = "shaderpointer";
-  }
-  else if (src == orxMODULE_ID_SOUND)
-  {
-    src_str = "sound";
-  }
-  else if (src == orxMODULE_ID_SOUNDPOINTER)
-  {
-    src_str = "soundpointer";
-  }
-  else if (src == orxMODULE_ID_SOUNDSYSTEM)
-  {
-    src_str = "soundsystem";
-  }
-  else if (src == orxMODULE_ID_SPAWNER)
-  {
-    src_str = "spawner";
-  }
-  else if (src == orxMODULE_ID_STRING)
-  {
-    src_str = "string";
-  }
-  else if (src == orxMODULE_ID_STRUCTURE)
-  {
-    src_str = "structure";
-  }
-  else if (src == orxMODULE_ID_SYSTEM)
-  {
-    src_str = "system";
-  }
-  else if (src == orxMODULE_ID_TEXT)
-  {
-    src_str = "text";
-  }
-  else if (src == orxMODULE_ID_TEXTURE)
-  {
-    src_str = "texture";
-  }
-  else if (src == orxMODULE_ID_THREAD)
-  {
-    src_str = "thread";
-  }
-  else if (src == orxMODULE_ID_TIMELINE)
-  {
-    src_str = "timeline";
-  }
-  else if (src == orxMODULE_ID_VIEWPORT)
-  {
-    src_str = "viewport";
-  }
-  else if (src == orxMODULE_ID_USER_DEFINED)
-  {
-    src_str = "user_defined";
-  }
-  else if (src == orxMODULE_ID_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxSEEK_OFFSET_WHENCE_to_lenumstr(lua_State *L, orxSEEK_OFFSET_WHENCE src)
-{
-  const char* src_str = NULL;
-  if (src == orxSEEK_OFFSET_WHENCE_START)
-  {
-    src_str = "start";
-  }
-  else if (src == orxSEEK_OFFSET_WHENCE_CURRENT)
-  {
-    src_str = "current";
-  }
-  else if (src == orxSEEK_OFFSET_WHENCE_END)
-  {
-    src_str = "end";
-  }
-  else if (src == orxSEEK_OFFSET_WHENCE_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxSTATUS_to_lenumstr(lua_State *L, orxSTATUS src)
-{
-  const char* src_str = NULL;
-  if (src == orxSTATUS_FAILURE)
-  {
-    src_str = "failure";
-  }
-  else if (src == orxSTATUS_SUCCESS)
-  {
-    src_str = "success";
-  }
-  else if (src == orxSTATUS_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxPHYSICS_EVENT_to_lenumstr(lua_State *L, orxPHYSICS_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxPHYSICS_EVENT_CONTACT_ADD)
-  {
-    src_str = "contact_add";
-  }
-  else if (src == orxPHYSICS_EVENT_CONTACT_REMOVE)
-  {
-    src_str = "contact_remove";
-  }
-  else if (src == orxPHYSICS_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxSOUNDSYSTEM_STATUS_to_lenumstr(lua_State *L, orxSOUNDSYSTEM_STATUS src)
-{
-  const char* src_str = NULL;
-  if (src == orxSOUNDSYSTEM_STATUS_PLAY)
-  {
-    src_str = "play";
-  }
-  else if (src == orxSOUNDSYSTEM_STATUS_PAUSE)
+  else if (src == orxOBJECT_EVENT_PAUSE)
   {
     src_str = "pause";
   }
-  else if (src == orxSOUNDSYSTEM_STATUS_STOP)
+  else if (src == orxOBJECT_EVENT_UNPAUSE)
   {
-    src_str = "stop";
+    src_str = "unpause";
   }
-  else if (src == orxSOUNDSYSTEM_STATUS_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxSOUND_FILTER_TYPE_to_lenumstr(lua_State *L, orxSOUND_FILTER_TYPE src)
-{
-  const char* src_str = NULL;
-  if (src == orxSOUND_FILTER_TYPE_BIQUAD)
-  {
-    src_str = "biquad";
-  }
-  else if (src == orxSOUND_FILTER_TYPE_LOW_PASS)
-  {
-    src_str = "low_pass";
-  }
-  else if (src == orxSOUND_FILTER_TYPE_HIGH_PASS)
-  {
-    src_str = "high_pass";
-  }
-  else if (src == orxSOUND_FILTER_TYPE_BAND_PASS)
-  {
-    src_str = "band_pass";
-  }
-  else if (src == orxSOUND_FILTER_TYPE_LOW_SHELF)
-  {
-    src_str = "low_shelf";
-  }
-  else if (src == orxSOUND_FILTER_TYPE_HIGH_SHELF)
-  {
-    src_str = "high_shelf";
-  }
-  else if (src == orxSOUND_FILTER_TYPE_NOTCH)
-  {
-    src_str = "notch";
-  }
-  else if (src == orxSOUND_FILTER_TYPE_PEAKING)
-  {
-    src_str = "peaking";
-  }
-  else if (src == orxSOUND_FILTER_TYPE_DELAY)
-  {
-    src_str = "delay";
-  }
-  else if (src == orxSOUND_FILTER_TYPE_CUSTOM)
-  {
-    src_str = "custom";
-  }
-  else if (src == orxSOUND_FILTER_TYPE_NONE)
+  else if (src == orxOBJECT_EVENT_NONE)
   {
     src_str = "none";
   }
@@ -10259,74 +10167,38 @@ LORX_API int lorx_orxSOUND_FILTER_TYPE_to_lenumstr(lua_State *L, orxSOUND_FILTER
   return 1;
 }
 
-LORX_API int lorx_orxSOUND_STATUS_to_lenumstr(lua_State *L, orxSOUND_STATUS src)
+LORX_API int lorx_orxSPAWNER_EVENT_to_lenumstr(lua_State *L, orxSPAWNER_EVENT src)
 {
   const char* src_str = NULL;
-  if (src == orxSOUND_STATUS_PLAY)
+  if (src == orxSPAWNER_EVENT_SPAWN)
   {
-    src_str = "play";
+    src_str = "spawn";
   }
-  else if (src == orxSOUND_STATUS_PAUSE)
+  else if (src == orxSPAWNER_EVENT_CREATE)
   {
-    src_str = "pause";
+    src_str = "create";
   }
-  else if (src == orxSOUND_STATUS_STOP)
+  else if (src == orxSPAWNER_EVENT_DELETE)
   {
-    src_str = "stop";
+    src_str = "delete";
   }
-  else if (src == orxSOUND_STATUS_NONE)
+  else if (src == orxSPAWNER_EVENT_RESET)
   {
-    src_str = "none";
+    src_str = "reset";
   }
-  else
+  else if (src == orxSPAWNER_EVENT_EMPTY)
   {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
+    src_str = "empty";
   }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxSOUND_EVENT_to_lenumstr(lua_State *L, orxSOUND_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxSOUND_EVENT_START)
+  else if (src == orxSPAWNER_EVENT_WAVE_START)
   {
-    src_str = "start";
+    src_str = "wave_start";
   }
-  else if (src == orxSOUND_EVENT_STOP)
+  else if (src == orxSPAWNER_EVENT_WAVE_STOP)
   {
-    src_str = "stop";
+    src_str = "wave_stop";
   }
-  else if (src == orxSOUND_EVENT_ADD)
-  {
-    src_str = "add";
-  }
-  else if (src == orxSOUND_EVENT_REMOVE)
-  {
-    src_str = "remove";
-  }
-  else if (src == orxSOUND_EVENT_PACKET)
-  {
-    src_str = "packet";
-  }
-  else if (src == orxSOUND_EVENT_RECORDING_START)
-  {
-    src_str = "recording_start";
-  }
-  else if (src == orxSOUND_EVENT_RECORDING_STOP)
-  {
-    src_str = "recording_stop";
-  }
-  else if (src == orxSOUND_EVENT_RECORDING_PACKET)
-  {
-    src_str = "recording_packet";
-  }
-  else if (src == orxSOUND_EVENT_SET_FILTER_PARAM)
-  {
-    src_str = "set_filter_param";
-  }
-  else if (src == orxSOUND_EVENT_NONE)
+  else if (src == orxSPAWNER_EVENT_NONE)
   {
     src_str = "none";
   }
@@ -10463,194 +10335,6 @@ LORX_API int lorx_orxSTRUCTURE_STORAGE_TYPE_to_lenumstr(lua_State *L, orxSTRUCTU
   return 1;
 }
 
-LORX_API int lorx_orxSPAWNER_EVENT_to_lenumstr(lua_State *L, orxSPAWNER_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxSPAWNER_EVENT_SPAWN)
-  {
-    src_str = "spawn";
-  }
-  else if (src == orxSPAWNER_EVENT_CREATE)
-  {
-    src_str = "create";
-  }
-  else if (src == orxSPAWNER_EVENT_DELETE)
-  {
-    src_str = "delete";
-  }
-  else if (src == orxSPAWNER_EVENT_RESET)
-  {
-    src_str = "reset";
-  }
-  else if (src == orxSPAWNER_EVENT_EMPTY)
-  {
-    src_str = "empty";
-  }
-  else if (src == orxSPAWNER_EVENT_WAVE_START)
-  {
-    src_str = "wave_start";
-  }
-  else if (src == orxSPAWNER_EVENT_WAVE_STOP)
-  {
-    src_str = "wave_stop";
-  }
-  else if (src == orxSPAWNER_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxFRAME_SPACE_to_lenumstr(lua_State *L, orxFRAME_SPACE src)
-{
-  const char* src_str = NULL;
-  if (src == orxFRAME_SPACE_GLOBAL)
-  {
-    src_str = "global";
-  }
-  else if (src == orxFRAME_SPACE_LOCAL)
-  {
-    src_str = "local";
-  }
-  else if (src == orxFRAME_SPACE_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxOBJECT_EVENT_to_lenumstr(lua_State *L, orxOBJECT_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxOBJECT_EVENT_CREATE)
-  {
-    src_str = "create";
-  }
-  else if (src == orxOBJECT_EVENT_DELETE)
-  {
-    src_str = "delete";
-  }
-  else if (src == orxOBJECT_EVENT_PREPARE)
-  {
-    src_str = "prepare";
-  }
-  else if (src == orxOBJECT_EVENT_ENABLE)
-  {
-    src_str = "enable";
-  }
-  else if (src == orxOBJECT_EVENT_DISABLE)
-  {
-    src_str = "disable";
-  }
-  else if (src == orxOBJECT_EVENT_PAUSE)
-  {
-    src_str = "pause";
-  }
-  else if (src == orxOBJECT_EVENT_UNPAUSE)
-  {
-    src_str = "unpause";
-  }
-  else if (src == orxOBJECT_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxFX_CURVE_to_lenumstr(lua_State *L, orxFX_CURVE src)
-{
-  const char* src_str = NULL;
-  if (src == orxFX_CURVE_LINEAR)
-  {
-    src_str = "linear";
-  }
-  else if (src == orxFX_CURVE_SMOOTH)
-  {
-    src_str = "smooth";
-  }
-  else if (src == orxFX_CURVE_SMOOTHER)
-  {
-    src_str = "smoother";
-  }
-  else if (src == orxFX_CURVE_TRIANGLE)
-  {
-    src_str = "triangle";
-  }
-  else if (src == orxFX_CURVE_SINE)
-  {
-    src_str = "sine";
-  }
-  else if (src == orxFX_CURVE_SQUARE)
-  {
-    src_str = "square";
-  }
-  else if (src == orxFX_CURVE_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
-LORX_API int lorx_orxFX_EVENT_to_lenumstr(lua_State *L, orxFX_EVENT src)
-{
-  const char* src_str = NULL;
-  if (src == orxFX_EVENT_START)
-  {
-    src_str = "start";
-  }
-  else if (src == orxFX_EVENT_STOP)
-  {
-    src_str = "stop";
-  }
-  else if (src == orxFX_EVENT_ADD)
-  {
-    src_str = "add";
-  }
-  else if (src == orxFX_EVENT_REMOVE)
-  {
-    src_str = "remove";
-  }
-  else if (src == orxFX_EVENT_LOOP)
-  {
-    src_str = "loop";
-  }
-  else if (src == orxFX_EVENT_NONE)
-  {
-    src_str = "none";
-  }
-  else
-  {
-    LORX_ERROR("unexpected enum type: %u!\n", src);
-  }
-  lua_pushstring(L, src_str);
-  
-  return 1;
-}
-
 LORX_API int lorx_orxTIMELINE_EVENT_to_lenumstr(lua_State *L, orxTIMELINE_EVENT src)
 {
   const char* src_str = NULL;
@@ -10679,6 +10363,322 @@ LORX_API int lorx_orxTIMELINE_EVENT_to_lenumstr(lua_State *L, orxTIMELINE_EVENT 
     src_str = "trigger";
   }
   else if (src == orxTIMELINE_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxPHYSICS_EVENT_to_lenumstr(lua_State *L, orxPHYSICS_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxPHYSICS_EVENT_CONTACT_ADD)
+  {
+    src_str = "contact_add";
+  }
+  else if (src == orxPHYSICS_EVENT_CONTACT_REMOVE)
+  {
+    src_str = "contact_remove";
+  }
+  else if (src == orxPHYSICS_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxRENDER_EVENT_to_lenumstr(lua_State *L, orxRENDER_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxRENDER_EVENT_START)
+  {
+    src_str = "start";
+  }
+  else if (src == orxRENDER_EVENT_STOP)
+  {
+    src_str = "stop";
+  }
+  else if (src == orxRENDER_EVENT_VIEWPORT_START)
+  {
+    src_str = "viewport_start";
+  }
+  else if (src == orxRENDER_EVENT_VIEWPORT_STOP)
+  {
+    src_str = "viewport_stop";
+  }
+  else if (src == orxRENDER_EVENT_OBJECT_START)
+  {
+    src_str = "object_start";
+  }
+  else if (src == orxRENDER_EVENT_OBJECT_STOP)
+  {
+    src_str = "object_stop";
+  }
+  else if (src == orxRENDER_EVENT_CONSOLE_START)
+  {
+    src_str = "console_start";
+  }
+  else if (src == orxRENDER_EVENT_CONSOLE_STOP)
+  {
+    src_str = "console_stop";
+  }
+  else if (src == orxRENDER_EVENT_PROFILER_START)
+  {
+    src_str = "profiler_start";
+  }
+  else if (src == orxRENDER_EVENT_PROFILER_STOP)
+  {
+    src_str = "profiler_stop";
+  }
+  else if (src == orxRENDER_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxSHADER_PARAM_TYPE_to_lenumstr(lua_State *L, orxSHADER_PARAM_TYPE src)
+{
+  const char* src_str = NULL;
+  if (src == orxSHADER_PARAM_TYPE_FLOAT)
+  {
+    src_str = "float";
+  }
+  else if (src == orxSHADER_PARAM_TYPE_TEXTURE)
+  {
+    src_str = "texture";
+  }
+  else if (src == orxSHADER_PARAM_TYPE_VECTOR)
+  {
+    src_str = "vector";
+  }
+  else if (src == orxSHADER_PARAM_TYPE_TIME)
+  {
+    src_str = "time";
+  }
+  else if (src == orxSHADER_PARAM_TYPE_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxSHADER_EVENT_to_lenumstr(lua_State *L, orxSHADER_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxSHADER_EVENT_SET_PARAM)
+  {
+    src_str = "set_param";
+  }
+  else if (src == orxSHADER_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxVIEWPORT_EVENT_to_lenumstr(lua_State *L, orxVIEWPORT_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxVIEWPORT_EVENT_RESIZE)
+  {
+    src_str = "resize";
+  }
+  else if (src == orxVIEWPORT_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxSOUND_STATUS_to_lenumstr(lua_State *L, orxSOUND_STATUS src)
+{
+  const char* src_str = NULL;
+  if (src == orxSOUND_STATUS_PLAY)
+  {
+    src_str = "play";
+  }
+  else if (src == orxSOUND_STATUS_PAUSE)
+  {
+    src_str = "pause";
+  }
+  else if (src == orxSOUND_STATUS_STOP)
+  {
+    src_str = "stop";
+  }
+  else if (src == orxSOUND_STATUS_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxSOUND_EVENT_to_lenumstr(lua_State *L, orxSOUND_EVENT src)
+{
+  const char* src_str = NULL;
+  if (src == orxSOUND_EVENT_START)
+  {
+    src_str = "start";
+  }
+  else if (src == orxSOUND_EVENT_STOP)
+  {
+    src_str = "stop";
+  }
+  else if (src == orxSOUND_EVENT_ADD)
+  {
+    src_str = "add";
+  }
+  else if (src == orxSOUND_EVENT_REMOVE)
+  {
+    src_str = "remove";
+  }
+  else if (src == orxSOUND_EVENT_PACKET)
+  {
+    src_str = "packet";
+  }
+  else if (src == orxSOUND_EVENT_RECORDING_START)
+  {
+    src_str = "recording_start";
+  }
+  else if (src == orxSOUND_EVENT_RECORDING_STOP)
+  {
+    src_str = "recording_stop";
+  }
+  else if (src == orxSOUND_EVENT_RECORDING_PACKET)
+  {
+    src_str = "recording_packet";
+  }
+  else if (src == orxSOUND_EVENT_SET_FILTER_PARAM)
+  {
+    src_str = "set_filter_param";
+  }
+  else if (src == orxSOUND_EVENT_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxSOUNDSYSTEM_STATUS_to_lenumstr(lua_State *L, orxSOUNDSYSTEM_STATUS src)
+{
+  const char* src_str = NULL;
+  if (src == orxSOUNDSYSTEM_STATUS_PLAY)
+  {
+    src_str = "play";
+  }
+  else if (src == orxSOUNDSYSTEM_STATUS_PAUSE)
+  {
+    src_str = "pause";
+  }
+  else if (src == orxSOUNDSYSTEM_STATUS_STOP)
+  {
+    src_str = "stop";
+  }
+  else if (src == orxSOUNDSYSTEM_STATUS_NONE)
+  {
+    src_str = "none";
+  }
+  else
+  {
+    LORX_ERROR("unexpected enum type: %u!\n", src);
+  }
+  lua_pushstring(L, src_str);
+  
+  return 1;
+}
+
+LORX_API int lorx_orxSOUND_FILTER_TYPE_to_lenumstr(lua_State *L, orxSOUND_FILTER_TYPE src)
+{
+  const char* src_str = NULL;
+  if (src == orxSOUND_FILTER_TYPE_BIQUAD)
+  {
+    src_str = "biquad";
+  }
+  else if (src == orxSOUND_FILTER_TYPE_LOW_PASS)
+  {
+    src_str = "low_pass";
+  }
+  else if (src == orxSOUND_FILTER_TYPE_HIGH_PASS)
+  {
+    src_str = "high_pass";
+  }
+  else if (src == orxSOUND_FILTER_TYPE_BAND_PASS)
+  {
+    src_str = "band_pass";
+  }
+  else if (src == orxSOUND_FILTER_TYPE_LOW_SHELF)
+  {
+    src_str = "low_shelf";
+  }
+  else if (src == orxSOUND_FILTER_TYPE_HIGH_SHELF)
+  {
+    src_str = "high_shelf";
+  }
+  else if (src == orxSOUND_FILTER_TYPE_NOTCH)
+  {
+    src_str = "notch";
+  }
+  else if (src == orxSOUND_FILTER_TYPE_PEAKING)
+  {
+    src_str = "peaking";
+  }
+  else if (src == orxSOUND_FILTER_TYPE_DELAY)
+  {
+    src_str = "delay";
+  }
+  else if (src == orxSOUND_FILTER_TYPE_CUSTOM)
+  {
+    src_str = "custom";
+  }
+  else if (src == orxSOUND_FILTER_TYPE_NONE)
   {
     src_str = "none";
   }

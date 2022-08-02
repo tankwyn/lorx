@@ -14,62 +14,6 @@
 #include "conenum.h"
 #include "conutype.h"
 
-static int l_lorx_orxFILE_INFO_create(lua_State *L)
-{
-  orxFILE_INFO** pself = lua_newuserdata(L, sizeof(orxFILE_INFO*)+sizeof(orxFILE_INFO));
-  orxFILE_INFO* self = (orxFILE_INFO*)(pself + 1);
-  luaL_setmetatable(L, "lorx.orxFILE_INFO");
-  *pself = self;
-  self->s64Size = lorx_linteger_to_orxS64(L, 1);
-  self->s64TimeStamp = lorx_linteger_to_orxS64(L, 2);
-  self->u32Flags = lorx_linteger_to_orxU32(L, 3);
-  self->hInternal = lorx_luserdata_to_orxHANDLE(L, 4);
-  {
-    const char* s = luaL_checkstring(L, 5);
-    if (strlen(s) > 256)
-    {
-      luaL_error(L, "the provided string is longer than the char array!");
-    }
-    strncpy(self->zName, s, 256-1);
-  }
-  {
-    const char* s = luaL_checkstring(L, 6);
-    if (strlen(s) > 256)
-    {
-      luaL_error(L, "the provided string is longer than the char array!");
-    }
-    strncpy(self->zPattern, s, 256-1);
-  }
-  {
-    const char* s = luaL_checkstring(L, 7);
-    if (strlen(s) > 1024)
-    {
-      luaL_error(L, "the provided string is longer than the char array!");
-    }
-    strncpy(self->zPath, s, 1024-1);
-  }
-  {
-    const char* s = luaL_checkstring(L, 8);
-    if (strlen(s) > 1280)
-    {
-      luaL_error(L, "the provided string is longer than the char array!");
-    }
-    strncpy(self->zFullName, s, 1280-1);
-  }
-  
-  return 1;
-}
-
-static int l_lorx_orxCOMMAND_VAR_create(lua_State *L)
-{
-  orxCOMMAND_VAR** pself = lua_newuserdata(L, sizeof(orxCOMMAND_VAR*)+sizeof(orxCOMMAND_VAR));
-  orxCOMMAND_VAR* self = (orxCOMMAND_VAR*)(pself + 1);
-  luaL_setmetatable(L, "lorx.orxCOMMAND_VAR");
-  *pself = self;
-  
-  return 1;
-}
-
 static int l_lorx_orxANIM_CUSTOM_EVENT_create(lua_State *L)
 {
   orxANIM_CUSTOM_EVENT** pself = lua_newuserdata(L, sizeof(orxANIM_CUSTOM_EVENT*)+sizeof(orxANIM_CUSTOM_EVENT));
@@ -80,42 +24,12 @@ static int l_lorx_orxANIM_CUSTOM_EVENT_create(lua_State *L)
   return 1;
 }
 
-static int l_lorx_orxOBOX_create(lua_State *L)
+static int l_lorx_orxCOMMAND_VAR_create(lua_State *L)
 {
-  orxOBOX** pself = lua_newuserdata(L, sizeof(orxOBOX*)+sizeof(orxOBOX));
-  orxOBOX* self = (orxOBOX*)(pself + 1);
-  luaL_setmetatable(L, "lorx.orxOBOX");
+  orxCOMMAND_VAR** pself = lua_newuserdata(L, sizeof(orxCOMMAND_VAR*)+sizeof(orxCOMMAND_VAR));
+  orxCOMMAND_VAR* self = (orxCOMMAND_VAR*)(pself + 1);
+  luaL_setmetatable(L, "lorx.orxCOMMAND_VAR");
   *pself = self;
-  self->vPosition = lorx_luserdata_to_orxVECTOR_struct(L, 1);
-  self->vPivot = lorx_luserdata_to_orxVECTOR_struct(L, 2);
-  self->vX = lorx_luserdata_to_orxVECTOR_struct(L, 3);
-  self->vY = lorx_luserdata_to_orxVECTOR_struct(L, 4);
-  self->vZ = lorx_luserdata_to_orxVECTOR_struct(L, 5);
-  
-  return 1;
-}
-
-static int l_lorx_orxVECTOR_create(lua_State *L)
-{
-  orxVECTOR** pself = lua_newuserdata(L, sizeof(orxVECTOR*)+sizeof(orxVECTOR));
-  orxVECTOR* self = (orxVECTOR*)(pself + 1);
-  luaL_setmetatable(L, "lorx.orxVECTOR");
-  *pself = self;
-  self->fX = lorx_lnumber_to_orxFLOAT(L, 1);
-  self->fY = lorx_lnumber_to_orxFLOAT(L, 2);
-  self->fZ = lorx_lnumber_to_orxFLOAT(L, 3);
-  
-  return 1;
-}
-
-static int l_lorx_orxAABOX_create(lua_State *L)
-{
-  orxAABOX** pself = lua_newuserdata(L, sizeof(orxAABOX*)+sizeof(orxAABOX));
-  orxAABOX* self = (orxAABOX*)(pself + 1);
-  luaL_setmetatable(L, "lorx.orxAABOX");
-  *pself = self;
-  self->vTL = lorx_luserdata_to_orxVECTOR_struct(L, 1);
-  self->vBR = lorx_luserdata_to_orxVECTOR_struct(L, 2);
   
   return 1;
 }
@@ -189,6 +103,92 @@ static int l_lorx_orxCOLOR_create(lua_State *L)
   *pself = self;
   self->vRGB = lorx_luserdata_to_orxVECTOR_struct(L, 1);
   self->fAlpha = lorx_lnumber_to_orxFLOAT(L, 2);
+  
+  return 1;
+}
+
+static int l_lorx_orxFILE_INFO_create(lua_State *L)
+{
+  orxFILE_INFO** pself = lua_newuserdata(L, sizeof(orxFILE_INFO*)+sizeof(orxFILE_INFO));
+  orxFILE_INFO* self = (orxFILE_INFO*)(pself + 1);
+  luaL_setmetatable(L, "lorx.orxFILE_INFO");
+  *pself = self;
+  self->s64Size = lorx_linteger_to_orxS64(L, 1);
+  self->s64TimeStamp = lorx_linteger_to_orxS64(L, 2);
+  self->u32Flags = lorx_linteger_to_orxU32(L, 3);
+  self->hInternal = lorx_luserdata_to_orxHANDLE(L, 4);
+  {
+    const char* s = luaL_checkstring(L, 5);
+    if (strlen(s) > 256)
+    {
+      luaL_error(L, "the provided string is longer than the char array!");
+    }
+    strncpy(self->zName, s, 256-1);
+  }
+  {
+    const char* s = luaL_checkstring(L, 6);
+    if (strlen(s) > 256)
+    {
+      luaL_error(L, "the provided string is longer than the char array!");
+    }
+    strncpy(self->zPattern, s, 256-1);
+  }
+  {
+    const char* s = luaL_checkstring(L, 7);
+    if (strlen(s) > 1024)
+    {
+      luaL_error(L, "the provided string is longer than the char array!");
+    }
+    strncpy(self->zPath, s, 1024-1);
+  }
+  {
+    const char* s = luaL_checkstring(L, 8);
+    if (strlen(s) > 1280)
+    {
+      luaL_error(L, "the provided string is longer than the char array!");
+    }
+    strncpy(self->zFullName, s, 1280-1);
+  }
+  
+  return 1;
+}
+
+static int l_lorx_orxAABOX_create(lua_State *L)
+{
+  orxAABOX** pself = lua_newuserdata(L, sizeof(orxAABOX*)+sizeof(orxAABOX));
+  orxAABOX* self = (orxAABOX*)(pself + 1);
+  luaL_setmetatable(L, "lorx.orxAABOX");
+  *pself = self;
+  self->vTL = lorx_luserdata_to_orxVECTOR_struct(L, 1);
+  self->vBR = lorx_luserdata_to_orxVECTOR_struct(L, 2);
+  
+  return 1;
+}
+
+static int l_lorx_orxOBOX_create(lua_State *L)
+{
+  orxOBOX** pself = lua_newuserdata(L, sizeof(orxOBOX*)+sizeof(orxOBOX));
+  orxOBOX* self = (orxOBOX*)(pself + 1);
+  luaL_setmetatable(L, "lorx.orxOBOX");
+  *pself = self;
+  self->vPosition = lorx_luserdata_to_orxVECTOR_struct(L, 1);
+  self->vPivot = lorx_luserdata_to_orxVECTOR_struct(L, 2);
+  self->vX = lorx_luserdata_to_orxVECTOR_struct(L, 3);
+  self->vY = lorx_luserdata_to_orxVECTOR_struct(L, 4);
+  self->vZ = lorx_luserdata_to_orxVECTOR_struct(L, 5);
+  
+  return 1;
+}
+
+static int l_lorx_orxVECTOR_create(lua_State *L)
+{
+  orxVECTOR** pself = lua_newuserdata(L, sizeof(orxVECTOR*)+sizeof(orxVECTOR));
+  orxVECTOR* self = (orxVECTOR*)(pself + 1);
+  luaL_setmetatable(L, "lorx.orxVECTOR");
+  *pself = self;
+  self->fX = lorx_lnumber_to_orxFLOAT(L, 1);
+  self->fY = lorx_lnumber_to_orxFLOAT(L, 2);
+  self->fZ = lorx_lnumber_to_orxFLOAT(L, 3);
   
   return 1;
 }
