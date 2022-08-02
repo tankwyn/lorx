@@ -15,7 +15,7 @@ View online documentation at [https://tankwyn.github.io/lorx](https://tankwyn.gi
 ## Advantages
 
 * [Lua](https://www.lua.org/) is a simple but flexible language which has been tested for many years in the game industry.
-* The config system is very powerful. Visit the [Orx Wiki](https://orx-project.org/wiki/) to find out.
+* The configuration system is very powerful. Visit the [Orx Wiki](https://orx-project.org/wiki/) to find out.
 * Orx is a very performant game engine written in C. It runs very fast and it's memory efficient.
 * Orx has many advanced features that are missing even in many established engines (e.g. multiple viewports, object aging).
 * Lorx has covered almost all of Orx's functionalities.
@@ -30,7 +30,7 @@ The Lorx executable (lorx.sh if you are on Linux) accepts a game directory as ar
     main.lua      # Load after initialized.
     settings.lua  # Settings.
     data/
-        config/   # Config files.
+        config/   # Configuration files.
         texture/  # Textures.
         sound/    # Sound.
         ...       # Other resources.
@@ -96,7 +96,7 @@ There are some examples shipped with the source code, you can view them to learn
 
 In addition, there is some advices about setting up a development environment:
 
-* Auto-completion and linting: If your editor/IDE (vscode, vim, ...) supports LSP, you can install the [sumneoko](https://github.com/sumneko/lua-language-server) Lua language server, download the emmy annotations for Lorx and set the `api` path as an external library path for your project.
+* Auto-completion and linting: If your editor/IDE (vscode, vim, ...) supports LSP, you can install the [sumneoko](https://github.com/sumneko/lua-language-server) Lua language server, download the Emmy annotations for Lorx and set the `api` path as an external library path for your project.
 * Debugging: use a debugger plugin that supports custom Lua environments (e.g. [Local Lua Debugger](https://github.com/tomblind/local-lua-debugger-vscode.git) for vscode).
 
 ## Build
@@ -138,12 +138,12 @@ The documentations are built with [Mkdocs](https://www.mkdocs.org). Run the foll
 pip3 install mkdocs mkdocs-material mkdocs-localsearch markdown-extra mkdocs-markdownextradata-plugin
 ```
 
-Go to `doc`, run `mkdocs build` to generate all documentations. (The generated htmls are fully static, which can used offline)
+Go to `doc`, run `mkdocs build` to generate all documentations. (The generated HTMLs are fully static, which can used offline)
 
 ## What's not implemented
 
 * Threading (`orxThread_Start`, `orxThread_RunTask` and `orxThread_SetCallbacks`). Lua is not thread safe and there's little benefit in supporting it.
-* Low-level resource reading/writting (`orxResource_Read` and `orxResource_Write`).
+* Low-level resource reading/writing (`orxResource_Read` and `orxResource_Write`).
 * Body, part and joint definition structs (`orxBODY_DEF`, `orxBODY_PART_DEF` and `orxBODY_JOINT_DEF`). Please use configuration instead.
 * Meshes. Lorx supports drawing meshes, but does not support creating or reading meshes from files. However, you can write your own code to get meshes read in C and store the pointer in a userdata with the tname of 'lorx.orxDISPLAY_MESH', then you will be able to draw meshes in Lua.
 
@@ -152,7 +152,7 @@ Go to `doc`, run `mkdocs build` to generate all documentations. (The generated h
 1. Android support.
 2. Loading pre-compiled chunks (and maybe basic chunk encryption).
 3. Reflect event data modification to Orx.
-4. Maybe support setting lua tables as the usredata of orxObject. So that we can easily attach data (health, mana, ...) to objects.
+4. Maybe support setting lua tables as the userdata of orxObject. So that we can easily attach data (health, mana, ...) to objects.
 
 ## FAQ
 
