@@ -1,0 +1,152 @@
+site_name: LORX
+site_url: https://changeme.foo.bar
+
+use_directory_urls: false
+
+nav:
+    - Overview: index.md
+    - Root Module: root.md
+    - Modules:
+        - constants: modules/constants.md
+        - aabox: modules/aabox.md
+        - anim: modules/anim.md
+        - animpointer: modules/animpointer.md
+        - animset: modules/animset.md
+        - body: modules/body.md
+        - camera: modules/camera.md
+        - clock: modules/clock.md
+        - command: modules/command.md
+        - config: modules/config.md
+        - console: modules/console.md
+        - debug: modules/debug.md
+        - display: modules/display.md
+        - event: modules/event.md
+        - file: modules/file.md
+        - font: modules/font.md
+        - fps: modules/fps.md
+        - frame: modules/frame.md
+        - fx: modules/fx.md
+        - fxpointer: modules/fxpointer.md
+        - graphic: modules/graphic.md
+        - input: modules/input.md
+        - joystick: modules/joystick.md
+        - keyboard: modules/keyboard.md
+        - locale: modules/locale.md
+        - math: modules/math.md
+        - module: modules/module.md
+        - mouse: modules/mouse.md
+        - object: modules/object.md
+        - obox: modules/obox.md
+        - physics: modules/physics.md
+        - profiler: modules/profiler.md
+        - render: modules/render.md
+        - resource: modules/resource.md
+        - screenshot: modules/screenshot.md
+        - shader: modules/shader.md
+        - shaderpointer: modules/shaderpointer.md
+        - sound: modules/sound.md
+        - soundpointer: modules/soundpointer.md
+        - soundsystem: modules/soundsystem.md
+        - spawner: modules/spawner.md
+        - string: modules/string.md
+        - structure: modules/structure.md
+        - system: modules/system.md
+        - text: modules/text.md
+        - texture: modules/texture.md
+        - thread: modules/thread.md
+        - timeline: modules/timeline.md
+        - vector: modules/vector.md
+        - viewport: modules/viewport.md
+
+    - Types:
+        - orxAABOX: types/orxAABOX.md
+        - orxANIM: types/orxANIM.md
+        - orxANIMPOINTER: types/orxANIMPOINTER.md
+        - orxANIMSET: types/orxANIMSET.md
+        - orxANIMSET_LINK_TABLE: types/orxANIMSET_LINK_TABLE.md
+        - orxANIM_CUSTOM_EVENT: types/orxANIM_CUSTOM_EVENT.md
+        - orxBITMAP: types/orxBITMAP.md
+        - orxBODY: types/orxBODY.md
+        - orxBODY_JOINT: types/orxBODY_JOINT.md
+        - orxBODY_PART: types/orxBODY_PART.md
+        - orxCAMERA: types/orxCAMERA.md
+        - orxCHARACTER_GLYPH: types/orxCHARACTER_GLYPH.md
+        - orxCHARACTER_MAP: types/orxCHARACTER_MAP.md
+        - orxCLOCK: types/orxCLOCK.md
+        - orxCLOCK_INFO: types/orxCLOCK_INFO.md
+        - orxCOLOR: types/orxCOLOR.md
+        - orxCOMMAND_VAR: types/orxCOMMAND_VAR.md
+        - orxDISPLAY_MESH: types/orxDISPLAY_MESH.md
+        - orxDISPLAY_TRANSFORM: types/orxDISPLAY_TRANSFORM.md
+        - orxDISPLAY_VIDEO_MODE: types/orxDISPLAY_VIDEO_MODE.md
+        - orxFILE: types/orxFILE.md
+        - orxFILE_INFO: types/orxFILE_INFO.md
+        - orxFONT: types/orxFONT.md
+        - orxFRAME: types/orxFRAME.md
+        - orxFX: types/orxFX.md
+        - orxFXPOINTER: types/orxFXPOINTER.md
+        - orxGRAPHIC: types/orxGRAPHIC.md
+        - orxOBJECT: types/orxOBJECT.md
+        - orxOBOX: types/orxOBOX.md
+        - orxPHYSICS_BODY: types/orxPHYSICS_BODY.md
+        - orxPHYSICS_BODY_JOINT: types/orxPHYSICS_BODY_JOINT.md
+        - orxPHYSICS_BODY_PART: types/orxPHYSICS_BODY_PART.md
+        - orxRGBA: types/orxRGBA.md
+        - orxSHADER: types/orxSHADER.md
+        - orxSHADERPOINTER: types/orxSHADERPOINTER.md
+        - orxSOUND: types/orxSOUND.md
+        - orxSOUNDPOINTER: types/orxSOUNDPOINTER.md
+        - orxSOUNDSYSTEM_SAMPLE: types/orxSOUNDSYSTEM_SAMPLE.md
+        - orxSOUNDSYSTEM_SOUND: types/orxSOUNDSYSTEM_SOUND.md
+        - orxSOUND_FILTER_DATA: types/orxSOUND_FILTER_DATA.md
+        - orxSOUND_STREAM_INFO: types/orxSOUND_STREAM_INFO.md
+        - orxSOUND_STREAM_PACKET: types/orxSOUND_STREAM_PACKET.md
+        - orxSPAWNER: types/orxSPAWNER.md
+        - orxSTRUCTURE: types/orxSTRUCTURE.md
+        - orxTEXT: types/orxTEXT.md
+        - orxTEXTURE: types/orxTEXTURE.md
+        - orxTHREAD_SEMAPHORE: types/orxTHREAD_SEMAPHORE.md
+        - orxTIMELINE: types/orxTIMELINE.md
+        - orxVECTOR: types/orxVECTOR.md
+        - orxVIEWPORT: types/orxVIEWPORT.md
+
+    - Enums: enums.md
+    - Constants: constants.md
+    - Callbacks: callbacks.md
+  
+theme: 
+    font: false
+    palette:
+        - scheme: default
+          toggle:
+            icon: material/brightness-7 
+            name: Switch to dark mode
+
+        - scheme: slate
+          primary: deep purple
+          toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
+
+    name: material
+    custom_dir: theme
+    features:
+        - navigation.instant
+        - navigation.tabs
+        - navigation.top
+
+plugins:
+    - search:
+        indexing: 'full'
+        # separator: '[\s\-\.]'
+    - localsearch
+    - markdownextradata: {}
+
+markdown_extensions:
+    - toc:
+        permalink: "#"
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.superfences:
+        preserve_tabs: true
+    - pymdownx.escapeall: {}

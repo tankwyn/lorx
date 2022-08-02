@@ -1,0 +1,695 @@
+# docs for extra types
+extdocdict = {
+    'orxSTRUCTURE': {
+        'properties' : [],
+        'methods': [
+            {
+                'name': 'toAnim',
+                'description': 'Convert the orxSTRUCTURE to an orxANIM (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxANIM',
+                    'description': 'The converted orxANIM or nil',
+                },],
+                'csig': '#define orxANIM(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toAnimPointer',
+                'description': 'Convert the orxSTRUCTURE to an orxANIMPOINTER (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxANIMPOINTER',
+                    'description': 'The converted orxANIMPOINTER or nil',
+                },],
+                'csig': '#define orxANIMPOINTER(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toAnimSet',
+                'description': 'Convert the orxSTRUCTURE to an orxANIMSET (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxANIMSET',
+                    'description': 'The converted orxANIMSET or nil',
+                },],
+                'csig': '#define orxANIMSET(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toBody',
+                'description': 'Convert the orxSTRUCTURE to an orxBODY (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxBODY',
+                    'description': 'The converted orxBODY or nil',
+                },],
+                'csig': '#define orxBODY(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toCamera',
+                'description': 'Convert the orxSTRUCTURE to an orxCAMERA (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxCAMERA',
+                    'description': 'The converted orxCAMERA or nil',
+                },],
+                'csig': '#define orxCAMERA(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toClock',
+                'description': 'Convert the orxSTRUCTURE to an orxCLOCK (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxCLOCK',
+                    'description': 'The converted orxCLOCK or nil',
+                },],
+                'csig': '#define orxCLOCK(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toFont',
+                'description': 'Convert the orxSTRUCTURE to an orxFONT (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxFONT',
+                    'description': 'The converted orxFONT or nil',
+                },],
+                'csig': '#define orxFONT(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toFrame',
+                'description': 'Convert the orxSTRUCTURE to an orxFRAME (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxFRAME',
+                    'description': 'The converted orxFRAME or nil',
+                },],
+                'csig': '#define orxFRAME(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toFX',
+                'description': 'Convert the orxSTRUCTURE to an orxFX (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxFX',
+                    'description': 'The converted orxFX or nil',
+                },],
+                'csig': '#define orxFX(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toFXPointer',
+                'description': 'Convert the orxSTRUCTURE to an orxFXPOINTER (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxFXPOINTER',
+                    'description': 'The converted orxFXPOINTER or nil',
+                },],
+                'csig': '#define orxFXPOINTER(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toGraphic',
+                'description': 'Convert the orxSTRUCTURE to an orxGRAPHIC (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxGRAPHIC',
+                    'description': 'The converted orxGRAPHIC or nil',
+                },],
+                'csig': '#define orxGRAPHIC(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toObject',
+                'description': 'Convert the orxSTRUCTURE to an orxOBJECT (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxOBJECT',
+                    'description': 'The converted orxOBJECT or nil',
+                },],
+                'csig': '#define orxOBJECT(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toSound',
+                'description': 'Convert the orxSTRUCTURE to an orxSOUND (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSOUND',
+                    'description': 'The converted orxSOUND or nil',
+                },],
+                'csig': '#define orxSOUND(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toSoundPointer',
+                'description': 'Convert the orxSTRUCTURE to an orxSOUNDPOINTER (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSOUNDPOINTER',
+                    'description': 'The converted orxSOUNDPOINTER or nil',
+                },],
+                'csig': '#define orxSOUNDPOINTER(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toShader',
+                'description': 'Convert the orxSTRUCTURE to an orxSHADER (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSHADER',
+                    'description': 'The converted orxSHADER or nil',
+                },],
+                'csig': '#define orxSHADER(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toShaderPointer',
+                'description': 'Convert the orxSTRUCTURE to an orxSHADERPOINTER (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSHADERPOINTER',
+                    'description': 'The converted orxSHADERPOINTER or nil',
+                },],
+                'csig': '#define orxSHADERPOINTER(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toSpawner',
+                'description': 'Convert the orxSTRUCTURE to an orxSPAWNER (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSPAWNER',
+                    'description': 'The converted orxSPAWNER or nil',
+                },],
+                'csig': '#define orxSPAWNER(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toText',
+                'description': 'Convert the orxSTRUCTURE to an orxTEXT (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxTEXT',
+                    'description': 'The converted orxTEXT or nil',
+                },],
+                'csig': '#define orxTEXT(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toTexture',
+                'description': 'Convert the orxSTRUCTURE to an orxTEXTURE (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxTEXTURE',
+                    'description': 'The converted orxTEXTURE or nil',
+                },],
+                'csig': '#define orxTEXTURE(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toTimeline',
+                'description': 'Convert the orxSTRUCTURE to an orxTIMELINE (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxTIMELINE',
+                    'description': 'The converted orxTIMELINE or nil',
+                },],
+                'csig': '#define orxTIMELINE(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toViewport',
+                'description': 'Convert the orxSTRUCTURE to an orxVIEWPORT (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxVIEWPORT',
+                    'description': 'The converted orxVIEWPORT or nil',
+                },],
+                'csig': '#define orxVIEWPORT(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toAnimConst',
+                'description': 'Convert the orxSTRUCTURE to an orxANIM# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxANIM#',
+                    'description': 'The converted orxANIM or nil',
+                },],
+                'csig': '#define orxANIM(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toAnimPointerConst',
+                'description': 'Convert the orxSTRUCTURE to an orxANIMPOINTER# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxANIMPOINTER#',
+                    'description': 'The converted orxANIMPOINTER or nil',
+                },],
+                'csig': '#define orxANIMPOINTER(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toAnimSetConst',
+                'description': 'Convert the orxSTRUCTURE to an orxANIMSET# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxANIMSET#',
+                    'description': 'The converted orxANIMSET or nil',
+                },],
+                'csig': '#define orxANIMSET(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toBodyConst',
+                'description': 'Convert the orxSTRUCTURE to an orxBODY# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxBODY#',
+                    'description': 'The converted orxBODY or nil',
+                },],
+                'csig': '#define orxBODY(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toCameraConst',
+                'description': 'Convert the orxSTRUCTURE to an orxCAMERA# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxCAMERA#',
+                    'description': 'The converted orxCAMERA or nil',
+                },],
+                'csig': '#define orxCAMERA(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toClockConst',
+                'description': 'Convert the orxSTRUCTURE to an orxCLOCK# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxCLOCK#',
+                    'description': 'The converted orxCLOCK or nil',
+                },],
+                'csig': '#define orxCLOCK(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toFontConst',
+                'description': 'Convert the orxSTRUCTURE to an orxFONT# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxFONT#',
+                    'description': 'The converted orxFONT or nil',
+                },],
+                'csig': '#define orxFONT(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toFrameConst',
+                'description': 'Convert the orxSTRUCTURE to an orxFRAME# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxFRAME#',
+                    'description': 'The converted orxFRAME or nil',
+                },],
+                'csig': '#define orxFRAME(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toFXConst',
+                'description': 'Convert the orxSTRUCTURE to an orxFX# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxFX#',
+                    'description': 'The converted orxFX or nil',
+                },],
+                'csig': '#define orxFX(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toFXPointerConst',
+                'description': 'Convert the orxSTRUCTURE to an orxFXPOINTER# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxFXPOINTER#',
+                    'description': 'The converted orxFXPOINTER or nil',
+                },],
+                'csig': '#define orxFXPOINTER(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toGraphicConst',
+                'description': 'Convert the orxSTRUCTURE to an orxGRAPHIC# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxGRAPHIC#',
+                    'description': 'The converted orxGRAPHIC or nil',
+                },],
+                'csig': '#define orxGRAPHIC(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toObjectConst',
+                'description': 'Convert the orxSTRUCTURE to an orxOBJECT# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxOBJECT#',
+                    'description': 'The converted orxOBJECT or nil',
+                },],
+                'csig': '#define orxOBJECT(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toSoundConst',
+                'description': 'Convert the orxSTRUCTURE to an orxSOUND# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSOUND#',
+                    'description': 'The converted orxSOUND or nil',
+                },],
+                'csig': '#define orxSOUND(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toSoundPointerConst',
+                'description': 'Convert the orxSTRUCTURE to an orxSOUNDPOINTER# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSOUNDPOINTER#',
+                    'description': 'The converted orxSOUNDPOINTER or nil',
+                },],
+                'csig': '#define orxSOUNDPOINTER(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toShaderConst',
+                'description': 'Convert the orxSTRUCTURE to an orxSHADER# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSHADER#',
+                    'description': 'The converted orxSHADER or nil',
+                },],
+                'csig': '#define orxSHADER(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toShaderPointerConst',
+                'description': 'Convert the orxSTRUCTURE to an orxSHADERPOINTER# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSHADERPOINTER#',
+                    'description': 'The converted orxSHADERPOINTER or nil',
+                },],
+                'csig': '#define orxSHADERPOINTER(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toSpawnerConst',
+                'description': 'Convert the orxSTRUCTURE to an orxSPAWNER# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSPAWNER#',
+                    'description': 'The converted orxSPAWNER or nil',
+                },],
+                'csig': '#define orxSPAWNER(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toTextConst',
+                'description': 'Convert the orxSTRUCTURE to an orxTEXT# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxTEXT#',
+                    'description': 'The converted orxTEXT or nil',
+                },],
+                'csig': '#define orxTEXT(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toTextureConst',
+                'description': 'Convert the orxSTRUCTURE to an orxTEXTURE# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxTEXTURE#',
+                    'description': 'The converted orxTEXTURE or nil',
+                },],
+                'csig': '#define orxTEXTURE(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toTimelineConst',
+                'description': 'Convert the orxSTRUCTURE to an orxTIMELINE# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxTIMELINE#',
+                    'description': 'The converted orxTIMELINE or nil',
+                },],
+                'csig': '#define orxTIMELINE(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'toViewportConst',
+                'description': 'Convert the orxSTRUCTURE to an orxVIEWPORT# (pointer cast)',
+                'params': [],
+                'returns': [{
+                    'type': 'orxVIEWPORT#',
+                    'description': 'The converted orxVIEWPORT or nil',
+                },],
+                'csig': '#define orxVIEWPORT(STRUCTURE)',
+                'non_const_self': 'no',
+            },
+        ],
+        'description': ''
+    },
+    'orxOBJECT': {
+        'properties': [],
+        'methods': [
+            {
+                'name': 'getAnimPointer',
+                'description': 'Get the orxANIMPOINTER linked to the orxSTRUCTURE',
+                'params': [],
+                'returns': [{
+                    'type': 'orxANIMPOINTER',
+                    'description': 'The orxANIMPOINTER or nil',
+                },],
+                'csig': '#define orxOBJECT_GET_STRUCTURE(OBJECT, TYPE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'getBody',
+                'description': 'Get the orxBODY linked to the orxSTRUCTURE',
+                'params': [],
+                'returns': [{
+                    'type': 'orxBODY',
+                    'description': 'The orxBODY or nil',
+                },],
+                'csig': '#define orxOBJECT_GET_STRUCTURE(OBJECT, TYPE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'getClock',
+                'description': 'Get the orxCLOCK linked to the orxSTRUCTURE',
+                'params': [],
+                'returns': [{
+                    'type': 'orxCLOCK',
+                    'description': 'The orxCLOCK or nil',
+                },],
+                'csig': '#define orxOBJECT_GET_STRUCTURE(OBJECT, TYPE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'getFrame',
+                'description': 'Get the orxFRAME linked to the orxSTRUCTURE',
+                'params': [],
+                'returns': [{
+                    'type': 'orxFRAME',
+                    'description': 'The orxFRAME or nil',
+                },],
+                'csig': '#define orxOBJECT_GET_STRUCTURE(OBJECT, TYPE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'getFXPointer',
+                'description': 'Get the orxFXPOINTER linked to the orxSTRUCTURE',
+                'params': [],
+                'returns': [{
+                    'type': 'orxFXPOINTER',
+                    'description': 'The orxFXPOINTER or nil',
+                },],
+                'csig': '#define orxOBJECT_GET_STRUCTURE(OBJECT, TYPE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'getGraphic',
+                'description': 'Get the orxGRAPHIC linked to the orxSTRUCTURE',
+                'params': [],
+                'returns': [{
+                    'type': 'orxGRAPHIC',
+                    'description': 'The orxGRAPHIC or nil',
+                },],
+                'csig': '#define orxOBJECT_GET_STRUCTURE(OBJECT, TYPE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'getShaderPointer',
+                'description': 'Get the orxSHADERPOINTER linked to the orxSTRUCTURE',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSHADERPOINTER',
+                    'description': 'The orxSHADERPOINTER or nil',
+                },],
+                'csig': '#define orxOBJECT_GET_STRUCTURE(OBJECT, TYPE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'getSoundPointer',
+                'description': 'Get the orxSOUNDPOINTER linked to the orxSTRUCTURE',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSOUNDPOINTER',
+                    'description': 'The orxSOUNDPOINTER or nil',
+                },],
+                'csig': '#define orxOBJECT_GET_STRUCTURE(OBJECT, TYPE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'getSpawner',
+                'description': 'Get the orxSPAWNER linked to the orxSTRUCTURE',
+                'params': [],
+                'returns': [{
+                    'type': 'orxSPAWNER',
+                    'description': 'The orxSPAWNER or nil',
+                },],
+                'csig': '#define orxOBJECT_GET_STRUCTURE(OBJECT, TYPE)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'getTimeline',
+                'description': 'Get the orxTIMELINE linked to the orxSTRUCTURE',
+                'params': [],
+                'returns': [{
+                    'type': 'orxTIMELINE',
+                    'description': 'The orxTIMELINE or nil',
+                },],
+                'csig': '#define orxOBJECT_GET_STRUCTURE(OBJECT, TYPE)',
+                'non_const_self': 'no',
+            },
+        ],
+        'description': ''
+    },
+    "orxVECTOR": {
+        'properties': [],
+        'methods': [],
+        'description': "This type has __add, __sub, __mul, __div, __unm, __eq, and __tostring implemented, so it can handle common arithmetic operations, compare with '=' and print as a string"
+    },
+    "orxSOUND_FILTER_DATA": {
+        'properties': [
+            { 'name' : 'type', 'type': 'orxSOUND_FILTER_TYPE' },
+            { 'name' : 'nameid', 'type': 'integer' },
+            { 'name' : 'a0', 'type': 'number' },
+            { 'name' : 'a1', 'type': 'number' },
+            { 'name' : 'a2', 'type': 'number' },
+            { 'name' : 'b0', 'type': 'number' },
+            { 'name' : 'b1', 'type': 'number' },
+            { 'name' : 'b2', 'type': 'number' },
+            { 'name' : 'frequency', 'type': 'number' },
+            { 'name' : 'order', 'type': 'integer' },
+            { 'name' : 'q', 'type': 'number' },
+            { 'name' : 'gain', 'type': 'number' },
+            { 'name' : 'delay', 'type': 'number' },
+            { 'name' : 'decay', 'type': 'number' }
+        ],
+        'methods': [],
+        'description': 'not all the properties are available at the same time, refer to the constructors to find out about that',
+        'constructors': [
+            { 'module': 'sound', 'funcname': 'filterDataBiquad' },
+            { 'module': 'sound', 'funcname': 'filterDataLowPass' },
+            { 'module': 'sound', 'funcname': 'filterDataHighPass' },
+            { 'module': 'sound', 'funcname': 'filterDataLowShelf' },
+            { 'module': 'sound', 'funcname': 'filterDataHighShelf' },
+            { 'module': 'sound', 'funcname': 'filterDataNotch' },
+            { 'module': 'sound', 'funcname': 'filterDataPeaking' },
+            { 'module': 'sound', 'funcname': 'filterDataDelay' },
+        ],
+    },
+    'orxCLOCK': {
+        'properties': [],
+        'methods': [
+            {
+                'name': 'register',
+                'description': 'Registers a callback function to a clock (the previous one will be discarded)',
+                'params': [
+                    { 'name': 'clock', 'type': 'orxCLOCK', 'dir': '', 'description': "Concerned clock" },
+                    { 'name': 'func', 'type': 'lorxCLOCK_CALLBACK', 'dir': '', 'description': "Callback to register" },
+                    { 'name': 'moduleid', 'type': 'orxMODULE_ID', 'dir': '', 'description': "ID of the module related to this callback" },
+                    { 'name': 'priority', 'type': 'orxCLOCK_PRIORITY', 'dir': '', 'description': "Priority for the function" },
+                ],
+                'returns': [
+                    {
+                        'type': 'orxSTATUS',
+                        'description': 'success / failure',
+                    },
+                ],
+                'csig': 'orxSTATUS orxClock_Register(orxCLOCK *_pstClock, const orxCLOCK_FUNCTION _pfnCallback, void *_pContext, orxMODULE_ID _eModuleID, orxCLOCK_PRIORITY _ePriority)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'unregister',
+                'description': 'Unregisters the callback function of a clock',
+                'params': [
+                ],
+                'returns': [
+                    {
+                        'type': 'orxSTATUS',
+                        'description': 'success / failure',
+                    },
+                ],
+                'csig': 'orxSTATUS orxClock_Unregister(orxCLOCK *_pstClock, const orxCLOCK_FUNCTION _pfnCallback);',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'addTimer',
+                'description': 'Adds a timer function to a clock',
+                'params': [
+                    { 'name': 'clock', 'type': 'orxCLOCK', 'dir': '', 'description': "Concerned clock" },
+                    { 'name': 'func', 'type': 'lorxCLOCK_CALLBACK', 'dir': '', 'description': "Callback to register" },
+                    { 'name': 'delay', 'type': 'number', 'dir': '', 'description': "Timer's delay between 2 calls, must be strictly positive" },
+                    { 'name': 'repetition', 'type': 'integer', 'dir': '', 'description': 'Number of times this timer should be called before removed, -1 for infinite' },
+                ],
+                'returns': [
+                    {
+                        'type': 'orxSTATUS',
+                        'description': 'success / failure',
+                    },
+                ],
+                'csig': 'orxSTATUS orxClock_AddTimer(orxCLOCK *_pstClock, const orxCLOCK_FUNCTION _pfnCallback, orxFLOAT _fDelay, orxS32 _s32Repetition, void *_pContext)',
+                'non_const_self': 'no',
+            },
+            {
+                'name': 'removeTimer',
+                'description': 'Removes a timer function from a clock',
+                'params': [
+                    { 'name': 'clock', 'type': 'orxCLOCK', 'dir': '', 'description': "Concerned clock" },
+                    { 'name': 'func', 'type': 'lorxCLOCK_CALLBACK', 'dir': '', 'description': "Callback to register" },
+                    { 'name': 'delay', 'type': 'number', 'dir': '', 'description': "Timer's delay between 2 calls, must be strictly positive" },
+                ],
+                'returns': [
+                    {
+                        'type': 'orxSTATUS',
+                        'description': 'success / failure',
+                    },
+                ],
+                'csig': 'orxSTATUS orxClock_RemoveTimer(orxCLOCK *_pstClock, const orxCLOCK_FUNCTION _pfnCallback, orxFLOAT _fDelay, void *_pContext)',
+                'non_const_self': 'no',
+            },
+        ],
+        'description': ''
+    },
+}

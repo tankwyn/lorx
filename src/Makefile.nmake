@@ -1,0 +1,126 @@
+#################################################################################################
+# This makefile is for nmake on Windows.
+# To build 32 bit, link aginst 32 bit orx and lua libs and run nmake in x86 environment
+#################################################################################################
+
+CC              = cl.exe
+LINK            = link.exe
+
+# Set these paths according to your lua source directory!!!!!!!
+# LUA             = 
+LUA_INC         = $(LUA)
+LUA_LIB         = /libpath:$(LUA) lua53.lib
+
+!IFNDEF config
+config          = release
+!ENDIF
+
+!IF "$(config)" == "debug"
+LDFLAGS         = /debug
+CFLAGS          = /Og /D__orxDEBUG__
+ORX_LIBNAME     = orxd
+EXE_NAME        = lorxd.exe
+LIB_NAME        = lorxd.lib
+DLL_NAME        = lorxd.dll
+!ENDIF
+
+!IF "$(config)" == "profile"
+LDFLAGS         =
+CFLAGS          = /O2 /D__orxPROFILER__
+ORX_LIBNAME     = orxp
+EXE_NAME        = lorxp.exe
+LIB_NAME        = lorxp.lib
+DLL_NAME        = lorxp.dll
+
+!ENDIF
+
+!IF "$(config)" == "release"
+LDFLAGS         =
+CFLAGS          = /O2
+ORX_LIBNAME     = orx
+EXE_NAME        = lorx.exe
+LIB_NAME        = lorx.lib
+DLL_NAME        = lorx.dll
+!ENDIF
+
+ORX_INC         = $(ORX)\include
+ORX_LIB         = /libpath:$(ORX)\lib /libpath:$(ORX)\lib\dynamic $(ORX_LIBNAME).lib
+
+DLL_CFLAGS      = $(CFLAGS) /TC /MD /W4 /DLORX_BUILD_DLL
+EXE_CFLAGS      = $(CFLAGS) /TC /MD /W4
+ALL_LDFLAGS     = $(LDFLAGS)
+
+ALL_INC         = /I$(LUA_INC) /I$(ORX_INC) /I$(SOURCE_ROOT)
+ALL_LIB         = $(LUA_LIB) $(ORX_LIB)
+
+
+#########################################################################################################
+
+
+SOURCE_ROOT     = $(MAKEDIR)
+EXE_DEPS        = main.obj
+
+LIB_DEPS        = conbasic.obj conenum.obj conutype.obj bindings.obj modules.obj lorx.obj 
+
+all: $(EXE_NAME)
+
+clean:
+    @echo Cleaning binaries and libraries...
+    @del /F *.obj 2>nul
+    @del /F *.exe 2>nul
+    @del /F *.pdb 2>nul
+    @del /F *.ilk 2>nul
+
+$(DLL_NAME): $(LIB_DEPS)
+    $(LINK) /DLL /IMPLIB:$(LIB_NAME) /OUT:$(DLL_NAME) $(ALL_LIB) $(LIB_DEPS)
+
+$(EXE_NAME): $(DLL_NAME) $(EXE_DEPS)
+    $(LINK) $(ALL_LDFLAGS) /OUT:$(EXE_NAME) $(ALL_LIB) $(LIB_NAME) $(EXE_DEPS)
+    @IF exist $(ORX)\lib\dynamic (copy $(ORX)\lib\dynamic\$(ORX_LIBNAME).dll $(MAKEDIR)\..\bin) ELSE (copy $(ORX)\lib\$(ORX_LIBNAME).dll $(MAKEDIR)\..\bin)
+    @copy $(LUA)\lua53.dll $(MAKEDIR)\..\bin
+    @copy $(LIB_NAME) $(MAKEDIR)\..\bin
+    @copy $(DLL_NAME) $(MAKEDIR)\..\bin
+    @copy $(EXE_NAME) $(MAKEDIR)\..\bin
+
+conbasic.obj: {$(SOURCE_ROOT)}conbasic.c \
+    {$(SOURCE_ROOT)}helpers.h
+    @cd "$(SOURCE_ROOT)"
+    $(CC) /c $(DLL_CFLAGS) $(ALL_INC) /o "$(MAKEDIR)\$*.obj" $*.c
+    @cd "$(MAKEDIR)"
+    
+conenum.obj: {$(SOURCE_ROOT)}conenum.c
+    @cd "$(SOURCE_ROOT)"
+    $(CC) /c $(DLL_CFLAGS) $(ALL_INC) /o "$(MAKEDIR)\$*.obj" $*.c
+    @cd "$(MAKEDIR)"
+    
+conutype.obj: {$(SOURCE_ROOT)}conutype.c
+    @cd "$(SOURCE_ROOT)"
+    $(CC) /c $(DLL_CFLAGS) $(ALL_INC) /o "$(MAKEDIR)\$*.obj" $*.c
+    @cd "$(MAKEDIR)"
+    
+bindings.obj: {$(SOURCE_ROOT)}bindings.c \
+    {$(SOURCE_ROOT)}conenumex.h
+    @cd "$(SOURCE_ROOT)"
+    $(CC) /c $(DLL_CFLAGS) $(ALL_INC) /o "$(MAKEDIR)\$*.obj" $*.c
+    @cd "$(MAKEDIR)"
+    
+modules.obj: {$(SOURCE_ROOT)}modules.c \
+    {$(SOURCE_ROOT)}helpers.h \
+    {$(SOURCE_ROOT)}constructors.h \
+    {$(SOURCE_ROOT)}conenumex.h
+    @cd "$(SOURCE_ROOT)"
+    $(CC) /c $(DLL_CFLAGS) $(ALL_INC) /o "$(MAKEDIR)\$*.obj" $*.c
+    @cd "$(MAKEDIR)"
+    
+lorx.obj: {$(SOURCE_ROOT)}lorx.c \
+    {$(SOURCE_ROOT)}helpers.h \
+    {$(SOURCE_ROOT)}conenumex.h \
+    {$(SOURCE_ROOT)}utypes.h
+    @cd "$(SOURCE_ROOT)"
+    $(CC) /c $(DLL_CFLAGS) $(ALL_INC) /o "$(MAKEDIR)\$*.obj" $*.c
+    @cd "$(MAKEDIR)"
+    
+main.obj: {$(SOURCE_ROOT)}main.c
+    @cd "$(SOURCE_ROOT)"
+    $(CC) /c $(EXE_CFLAGS) $(ALL_INC) /o "$(MAKEDIR)\$*.obj" $*.c
+    @cd "$(MAKEDIR)"

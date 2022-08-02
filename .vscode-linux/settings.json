@@ -1,0 +1,9 @@
+{
+    "C_Cpp.default.includePath": [
+        "$HOME/workspace/lua-5.3.6/src/",
+        "$HOME/workspace/orx/code/include",
+    ],
+    "files.associations": {
+        "*.h": "c",
+    },
+}

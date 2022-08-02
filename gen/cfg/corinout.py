@@ -1,0 +1,45 @@
+# correction for in,out flags in doxygen strings (this is important, auto-generation rely on the correctness of this)
+corinout = {
+    "orxSoundSystem_GetSampleInfo": {
+        "_pu32ChannelNumber": "out",
+        "_pu32FrameNumber": "out",
+        "_pu32SampleRate": "out",
+    },
+    "orxSound_GetSampleInfo": {
+        "_pu32ChannelNumber": "out",
+        "_pu32FrameNumber": "out",
+        "_pu32SampleRate": "out",
+    },
+    "orxObject_GetFlip": {
+        "_pbFlipX": "out",
+        "_pbFlipY": "out",
+    },
+    "orxGraphic_GetFlip": {
+        "_pbFlipX": "out",
+        "_pbFlipY": "out",
+    },
+    "orxText_SetSize": {
+        "_pstText": "in,out",
+        "_pzExtra": "out",
+    },
+    "orxPhysics_GetGravity": {"_pvGravity": "out"},
+    "orxSpawner_GetObjectSpeed": {"_pvObjectSpeed": "out"},
+    "orxAABox_Set": { "_pstRes": "in,out" },
+    "orxOBox_2DSet": { "_pstRes": "in,out" },
+    "orxColor_SetRGBA": {"_pstColor": "in,out"},
+    "orxColor_Set": {"_pstColor": "in,out"},
+    "orxColor_SetRGB": {"_pstColor": "in,out"},
+    "orxColor_SetAlpha": {"_pstColor": "in,out"},
+    "orxColor_Copy": {"_pstDst": "out"},
+    "orxColor_FromRGBToHSL": {"_pstDst": "out"},
+    "orxColor_FromHSLToRGB": {"_pstDst": "out"},
+    "orxColor_FromRGBToHSV": {"_pstDst": "out"},
+    "orxColor_FromHSVToRGB": {"_pstDst": "out"},
+    "orxAABox_Reorder": {"_pstBox": "in,out"},
+    "orxVector_Set": {"_pvVec": "in,out"},
+    "orxVector_SetAll": {"_pvVec": "in,out"},
+    "orxVector_Copy": {"_pvDst": "out"},
+    "orxText_GetLineSize" : {"_u32Line" : "in" },
+    "orxObject_SetIgnoreFlags" : {"_u32IgnoreFlags" : "in"},
+    "orxFrame_TransformRotation" : {"_fRotation" : "in" },
+}

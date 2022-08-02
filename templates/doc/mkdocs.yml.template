@@ -1,0 +1,52 @@
+site_name: LORX
+site_url: https://changeme.foo.bar
+
+use_directory_urls: false
+
+nav:
+    - Overview: index.md
+    - Root Module: root.md
+    - Modules:
+${MODULES}
+    - Types:
+${TYPES}
+    - Enums: enums.md
+    - Constants: constants.md
+    - Callbacks: callbacks.md
+  
+theme: 
+    font: false
+    palette:
+        - scheme: default
+          toggle:
+            icon: material/brightness-7 
+            name: Switch to dark mode
+
+        - scheme: slate
+          primary: deep purple
+          toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
+
+    name: material
+    custom_dir: theme
+    features:
+        - navigation.instant
+        - navigation.tabs
+        - navigation.top
+
+plugins:
+    - search:
+        indexing: 'full'
+        # separator: '[\s\-\.]'
+    - localsearch
+    - markdownextradata: {}
+
+markdown_extensions:
+    - toc:
+        permalink: "#"
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.superfences:
+        preserve_tabs: true
+    - pymdownx.escapeall: {}

@@ -1,0 +1,99 @@
+ifndef config
+config=release
+endif
+ifndef arch
+arch=x86-64
+endif
+
+CC              = gcc.exe
+
+# Set to your lua src directory (supposed to contain headers and the lib file)
+# LUA             = 
+
+ifeq ($(config),debug)
+LDFLAGS         =
+CFLAGS          = -O0 -g -D__orxDEBUG__
+ORX_LIBNAME     = orxd
+EXE_NAME        = lorxd
+LIB_NAME		= lorxd
+endif
+
+ifeq ($(config),profile)
+LDFLAGS         =
+CFLAGS          = -O2 -D__orxPROFILER__
+ORX_LIBNAME     = orxp
+EXE_NAME        = lorxp
+LIB_NAME		= lorxp
+endif
+
+ifeq ($(config),release)
+LDFLAGS         =
+CFLAGS          = -O2
+ORX_LIBNAME     = orx
+EXE_NAME        = lorx
+LIB_NAME		= lorx
+endif
+
+ifeq ($(arch),x86-64)
+ALL_CFLAGS      = $(CFLAGS) -DLORX_BUILD_DLL -Wall -ffast-math -msse2 -m64 -Wno-unused-function
+ALL_LDFLAGS     = $(LDFLAGS) -static-libgcc -m64
+endif
+
+ifeq ($(arch),x86)
+ALL_CFLAGS      = $(CFLAGS) -DLORX_BUILD_DLL -Wall -ffast-math -msse2 -m32 -Wno-unused-function
+ALL_LDFLAGS     = $(LDFLAGS) -static-libgcc -m32
+endif
+
+INCS        	= -I$(LUA) -I$(ORX)/include
+LIBS            = -L$(LUA) -llua53 -L$(ORX)/lib/dynamic -L$(ORX)/lib -l$(ORX_LIBNAME) -lm
+
+
+############################################################################################
+
+
+OBJECTS := \
+	conbasic.o \
+	conenum.o \
+	conutype.o \
+	bindings.o \
+	modules.o \
+	lorx.o
+
+.PHONY: clean
+
+all: exe
+	@:
+
+exe: lib main.o
+	$(CC) main.o -o $(EXE_NAME).exe -L. -l$(EXE_NAME) $(ALL_LDFLAGS) $(LIBS)
+	copy $(EXE_NAME).exe ..\bin
+	copy $(LIB_NAME).dll ..\bin
+	copy $(LUA)\lua53.dll ..\bin
+	IF exist $(ORX)\lib\dynamic (copy $(ORX)\lib\dynamic\$(ORX_LIBNAME).dll ..\bin) ELSE (copy $(ORX)\lib\$(ORX_LIBNAME).dll ..\bin)
+
+lib: $(OBJECTS)
+	$(CC) -shared -fPIC $(OBJECTS) -o $(LIB_NAME).dll $(ALL_LDFLAGS) $(LIBS)
+
+clean:
+	del /F *.exe *.o 2>nul
+
+conbasic.o: conbasic.c
+	$(CC) $(INCS) $(ALL_CFLAGS) -o "$@" -c "$<"
+
+main.o: main.c
+	$(CC) $(INCS) $(ALL_CFLAGS) -o "$@" -c "$<"
+
+lorx.o: lorx.c
+	$(CC) $(INCS) $(ALL_CFLAGS) -o "$@" -c "$<"
+
+conutype.o: conutype.c
+	$(CC) $(INCS) $(ALL_CFLAGS) -o "$@" -c "$<"
+
+modules.o: modules.c
+	$(CC) $(INCS) $(ALL_CFLAGS) -o "$@" -c "$<"
+
+conenum.o: conenum.c
+	$(CC) $(INCS) $(ALL_CFLAGS) -o "$@" -c "$<"
+
+bindings.o: bindings.c
+	$(CC) $(INCS) $(ALL_CFLAGS) -o "$@" -c "$<"

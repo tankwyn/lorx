@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Build and debug",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/lorxd.exe",
+            "args": [ "${workspaceFolder}/test" ],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "C/C++: build project"
+        },
+        {
+            "name": "Debug",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/lorxd.exe",
+            "args": [ "${workspaceFolder}/test" ],
+            "cwd": "${workspaceFolder}",
+        },
+        {
+            "type": "lua-local",
+            "request": "launch",
+            "name": "Debug Lorx script",
+            "program": {
+                "command": "bin/lorxd.exe",
+            },
+            "args":  [
+                "${workspaceFolder}/test"
+            ],
+            "scriptRoots": [
+                "${workspaceFolder}/test"
+            ],
+        }
+    ]
+}

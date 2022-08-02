@@ -1,0 +1,493 @@
+---@meta
+
+
+---@class lorx
+lorx = {}
+
+---@class voidptr
+voidptr = {}
+
+---@class orxHANDLE
+orxHANDLE = {}
+
+
+---@class lorxANIM_EVENT
+---@field id orxANIM_EVENT
+---@field sender orxSTRUCTURE
+---@field recipient orxSTRUCTURE
+---@field anim orxANIM
+---@field animname string
+---@field count integer # when id is 'loop'
+---@field time number # when id is 'cut' or 'custom_event'
+---@field name string # when id is 'custom_event'
+---@field value number # when id is 'custom_event'
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxANIM_EVENT = {}
+
+---@class lorxCLOCK_EVENT
+---@field id orxCLOCK_EVENT
+---@field sender orxCLOCK
+---@field recipient voidptr
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxCLOCK_EVENT = {}
+
+---@class lorxCONFIG_EVENT
+---@field id orxCONFIG_EVENT
+---@field sender voidptr
+---@field recipient voidptr
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxCONFIG_EVENT = {}
+
+---@class lorxDISPLAY_EVENT
+---@field id orxDISPLAY_EVENT
+---@field sender voidptr|orxBITMAP
+---@field recipient voidptr|orxBITMAP
+---@field width integer # when id is 'set_video_mode'
+---@field height integer # when id is 'set_video_mode'
+---@field depth integer # when id is 'set_video_mode'
+---@field refreshrate integer # when id is 'set_video_mode'
+---@field previouswidth integer # when id is 'set_video_mode'
+---@field previousheight integer # when id is 'set_video_mode'
+---@field previousdepth integer # when id is 'set_video_mode'
+---@field previousrefreshrate integer # when id is 'set_video_mode'
+---@field fullscreen boolean # when id is 'set_video_mode'
+---@field location string # when id is 'load_bitmap'
+---@field filenameid integer # when id is 'load_bitmap'
+---@field bitmapid integer # when id is 'load_bitmap'
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxDISPLAY_EVENT = {}
+
+---@class lorxFX_EVENT
+---@field id orxFX_EVENT
+---@field sender orxSTRUCTURE
+---@field recipient orxSTRUCTURE
+---@field fx orxFX
+---@field fxname string
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxFX_EVENT = {}
+
+---@class lorxINPUT_EVENT
+---@field id orxINPUT_EVENT
+---@field sender voidptr
+---@field recipient voidptr
+---@field setname string
+---@field inputname string
+---@field typelist orxINPUT_TYPE[] # when id is 'on' or 'off'
+---@field idlist string[] # when id is 'on' or 'off' (will be integer array only if type is 'external')
+---@field modelist orxINPUT_MODE[] # when id is 'on' or 'off'
+---@field valuelist number[] # when id is 'on' or 'off'
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxINPUT_EVENT = {}
+
+---@class lorxLOCALE_EVENT
+---@field id orxLOCALE_EVENT
+---@field sender voidptr
+---@field recipient voidptr
+---@field language string
+---@field group string
+---@field stringkey string
+---@field stringvalue string
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxLOCALE_EVENT = {}
+
+---@class lorxOBJECT_EVENT
+---@field id orxOBJECT_EVENT
+---@field sender orxOBJECT
+---@field recipient orxOBJECT
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxOBJECT_EVENT = {}
+
+---@class lorxRENDER_EVENT
+---@field id orxRENDER_EVENT
+---@field sender orxVIEWPORT|orxOBJECT|voidptr
+---@field recipient orxVIEWPORT|orxOBJECT|voidptr
+---@field transform orxDISPLAY_TRANSFORM # when id is 'object_start' or 'object_stop'
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxRENDER_EVENT = {}
+
+---@class lorxVIEWPORT_EVENT
+---@field id orxVIEWPORT_EVENT
+---@field sender orxVIEWPORT
+---@field recipient orxVIEWPORT
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxVIEWPORT_EVENT = {}
+
+---@class lorxTIMELINE_EVENT
+---@field id orxTIMELINE_EVENT
+---@field sender orxSTRUCTURE
+---@field recipient orxSTRUCTURE
+---@field timeline orxTIMELINE
+---@field trackname string
+---@field event string
+---@field timestamp number
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxTIMELINE_EVENT = {}
+
+---@class lorxTEXTURE_EVENT
+---@field id orxTEXTURE_EVENT
+---@field sender orxTEXTURE
+---@field recipient orxTEXTURE
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxTEXTURE_EVENT = {}
+
+---@class lorxSYSTEM_EVENT
+---@field id orxSYSTEM_EVENT
+---@field sender voidptr # should be NULL
+---@field recipient voidptr # should be NULL
+---@field time number # when id is 'touch_*' or 'accelerate'
+---@field touchid integer # when id is 'touch_*'
+---@field pressure number # when id is 'touch_*'
+---@field x number # when id is 'touch_*'
+---@field y number # when id is 'touch_*'
+---@field acceleration orxVECTOR  # when id is 'accelerate'
+---@field valuelist string[] # when id is 'drop'
+---@field value string # when id is 'clipboard'
+---@field framecount integer # when id is 'game_loop_start' or 'game_loop_stop'
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxSYSTEM_EVENT = {}
+
+---@class lorxSHADER_EVENT
+---@field id orxSHADER_EVENT
+---@field sender orxSTRUCTURE
+---@field recipient orxSTRUCTURE
+---@field shader orxSHADER
+---@field shadername string
+---@field paramname string
+---@field paramtype orxSHADER_PARAM_TYPE
+---@field paramindex integer
+---@field value number|orxTEXTURE|orxVECTOR # the type of this field depends on `paramtype`
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxSHADER_EVENT = {}
+
+---@class lorxSPAWNER_EVENT
+---@field id orxSPAWNER_EVENT
+---@field sender orxSPAWNER
+---@field recipient orxOBJECT
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxSPAWNER_EVENT = {}
+
+---@class lorxSOUND_EVENT
+---@field id orxSOUND_EVENT
+---@field sender orxHANDLE|orxOBJECT|orxSTRUCTURE|voidptr
+---@field recipient orxOBJECT|voidptr
+---@field streaminfo orxSOUND_STREAM_INFO # when id is 'packet' or 'recording_*'
+---@field streampacket orxSOUND_STREAM_PACKET # when id is 'packet' or 'recording_*'
+---@field filterdata orxSOUND_FILTER_DATA # when id is 'set_filter_param'
+---@field filterbusid integer # when id is 'set_filter_param'
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxSOUND_EVENT = {}
+
+---@class lorxRESOURCE_EVENT
+---@field id orxRESOURCE_EVENT
+---@field sender voidptr
+---@field recipient voidptr
+---@field time integer
+---@field location string
+---@field groupid integer
+---@field nameid integer
+---@field typetag string
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxRESOURCE_EVENT = {}
+
+---@class lorxPHYSICS_EVENT
+---@field id orxPHYSICS_EVENT
+---@field sender orxOBJECT
+---@field recipient orxOBJECT
+---@field position orxVECTOR
+---@field normal orxVECTOR
+---@field raw voidptr # raw pointer of orxEVENT
+local lorxPHYSICS_EVENT = {}
+
+
+---
+---Run lorx
+---
+---@param _init lorxINIT_CALLBACK
+---@param _update lorxUPDATE_CALLBACK
+---@param _exit lorxEXIT_CALLBACK # optional
+function lorx.execute(_init, _update, _exit) end
+
+---
+---Stop lorx (stop the main loop and cause normal exit)
+---
+function lorx.stop() end
+
+---
+---Get Lorx version
+---
+---@return string
+function lorx.getVersion() end
+
+---
+---Get runtime Orx version
+---
+---@return string
+function lorx.getOrxVersion() end
+
+---
+---Get bind Orx version
+---
+---@return string
+function lorx.getBindOrxVersion() end
+
+---
+---Register the update callback, will unregister the existing one
+---
+---@param _update lorxUPDATE_CALLBACK
+function lorx.registerUpdate(_update) end
+
+---
+---Unregister current update callback
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterUpdate() end
+
+---
+---Register anim event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxANIM_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerAnimHandler(_ecb) end
+
+---
+---Unregister current anim event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterAnimHandler() end
+
+---
+---Register clock event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxCLOCK_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerClockHandler(_ecb) end
+
+---
+---Unregister current clock event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterClockHandler() end
+
+---
+---Register config event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxCONFIG_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerConfigHandler(_ecb) end
+
+---
+---Unregister current config event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterConfigHandler() end
+
+---
+---Register display event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxDISPLAY_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerDisplayHandler(_ecb) end
+
+---
+---Unregister current display event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterDisplayHandler() end
+
+---
+---Register fx event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxFX_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerFXHandler(_ecb) end
+
+---
+---Unregister current fx event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterFXHandler() end
+
+---
+---Register input event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxINPUT_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerInputHandler(_ecb) end
+
+---
+---Unregister current input event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterInputHandler() end
+
+---
+---Register locale event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxLOCALE_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerLocaleHandler(_ecb) end
+
+---
+---Unregister current locale event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterLocaleHandler() end
+
+---
+---Register object event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxOBJECT_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerObjectHandler(_ecb) end
+
+---
+---Unregister current object event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterObjectHandler() end
+
+---
+---Register render event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxRENDER_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerRenderHandler(_ecb) end
+
+---
+---Unregister current render event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterRenderHandler() end
+
+---
+---Register physics event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxPHYSICS_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerPhysicsHandler(_ecb) end
+
+---
+---Unregister current physics event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterPhysicsHandler() end
+
+---
+---Register resource event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxRESOURCE_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerResourceHandler(_ecb) end
+
+---
+---Unregister current resource event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterResourceHandler() end
+
+---
+---Register shader event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxSHADER_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerShaderHandler(_ecb) end
+
+---
+---Unregister current shader event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterShaderHandler() end
+
+---
+---Register sound event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxSOUND_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerSoundHandler(_ecb) end
+
+---
+---Unregister current sound event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterSoundHandler() end
+
+---
+---Register spawner event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxSPAWNER_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerSpawnerHandler(_ecb) end
+
+---
+---Unregister current spawner event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterSpawnerHandler() end
+
+---
+---Register system event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxSYSTEM_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerSystemHandler(_ecb) end
+
+---
+---Unregister current system event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterSystemHandler() end
+
+---
+---Register texture event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxTEXTURE_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerTextureHandler(_ecb) end
+
+---
+---Unregister current texture event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterTextureHandler() end
+
+---
+---Register timeline event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxTIMELINE_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerTimelineHandler(_ecb) end
+
+---
+---Unregister current timeline event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterTimelineHandler() end
+
+---
+---Register viewport event handler, will unregister the existing one
+---
+---@param _ecb fun(e:lorxVIEWPORT_EVENT):orxSTATUS
+---@return orxSTATUS # success / failure
+function lorx.registerViewportHandler(_ecb) end
+
+---
+---Unregister current viewport event handler
+---
+---@return boolean # false if the callback was not set
+function lorx.unregisterViewportHandler() end
+
+
+---@alias lorxLOG_CALLBACK fun(level:orxDEBUG_LEVEL, func:string, file:string, line:integer, log:string):orxSTATUS
+
+---@alias lorxCLOCK_CALLBACK fun(ci:orxCLOCK_INFO)
+
+---@alias lorxINIT_CALLBACK fun():orxSTATUS
+
+---@alias lorxUPDATE_CALLBACK fun(ci:orxCLOCK_INFO)
+
+---@alias lorxEXIT_CALLBACK fun()
+
+---@alias lorxCFGSAVE_CALLBACK fun(section:string, key:string, file:string, useencryption:boolean):boolean
+
+---@alias lorxCFGCLEAR_CALLBACK fun(section:string, key:string):boolean
+

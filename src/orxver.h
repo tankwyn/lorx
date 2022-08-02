@@ -1,0 +1,8 @@
+#ifndef __LORX_ORXVER_H__
+#define __LORX_ORXVER_H__
+
+#define LORX_ORX_VERSION_MAJOR 1
+#define LORX_ORX_VERSION_MINOR 13
+#define LORX_ORX_VERSION_BUILD 6051
+
+#endif /* __LORX_ORXVER_H__ */

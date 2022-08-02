@@ -1,0 +1,118 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: build project",
+            "command": "nmake64.bat /f Makefile.nmake config=debug",
+            "options": {
+                "cwd": "${workspaceFolder}/src",
+                "env": {
+                    "LUA": "D:\\workspace\\gamedev\\lua-5.3.6\\msvc64d",
+                    "ORX": "D:\\workspace\\gamedev\\orx-1.13-dev\\dev-vs2022-64",
+                }
+            },
+            "problemMatcher": [
+                {
+                    "base": "$msCompile",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}/src"
+                    ],
+                },
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "C/C++ Project Build With NMake/Clang on Windows"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: clean project",
+            "command": "nmake64.bat /f Makefile.nmake clean",
+            "options": {
+                "cwd": "${workspaceFolder}/src",
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "C/C++ Project Clean With NMake/Clang on Windows"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: rebuild project",
+            "dependsOn": [ "C/C++: clean project" ],
+            "command": "nmake64.bat /f Makefile.nmake config=debug",
+            "options": {
+                "cwd": "${workspaceFolder}/src",
+                "env": {
+                    "LUA": "D:\\workspace\\gamedev\\lua-5.3.6\\msvc64d",
+                    "ORX": "D:\\workspace\\gamedev\\orx-1.13-dev\\dev-vs2022-64",
+                }
+            },
+            "problemMatcher": [
+                {
+                    "base": "$msCompile",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}/src"
+                    ],
+                },
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "C/C++ Project Rebuild With NMake/Clang on Windows"
+        },
+        {
+            "type": "shell",
+            "label": "Python: autogen",
+            "command": "python.exe autogen.py",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "LUA": "D:\\workspace\\gamedev\\lua-5.3.6\\msvc64d",
+                    "ORX": "D:\\workspace\\gamedev\\orx-1.13-dev\\dev-vs2022-64",
+                }
+            },
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "detail": "Auto-generate src, doc and emmy"
+        },
+        {
+            "type": "shell",
+            "label": "Python: autogen clean",
+            "command": "python.exe autogen.py clean",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "LUA": "D:\\workspace\\gamedev\\lua-5.3.6\\msvc64d",
+                    "ORX": "D:\\workspace\\gamedev\\orx-1.13-dev\\dev-vs2022-64",
+                }
+            },
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "detail": "Clean the project, including the auto-generated stuff"
+        },
+        {
+            "type": "shell",
+            "label": "build doc",
+            "command": "mkdocs build",
+            "options": {
+                "cwd": "${workspaceFolder}\\doc",
+            },
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "detail": "Build the html documentation"
+        },
+    ],
+    "version": "2.0.0"
+}

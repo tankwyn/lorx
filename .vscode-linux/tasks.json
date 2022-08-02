@@ -1,0 +1,146 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: build project",
+            "command": "make",
+            "args": [
+                "-f",
+                "Makefile.linux",
+                "config=debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/src",
+                "env": {
+                    "LUA": "${HOME}/workspace/lua-5.3.6/src",
+                    "ORX": "${HOME}/workspace/orx-1.13-dev/dev-linux64",
+                }
+            },
+            "problemMatcher": [
+                {
+                    // we use gcc in our makefile
+                    "base": "$gcc",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}/src"
+                    ],
+                },
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "C/C++ Project Build"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: clean project",
+            "command": "make",
+            "args": [
+                "-f",
+                "Makefile.linux",
+                "clean",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/src",
+            },
+            "problemMatcher": [
+                {
+                    "base": "$gcc",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}/src"
+                    ],
+                },
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "C/C++ Project Clean"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: rebuild project",
+            "dependsOn": [ "C/C++: clean project" ],
+            "command": "bear",
+            "args": [
+                "-o",
+                "../compile_commands.json",
+                "make",
+                "-f",
+                "Makefile.linux",
+                "config=debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/src",
+                "env": {
+                    "LUA": "${HOME}/workspace/lua-5.3.6/src",
+                    "ORX": "${HOME}/workspace/orx-1.13-dev/dev-linux64",
+                }
+            },
+            "problemMatcher": [
+                {
+                    "base": "$gcc",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}/src"
+                    ],
+                },
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "C/C++ Project Rebuild"
+        },
+        {
+            "type": "shell",
+            "label": "Python: autogen",
+            "command": "python3 autogen.py",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "LUA": "/home/tkw/workspace/lua-5.3.6/src",
+                    "ORX": "/home/tkw/workspace/orx-1.13-dev/dev-linux64",
+                }
+            },
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "detail": "Auto-generate src, doc and emmy"
+        },
+        {
+            "type": "shell",
+            "label": "Python: autogen clean",
+            "command": "python3 autogen.py clean",
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "LUA": "/home/tkw/workspace/lua-5.3.6/src",
+                    "ORX": "/home/tkw/workspace/orx-1.13-dev/dev-linux64",
+                }
+            },
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "detail": "Clean the project, including the auto-generated stuff"
+        },
+        {
+            "type": "shell",
+            "label": "build doc",
+            "command": "mkdocs build",
+            "options": {
+                "cwd": "${workspaceFolder}/doc",
+            },
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "detail": "Build the html documentation"
+        },
+    ],
+    "version": "2.0.0"
+}

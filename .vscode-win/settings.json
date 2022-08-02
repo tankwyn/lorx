@@ -1,0 +1,12 @@
+{
+    "C_Cpp.default.includePath": [
+        "D:/workspace/gamedev/lua-5.3.6/src",
+        "D:/workspace/gamedev/orx-1.13/code/include",
+    ],
+    "files.associations": {
+        "helpers.h": "c",
+        "bindings.h": "c",
+        "methods.h": "c",
+    },
+    "python.formatting.provider": "black",
+}
