@@ -20,7 +20,7 @@ name | type | description
 --- | --- | ---
 init | [lorxINIT_CALLBACK](callbacks.md#lorxinit_callback) | init callback to be called when Orx is initalizing
 update | [lorxUPDATE_CALLBACK](callbacks.md#lorxupdate_callback) | update callback to be called on every frame
-exit | [lorxEXIT_CALLBACK](callbacks.md#lorxexit_callback) | exit callback to be called when Orx is exiting
+exit | [lorxEXIT_CALLBACK](callbacks.md#lorxexit_callback) | exit callback to be called when Orx is exiting (optional)
 
 * Returns:
 

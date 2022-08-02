@@ -416,9 +416,9 @@ r1 = callback(e)
 name | type | condition | description
 --- | --- | --- | ---
 id | [orxRENDER_EVENT](enums.md#orxrender_event) |  | render event type
-sender | [orxOBJECT](types/orxOBJECT.md) \| [orxVIEWPORT](types/orxVIEWPORT.md) | id == 'viewport_*' \| id == 'object_*' | sender
-recipient | [orxOBJECT](types/orxOBJECT.md) \| [orxVIEWPORT](types/orxVIEWPORT.md) | id == 'viewport_*' \| id == 'object_*' | recipient
-transform | [orxDISPLAY_TRANSFORM](types/orxDISPLAY_TRANSFORM.md) | id == 'object_*' | transform
+sender | [orxOBJECT](types/orxOBJECT.md) \| [orxVIEWPORT](types/orxVIEWPORT.md) | id == 'viewport_\*' \| id == 'object_\*' | sender
+recipient | [orxOBJECT](types/orxOBJECT.md) \| [orxVIEWPORT](types/orxVIEWPORT.md) | id == 'viewport_\*' \| id == 'object_\*' | recipient
+transform | [orxDISPLAY_TRANSFORM](types/orxDISPLAY_TRANSFORM.md) | id == 'object_\*' | transform
 raw | void\* |  | raw pointer of the event
 
 
@@ -519,15 +519,15 @@ name | type | condition | description
 id | [orxSYSTEM_EVENT](enums.md#orxsystem_event) |  | system event type
 sender | void\* |  | sender
 recipient | void\* |  | recipient
-time | number | id == 'touch_*' or 'accelerate' | touch time or acceleration time
-touchid | integer | id == 'touch_*' | touch ID
-pressure | number | id == 'touch_*' | pressure
-x | number | id == 'touch_*' | x of touch position
-y | number | id == 'touch_*' | y of touch position
+time | number | id == 'touch_\*' or 'accelerate' | touch time or acceleration time
+touchid | integer | id == 'touch_\*' | touch ID
+pressure | number | id == 'touch_\*' | pressure
+x | number | id == 'touch_\*' | x of touch position
+y | number | id == 'touch_\*' | y of touch position
 acceleration | [orxVECTOR](types/orxVECTOR.md) | id == 'accelerate' | the acceleration
 valuelist | table of string | id == 'drop' | drop value list
 value | string | id == 'clipboard' | clipboard value
-framecount | integer | id == 'game_loop_*' | frame count
+framecount | integer | id == 'game_loop_\*' | frame count
 raw | void\* |  | raw pointer of the event
 
 
@@ -606,8 +606,8 @@ name | type | condition | description
 id | [orxSOUND_EVENT](enums.md#orxsound_event) |  | sound event type
 sender | orxHANDLE \| [orxOBJECT](types/orxOBJECT.md) \| [orxSTRUCTURE](types/orxSTRUCTURE.md) |  | sender
 recipient | [orxOBJECT](types/orxOBJECT.md) |  | recipient
-streaminfo | [orxSOUND_STREAM_INFO](types/orxSOUND_STREAM_INFO.md) | id == 'packet' or 'recording_*' | stream info
-streampacket | [orxSOUND_STREAM_PACKET](types/orxSOUND_STREAM_PACKET.md) | id == 'packet' or 'recording_*' | stream packet
+streaminfo | [orxSOUND_STREAM_INFO](types/orxSOUND_STREAM_INFO.md) | id == 'packet' or 'recording_\*' | stream info
+streampacket | [orxSOUND_STREAM_PACKET](types/orxSOUND_STREAM_PACKET.md) | id == 'packet' or 'recording_\*' | stream packet
 filterdata | [orxSOUND_FILTER_DATA](types/orxSOUND_FILTER_DATA.md) | id == 'set_filter_param' | filter data
 filterbusid | integer | id == 'set_filter_param' | filter bus ID
 raw | void\* |  | raw pointer of the event
