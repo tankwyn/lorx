@@ -1,0 +1,6717 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://changeme.foo.bar/modules/config.html">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>config - LORX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-config" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="LORX" class="md-header__button md-logo" aria-label="LORX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LORX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              config
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      Overview
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../root.html" class="md-tabs__link">
+      Root Module
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="constants.html" class="md-tabs__link md-tabs__link--active">
+        Modules
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../types/orxAABOX.html" class="md-tabs__link">
+        Types
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../enums.html" class="md-tabs__link">
+      Enums
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../constants.html" class="md-tabs__link">
+      Constants
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../callbacks.html" class="md-tabs__link">
+      Callbacks
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="LORX" class="md-nav__button md-logo" aria-label="LORX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    LORX
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../root.html" class="md-nav__link">
+        Root Module
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Modules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="constants.html" class="md-nav__link">
+        constants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aabox.html" class="md-nav__link">
+        aabox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="anim.html" class="md-nav__link">
+        anim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="animpointer.html" class="md-nav__link">
+        animpointer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="animset.html" class="md-nav__link">
+        animset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="body.html" class="md-nav__link">
+        body
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera.html" class="md-nav__link">
+        camera
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="clock.html" class="md-nav__link">
+        clock
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="command.html" class="md-nav__link">
+        command
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          config
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="config.html" class="md-nav__link md-nav__link--active">
+        config
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    functions
+  </a>
+  
+    <nav class="md-nav" aria-label="functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#appendliststring" class="md-nav__link">
+    appendListString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearsection" class="md-nav__link">
+    clearSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearvalue" class="md-nav__link">
+    clearValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copyfile" class="md-nav__link">
+    copyFile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicaterawvalue" class="md-nav__link">
+    duplicateRawValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit" class="md-nav__link">
+    exit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getbool" class="md-nav__link">
+    getBool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentsection" class="md-nav__link">
+    getCurrentSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getencryptionkey" class="md-nav__link">
+    getEncryptionKey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfloat" class="md-nav__link">
+    getFloat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getkey" class="md-nav__link">
+    getKey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getkeycount" class="md-nav__link">
+    getKeyCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistbool" class="md-nav__link">
+    getListBool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistcount" class="md-nav__link">
+    getListCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistfloat" class="md-nav__link">
+    getListFloat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlists32" class="md-nav__link">
+    getListS32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlists64" class="md-nav__link">
+    getListS64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getliststring" class="md-nav__link">
+    getListString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistu32" class="md-nav__link">
+    getListU32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistu64" class="md-nav__link">
+    getListU64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistvector" class="md-nav__link">
+    getListVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmainfilename" class="md-nav__link">
+    getMainFileName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getorigin" class="md-nav__link">
+    getOrigin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getoriginid" class="md-nav__link">
+    getOriginID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getparent" class="md-nav__link">
+    getParent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gets32" class="md-nav__link">
+    getS32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gets64" class="md-nav__link">
+    getS64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsection" class="md-nav__link">
+    getSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsectioncount" class="md-nav__link">
+    getSectionCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getstring" class="md-nav__link">
+    getString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getu32" class="md-nav__link">
+    getU32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getu64" class="md-nav__link">
+    getU64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvaluesource" class="md-nav__link">
+    getValueSource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvector" class="md-nav__link">
+    getVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hassection" class="md-nav__link">
+    hasSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasvalue" class="md-nav__link">
+    hasValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iscommandvalue" class="md-nav__link">
+    isCommandValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isdynamicvalue" class="md-nav__link">
+    isDynamicValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isinheritedvalue" class="md-nav__link">
+    isInheritedValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#islist" class="md-nav__link">
+    isList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#islocallyinheritedvalue" class="md-nav__link">
+    isLocallyInheritedValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#israndomvalue" class="md-nav__link">
+    isRandomValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    load
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadfrommemory" class="md-nav__link">
+    loadFromMemory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mergefiles" class="md-nav__link">
+    mergeFiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popsection" class="md-nav__link">
+    popSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protectsection" class="md-nav__link">
+    protectSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pushsection" class="md-nav__link">
+    pushSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reloadhistory" class="md-nav__link">
+    reloadHistory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renamesection" class="md-nav__link">
+    renameSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectsection" class="md-nav__link">
+    selectSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setbasename" class="md-nav__link">
+    setBaseName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setbool" class="md-nav__link">
+    setBool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdefaultparent" class="md-nav__link">
+    setDefaultParent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setencryptionkey" class="md-nav__link">
+    setEncryptionKey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setfloat" class="md-nav__link">
+    setFloat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setliststring" class="md-nav__link">
+    setListString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setparent" class="md-nav__link">
+    setParent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sets32" class="md-nav__link">
+    setS32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sets64" class="md-nav__link">
+    setS64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setstring" class="md-nav__link">
+    setString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setstringblock" class="md-nav__link">
+    setStringBlock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setu32" class="md-nav__link">
+    setU32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setu64" class="md-nav__link">
+    setU64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setvector" class="md-nav__link">
+    setVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="console.html" class="md-nav__link">
+        console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="debug.html" class="md-nav__link">
+        debug
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="display.html" class="md-nav__link">
+        display
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="event.html" class="md-nav__link">
+        event
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="file.html" class="md-nav__link">
+        file
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="font.html" class="md-nav__link">
+        font
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fps.html" class="md-nav__link">
+        fps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="frame.html" class="md-nav__link">
+        frame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fx.html" class="md-nav__link">
+        fx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fxpointer.html" class="md-nav__link">
+        fxpointer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graphic.html" class="md-nav__link">
+        graphic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="input.html" class="md-nav__link">
+        input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="joystick.html" class="md-nav__link">
+        joystick
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="keyboard.html" class="md-nav__link">
+        keyboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="locale.html" class="md-nav__link">
+        locale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math.html" class="md-nav__link">
+        math
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="module.html" class="md-nav__link">
+        module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mouse.html" class="md-nav__link">
+        mouse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="object.html" class="md-nav__link">
+        object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="obox.html" class="md-nav__link">
+        obox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="physics.html" class="md-nav__link">
+        physics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="profiler.html" class="md-nav__link">
+        profiler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="render.html" class="md-nav__link">
+        render
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="resource.html" class="md-nav__link">
+        resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="screenshot.html" class="md-nav__link">
+        screenshot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="shader.html" class="md-nav__link">
+        shader
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="shaderpointer.html" class="md-nav__link">
+        shaderpointer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sound.html" class="md-nav__link">
+        sound
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="soundpointer.html" class="md-nav__link">
+        soundpointer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="soundsystem.html" class="md-nav__link">
+        soundsystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="spawner.html" class="md-nav__link">
+        spawner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="string.html" class="md-nav__link">
+        string
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="structure.html" class="md-nav__link">
+        structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="system.html" class="md-nav__link">
+        system
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="text.html" class="md-nav__link">
+        text
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="texture.html" class="md-nav__link">
+        texture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="thread.html" class="md-nav__link">
+        thread
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="timeline.html" class="md-nav__link">
+        timeline
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vector.html" class="md-nav__link">
+        vector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="viewport.html" class="md-nav__link">
+        viewport
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Types
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Types" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Types
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxAABOX.html" class="md-nav__link">
+        orxAABOX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxANIM.html" class="md-nav__link">
+        orxANIM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxANIMPOINTER.html" class="md-nav__link">
+        orxANIMPOINTER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxANIMSET.html" class="md-nav__link">
+        orxANIMSET
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxANIMSET_LINK_TABLE.html" class="md-nav__link">
+        orxANIMSET_LINK_TABLE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxANIM_CUSTOM_EVENT.html" class="md-nav__link">
+        orxANIM_CUSTOM_EVENT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxBITMAP.html" class="md-nav__link">
+        orxBITMAP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxBODY.html" class="md-nav__link">
+        orxBODY
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxBODY_JOINT.html" class="md-nav__link">
+        orxBODY_JOINT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxBODY_PART.html" class="md-nav__link">
+        orxBODY_PART
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCAMERA.html" class="md-nav__link">
+        orxCAMERA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCHARACTER_GLYPH.html" class="md-nav__link">
+        orxCHARACTER_GLYPH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCHARACTER_MAP.html" class="md-nav__link">
+        orxCHARACTER_MAP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCLOCK.html" class="md-nav__link">
+        orxCLOCK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCLOCK_INFO.html" class="md-nav__link">
+        orxCLOCK_INFO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCOLOR.html" class="md-nav__link">
+        orxCOLOR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCOMMAND_VAR.html" class="md-nav__link">
+        orxCOMMAND_VAR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxDISPLAY_MESH.html" class="md-nav__link">
+        orxDISPLAY_MESH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxDISPLAY_TRANSFORM.html" class="md-nav__link">
+        orxDISPLAY_TRANSFORM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxDISPLAY_VIDEO_MODE.html" class="md-nav__link">
+        orxDISPLAY_VIDEO_MODE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxFILE.html" class="md-nav__link">
+        orxFILE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxFILE_INFO.html" class="md-nav__link">
+        orxFILE_INFO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxFONT.html" class="md-nav__link">
+        orxFONT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxFRAME.html" class="md-nav__link">
+        orxFRAME
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxFX.html" class="md-nav__link">
+        orxFX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxFXPOINTER.html" class="md-nav__link">
+        orxFXPOINTER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxGRAPHIC.html" class="md-nav__link">
+        orxGRAPHIC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxOBJECT.html" class="md-nav__link">
+        orxOBJECT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxOBOX.html" class="md-nav__link">
+        orxOBOX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxPHYSICS_BODY.html" class="md-nav__link">
+        orxPHYSICS_BODY
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxPHYSICS_BODY_JOINT.html" class="md-nav__link">
+        orxPHYSICS_BODY_JOINT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxPHYSICS_BODY_PART.html" class="md-nav__link">
+        orxPHYSICS_BODY_PART
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxRGBA.html" class="md-nav__link">
+        orxRGBA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSHADER.html" class="md-nav__link">
+        orxSHADER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSHADERPOINTER.html" class="md-nav__link">
+        orxSHADERPOINTER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUND.html" class="md-nav__link">
+        orxSOUND
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUNDPOINTER.html" class="md-nav__link">
+        orxSOUNDPOINTER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUNDSYSTEM_SAMPLE.html" class="md-nav__link">
+        orxSOUNDSYSTEM_SAMPLE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUNDSYSTEM_SOUND.html" class="md-nav__link">
+        orxSOUNDSYSTEM_SOUND
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUND_FILTER_DATA.html" class="md-nav__link">
+        orxSOUND_FILTER_DATA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUND_STREAM_INFO.html" class="md-nav__link">
+        orxSOUND_STREAM_INFO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUND_STREAM_PACKET.html" class="md-nav__link">
+        orxSOUND_STREAM_PACKET
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSPAWNER.html" class="md-nav__link">
+        orxSPAWNER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSTRUCTURE.html" class="md-nav__link">
+        orxSTRUCTURE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxTEXT.html" class="md-nav__link">
+        orxTEXT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxTEXTURE.html" class="md-nav__link">
+        orxTEXTURE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxTHREAD_SEMAPHORE.html" class="md-nav__link">
+        orxTHREAD_SEMAPHORE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxTIMELINE.html" class="md-nav__link">
+        orxTIMELINE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxVECTOR.html" class="md-nav__link">
+        orxVECTOR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxVIEWPORT.html" class="md-nav__link">
+        orxVIEWPORT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums.html" class="md-nav__link">
+        Enums
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constants.html" class="md-nav__link">
+        Constants
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../callbacks.html" class="md-nav__link">
+        Callbacks
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    functions
+  </a>
+  
+    <nav class="md-nav" aria-label="functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#appendliststring" class="md-nav__link">
+    appendListString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    clear
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearsection" class="md-nav__link">
+    clearSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearvalue" class="md-nav__link">
+    clearValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copyfile" class="md-nav__link">
+    copyFile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicaterawvalue" class="md-nav__link">
+    duplicateRawValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit" class="md-nav__link">
+    exit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getbool" class="md-nav__link">
+    getBool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getcurrentsection" class="md-nav__link">
+    getCurrentSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getencryptionkey" class="md-nav__link">
+    getEncryptionKey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getfloat" class="md-nav__link">
+    getFloat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getkey" class="md-nav__link">
+    getKey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getkeycount" class="md-nav__link">
+    getKeyCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistbool" class="md-nav__link">
+    getListBool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistcount" class="md-nav__link">
+    getListCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistfloat" class="md-nav__link">
+    getListFloat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlists32" class="md-nav__link">
+    getListS32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlists64" class="md-nav__link">
+    getListS64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getliststring" class="md-nav__link">
+    getListString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistu32" class="md-nav__link">
+    getListU32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistu64" class="md-nav__link">
+    getListU64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistvector" class="md-nav__link">
+    getListVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getmainfilename" class="md-nav__link">
+    getMainFileName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getorigin" class="md-nav__link">
+    getOrigin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getoriginid" class="md-nav__link">
+    getOriginID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getparent" class="md-nav__link">
+    getParent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gets32" class="md-nav__link">
+    getS32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gets64" class="md-nav__link">
+    getS64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsection" class="md-nav__link">
+    getSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getsectioncount" class="md-nav__link">
+    getSectionCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getstring" class="md-nav__link">
+    getString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getu32" class="md-nav__link">
+    getU32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getu64" class="md-nav__link">
+    getU64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvaluesource" class="md-nav__link">
+    getValueSource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvector" class="md-nav__link">
+    getVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hassection" class="md-nav__link">
+    hasSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasvalue" class="md-nav__link">
+    hasValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iscommandvalue" class="md-nav__link">
+    isCommandValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isdynamicvalue" class="md-nav__link">
+    isDynamicValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isinheritedvalue" class="md-nav__link">
+    isInheritedValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#islist" class="md-nav__link">
+    isList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#islocallyinheritedvalue" class="md-nav__link">
+    isLocallyInheritedValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#israndomvalue" class="md-nav__link">
+    isRandomValue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load" class="md-nav__link">
+    load
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadfrommemory" class="md-nav__link">
+    loadFromMemory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mergefiles" class="md-nav__link">
+    mergeFiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popsection" class="md-nav__link">
+    popSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protectsection" class="md-nav__link">
+    protectSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pushsection" class="md-nav__link">
+    pushSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reloadhistory" class="md-nav__link">
+    reloadHistory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renamesection" class="md-nav__link">
+    renameSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save" class="md-nav__link">
+    save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectsection" class="md-nav__link">
+    selectSection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setbasename" class="md-nav__link">
+    setBaseName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setbool" class="md-nav__link">
+    setBool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdefaultparent" class="md-nav__link">
+    setDefaultParent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setencryptionkey" class="md-nav__link">
+    setEncryptionKey
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setfloat" class="md-nav__link">
+    setFloat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setliststring" class="md-nav__link">
+    setListString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setparent" class="md-nav__link">
+    setParent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sets32" class="md-nav__link">
+    setS32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sets64" class="md-nav__link">
+    setS64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setstring" class="md-nav__link">
+    setString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setstringblock" class="md-nav__link">
+    setStringBlock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setu32" class="md-nav__link">
+    setU32
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setu64" class="md-nav__link">
+    setU64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setvector" class="md-nav__link">
+    setVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="module-config">module config<a class="headerlink" href="#module-config" title="Permanent link">#</a></h1>
+<h2 id="functions">functions<a class="headerlink" href="#functions" title="Permanent link">#</a></h2>
+<h3 id="appendliststring"><strong><code>appendListString</code></strong><a class="headerlink" href="#appendliststring" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">appendListString</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Appends string values to a config list (will create a new entry if not already present)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>value</td>
+<td>table of string</td>
+<td>Values</td>
+</tr>
+<tr>
+<td>number</td>
+<td>integer</td>
+<td>Number of values</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_AppendListString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_azValue</span><span class="p">[],</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32Number</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="clear"><strong><code>clear</code></strong><a class="headerlink" href="#clear" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">clear</span><span class="p">([</span><span class="n">func</span><span class="p">])</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Clear all config info (set the lorx.tmpcfgclear callback to filter)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[func]</td>
+<td><a href="../callbacks.html#lorxcfgclear_callback">lorxCFGCLEAR_CALLBACK</a></td>
+<td>Callback used to filter sections/keys to clear. If null, all sections/keys will be cleared</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">orxSTATUS</span><span class="w"> </span><span class="n">orxFASTCALL</span><span class="w"> </span><span class="n">orxConfig_Clear</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxCONFIG_CLEAR_FUNCTION</span><span class="w"> </span><span class="n">_pfnClearCallback</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="clearsection"><strong><code>clearSection</code></strong><a class="headerlink" href="#clearsection" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">clearSection</span><span class="p">(</span><span class="n">sectionname</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Clears section</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sectionname</td>
+<td>string</td>
+<td>Section name to clear</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_ClearSection</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zSectionName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="clearvalue"><strong><code>clearValue</code></strong><a class="headerlink" href="#clearvalue" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">clearValue</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Clears a value from current selected section</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_ClearValue</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="copyfile"><strong><code>copyFile</code></strong><a class="headerlink" href="#copyfile" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">copyFile</span><span class="p">(</span><span class="n">dstfilename</span><span class="p">,</span> <span class="n">srcfilename</span><span class="p">,</span> <span class="n">encryptionkey</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Copies a file with optional encryption</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dstfilename</td>
+<td>string</td>
+<td>Name of the destination file</td>
+</tr>
+<tr>
+<td>srcfilename</td>
+<td>string</td>
+<td>Name of the source file</td>
+</tr>
+<tr>
+<td>encryptionkey</td>
+<td>string</td>
+<td>Encryption key to use when writing destination file, nil for no encryption</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_CopyFile</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zDstFileName</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zSrcFileName</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zEncryptionKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="duplicaterawvalue"><strong><code>duplicateRawValue</code></strong><a class="headerlink" href="#duplicaterawvalue" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">duplicateRawValue</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Duplicates a raw value (string) from config</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>The value. If non-null, needs to be deleted by the caller with orxString_Delete()</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">  </span><span class="n">orxSTRING</span><span class="w">  </span><span class="n">orxConfig_DuplicateRawValue</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="exit"><strong><code>exit</code></strong><a class="headerlink" href="#exit" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">exit</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Exits from the Config Module</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+<li>
+<p>C signature:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">  </span><span class="kt">void</span><span class="w">  </span><span class="n">orxConfig_Exit</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getbool"><strong><code>getBool</code></strong><a class="headerlink" href="#getbool" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getBool</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads a boolean value from config (will take a random value if a list is provided for this key)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxConfig_GetBool</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getcurrentsection"><strong><code>getCurrentSection</code></strong><a class="headerlink" href="#getcurrentsection" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getCurrentSection</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets current working section</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>Current selected section</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w">  </span><span class="n">orxConfig_GetCurrentSection</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getencryptionkey"><strong><code>getEncryptionKey</code></strong><a class="headerlink" href="#getencryptionkey" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getEncryptionKey</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets encryption key</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>Current encryption key / empty string</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w">  </span><span class="n">orxConfig_GetEncryptionKey</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getfloat"><strong><code>getFloat</code></strong><a class="headerlink" href="#getfloat" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getFloat</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads a float value from config (will take a random value if a list is provided for this key)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="w">  </span><span class="n">orxFLOAT</span><span class="w">  </span><span class="n">orxConfig_GetFloat</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getkey"><strong><code>getKey</code></strong><a class="headerlink" href="#getkey" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getKey</span><span class="p">(</span><span class="n">keyindex</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets key for the current section at the given index</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keyindex</td>
+<td>integer</td>
+<td>Index of the desired key</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>string if exist, empty string otherwise</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w">  </span><span class="n">orxConfig_GetKey</span><span class="p">(</span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32KeyIndex</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getkeycount"><strong><code>getKeyCount</code></strong><a class="headerlink" href="#getkeycount" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getKeyCount</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets key count of the current section</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>Key count of the current section if valid, 0 otherwise</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="w">  </span><span class="n">orxU32</span><span class="w">  </span><span class="n">orxConfig_GetKeyCount</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getlistbool"><strong><code>getListBool</code></strong><a class="headerlink" href="#getlistbool" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getListBool</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">listindex</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads a boolean value from config list</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>listindex</td>
+<td>integer</td>
+<td>Index of desired item in list / -1 for random</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxConfig_GetListBool</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32ListIndex</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getlistcount"><strong><code>getListCount</code></strong><a class="headerlink" href="#getlistcount" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getListCount</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets list count for a given key</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>List count if it's a valid list, 0 otherwise</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="w">  </span><span class="n">orxS32</span><span class="w">  </span><span class="n">orxConfig_GetListCount</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getlistfloat"><strong><code>getListFloat</code></strong><a class="headerlink" href="#getlistfloat" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getListFloat</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">listindex</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads a float value from config list</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>listindex</td>
+<td>integer</td>
+<td>Index of desired item in list / -1 for random</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="w">  </span><span class="n">orxFLOAT</span><span class="w">  </span><span class="n">orxConfig_GetListFloat</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32ListIndex</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getlists32"><strong><code>getListS32</code></strong><a class="headerlink" href="#getlists32" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getListS32</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">listindex</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads a signed integer value from config list</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>listindex</td>
+<td>integer</td>
+<td>Index of desired item in list / -1 for random</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="w">  </span><span class="n">orxS32</span><span class="w">  </span><span class="n">orxConfig_GetListS32</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32ListIndex</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getlists64"><strong><code>getListS64</code></strong><a class="headerlink" href="#getlists64" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getListS64</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">listindex</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads a signed integer value from config list</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>listindex</td>
+<td>integer</td>
+<td>Index of desired item in list / -1 for random</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="w">  </span><span class="n">orxS64</span><span class="w">  </span><span class="n">orxConfig_GetListS64</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32ListIndex</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getliststring"><strong><code>getListString</code></strong><a class="headerlink" href="#getliststring" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getListString</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">listindex</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads a string value from config list</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>listindex</td>
+<td>integer</td>
+<td>Index of desired item in list / -1 for random</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w">  </span><span class="n">orxConfig_GetListString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32ListIndex</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getlistu32"><strong><code>getListU32</code></strong><a class="headerlink" href="#getlistu32" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getListU32</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">listindex</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads an unsigned integer value from config list</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>listindex</td>
+<td>integer</td>
+<td>Index of desired item in list / -1 for random</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="w">  </span><span class="n">orxU32</span><span class="w">  </span><span class="n">orxConfig_GetListU32</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32ListIndex</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getlistu64"><strong><code>getListU64</code></strong><a class="headerlink" href="#getlistu64" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getListU64</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">listindex</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads an unsigned integer value from config list</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>listindex</td>
+<td>integer</td>
+<td>Index of desired item in list / -1 for random</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="w">  </span><span class="n">orxU64</span><span class="w">  </span><span class="n">orxConfig_GetListU64</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32ListIndex</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getlistvector"><strong><code>getListVector</code></strong><a class="headerlink" href="#getlistvector" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getListVector</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">listindex</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads a vector value from config list</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>listindex</td>
+<td>integer</td>
+<td>Index of desired item in list / -1 for random</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxVECTOR.html">orxVECTOR</a></td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="w">  </span><span class="n">orxVECTOR</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">orxConfig_GetListVector</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32ListIndex</span><span class="p">,</span><span class="w"> </span><span class="n">orxVECTOR</span><span class="w"> </span><span class="o">*</span><span class="n">_pvVector</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getmainfilename"><strong><code>getMainFileName</code></strong><a class="headerlink" href="#getmainfilename" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getMainFileName</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets config main file name</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>Config main file name / empty string</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w">  </span><span class="n">orxConfig_GetMainFileName</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getorigin"><strong><code>getOrigin</code></strong><a class="headerlink" href="#getorigin" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getOrigin</span><span class="p">(</span><span class="n">sectionname</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets section origin (ie. the file where it was defined for the first time or orxSTRING_EMPTY if not defined via a file)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sectionname</td>
+<td>string</td>
+<td>Concerned section name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>string if found, empty string otherwise</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w">  </span><span class="n">orxConfig_GetOrigin</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zSectionName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getoriginid"><strong><code>getOriginID</code></strong><a class="headerlink" href="#getoriginid" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getOriginID</span><span class="p">(</span><span class="n">sectionname</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets section origin ID (ie. the file where it was defined for the first time or orxSTRING_EMPTY if not defined via a file)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sectionname</td>
+<td>string</td>
+<td>Concerned section name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>String ID if found, <a href="constants.html#orxstringid_undefined">orxSTRINGID_UNDEFINED</a> otherwise</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="w">  </span><span class="n">orxSTRINGID</span><span class="w">  </span><span class="n">orxConfig_GetOriginID</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zSectionName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getparent"><strong><code>getParent</code></strong><a class="headerlink" href="#getparent" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getParent</span><span class="p">(</span><span class="n">sectionname</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets a section's parent</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sectionname</td>
+<td>string</td>
+<td>Concerned section</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>Section's parent name if set or empty string if no parent has been forced, nil otherwise</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w">  </span><span class="n">orxConfig_GetParent</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zSectionName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="gets32"><strong><code>getS32</code></strong><a class="headerlink" href="#gets32" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getS32</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads a signed integer value from config (will take a random value if a list is provided for this key)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="w">  </span><span class="n">orxS32</span><span class="w">  </span><span class="n">orxConfig_GetS32</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="gets64"><strong><code>getS64</code></strong><a class="headerlink" href="#gets64" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getS64</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads a signed integer value from config (will take a random value if a list is provided for this key)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="w">  </span><span class="n">orxS64</span><span class="w">  </span><span class="n">orxConfig_GetS64</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getsection"><strong><code>getSection</code></strong><a class="headerlink" href="#getsection" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getSection</span><span class="p">(</span><span class="n">sectionindex</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets section at the given index</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sectionindex</td>
+<td>integer</td>
+<td>Index of the desired section</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>string if exist, empty string otherwise</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w">  </span><span class="n">orxConfig_GetSection</span><span class="p">(</span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32SectionIndex</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getsectioncount"><strong><code>getSectionCount</code></strong><a class="headerlink" href="#getsectioncount" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getSectionCount</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets section count</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>Section count</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="w">  </span><span class="n">orxU32</span><span class="w">  </span><span class="n">orxConfig_GetSectionCount</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getstring"><strong><code>getString</code></strong><a class="headerlink" href="#getstring" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getString</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads a string value from config (will take a random value if a list is provided for this key)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w">  </span><span class="n">orxConfig_GetString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getu32"><strong><code>getU32</code></strong><a class="headerlink" href="#getu32" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getU32</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads an unsigned integer value from config (will take a random value if a list is provided for this key)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="w">  </span><span class="n">orxU32</span><span class="w">  </span><span class="n">orxConfig_GetU32</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getu64"><strong><code>getU64</code></strong><a class="headerlink" href="#getu64" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getU64</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads an unsigned integer value from config (will take a random value if a list is provided for this key)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>The value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="w">  </span><span class="n">orxU64</span><span class="w">  </span><span class="n">orxConfig_GetU64</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getvaluesource"><strong><code>getValueSource</code></strong><a class="headerlink" href="#getvaluesource" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getValueSource</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets a value's source section (ie. the section where the value is explicitly defined), only considering section inheritance, not local one</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>Name of the section that explicitly contains the value, empty string if not found</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w">  </span><span class="n">orxConfig_GetValueSource</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getvector"><strong><code>getVector</code></strong><a class="headerlink" href="#getvector" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getVector</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reads a vector value from config (will take a random value if a list is provided for this key)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxVECTOR.html">orxVECTOR</a></td>
+<td>The value if valid, nil otherwise</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="w">  </span><span class="n">orxVECTOR</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">orxConfig_GetVector</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxVECTOR</span><span class="w"> </span><span class="o">*</span><span class="n">_pvVector</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="hassection"><strong><code>hasSection</code></strong><a class="headerlink" href="#hassection" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">hasSection</span><span class="p">(</span><span class="n">sectionname</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Has section for the given section name?</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sectionname</td>
+<td>string</td>
+<td>Section name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true / false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxConfig_HasSection</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zSectionName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="hasvalue"><strong><code>hasValue</code></strong><a class="headerlink" href="#hasvalue" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">hasValue</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Has specified value for the given key?</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true / false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxConfig_HasValue</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="init"><strong><code>init</code></strong><a class="headerlink" href="#init" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">init</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Initializes the Config Module</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_Init</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="iscommandvalue"><strong><code>isCommandValue</code></strong><a class="headerlink" href="#iscommandvalue" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">isCommandValue</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Is this a command value? (ie. lazily evaluated command: %...)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true / false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxConfig_IsCommandValue</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="isdynamicvalue"><strong><code>isDynamicValue</code></strong><a class="headerlink" href="#isdynamicvalue" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">isDynamicValue</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Is this value dynamic? (ie. random and/or a list or command)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true / false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxConfig_IsDynamicValue</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="isinheritedvalue"><strong><code>isInheritedValue</code></strong><a class="headerlink" href="#isinheritedvalue" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">isInheritedValue</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Is this value inherited from another one (either locally or at section level)?</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true / false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxConfig_IsInheritedValue</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="islist"><strong><code>isList</code></strong><a class="headerlink" href="#islist" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">isList</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Is value a list for the given key?</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true / false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxConfig_IsList</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="islocallyinheritedvalue"><strong><code>isLocallyInheritedValue</code></strong><a class="headerlink" href="#islocallyinheritedvalue" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">isLocallyInheritedValue</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Is this value locally inherited from another one (ie. with a Value = @... syntax)?</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true / false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxConfig_IsLocallyInheritedValue</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="israndomvalue"><strong><code>isRandomValue</code></strong><a class="headerlink" href="#israndomvalue" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">isRandomValue</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Is this value random? (ie. using '~' character, within or without a list)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true / false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxConfig_IsRandomValue</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="load"><strong><code>load</code></strong><a class="headerlink" href="#load" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-88-1" name="__codelineno-88-1" href="#__codelineno-88-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="nb">load</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Loads config file from source</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>string</td>
+<td>File name</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-89-1" name="__codelineno-89-1" href="#__codelineno-89-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_Load</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zFileName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="loadfrommemory"><strong><code>loadFromMemory</code></strong><a class="headerlink" href="#loadfrommemory" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">loadFromMemory</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">buffersize</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Loads config data from a memory buffer. NB: the buffer will be modified during processing!</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>buffer</td>
+<td>string (length-limited)</td>
+<td>Buffer to process, will be modified during processing</td>
+</tr>
+<tr>
+<td>buffersize</td>
+<td>integer</td>
+<td>Size of the buffer</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_LoadFromMemory</span><span class="p">(</span><span class="n">orxCHAR</span><span class="w"> </span><span class="o">*</span><span class="n">_acBuffer</span><span class="p">,</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32BufferSize</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="mergefiles"><strong><code>mergeFiles</code></strong><a class="headerlink" href="#mergefiles" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-92-1" name="__codelineno-92-1" href="#__codelineno-92-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">mergeFiles</span><span class="p">(</span><span class="n">dstfilename</span><span class="p">,</span> <span class="n">srcfilename</span><span class="p">,</span> <span class="n">number</span><span class="p">,</span> <span class="n">encryptionkey</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Merges multiple files into a single one, with optional encryption</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dstfilename</td>
+<td>string</td>
+<td>Name of the destination file</td>
+</tr>
+<tr>
+<td>srcfilename</td>
+<td>table of string</td>
+<td>List of the names of the source files</td>
+</tr>
+<tr>
+<td>number</td>
+<td>integer</td>
+<td>Number of source file names</td>
+</tr>
+<tr>
+<td>encryptionkey</td>
+<td>string</td>
+<td>Encryption key to use when writing destination file, nil for no encryption</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-93-1" name="__codelineno-93-1" href="#__codelineno-93-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_MergeFiles</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zDstFileName</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="o">*</span><span class="n">_azSrcFileName</span><span class="p">,</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32Number</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zEncryptionKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="popsection"><strong><code>popSection</code></strong><a class="headerlink" href="#popsection" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">popSection</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Pops last section from section stack</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_PopSection</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="protectsection"><strong><code>protectSection</code></strong><a class="headerlink" href="#protectsection" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">protectSection</span><span class="p">(</span><span class="n">sectionname</span><span class="p">,</span> <span class="n">protect</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Protects/unprotects a section from deletion (content might still be changed or deleted, but the section itself will resist delete/clear calls)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sectionname</td>
+<td>string</td>
+<td>Section name to protect</td>
+</tr>
+<tr>
+<td>protect</td>
+<td>boolean</td>
+<td>true for protecting the section, false to remove the protection</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-97-1" name="__codelineno-97-1" href="#__codelineno-97-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_ProtectSection</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zSectionName</span><span class="p">,</span><span class="w"> </span><span class="n">orxBOOL</span><span class="w"> </span><span class="n">_bProtect</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="pushsection"><strong><code>pushSection</code></strong><a class="headerlink" href="#pushsection" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-98-1" name="__codelineno-98-1" href="#__codelineno-98-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">pushSection</span><span class="p">(</span><span class="n">sectionname</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Pushes a section (storing the current one on section stack)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sectionname</td>
+<td>string</td>
+<td>Section name to push</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-99-1" name="__codelineno-99-1" href="#__codelineno-99-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_PushSection</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zSectionName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="reloadhistory"><strong><code>reloadHistory</code></strong><a class="headerlink" href="#reloadhistory" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-100-1" name="__codelineno-100-1" href="#__codelineno-100-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">reloadHistory</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Reloads config files from history</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-101-1" name="__codelineno-101-1" href="#__codelineno-101-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_ReloadHistory</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="renamesection"><strong><code>renameSection</code></strong><a class="headerlink" href="#renamesection" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-102-1" name="__codelineno-102-1" href="#__codelineno-102-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">renameSection</span><span class="p">(</span><span class="n">sectionname</span><span class="p">,</span> <span class="n">newsectionname</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Renames a section</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sectionname</td>
+<td>string</td>
+<td>Section to rename</td>
+</tr>
+<tr>
+<td>newsectionname</td>
+<td>string</td>
+<td>New name for the section</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-103-1" name="__codelineno-103-1" href="#__codelineno-103-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_RenameSection</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zSectionName</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zNewSectionName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="save"><strong><code>save</code></strong><a class="headerlink" href="#save" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-104-1" name="__codelineno-104-1" href="#__codelineno-104-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">save</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">useencryption</span><span class="p">,</span> <span class="p">[</span><span class="n">func</span><span class="p">])</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Save all config info (set the lorx.tmpcfgsave callback to filter)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>string</td>
+<td>File name, if null or empty the default file name will be used</td>
+</tr>
+<tr>
+<td>useencryption</td>
+<td>boolean</td>
+<td>Use file encryption to make it human non-readable?</td>
+</tr>
+<tr>
+<td>[func]</td>
+<td><a href="../callbacks.html#lorxcfgsave_callback">lorxCFGSAVE_CALLBACK</a></td>
+<td>Callback used to filter sections/keys to save. If null, all sections/keys will be saved</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-105-1" name="__codelineno-105-1" href="#__codelineno-105-1"></a><span class="n">orxSTATUS</span><span class="w"> </span><span class="n">orxConfig_Save</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zFileName</span><span class="p">,</span><span class="w"> </span><span class="n">orxBOOL</span><span class="w"> </span><span class="n">_bUseEncryption</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxCONFIG_SAVE_FUNCTION</span><span class="w"> </span><span class="n">_pfnSaveCallback</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="selectsection"><strong><code>selectSection</code></strong><a class="headerlink" href="#selectsection" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-106-1" name="__codelineno-106-1" href="#__codelineno-106-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">selectSection</span><span class="p">(</span><span class="n">sectionname</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Selects current working section</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sectionname</td>
+<td>string</td>
+<td>Section name to select</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-107-1" name="__codelineno-107-1" href="#__codelineno-107-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SelectSection</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zSectionName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setbasename"><strong><code>setBaseName</code></strong><a class="headerlink" href="#setbasename" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-108-1" name="__codelineno-108-1" href="#__codelineno-108-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setBaseName</span><span class="p">(</span><span class="n">basename</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets config base name</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>basename</td>
+<td>string</td>
+<td>Base name used for default config file</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-109-1" name="__codelineno-109-1" href="#__codelineno-109-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetBaseName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zBaseName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setbool"><strong><code>setBool</code></strong><a class="headerlink" href="#setbool" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-110-1" name="__codelineno-110-1" href="#__codelineno-110-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setBool</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Writes a boolean value to config</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>value</td>
+<td>boolean</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-111-1" name="__codelineno-111-1" href="#__codelineno-111-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetBool</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxBOOL</span><span class="w"> </span><span class="n">_bValue</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setdefaultparent"><strong><code>setDefaultParent</code></strong><a class="headerlink" href="#setdefaultparent" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-112-1" name="__codelineno-112-1" href="#__codelineno-112-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setDefaultParent</span><span class="p">(</span><span class="n">sectionname</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets default parent for all sections</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sectionname</td>
+<td>string</td>
+<td>Section name that will be used as an implicit default parent section for all config sections, if nil is provided, default parent will be removed</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-113-1" name="__codelineno-113-1" href="#__codelineno-113-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetDefaultParent</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zSectionName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setencryptionkey"><strong><code>setEncryptionKey</code></strong><a class="headerlink" href="#setencryptionkey" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-114-1" name="__codelineno-114-1" href="#__codelineno-114-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setEncryptionKey</span><span class="p">(</span><span class="n">encryptionkey</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets encryption key</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>encryptionkey</td>
+<td>string</td>
+<td>Encryption key to use, nil to clear</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-115-1" name="__codelineno-115-1" href="#__codelineno-115-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetEncryptionKey</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zEncryptionKey</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setfloat"><strong><code>setFloat</code></strong><a class="headerlink" href="#setfloat" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-116-1" name="__codelineno-116-1" href="#__codelineno-116-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setFloat</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Writes a float value to config</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>value</td>
+<td>number</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-117-1" name="__codelineno-117-1" href="#__codelineno-117-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetFloat</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxFLOAT</span><span class="w"> </span><span class="n">_fValue</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setliststring"><strong><code>setListString</code></strong><a class="headerlink" href="#setliststring" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-118-1" name="__codelineno-118-1" href="#__codelineno-118-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setListString</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Writes a list of string values to config</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>value</td>
+<td>table of string</td>
+<td>Values</td>
+</tr>
+<tr>
+<td>number</td>
+<td>integer</td>
+<td>Number of values</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-119-1" name="__codelineno-119-1" href="#__codelineno-119-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetListString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_azValue</span><span class="p">[],</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32Number</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setparent"><strong><code>setParent</code></strong><a class="headerlink" href="#setparent" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-120-1" name="__codelineno-120-1" href="#__codelineno-120-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setParent</span><span class="p">(</span><span class="n">sectionname</span><span class="p">,</span> <span class="n">parentname</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets a section's parent</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sectionname</td>
+<td>string</td>
+<td>Concerned section, if the section doesn't exist, it will be created</td>
+</tr>
+<tr>
+<td>parentname</td>
+<td>string</td>
+<td>Parent section's name, if the section doesn't exist, it will be created, if nil is provided, the former parent will be erased, if empty string is provided, "no default parent" will be enforced</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-121-1" name="__codelineno-121-1" href="#__codelineno-121-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetParent</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zSectionName</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zParentName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="sets32"><strong><code>setS32</code></strong><a class="headerlink" href="#sets32" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-122-1" name="__codelineno-122-1" href="#__codelineno-122-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setS32</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Writes a signed integer value to config</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>value</td>
+<td>integer</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-123-1" name="__codelineno-123-1" href="#__codelineno-123-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetS32</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32Value</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="sets64"><strong><code>setS64</code></strong><a class="headerlink" href="#sets64" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-124-1" name="__codelineno-124-1" href="#__codelineno-124-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setS64</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Writes a signed integer value to config</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>value</td>
+<td>integer</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-125-1" name="__codelineno-125-1" href="#__codelineno-125-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetS64</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxS64</span><span class="w"> </span><span class="n">_s64Value</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setstring"><strong><code>setString</code></strong><a class="headerlink" href="#setstring" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-126-1" name="__codelineno-126-1" href="#__codelineno-126-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setString</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Writes a string value to config</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>value</td>
+<td>string</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-127-1" name="__codelineno-127-1" href="#__codelineno-127-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zValue</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setstringblock"><strong><code>setStringBlock</code></strong><a class="headerlink" href="#setstringblock" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-128-1" name="__codelineno-128-1" href="#__codelineno-128-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setStringBlock</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Writes a string value to config, in block mode</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>value</td>
+<td>string</td>
+<td>Value to write in block mode</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-129-1" name="__codelineno-129-1" href="#__codelineno-129-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetStringBlock</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zValue</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setu32"><strong><code>setU32</code></strong><a class="headerlink" href="#setu32" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-130-1" name="__codelineno-130-1" href="#__codelineno-130-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setU32</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Writes an unsigned integer value to config</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>value</td>
+<td>integer</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-131-1" name="__codelineno-131-1" href="#__codelineno-131-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetU32</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32Value</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setu64"><strong><code>setU64</code></strong><a class="headerlink" href="#setu64" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-132-1" name="__codelineno-132-1" href="#__codelineno-132-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setU64</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Writes an unsigned integer value to config</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>value</td>
+<td>integer</td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-133-1" name="__codelineno-133-1" href="#__codelineno-133-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetU64</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="n">orxU64</span><span class="w"> </span><span class="n">_u64Value</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setvector"><strong><code>setVector</code></strong><a class="headerlink" href="#setvector" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-134-1" name="__codelineno-134-1" href="#__codelineno-134-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setVector</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Writes a vector value to config</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key</td>
+<td>string</td>
+<td>Key name</td>
+</tr>
+<tr>
+<td>value</td>
+<td><a href="../types/orxVECTOR.html">orxVECTOR#</a></td>
+<td>Value</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-135-1" name="__codelineno-135-1" href="#__codelineno-135-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxConfig_SetVector</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zKey</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxVECTOR</span><span class="w"> </span><span class="o">*</span><span class="n">_pvValue</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setup"><strong><code>setup</code></strong><a class="headerlink" href="#setup" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-136-1" name="__codelineno-136-1" href="#__codelineno-136-1"></a><span class="n">setup</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Config module setup</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+<li>
+<p>C signature:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-137-1" name="__codelineno-137-1" href="#__codelineno-137-1"></a><span class="w">  </span><span class="kt">void</span><span class="w">  </span><span class="n">orxConfig_Setup</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="command.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: command" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              command
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="console.html" class="md-footer__link md-footer__link--next" aria-label="Next: console" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              console
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+
+<script src="../assets/javascripts/iframe-worker.js"></script>
+<script src="../search/search_index.js"></script>
+
+
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

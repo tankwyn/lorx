@@ -1,0 +1,7927 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://changeme.foo.bar/enums.html">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Enums - LORX</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#orxanim_event" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="LORX" class="md-header__button md-logo" aria-label="LORX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LORX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Enums
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="index.html" class="md-tabs__link">
+      Overview
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="root.html" class="md-tabs__link">
+      Root Module
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="modules/constants.html" class="md-tabs__link">
+        Modules
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="types/orxAABOX.html" class="md-tabs__link">
+        Types
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="enums.html" class="md-tabs__link md-tabs__link--active">
+      Enums
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="constants.html" class="md-tabs__link">
+      Constants
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="callbacks.html" class="md-tabs__link">
+      Callbacks
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="LORX" class="md-nav__button md-logo" aria-label="LORX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    LORX
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="root.html" class="md-nav__link">
+        Root Module
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Modules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/constants.html" class="md-nav__link">
+        constants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/aabox.html" class="md-nav__link">
+        aabox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/anim.html" class="md-nav__link">
+        anim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/animpointer.html" class="md-nav__link">
+        animpointer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/animset.html" class="md-nav__link">
+        animset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/body.html" class="md-nav__link">
+        body
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/camera.html" class="md-nav__link">
+        camera
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/clock.html" class="md-nav__link">
+        clock
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/command.html" class="md-nav__link">
+        command
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/config.html" class="md-nav__link">
+        config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/console.html" class="md-nav__link">
+        console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/debug.html" class="md-nav__link">
+        debug
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/display.html" class="md-nav__link">
+        display
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/event.html" class="md-nav__link">
+        event
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/file.html" class="md-nav__link">
+        file
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/font.html" class="md-nav__link">
+        font
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/fps.html" class="md-nav__link">
+        fps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/frame.html" class="md-nav__link">
+        frame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/fx.html" class="md-nav__link">
+        fx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/fxpointer.html" class="md-nav__link">
+        fxpointer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/graphic.html" class="md-nav__link">
+        graphic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/input.html" class="md-nav__link">
+        input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/joystick.html" class="md-nav__link">
+        joystick
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/keyboard.html" class="md-nav__link">
+        keyboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/locale.html" class="md-nav__link">
+        locale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/math.html" class="md-nav__link">
+        math
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/module.html" class="md-nav__link">
+        module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/mouse.html" class="md-nav__link">
+        mouse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/object.html" class="md-nav__link">
+        object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/obox.html" class="md-nav__link">
+        obox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/physics.html" class="md-nav__link">
+        physics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/profiler.html" class="md-nav__link">
+        profiler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/render.html" class="md-nav__link">
+        render
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/resource.html" class="md-nav__link">
+        resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/screenshot.html" class="md-nav__link">
+        screenshot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/shader.html" class="md-nav__link">
+        shader
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/shaderpointer.html" class="md-nav__link">
+        shaderpointer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/sound.html" class="md-nav__link">
+        sound
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/soundpointer.html" class="md-nav__link">
+        soundpointer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/soundsystem.html" class="md-nav__link">
+        soundsystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/spawner.html" class="md-nav__link">
+        spawner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/string.html" class="md-nav__link">
+        string
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/structure.html" class="md-nav__link">
+        structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/system.html" class="md-nav__link">
+        system
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/text.html" class="md-nav__link">
+        text
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/texture.html" class="md-nav__link">
+        texture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/thread.html" class="md-nav__link">
+        thread
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/timeline.html" class="md-nav__link">
+        timeline
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/vector.html" class="md-nav__link">
+        vector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modules/viewport.html" class="md-nav__link">
+        viewport
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Types
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Types" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Types
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxAABOX.html" class="md-nav__link">
+        orxAABOX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxANIM.html" class="md-nav__link">
+        orxANIM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxANIMPOINTER.html" class="md-nav__link">
+        orxANIMPOINTER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxANIMSET.html" class="md-nav__link">
+        orxANIMSET
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxANIMSET_LINK_TABLE.html" class="md-nav__link">
+        orxANIMSET_LINK_TABLE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxANIM_CUSTOM_EVENT.html" class="md-nav__link">
+        orxANIM_CUSTOM_EVENT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxBITMAP.html" class="md-nav__link">
+        orxBITMAP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxBODY.html" class="md-nav__link">
+        orxBODY
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxBODY_JOINT.html" class="md-nav__link">
+        orxBODY_JOINT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxBODY_PART.html" class="md-nav__link">
+        orxBODY_PART
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxCAMERA.html" class="md-nav__link">
+        orxCAMERA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxCHARACTER_GLYPH.html" class="md-nav__link">
+        orxCHARACTER_GLYPH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxCHARACTER_MAP.html" class="md-nav__link">
+        orxCHARACTER_MAP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxCLOCK.html" class="md-nav__link">
+        orxCLOCK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxCLOCK_INFO.html" class="md-nav__link">
+        orxCLOCK_INFO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxCOLOR.html" class="md-nav__link">
+        orxCOLOR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxCOMMAND_VAR.html" class="md-nav__link">
+        orxCOMMAND_VAR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxDISPLAY_MESH.html" class="md-nav__link">
+        orxDISPLAY_MESH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxDISPLAY_TRANSFORM.html" class="md-nav__link">
+        orxDISPLAY_TRANSFORM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxDISPLAY_VIDEO_MODE.html" class="md-nav__link">
+        orxDISPLAY_VIDEO_MODE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxFILE.html" class="md-nav__link">
+        orxFILE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxFILE_INFO.html" class="md-nav__link">
+        orxFILE_INFO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxFONT.html" class="md-nav__link">
+        orxFONT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxFRAME.html" class="md-nav__link">
+        orxFRAME
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxFX.html" class="md-nav__link">
+        orxFX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxFXPOINTER.html" class="md-nav__link">
+        orxFXPOINTER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxGRAPHIC.html" class="md-nav__link">
+        orxGRAPHIC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxOBJECT.html" class="md-nav__link">
+        orxOBJECT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxOBOX.html" class="md-nav__link">
+        orxOBOX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxPHYSICS_BODY.html" class="md-nav__link">
+        orxPHYSICS_BODY
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxPHYSICS_BODY_JOINT.html" class="md-nav__link">
+        orxPHYSICS_BODY_JOINT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxPHYSICS_BODY_PART.html" class="md-nav__link">
+        orxPHYSICS_BODY_PART
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxRGBA.html" class="md-nav__link">
+        orxRGBA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxSHADER.html" class="md-nav__link">
+        orxSHADER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxSHADERPOINTER.html" class="md-nav__link">
+        orxSHADERPOINTER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxSOUND.html" class="md-nav__link">
+        orxSOUND
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxSOUNDPOINTER.html" class="md-nav__link">
+        orxSOUNDPOINTER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxSOUNDSYSTEM_SAMPLE.html" class="md-nav__link">
+        orxSOUNDSYSTEM_SAMPLE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxSOUNDSYSTEM_SOUND.html" class="md-nav__link">
+        orxSOUNDSYSTEM_SOUND
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxSOUND_FILTER_DATA.html" class="md-nav__link">
+        orxSOUND_FILTER_DATA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxSOUND_STREAM_INFO.html" class="md-nav__link">
+        orxSOUND_STREAM_INFO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxSOUND_STREAM_PACKET.html" class="md-nav__link">
+        orxSOUND_STREAM_PACKET
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxSPAWNER.html" class="md-nav__link">
+        orxSPAWNER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxSTRUCTURE.html" class="md-nav__link">
+        orxSTRUCTURE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxTEXT.html" class="md-nav__link">
+        orxTEXT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxTEXTURE.html" class="md-nav__link">
+        orxTEXTURE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxTHREAD_SEMAPHORE.html" class="md-nav__link">
+        orxTHREAD_SEMAPHORE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxTIMELINE.html" class="md-nav__link">
+        orxTIMELINE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxVECTOR.html" class="md-nav__link">
+        orxVECTOR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="types/orxVIEWPORT.html" class="md-nav__link">
+        orxVIEWPORT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Enums
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="enums.html" class="md-nav__link md-nav__link--active">
+        Enums
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#orxanim_event" class="md-nav__link">
+    orxANIM_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxclock_event" class="md-nav__link">
+    orxCLOCK_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxclock_modifier" class="md-nav__link">
+    orxCLOCK_MODIFIER
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxclock_priority" class="md-nav__link">
+    orxCLOCK_PRIORITY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxcommand_var_type" class="md-nav__link">
+    orxCOMMAND_VAR_TYPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxconfig_event" class="md-nav__link">
+    orxCONFIG_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxdebug_level" class="md-nav__link">
+    orxDEBUG_LEVEL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxdisplay_blend_mode" class="md-nav__link">
+    orxDISPLAY_BLEND_MODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxdisplay_event" class="md-nav__link">
+    orxDISPLAY_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxdisplay_primitive" class="md-nav__link">
+    orxDISPLAY_PRIMITIVE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxdisplay_smoothing" class="md-nav__link">
+    orxDISPLAY_SMOOTHING
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxevent_type" class="md-nav__link">
+    orxEVENT_TYPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxframe_space" class="md-nav__link">
+    orxFRAME_SPACE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxfx_curve" class="md-nav__link">
+    orxFX_CURVE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxfx_event" class="md-nav__link">
+    orxFX_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxinput_event" class="md-nav__link">
+    orxINPUT_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxinput_mode" class="md-nav__link">
+    orxINPUT_MODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxinput_type" class="md-nav__link">
+    orxINPUT_TYPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxjoystick_axis" class="md-nav__link">
+    orxJOYSTICK_AXIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxjoystick_button" class="md-nav__link">
+    orxJOYSTICK_BUTTON
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxkeyboard_key" class="md-nav__link">
+    orxKEYBOARD_KEY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxlocale_event" class="md-nav__link">
+    orxLOCALE_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxmodule_id" class="md-nav__link">
+    orxMODULE_ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxmouse_axis" class="md-nav__link">
+    orxMOUSE_AXIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxmouse_button" class="md-nav__link">
+    orxMOUSE_BUTTON
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxobject_event" class="md-nav__link">
+    orxOBJECT_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxphysics_event" class="md-nav__link">
+    orxPHYSICS_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxrender_event" class="md-nav__link">
+    orxRENDER_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxresource_event" class="md-nav__link">
+    orxRESOURCE_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxseek_offset_whence" class="md-nav__link">
+    orxSEEK_OFFSET_WHENCE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxshader_event" class="md-nav__link">
+    orxSHADER_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxshader_param_type" class="md-nav__link">
+    orxSHADER_PARAM_TYPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxsoundsystem_status" class="md-nav__link">
+    orxSOUNDSYSTEM_STATUS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxsound_event" class="md-nav__link">
+    orxSOUND_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxsound_filter_type" class="md-nav__link">
+    orxSOUND_FILTER_TYPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxsound_status" class="md-nav__link">
+    orxSOUND_STATUS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxspawner_event" class="md-nav__link">
+    orxSPAWNER_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxstatus" class="md-nav__link">
+    orxSTATUS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxstructure_id" class="md-nav__link">
+    orxSTRUCTURE_ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxstructure_storage_type" class="md-nav__link">
+    orxSTRUCTURE_STORAGE_TYPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxsystem_event" class="md-nav__link">
+    orxSYSTEM_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxtexture_event" class="md-nav__link">
+    orxTEXTURE_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxtimeline_event" class="md-nav__link">
+    orxTIMELINE_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxviewport_event" class="md-nav__link">
+    orxVIEWPORT_EVENT
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="constants.html" class="md-nav__link">
+        Constants
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="callbacks.html" class="md-nav__link">
+        Callbacks
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#orxanim_event" class="md-nav__link">
+    orxANIM_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxclock_event" class="md-nav__link">
+    orxCLOCK_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxclock_modifier" class="md-nav__link">
+    orxCLOCK_MODIFIER
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxclock_priority" class="md-nav__link">
+    orxCLOCK_PRIORITY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxcommand_var_type" class="md-nav__link">
+    orxCOMMAND_VAR_TYPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxconfig_event" class="md-nav__link">
+    orxCONFIG_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxdebug_level" class="md-nav__link">
+    orxDEBUG_LEVEL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxdisplay_blend_mode" class="md-nav__link">
+    orxDISPLAY_BLEND_MODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxdisplay_event" class="md-nav__link">
+    orxDISPLAY_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxdisplay_primitive" class="md-nav__link">
+    orxDISPLAY_PRIMITIVE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxdisplay_smoothing" class="md-nav__link">
+    orxDISPLAY_SMOOTHING
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxevent_type" class="md-nav__link">
+    orxEVENT_TYPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxframe_space" class="md-nav__link">
+    orxFRAME_SPACE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxfx_curve" class="md-nav__link">
+    orxFX_CURVE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxfx_event" class="md-nav__link">
+    orxFX_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxinput_event" class="md-nav__link">
+    orxINPUT_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxinput_mode" class="md-nav__link">
+    orxINPUT_MODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxinput_type" class="md-nav__link">
+    orxINPUT_TYPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxjoystick_axis" class="md-nav__link">
+    orxJOYSTICK_AXIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxjoystick_button" class="md-nav__link">
+    orxJOYSTICK_BUTTON
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxkeyboard_key" class="md-nav__link">
+    orxKEYBOARD_KEY
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxlocale_event" class="md-nav__link">
+    orxLOCALE_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxmodule_id" class="md-nav__link">
+    orxMODULE_ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxmouse_axis" class="md-nav__link">
+    orxMOUSE_AXIS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxmouse_button" class="md-nav__link">
+    orxMOUSE_BUTTON
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxobject_event" class="md-nav__link">
+    orxOBJECT_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxphysics_event" class="md-nav__link">
+    orxPHYSICS_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxrender_event" class="md-nav__link">
+    orxRENDER_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxresource_event" class="md-nav__link">
+    orxRESOURCE_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxseek_offset_whence" class="md-nav__link">
+    orxSEEK_OFFSET_WHENCE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxshader_event" class="md-nav__link">
+    orxSHADER_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxshader_param_type" class="md-nav__link">
+    orxSHADER_PARAM_TYPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxsoundsystem_status" class="md-nav__link">
+    orxSOUNDSYSTEM_STATUS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxsound_event" class="md-nav__link">
+    orxSOUND_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxsound_filter_type" class="md-nav__link">
+    orxSOUND_FILTER_TYPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxsound_status" class="md-nav__link">
+    orxSOUND_STATUS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxspawner_event" class="md-nav__link">
+    orxSPAWNER_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxstatus" class="md-nav__link">
+    orxSTATUS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxstructure_id" class="md-nav__link">
+    orxSTRUCTURE_ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxstructure_storage_type" class="md-nav__link">
+    orxSTRUCTURE_STORAGE_TYPE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxsystem_event" class="md-nav__link">
+    orxSYSTEM_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxtexture_event" class="md-nav__link">
+    orxTEXTURE_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxtimeline_event" class="md-nav__link">
+    orxTIMELINE_EVENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orxviewport_event" class="md-nav__link">
+    orxVIEWPORT_EVENT
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>Enums</h1>
+
+<h2 id="orxanim_event">orxANIM_EVENT<a class="headerlink" href="#orxanim_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>orxANIM_EVENT_START</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>orxANIM_EVENT_STOP</td>
+</tr>
+<tr>
+<td>cut</td>
+<td>orxANIM_EVENT_CUT</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>orxANIM_EVENT_LOOP</td>
+</tr>
+<tr>
+<td>update</td>
+<td>orxANIM_EVENT_UPDATE</td>
+</tr>
+<tr>
+<td>custom_event</td>
+<td>orxANIM_EVENT_CUSTOM_EVENT</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxANIM_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxclock_event">orxCLOCK_EVENT<a class="headerlink" href="#orxclock_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>restart</td>
+<td>orxCLOCK_EVENT_RESTART</td>
+</tr>
+<tr>
+<td>resync</td>
+<td>orxCLOCK_EVENT_RESYNC</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>orxCLOCK_EVENT_PAUSE</td>
+</tr>
+<tr>
+<td>unpause</td>
+<td>orxCLOCK_EVENT_UNPAUSE</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxCLOCK_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxclock_modifier">orxCLOCK_MODIFIER<a class="headerlink" href="#orxclock_modifier" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fixed</td>
+<td>orxCLOCK_MODIFIER_FIXED</td>
+</tr>
+<tr>
+<td>multiply</td>
+<td>orxCLOCK_MODIFIER_MULTIPLY</td>
+</tr>
+<tr>
+<td>maxed</td>
+<td>orxCLOCK_MODIFIER_MAXED</td>
+</tr>
+<tr>
+<td>average</td>
+<td>orxCLOCK_MODIFIER_AVERAGE</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxCLOCK_MODIFIER_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxclock_priority">orxCLOCK_PRIORITY<a class="headerlink" href="#orxclock_priority" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lowest</td>
+<td>orxCLOCK_PRIORITY_LOWEST</td>
+</tr>
+<tr>
+<td>lower</td>
+<td>orxCLOCK_PRIORITY_LOWER</td>
+</tr>
+<tr>
+<td>low</td>
+<td>orxCLOCK_PRIORITY_LOW</td>
+</tr>
+<tr>
+<td>normal</td>
+<td>orxCLOCK_PRIORITY_NORMAL</td>
+</tr>
+<tr>
+<td>high</td>
+<td>orxCLOCK_PRIORITY_HIGH</td>
+</tr>
+<tr>
+<td>higher</td>
+<td>orxCLOCK_PRIORITY_HIGHER</td>
+</tr>
+<tr>
+<td>highest</td>
+<td>orxCLOCK_PRIORITY_HIGHEST</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxCLOCK_PRIORITY_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxcommand_var_type">orxCOMMAND_VAR_TYPE<a class="headerlink" href="#orxcommand_var_type" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>orxCOMMAND_VAR_TYPE_STRING</td>
+</tr>
+<tr>
+<td>float</td>
+<td>orxCOMMAND_VAR_TYPE_FLOAT</td>
+</tr>
+<tr>
+<td>s32</td>
+<td>orxCOMMAND_VAR_TYPE_S32</td>
+</tr>
+<tr>
+<td>u32</td>
+<td>orxCOMMAND_VAR_TYPE_U32</td>
+</tr>
+<tr>
+<td>s64</td>
+<td>orxCOMMAND_VAR_TYPE_S64</td>
+</tr>
+<tr>
+<td>u64</td>
+<td>orxCOMMAND_VAR_TYPE_U64</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>orxCOMMAND_VAR_TYPE_BOOL</td>
+</tr>
+<tr>
+<td>vector</td>
+<td>orxCOMMAND_VAR_TYPE_VECTOR</td>
+</tr>
+<tr>
+<td>numeric</td>
+<td>orxCOMMAND_VAR_TYPE_NUMERIC</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxCOMMAND_VAR_TYPE_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxconfig_event">orxCONFIG_EVENT<a class="headerlink" href="#orxconfig_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reload_start</td>
+<td>orxCONFIG_EVENT_RELOAD_START</td>
+</tr>
+<tr>
+<td>reload_stop</td>
+<td>orxCONFIG_EVENT_RELOAD_STOP</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxCONFIG_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxdebug_level">orxDEBUG_LEVEL<a class="headerlink" href="#orxdebug_level" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>anim</td>
+<td>orxDEBUG_LEVEL_ANIM</td>
+</tr>
+<tr>
+<td>config</td>
+<td>orxDEBUG_LEVEL_CONFIG</td>
+</tr>
+<tr>
+<td>clock</td>
+<td>orxDEBUG_LEVEL_CLOCK</td>
+</tr>
+<tr>
+<td>command</td>
+<td>orxDEBUG_LEVEL_COMMAND</td>
+</tr>
+<tr>
+<td>display</td>
+<td>orxDEBUG_LEVEL_DISPLAY</td>
+</tr>
+<tr>
+<td>file</td>
+<td>orxDEBUG_LEVEL_FILE</td>
+</tr>
+<tr>
+<td>input</td>
+<td>orxDEBUG_LEVEL_INPUT</td>
+</tr>
+<tr>
+<td>joystick</td>
+<td>orxDEBUG_LEVEL_JOYSTICK</td>
+</tr>
+<tr>
+<td>keyboard</td>
+<td>orxDEBUG_LEVEL_KEYBOARD</td>
+</tr>
+<tr>
+<td>memory</td>
+<td>orxDEBUG_LEVEL_MEMORY</td>
+</tr>
+<tr>
+<td>mouse</td>
+<td>orxDEBUG_LEVEL_MOUSE</td>
+</tr>
+<tr>
+<td>object</td>
+<td>orxDEBUG_LEVEL_OBJECT</td>
+</tr>
+<tr>
+<td>param</td>
+<td>orxDEBUG_LEVEL_PARAM</td>
+</tr>
+<tr>
+<td>physics</td>
+<td>orxDEBUG_LEVEL_PHYSICS</td>
+</tr>
+<tr>
+<td>plugin</td>
+<td>orxDEBUG_LEVEL_PLUGIN</td>
+</tr>
+<tr>
+<td>profiler</td>
+<td>orxDEBUG_LEVEL_PROFILER</td>
+</tr>
+<tr>
+<td>render</td>
+<td>orxDEBUG_LEVEL_RENDER</td>
+</tr>
+<tr>
+<td>screenshot</td>
+<td>orxDEBUG_LEVEL_SCREENSHOT</td>
+</tr>
+<tr>
+<td>sound</td>
+<td>orxDEBUG_LEVEL_SOUND</td>
+</tr>
+<tr>
+<td>system</td>
+<td>orxDEBUG_LEVEL_SYSTEM</td>
+</tr>
+<tr>
+<td>timer</td>
+<td>orxDEBUG_LEVEL_TIMER</td>
+</tr>
+<tr>
+<td>log</td>
+<td>orxDEBUG_LEVEL_LOG</td>
+</tr>
+<tr>
+<td>assert</td>
+<td>orxDEBUG_LEVEL_ASSERT</td>
+</tr>
+<tr>
+<td>user</td>
+<td>orxDEBUG_LEVEL_USER</td>
+</tr>
+<tr>
+<td>all</td>
+<td>orxDEBUG_LEVEL_ALL</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxDEBUG_LEVEL_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxdisplay_blend_mode">orxDISPLAY_BLEND_MODE<a class="headerlink" href="#orxdisplay_blend_mode" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alpha</td>
+<td>orxDISPLAY_BLEND_MODE_ALPHA</td>
+</tr>
+<tr>
+<td>multiply</td>
+<td>orxDISPLAY_BLEND_MODE_MULTIPLY</td>
+</tr>
+<tr>
+<td>add</td>
+<td>orxDISPLAY_BLEND_MODE_ADD</td>
+</tr>
+<tr>
+<td>premul</td>
+<td>orxDISPLAY_BLEND_MODE_PREMUL</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxDISPLAY_BLEND_MODE_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxdisplay_event">orxDISPLAY_EVENT<a class="headerlink" href="#orxdisplay_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>set_video_mode</td>
+<td>orxDISPLAY_EVENT_SET_VIDEO_MODE</td>
+</tr>
+<tr>
+<td>load_bitmap</td>
+<td>orxDISPLAY_EVENT_LOAD_BITMAP</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxDISPLAY_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxdisplay_primitive">orxDISPLAY_PRIMITIVE<a class="headerlink" href="#orxdisplay_primitive" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points</td>
+<td>orxDISPLAY_PRIMITIVE_POINTS</td>
+</tr>
+<tr>
+<td>lines</td>
+<td>orxDISPLAY_PRIMITIVE_LINES</td>
+</tr>
+<tr>
+<td>line_loop</td>
+<td>orxDISPLAY_PRIMITIVE_LINE_LOOP</td>
+</tr>
+<tr>
+<td>line_strip</td>
+<td>orxDISPLAY_PRIMITIVE_LINE_STRIP</td>
+</tr>
+<tr>
+<td>triangles</td>
+<td>orxDISPLAY_PRIMITIVE_TRIANGLES</td>
+</tr>
+<tr>
+<td>triangle_strip</td>
+<td>orxDISPLAY_PRIMITIVE_TRIANGLE_STRIP</td>
+</tr>
+<tr>
+<td>triangle_fan</td>
+<td>orxDISPLAY_PRIMITIVE_TRIANGLE_FAN</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxDISPLAY_PRIMITIVE_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxdisplay_smoothing">orxDISPLAY_SMOOTHING<a class="headerlink" href="#orxdisplay_smoothing" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>default</td>
+<td>orxDISPLAY_SMOOTHING_DEFAULT</td>
+</tr>
+<tr>
+<td>on</td>
+<td>orxDISPLAY_SMOOTHING_ON</td>
+</tr>
+<tr>
+<td>off</td>
+<td>orxDISPLAY_SMOOTHING_OFF</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxDISPLAY_SMOOTHING_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxevent_type">orxEVENT_TYPE<a class="headerlink" href="#orxevent_type" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>anim</td>
+<td>orxEVENT_TYPE_ANIM</td>
+</tr>
+<tr>
+<td>clock</td>
+<td>orxEVENT_TYPE_CLOCK</td>
+</tr>
+<tr>
+<td>config</td>
+<td>orxEVENT_TYPE_CONFIG</td>
+</tr>
+<tr>
+<td>display</td>
+<td>orxEVENT_TYPE_DISPLAY</td>
+</tr>
+<tr>
+<td>fx</td>
+<td>orxEVENT_TYPE_FX</td>
+</tr>
+<tr>
+<td>input</td>
+<td>orxEVENT_TYPE_INPUT</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>orxEVENT_TYPE_LOCALE</td>
+</tr>
+<tr>
+<td>object</td>
+<td>orxEVENT_TYPE_OBJECT</td>
+</tr>
+<tr>
+<td>render</td>
+<td>orxEVENT_TYPE_RENDER</td>
+</tr>
+<tr>
+<td>physics</td>
+<td>orxEVENT_TYPE_PHYSICS</td>
+</tr>
+<tr>
+<td>resource</td>
+<td>orxEVENT_TYPE_RESOURCE</td>
+</tr>
+<tr>
+<td>shader</td>
+<td>orxEVENT_TYPE_SHADER</td>
+</tr>
+<tr>
+<td>sound</td>
+<td>orxEVENT_TYPE_SOUND</td>
+</tr>
+<tr>
+<td>spawner</td>
+<td>orxEVENT_TYPE_SPAWNER</td>
+</tr>
+<tr>
+<td>system</td>
+<td>orxEVENT_TYPE_SYSTEM</td>
+</tr>
+<tr>
+<td>texture</td>
+<td>orxEVENT_TYPE_TEXTURE</td>
+</tr>
+<tr>
+<td>timeline</td>
+<td>orxEVENT_TYPE_TIMELINE</td>
+</tr>
+<tr>
+<td>viewport</td>
+<td>orxEVENT_TYPE_VIEWPORT</td>
+</tr>
+<tr>
+<td>first_reserved</td>
+<td>orxEVENT_TYPE_FIRST_RESERVED</td>
+</tr>
+<tr>
+<td>last_reserved</td>
+<td>orxEVENT_TYPE_LAST_RESERVED</td>
+</tr>
+<tr>
+<td>user_defined</td>
+<td>orxEVENT_TYPE_USER_DEFINED</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxEVENT_TYPE_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxframe_space">orxFRAME_SPACE<a class="headerlink" href="#orxframe_space" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>global</td>
+<td>orxFRAME_SPACE_GLOBAL</td>
+</tr>
+<tr>
+<td>local</td>
+<td>orxFRAME_SPACE_LOCAL</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxFRAME_SPACE_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxfx_curve">orxFX_CURVE<a class="headerlink" href="#orxfx_curve" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>linear</td>
+<td>orxFX_CURVE_LINEAR</td>
+</tr>
+<tr>
+<td>smooth</td>
+<td>orxFX_CURVE_SMOOTH</td>
+</tr>
+<tr>
+<td>smoother</td>
+<td>orxFX_CURVE_SMOOTHER</td>
+</tr>
+<tr>
+<td>triangle</td>
+<td>orxFX_CURVE_TRIANGLE</td>
+</tr>
+<tr>
+<td>sine</td>
+<td>orxFX_CURVE_SINE</td>
+</tr>
+<tr>
+<td>square</td>
+<td>orxFX_CURVE_SQUARE</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxFX_CURVE_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxfx_event">orxFX_EVENT<a class="headerlink" href="#orxfx_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>orxFX_EVENT_START</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>orxFX_EVENT_STOP</td>
+</tr>
+<tr>
+<td>add</td>
+<td>orxFX_EVENT_ADD</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>orxFX_EVENT_REMOVE</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>orxFX_EVENT_LOOP</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxFX_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxinput_event">orxINPUT_EVENT<a class="headerlink" href="#orxinput_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>on</td>
+<td>orxINPUT_EVENT_ON</td>
+</tr>
+<tr>
+<td>off</td>
+<td>orxINPUT_EVENT_OFF</td>
+</tr>
+<tr>
+<td>select_set</td>
+<td>orxINPUT_EVENT_SELECT_SET</td>
+</tr>
+<tr>
+<td>remove_set</td>
+<td>orxINPUT_EVENT_REMOVE_SET</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxINPUT_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxinput_mode">orxINPUT_MODE<a class="headerlink" href="#orxinput_mode" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>full</td>
+<td>orxINPUT_MODE_FULL</td>
+</tr>
+<tr>
+<td>positive</td>
+<td>orxINPUT_MODE_POSITIVE</td>
+</tr>
+<tr>
+<td>negative</td>
+<td>orxINPUT_MODE_NEGATIVE</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxINPUT_MODE_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxinput_type">orxINPUT_TYPE<a class="headerlink" href="#orxinput_type" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keyboard_key</td>
+<td>orxINPUT_TYPE_KEYBOARD_KEY</td>
+</tr>
+<tr>
+<td>mouse_button</td>
+<td>orxINPUT_TYPE_MOUSE_BUTTON</td>
+</tr>
+<tr>
+<td>mouse_axis</td>
+<td>orxINPUT_TYPE_MOUSE_AXIS</td>
+</tr>
+<tr>
+<td>joystick_button</td>
+<td>orxINPUT_TYPE_JOYSTICK_BUTTON</td>
+</tr>
+<tr>
+<td>joystick_axis</td>
+<td>orxINPUT_TYPE_JOYSTICK_AXIS</td>
+</tr>
+<tr>
+<td>external</td>
+<td>orxINPUT_TYPE_EXTERNAL</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxINPUT_TYPE_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxjoystick_axis">orxJOYSTICK_AXIS<a class="headerlink" href="#orxjoystick_axis" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lx_1</td>
+<td>orxJOYSTICK_AXIS_LX_1</td>
+</tr>
+<tr>
+<td>ly_1</td>
+<td>orxJOYSTICK_AXIS_LY_1</td>
+</tr>
+<tr>
+<td>rx_1</td>
+<td>orxJOYSTICK_AXIS_RX_1</td>
+</tr>
+<tr>
+<td>ry_1</td>
+<td>orxJOYSTICK_AXIS_RY_1</td>
+</tr>
+<tr>
+<td>ltrigger_1</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_1</td>
+</tr>
+<tr>
+<td>rtrigger_1</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_1</td>
+</tr>
+<tr>
+<td>lx_2</td>
+<td>orxJOYSTICK_AXIS_LX_2</td>
+</tr>
+<tr>
+<td>ly_2</td>
+<td>orxJOYSTICK_AXIS_LY_2</td>
+</tr>
+<tr>
+<td>rx_2</td>
+<td>orxJOYSTICK_AXIS_RX_2</td>
+</tr>
+<tr>
+<td>ry_2</td>
+<td>orxJOYSTICK_AXIS_RY_2</td>
+</tr>
+<tr>
+<td>ltrigger_2</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_2</td>
+</tr>
+<tr>
+<td>rtrigger_2</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_2</td>
+</tr>
+<tr>
+<td>lx_3</td>
+<td>orxJOYSTICK_AXIS_LX_3</td>
+</tr>
+<tr>
+<td>ly_3</td>
+<td>orxJOYSTICK_AXIS_LY_3</td>
+</tr>
+<tr>
+<td>rx_3</td>
+<td>orxJOYSTICK_AXIS_RX_3</td>
+</tr>
+<tr>
+<td>ry_3</td>
+<td>orxJOYSTICK_AXIS_RY_3</td>
+</tr>
+<tr>
+<td>ltrigger_3</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_3</td>
+</tr>
+<tr>
+<td>rtrigger_3</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_3</td>
+</tr>
+<tr>
+<td>lx_4</td>
+<td>orxJOYSTICK_AXIS_LX_4</td>
+</tr>
+<tr>
+<td>ly_4</td>
+<td>orxJOYSTICK_AXIS_LY_4</td>
+</tr>
+<tr>
+<td>rx_4</td>
+<td>orxJOYSTICK_AXIS_RX_4</td>
+</tr>
+<tr>
+<td>ry_4</td>
+<td>orxJOYSTICK_AXIS_RY_4</td>
+</tr>
+<tr>
+<td>ltrigger_4</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_4</td>
+</tr>
+<tr>
+<td>rtrigger_4</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_4</td>
+</tr>
+<tr>
+<td>lx_5</td>
+<td>orxJOYSTICK_AXIS_LX_5</td>
+</tr>
+<tr>
+<td>ly_5</td>
+<td>orxJOYSTICK_AXIS_LY_5</td>
+</tr>
+<tr>
+<td>rx_5</td>
+<td>orxJOYSTICK_AXIS_RX_5</td>
+</tr>
+<tr>
+<td>ry_5</td>
+<td>orxJOYSTICK_AXIS_RY_5</td>
+</tr>
+<tr>
+<td>ltrigger_5</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_5</td>
+</tr>
+<tr>
+<td>rtrigger_5</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_5</td>
+</tr>
+<tr>
+<td>lx_6</td>
+<td>orxJOYSTICK_AXIS_LX_6</td>
+</tr>
+<tr>
+<td>ly_6</td>
+<td>orxJOYSTICK_AXIS_LY_6</td>
+</tr>
+<tr>
+<td>rx_6</td>
+<td>orxJOYSTICK_AXIS_RX_6</td>
+</tr>
+<tr>
+<td>ry_6</td>
+<td>orxJOYSTICK_AXIS_RY_6</td>
+</tr>
+<tr>
+<td>ltrigger_6</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_6</td>
+</tr>
+<tr>
+<td>rtrigger_6</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_6</td>
+</tr>
+<tr>
+<td>lx_7</td>
+<td>orxJOYSTICK_AXIS_LX_7</td>
+</tr>
+<tr>
+<td>ly_7</td>
+<td>orxJOYSTICK_AXIS_LY_7</td>
+</tr>
+<tr>
+<td>rx_7</td>
+<td>orxJOYSTICK_AXIS_RX_7</td>
+</tr>
+<tr>
+<td>ry_7</td>
+<td>orxJOYSTICK_AXIS_RY_7</td>
+</tr>
+<tr>
+<td>ltrigger_7</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_7</td>
+</tr>
+<tr>
+<td>rtrigger_7</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_7</td>
+</tr>
+<tr>
+<td>lx_8</td>
+<td>orxJOYSTICK_AXIS_LX_8</td>
+</tr>
+<tr>
+<td>ly_8</td>
+<td>orxJOYSTICK_AXIS_LY_8</td>
+</tr>
+<tr>
+<td>rx_8</td>
+<td>orxJOYSTICK_AXIS_RX_8</td>
+</tr>
+<tr>
+<td>ry_8</td>
+<td>orxJOYSTICK_AXIS_RY_8</td>
+</tr>
+<tr>
+<td>ltrigger_8</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_8</td>
+</tr>
+<tr>
+<td>rtrigger_8</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_8</td>
+</tr>
+<tr>
+<td>lx_9</td>
+<td>orxJOYSTICK_AXIS_LX_9</td>
+</tr>
+<tr>
+<td>ly_9</td>
+<td>orxJOYSTICK_AXIS_LY_9</td>
+</tr>
+<tr>
+<td>rx_9</td>
+<td>orxJOYSTICK_AXIS_RX_9</td>
+</tr>
+<tr>
+<td>ry_9</td>
+<td>orxJOYSTICK_AXIS_RY_9</td>
+</tr>
+<tr>
+<td>ltrigger_9</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_9</td>
+</tr>
+<tr>
+<td>rtrigger_9</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_9</td>
+</tr>
+<tr>
+<td>lx_10</td>
+<td>orxJOYSTICK_AXIS_LX_10</td>
+</tr>
+<tr>
+<td>ly_10</td>
+<td>orxJOYSTICK_AXIS_LY_10</td>
+</tr>
+<tr>
+<td>rx_10</td>
+<td>orxJOYSTICK_AXIS_RX_10</td>
+</tr>
+<tr>
+<td>ry_10</td>
+<td>orxJOYSTICK_AXIS_RY_10</td>
+</tr>
+<tr>
+<td>ltrigger_10</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_10</td>
+</tr>
+<tr>
+<td>rtrigger_10</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_10</td>
+</tr>
+<tr>
+<td>lx_11</td>
+<td>orxJOYSTICK_AXIS_LX_11</td>
+</tr>
+<tr>
+<td>ly_11</td>
+<td>orxJOYSTICK_AXIS_LY_11</td>
+</tr>
+<tr>
+<td>rx_11</td>
+<td>orxJOYSTICK_AXIS_RX_11</td>
+</tr>
+<tr>
+<td>ry_11</td>
+<td>orxJOYSTICK_AXIS_RY_11</td>
+</tr>
+<tr>
+<td>ltrigger_11</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_11</td>
+</tr>
+<tr>
+<td>rtrigger_11</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_11</td>
+</tr>
+<tr>
+<td>lx_12</td>
+<td>orxJOYSTICK_AXIS_LX_12</td>
+</tr>
+<tr>
+<td>ly_12</td>
+<td>orxJOYSTICK_AXIS_LY_12</td>
+</tr>
+<tr>
+<td>rx_12</td>
+<td>orxJOYSTICK_AXIS_RX_12</td>
+</tr>
+<tr>
+<td>ry_12</td>
+<td>orxJOYSTICK_AXIS_RY_12</td>
+</tr>
+<tr>
+<td>ltrigger_12</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_12</td>
+</tr>
+<tr>
+<td>rtrigger_12</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_12</td>
+</tr>
+<tr>
+<td>lx_13</td>
+<td>orxJOYSTICK_AXIS_LX_13</td>
+</tr>
+<tr>
+<td>ly_13</td>
+<td>orxJOYSTICK_AXIS_LY_13</td>
+</tr>
+<tr>
+<td>rx_13</td>
+<td>orxJOYSTICK_AXIS_RX_13</td>
+</tr>
+<tr>
+<td>ry_13</td>
+<td>orxJOYSTICK_AXIS_RY_13</td>
+</tr>
+<tr>
+<td>ltrigger_13</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_13</td>
+</tr>
+<tr>
+<td>rtrigger_13</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_13</td>
+</tr>
+<tr>
+<td>lx_14</td>
+<td>orxJOYSTICK_AXIS_LX_14</td>
+</tr>
+<tr>
+<td>ly_14</td>
+<td>orxJOYSTICK_AXIS_LY_14</td>
+</tr>
+<tr>
+<td>rx_14</td>
+<td>orxJOYSTICK_AXIS_RX_14</td>
+</tr>
+<tr>
+<td>ry_14</td>
+<td>orxJOYSTICK_AXIS_RY_14</td>
+</tr>
+<tr>
+<td>ltrigger_14</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_14</td>
+</tr>
+<tr>
+<td>rtrigger_14</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_14</td>
+</tr>
+<tr>
+<td>lx_15</td>
+<td>orxJOYSTICK_AXIS_LX_15</td>
+</tr>
+<tr>
+<td>ly_15</td>
+<td>orxJOYSTICK_AXIS_LY_15</td>
+</tr>
+<tr>
+<td>rx_15</td>
+<td>orxJOYSTICK_AXIS_RX_15</td>
+</tr>
+<tr>
+<td>ry_15</td>
+<td>orxJOYSTICK_AXIS_RY_15</td>
+</tr>
+<tr>
+<td>ltrigger_15</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_15</td>
+</tr>
+<tr>
+<td>rtrigger_15</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_15</td>
+</tr>
+<tr>
+<td>lx_16</td>
+<td>orxJOYSTICK_AXIS_LX_16</td>
+</tr>
+<tr>
+<td>ly_16</td>
+<td>orxJOYSTICK_AXIS_LY_16</td>
+</tr>
+<tr>
+<td>rx_16</td>
+<td>orxJOYSTICK_AXIS_RX_16</td>
+</tr>
+<tr>
+<td>ry_16</td>
+<td>orxJOYSTICK_AXIS_RY_16</td>
+</tr>
+<tr>
+<td>ltrigger_16</td>
+<td>orxJOYSTICK_AXIS_LTRIGGER_16</td>
+</tr>
+<tr>
+<td>rtrigger_16</td>
+<td>orxJOYSTICK_AXIS_RTRIGGER_16</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxJOYSTICK_AXIS_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxjoystick_button">orxJOYSTICK_BUTTON<a class="headerlink" href="#orxjoystick_button" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a_1</td>
+<td>orxJOYSTICK_BUTTON_A_1</td>
+</tr>
+<tr>
+<td>b_1</td>
+<td>orxJOYSTICK_BUTTON_B_1</td>
+</tr>
+<tr>
+<td>x_1</td>
+<td>orxJOYSTICK_BUTTON_X_1</td>
+</tr>
+<tr>
+<td>y_1</td>
+<td>orxJOYSTICK_BUTTON_Y_1</td>
+</tr>
+<tr>
+<td>lbumper_1</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_1</td>
+</tr>
+<tr>
+<td>rbumper_1</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_1</td>
+</tr>
+<tr>
+<td>back_1</td>
+<td>orxJOYSTICK_BUTTON_BACK_1</td>
+</tr>
+<tr>
+<td>start_1</td>
+<td>orxJOYSTICK_BUTTON_START_1</td>
+</tr>
+<tr>
+<td>guide_1</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_1</td>
+</tr>
+<tr>
+<td>lthumb_1</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_1</td>
+</tr>
+<tr>
+<td>rthumb_1</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_1</td>
+</tr>
+<tr>
+<td>up_1</td>
+<td>orxJOYSTICK_BUTTON_UP_1</td>
+</tr>
+<tr>
+<td>right_1</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_1</td>
+</tr>
+<tr>
+<td>down_1</td>
+<td>orxJOYSTICK_BUTTON_DOWN_1</td>
+</tr>
+<tr>
+<td>left_1</td>
+<td>orxJOYSTICK_BUTTON_LEFT_1</td>
+</tr>
+<tr>
+<td>1_1</td>
+<td>orxJOYSTICK_BUTTON_1_1</td>
+</tr>
+<tr>
+<td>2_1</td>
+<td>orxJOYSTICK_BUTTON_2_1</td>
+</tr>
+<tr>
+<td>3_1</td>
+<td>orxJOYSTICK_BUTTON_3_1</td>
+</tr>
+<tr>
+<td>4_1</td>
+<td>orxJOYSTICK_BUTTON_4_1</td>
+</tr>
+<tr>
+<td>5_1</td>
+<td>orxJOYSTICK_BUTTON_5_1</td>
+</tr>
+<tr>
+<td>6_1</td>
+<td>orxJOYSTICK_BUTTON_6_1</td>
+</tr>
+<tr>
+<td>7_1</td>
+<td>orxJOYSTICK_BUTTON_7_1</td>
+</tr>
+<tr>
+<td>8_1</td>
+<td>orxJOYSTICK_BUTTON_8_1</td>
+</tr>
+<tr>
+<td>9_1</td>
+<td>orxJOYSTICK_BUTTON_9_1</td>
+</tr>
+<tr>
+<td>10_1</td>
+<td>orxJOYSTICK_BUTTON_10_1</td>
+</tr>
+<tr>
+<td>11_1</td>
+<td>orxJOYSTICK_BUTTON_11_1</td>
+</tr>
+<tr>
+<td>12_1</td>
+<td>orxJOYSTICK_BUTTON_12_1</td>
+</tr>
+<tr>
+<td>13_1</td>
+<td>orxJOYSTICK_BUTTON_13_1</td>
+</tr>
+<tr>
+<td>14_1</td>
+<td>orxJOYSTICK_BUTTON_14_1</td>
+</tr>
+<tr>
+<td>15_1</td>
+<td>orxJOYSTICK_BUTTON_15_1</td>
+</tr>
+<tr>
+<td>16_1</td>
+<td>orxJOYSTICK_BUTTON_16_1</td>
+</tr>
+<tr>
+<td>17_1</td>
+<td>orxJOYSTICK_BUTTON_17_1</td>
+</tr>
+<tr>
+<td>18_1</td>
+<td>orxJOYSTICK_BUTTON_18_1</td>
+</tr>
+<tr>
+<td>19_1</td>
+<td>orxJOYSTICK_BUTTON_19_1</td>
+</tr>
+<tr>
+<td>20_1</td>
+<td>orxJOYSTICK_BUTTON_20_1</td>
+</tr>
+<tr>
+<td>21_1</td>
+<td>orxJOYSTICK_BUTTON_21_1</td>
+</tr>
+<tr>
+<td>22_1</td>
+<td>orxJOYSTICK_BUTTON_22_1</td>
+</tr>
+<tr>
+<td>23_1</td>
+<td>orxJOYSTICK_BUTTON_23_1</td>
+</tr>
+<tr>
+<td>24_1</td>
+<td>orxJOYSTICK_BUTTON_24_1</td>
+</tr>
+<tr>
+<td>25_1</td>
+<td>orxJOYSTICK_BUTTON_25_1</td>
+</tr>
+<tr>
+<td>a_2</td>
+<td>orxJOYSTICK_BUTTON_A_2</td>
+</tr>
+<tr>
+<td>b_2</td>
+<td>orxJOYSTICK_BUTTON_B_2</td>
+</tr>
+<tr>
+<td>x_2</td>
+<td>orxJOYSTICK_BUTTON_X_2</td>
+</tr>
+<tr>
+<td>y_2</td>
+<td>orxJOYSTICK_BUTTON_Y_2</td>
+</tr>
+<tr>
+<td>lbumper_2</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_2</td>
+</tr>
+<tr>
+<td>rbumper_2</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_2</td>
+</tr>
+<tr>
+<td>back_2</td>
+<td>orxJOYSTICK_BUTTON_BACK_2</td>
+</tr>
+<tr>
+<td>start_2</td>
+<td>orxJOYSTICK_BUTTON_START_2</td>
+</tr>
+<tr>
+<td>guide_2</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_2</td>
+</tr>
+<tr>
+<td>lthumb_2</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_2</td>
+</tr>
+<tr>
+<td>rthumb_2</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_2</td>
+</tr>
+<tr>
+<td>up_2</td>
+<td>orxJOYSTICK_BUTTON_UP_2</td>
+</tr>
+<tr>
+<td>right_2</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_2</td>
+</tr>
+<tr>
+<td>down_2</td>
+<td>orxJOYSTICK_BUTTON_DOWN_2</td>
+</tr>
+<tr>
+<td>left_2</td>
+<td>orxJOYSTICK_BUTTON_LEFT_2</td>
+</tr>
+<tr>
+<td>1_2</td>
+<td>orxJOYSTICK_BUTTON_1_2</td>
+</tr>
+<tr>
+<td>2_2</td>
+<td>orxJOYSTICK_BUTTON_2_2</td>
+</tr>
+<tr>
+<td>3_2</td>
+<td>orxJOYSTICK_BUTTON_3_2</td>
+</tr>
+<tr>
+<td>4_2</td>
+<td>orxJOYSTICK_BUTTON_4_2</td>
+</tr>
+<tr>
+<td>5_2</td>
+<td>orxJOYSTICK_BUTTON_5_2</td>
+</tr>
+<tr>
+<td>6_2</td>
+<td>orxJOYSTICK_BUTTON_6_2</td>
+</tr>
+<tr>
+<td>7_2</td>
+<td>orxJOYSTICK_BUTTON_7_2</td>
+</tr>
+<tr>
+<td>8_2</td>
+<td>orxJOYSTICK_BUTTON_8_2</td>
+</tr>
+<tr>
+<td>9_2</td>
+<td>orxJOYSTICK_BUTTON_9_2</td>
+</tr>
+<tr>
+<td>10_2</td>
+<td>orxJOYSTICK_BUTTON_10_2</td>
+</tr>
+<tr>
+<td>11_2</td>
+<td>orxJOYSTICK_BUTTON_11_2</td>
+</tr>
+<tr>
+<td>12_2</td>
+<td>orxJOYSTICK_BUTTON_12_2</td>
+</tr>
+<tr>
+<td>13_2</td>
+<td>orxJOYSTICK_BUTTON_13_2</td>
+</tr>
+<tr>
+<td>14_2</td>
+<td>orxJOYSTICK_BUTTON_14_2</td>
+</tr>
+<tr>
+<td>15_2</td>
+<td>orxJOYSTICK_BUTTON_15_2</td>
+</tr>
+<tr>
+<td>16_2</td>
+<td>orxJOYSTICK_BUTTON_16_2</td>
+</tr>
+<tr>
+<td>17_2</td>
+<td>orxJOYSTICK_BUTTON_17_2</td>
+</tr>
+<tr>
+<td>18_2</td>
+<td>orxJOYSTICK_BUTTON_18_2</td>
+</tr>
+<tr>
+<td>19_2</td>
+<td>orxJOYSTICK_BUTTON_19_2</td>
+</tr>
+<tr>
+<td>20_2</td>
+<td>orxJOYSTICK_BUTTON_20_2</td>
+</tr>
+<tr>
+<td>21_2</td>
+<td>orxJOYSTICK_BUTTON_21_2</td>
+</tr>
+<tr>
+<td>22_2</td>
+<td>orxJOYSTICK_BUTTON_22_2</td>
+</tr>
+<tr>
+<td>23_2</td>
+<td>orxJOYSTICK_BUTTON_23_2</td>
+</tr>
+<tr>
+<td>24_2</td>
+<td>orxJOYSTICK_BUTTON_24_2</td>
+</tr>
+<tr>
+<td>25_2</td>
+<td>orxJOYSTICK_BUTTON_25_2</td>
+</tr>
+<tr>
+<td>a_3</td>
+<td>orxJOYSTICK_BUTTON_A_3</td>
+</tr>
+<tr>
+<td>b_3</td>
+<td>orxJOYSTICK_BUTTON_B_3</td>
+</tr>
+<tr>
+<td>x_3</td>
+<td>orxJOYSTICK_BUTTON_X_3</td>
+</tr>
+<tr>
+<td>y_3</td>
+<td>orxJOYSTICK_BUTTON_Y_3</td>
+</tr>
+<tr>
+<td>lbumper_3</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_3</td>
+</tr>
+<tr>
+<td>rbumper_3</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_3</td>
+</tr>
+<tr>
+<td>back_3</td>
+<td>orxJOYSTICK_BUTTON_BACK_3</td>
+</tr>
+<tr>
+<td>start_3</td>
+<td>orxJOYSTICK_BUTTON_START_3</td>
+</tr>
+<tr>
+<td>guide_3</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_3</td>
+</tr>
+<tr>
+<td>lthumb_3</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_3</td>
+</tr>
+<tr>
+<td>rthumb_3</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_3</td>
+</tr>
+<tr>
+<td>up_3</td>
+<td>orxJOYSTICK_BUTTON_UP_3</td>
+</tr>
+<tr>
+<td>right_3</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_3</td>
+</tr>
+<tr>
+<td>down_3</td>
+<td>orxJOYSTICK_BUTTON_DOWN_3</td>
+</tr>
+<tr>
+<td>left_3</td>
+<td>orxJOYSTICK_BUTTON_LEFT_3</td>
+</tr>
+<tr>
+<td>1_3</td>
+<td>orxJOYSTICK_BUTTON_1_3</td>
+</tr>
+<tr>
+<td>2_3</td>
+<td>orxJOYSTICK_BUTTON_2_3</td>
+</tr>
+<tr>
+<td>3_3</td>
+<td>orxJOYSTICK_BUTTON_3_3</td>
+</tr>
+<tr>
+<td>4_3</td>
+<td>orxJOYSTICK_BUTTON_4_3</td>
+</tr>
+<tr>
+<td>5_3</td>
+<td>orxJOYSTICK_BUTTON_5_3</td>
+</tr>
+<tr>
+<td>6_3</td>
+<td>orxJOYSTICK_BUTTON_6_3</td>
+</tr>
+<tr>
+<td>7_3</td>
+<td>orxJOYSTICK_BUTTON_7_3</td>
+</tr>
+<tr>
+<td>8_3</td>
+<td>orxJOYSTICK_BUTTON_8_3</td>
+</tr>
+<tr>
+<td>9_3</td>
+<td>orxJOYSTICK_BUTTON_9_3</td>
+</tr>
+<tr>
+<td>10_3</td>
+<td>orxJOYSTICK_BUTTON_10_3</td>
+</tr>
+<tr>
+<td>11_3</td>
+<td>orxJOYSTICK_BUTTON_11_3</td>
+</tr>
+<tr>
+<td>12_3</td>
+<td>orxJOYSTICK_BUTTON_12_3</td>
+</tr>
+<tr>
+<td>13_3</td>
+<td>orxJOYSTICK_BUTTON_13_3</td>
+</tr>
+<tr>
+<td>14_3</td>
+<td>orxJOYSTICK_BUTTON_14_3</td>
+</tr>
+<tr>
+<td>15_3</td>
+<td>orxJOYSTICK_BUTTON_15_3</td>
+</tr>
+<tr>
+<td>16_3</td>
+<td>orxJOYSTICK_BUTTON_16_3</td>
+</tr>
+<tr>
+<td>17_3</td>
+<td>orxJOYSTICK_BUTTON_17_3</td>
+</tr>
+<tr>
+<td>18_3</td>
+<td>orxJOYSTICK_BUTTON_18_3</td>
+</tr>
+<tr>
+<td>19_3</td>
+<td>orxJOYSTICK_BUTTON_19_3</td>
+</tr>
+<tr>
+<td>20_3</td>
+<td>orxJOYSTICK_BUTTON_20_3</td>
+</tr>
+<tr>
+<td>21_3</td>
+<td>orxJOYSTICK_BUTTON_21_3</td>
+</tr>
+<tr>
+<td>22_3</td>
+<td>orxJOYSTICK_BUTTON_22_3</td>
+</tr>
+<tr>
+<td>23_3</td>
+<td>orxJOYSTICK_BUTTON_23_3</td>
+</tr>
+<tr>
+<td>24_3</td>
+<td>orxJOYSTICK_BUTTON_24_3</td>
+</tr>
+<tr>
+<td>25_3</td>
+<td>orxJOYSTICK_BUTTON_25_3</td>
+</tr>
+<tr>
+<td>a_4</td>
+<td>orxJOYSTICK_BUTTON_A_4</td>
+</tr>
+<tr>
+<td>b_4</td>
+<td>orxJOYSTICK_BUTTON_B_4</td>
+</tr>
+<tr>
+<td>x_4</td>
+<td>orxJOYSTICK_BUTTON_X_4</td>
+</tr>
+<tr>
+<td>y_4</td>
+<td>orxJOYSTICK_BUTTON_Y_4</td>
+</tr>
+<tr>
+<td>lbumper_4</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_4</td>
+</tr>
+<tr>
+<td>rbumper_4</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_4</td>
+</tr>
+<tr>
+<td>back_4</td>
+<td>orxJOYSTICK_BUTTON_BACK_4</td>
+</tr>
+<tr>
+<td>start_4</td>
+<td>orxJOYSTICK_BUTTON_START_4</td>
+</tr>
+<tr>
+<td>guide_4</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_4</td>
+</tr>
+<tr>
+<td>lthumb_4</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_4</td>
+</tr>
+<tr>
+<td>rthumb_4</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_4</td>
+</tr>
+<tr>
+<td>up_4</td>
+<td>orxJOYSTICK_BUTTON_UP_4</td>
+</tr>
+<tr>
+<td>right_4</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_4</td>
+</tr>
+<tr>
+<td>down_4</td>
+<td>orxJOYSTICK_BUTTON_DOWN_4</td>
+</tr>
+<tr>
+<td>left_4</td>
+<td>orxJOYSTICK_BUTTON_LEFT_4</td>
+</tr>
+<tr>
+<td>1_4</td>
+<td>orxJOYSTICK_BUTTON_1_4</td>
+</tr>
+<tr>
+<td>2_4</td>
+<td>orxJOYSTICK_BUTTON_2_4</td>
+</tr>
+<tr>
+<td>3_4</td>
+<td>orxJOYSTICK_BUTTON_3_4</td>
+</tr>
+<tr>
+<td>4_4</td>
+<td>orxJOYSTICK_BUTTON_4_4</td>
+</tr>
+<tr>
+<td>5_4</td>
+<td>orxJOYSTICK_BUTTON_5_4</td>
+</tr>
+<tr>
+<td>6_4</td>
+<td>orxJOYSTICK_BUTTON_6_4</td>
+</tr>
+<tr>
+<td>7_4</td>
+<td>orxJOYSTICK_BUTTON_7_4</td>
+</tr>
+<tr>
+<td>8_4</td>
+<td>orxJOYSTICK_BUTTON_8_4</td>
+</tr>
+<tr>
+<td>9_4</td>
+<td>orxJOYSTICK_BUTTON_9_4</td>
+</tr>
+<tr>
+<td>10_4</td>
+<td>orxJOYSTICK_BUTTON_10_4</td>
+</tr>
+<tr>
+<td>11_4</td>
+<td>orxJOYSTICK_BUTTON_11_4</td>
+</tr>
+<tr>
+<td>12_4</td>
+<td>orxJOYSTICK_BUTTON_12_4</td>
+</tr>
+<tr>
+<td>13_4</td>
+<td>orxJOYSTICK_BUTTON_13_4</td>
+</tr>
+<tr>
+<td>14_4</td>
+<td>orxJOYSTICK_BUTTON_14_4</td>
+</tr>
+<tr>
+<td>15_4</td>
+<td>orxJOYSTICK_BUTTON_15_4</td>
+</tr>
+<tr>
+<td>16_4</td>
+<td>orxJOYSTICK_BUTTON_16_4</td>
+</tr>
+<tr>
+<td>17_4</td>
+<td>orxJOYSTICK_BUTTON_17_4</td>
+</tr>
+<tr>
+<td>18_4</td>
+<td>orxJOYSTICK_BUTTON_18_4</td>
+</tr>
+<tr>
+<td>19_4</td>
+<td>orxJOYSTICK_BUTTON_19_4</td>
+</tr>
+<tr>
+<td>20_4</td>
+<td>orxJOYSTICK_BUTTON_20_4</td>
+</tr>
+<tr>
+<td>21_4</td>
+<td>orxJOYSTICK_BUTTON_21_4</td>
+</tr>
+<tr>
+<td>22_4</td>
+<td>orxJOYSTICK_BUTTON_22_4</td>
+</tr>
+<tr>
+<td>23_4</td>
+<td>orxJOYSTICK_BUTTON_23_4</td>
+</tr>
+<tr>
+<td>24_4</td>
+<td>orxJOYSTICK_BUTTON_24_4</td>
+</tr>
+<tr>
+<td>25_4</td>
+<td>orxJOYSTICK_BUTTON_25_4</td>
+</tr>
+<tr>
+<td>a_5</td>
+<td>orxJOYSTICK_BUTTON_A_5</td>
+</tr>
+<tr>
+<td>b_5</td>
+<td>orxJOYSTICK_BUTTON_B_5</td>
+</tr>
+<tr>
+<td>x_5</td>
+<td>orxJOYSTICK_BUTTON_X_5</td>
+</tr>
+<tr>
+<td>y_5</td>
+<td>orxJOYSTICK_BUTTON_Y_5</td>
+</tr>
+<tr>
+<td>lbumper_5</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_5</td>
+</tr>
+<tr>
+<td>rbumper_5</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_5</td>
+</tr>
+<tr>
+<td>back_5</td>
+<td>orxJOYSTICK_BUTTON_BACK_5</td>
+</tr>
+<tr>
+<td>start_5</td>
+<td>orxJOYSTICK_BUTTON_START_5</td>
+</tr>
+<tr>
+<td>guide_5</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_5</td>
+</tr>
+<tr>
+<td>lthumb_5</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_5</td>
+</tr>
+<tr>
+<td>rthumb_5</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_5</td>
+</tr>
+<tr>
+<td>up_5</td>
+<td>orxJOYSTICK_BUTTON_UP_5</td>
+</tr>
+<tr>
+<td>right_5</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_5</td>
+</tr>
+<tr>
+<td>down_5</td>
+<td>orxJOYSTICK_BUTTON_DOWN_5</td>
+</tr>
+<tr>
+<td>left_5</td>
+<td>orxJOYSTICK_BUTTON_LEFT_5</td>
+</tr>
+<tr>
+<td>1_5</td>
+<td>orxJOYSTICK_BUTTON_1_5</td>
+</tr>
+<tr>
+<td>2_5</td>
+<td>orxJOYSTICK_BUTTON_2_5</td>
+</tr>
+<tr>
+<td>3_5</td>
+<td>orxJOYSTICK_BUTTON_3_5</td>
+</tr>
+<tr>
+<td>4_5</td>
+<td>orxJOYSTICK_BUTTON_4_5</td>
+</tr>
+<tr>
+<td>5_5</td>
+<td>orxJOYSTICK_BUTTON_5_5</td>
+</tr>
+<tr>
+<td>6_5</td>
+<td>orxJOYSTICK_BUTTON_6_5</td>
+</tr>
+<tr>
+<td>7_5</td>
+<td>orxJOYSTICK_BUTTON_7_5</td>
+</tr>
+<tr>
+<td>8_5</td>
+<td>orxJOYSTICK_BUTTON_8_5</td>
+</tr>
+<tr>
+<td>9_5</td>
+<td>orxJOYSTICK_BUTTON_9_5</td>
+</tr>
+<tr>
+<td>10_5</td>
+<td>orxJOYSTICK_BUTTON_10_5</td>
+</tr>
+<tr>
+<td>11_5</td>
+<td>orxJOYSTICK_BUTTON_11_5</td>
+</tr>
+<tr>
+<td>12_5</td>
+<td>orxJOYSTICK_BUTTON_12_5</td>
+</tr>
+<tr>
+<td>13_5</td>
+<td>orxJOYSTICK_BUTTON_13_5</td>
+</tr>
+<tr>
+<td>14_5</td>
+<td>orxJOYSTICK_BUTTON_14_5</td>
+</tr>
+<tr>
+<td>15_5</td>
+<td>orxJOYSTICK_BUTTON_15_5</td>
+</tr>
+<tr>
+<td>16_5</td>
+<td>orxJOYSTICK_BUTTON_16_5</td>
+</tr>
+<tr>
+<td>17_5</td>
+<td>orxJOYSTICK_BUTTON_17_5</td>
+</tr>
+<tr>
+<td>18_5</td>
+<td>orxJOYSTICK_BUTTON_18_5</td>
+</tr>
+<tr>
+<td>19_5</td>
+<td>orxJOYSTICK_BUTTON_19_5</td>
+</tr>
+<tr>
+<td>20_5</td>
+<td>orxJOYSTICK_BUTTON_20_5</td>
+</tr>
+<tr>
+<td>21_5</td>
+<td>orxJOYSTICK_BUTTON_21_5</td>
+</tr>
+<tr>
+<td>22_5</td>
+<td>orxJOYSTICK_BUTTON_22_5</td>
+</tr>
+<tr>
+<td>23_5</td>
+<td>orxJOYSTICK_BUTTON_23_5</td>
+</tr>
+<tr>
+<td>24_5</td>
+<td>orxJOYSTICK_BUTTON_24_5</td>
+</tr>
+<tr>
+<td>25_5</td>
+<td>orxJOYSTICK_BUTTON_25_5</td>
+</tr>
+<tr>
+<td>a_6</td>
+<td>orxJOYSTICK_BUTTON_A_6</td>
+</tr>
+<tr>
+<td>b_6</td>
+<td>orxJOYSTICK_BUTTON_B_6</td>
+</tr>
+<tr>
+<td>x_6</td>
+<td>orxJOYSTICK_BUTTON_X_6</td>
+</tr>
+<tr>
+<td>y_6</td>
+<td>orxJOYSTICK_BUTTON_Y_6</td>
+</tr>
+<tr>
+<td>lbumper_6</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_6</td>
+</tr>
+<tr>
+<td>rbumper_6</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_6</td>
+</tr>
+<tr>
+<td>back_6</td>
+<td>orxJOYSTICK_BUTTON_BACK_6</td>
+</tr>
+<tr>
+<td>start_6</td>
+<td>orxJOYSTICK_BUTTON_START_6</td>
+</tr>
+<tr>
+<td>guide_6</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_6</td>
+</tr>
+<tr>
+<td>lthumb_6</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_6</td>
+</tr>
+<tr>
+<td>rthumb_6</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_6</td>
+</tr>
+<tr>
+<td>up_6</td>
+<td>orxJOYSTICK_BUTTON_UP_6</td>
+</tr>
+<tr>
+<td>right_6</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_6</td>
+</tr>
+<tr>
+<td>down_6</td>
+<td>orxJOYSTICK_BUTTON_DOWN_6</td>
+</tr>
+<tr>
+<td>left_6</td>
+<td>orxJOYSTICK_BUTTON_LEFT_6</td>
+</tr>
+<tr>
+<td>1_6</td>
+<td>orxJOYSTICK_BUTTON_1_6</td>
+</tr>
+<tr>
+<td>2_6</td>
+<td>orxJOYSTICK_BUTTON_2_6</td>
+</tr>
+<tr>
+<td>3_6</td>
+<td>orxJOYSTICK_BUTTON_3_6</td>
+</tr>
+<tr>
+<td>4_6</td>
+<td>orxJOYSTICK_BUTTON_4_6</td>
+</tr>
+<tr>
+<td>5_6</td>
+<td>orxJOYSTICK_BUTTON_5_6</td>
+</tr>
+<tr>
+<td>6_6</td>
+<td>orxJOYSTICK_BUTTON_6_6</td>
+</tr>
+<tr>
+<td>7_6</td>
+<td>orxJOYSTICK_BUTTON_7_6</td>
+</tr>
+<tr>
+<td>8_6</td>
+<td>orxJOYSTICK_BUTTON_8_6</td>
+</tr>
+<tr>
+<td>9_6</td>
+<td>orxJOYSTICK_BUTTON_9_6</td>
+</tr>
+<tr>
+<td>10_6</td>
+<td>orxJOYSTICK_BUTTON_10_6</td>
+</tr>
+<tr>
+<td>11_6</td>
+<td>orxJOYSTICK_BUTTON_11_6</td>
+</tr>
+<tr>
+<td>12_6</td>
+<td>orxJOYSTICK_BUTTON_12_6</td>
+</tr>
+<tr>
+<td>13_6</td>
+<td>orxJOYSTICK_BUTTON_13_6</td>
+</tr>
+<tr>
+<td>14_6</td>
+<td>orxJOYSTICK_BUTTON_14_6</td>
+</tr>
+<tr>
+<td>15_6</td>
+<td>orxJOYSTICK_BUTTON_15_6</td>
+</tr>
+<tr>
+<td>16_6</td>
+<td>orxJOYSTICK_BUTTON_16_6</td>
+</tr>
+<tr>
+<td>17_6</td>
+<td>orxJOYSTICK_BUTTON_17_6</td>
+</tr>
+<tr>
+<td>18_6</td>
+<td>orxJOYSTICK_BUTTON_18_6</td>
+</tr>
+<tr>
+<td>19_6</td>
+<td>orxJOYSTICK_BUTTON_19_6</td>
+</tr>
+<tr>
+<td>20_6</td>
+<td>orxJOYSTICK_BUTTON_20_6</td>
+</tr>
+<tr>
+<td>21_6</td>
+<td>orxJOYSTICK_BUTTON_21_6</td>
+</tr>
+<tr>
+<td>22_6</td>
+<td>orxJOYSTICK_BUTTON_22_6</td>
+</tr>
+<tr>
+<td>23_6</td>
+<td>orxJOYSTICK_BUTTON_23_6</td>
+</tr>
+<tr>
+<td>24_6</td>
+<td>orxJOYSTICK_BUTTON_24_6</td>
+</tr>
+<tr>
+<td>25_6</td>
+<td>orxJOYSTICK_BUTTON_25_6</td>
+</tr>
+<tr>
+<td>a_7</td>
+<td>orxJOYSTICK_BUTTON_A_7</td>
+</tr>
+<tr>
+<td>b_7</td>
+<td>orxJOYSTICK_BUTTON_B_7</td>
+</tr>
+<tr>
+<td>x_7</td>
+<td>orxJOYSTICK_BUTTON_X_7</td>
+</tr>
+<tr>
+<td>y_7</td>
+<td>orxJOYSTICK_BUTTON_Y_7</td>
+</tr>
+<tr>
+<td>lbumper_7</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_7</td>
+</tr>
+<tr>
+<td>rbumper_7</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_7</td>
+</tr>
+<tr>
+<td>back_7</td>
+<td>orxJOYSTICK_BUTTON_BACK_7</td>
+</tr>
+<tr>
+<td>start_7</td>
+<td>orxJOYSTICK_BUTTON_START_7</td>
+</tr>
+<tr>
+<td>guide_7</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_7</td>
+</tr>
+<tr>
+<td>lthumb_7</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_7</td>
+</tr>
+<tr>
+<td>rthumb_7</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_7</td>
+</tr>
+<tr>
+<td>up_7</td>
+<td>orxJOYSTICK_BUTTON_UP_7</td>
+</tr>
+<tr>
+<td>right_7</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_7</td>
+</tr>
+<tr>
+<td>down_7</td>
+<td>orxJOYSTICK_BUTTON_DOWN_7</td>
+</tr>
+<tr>
+<td>left_7</td>
+<td>orxJOYSTICK_BUTTON_LEFT_7</td>
+</tr>
+<tr>
+<td>1_7</td>
+<td>orxJOYSTICK_BUTTON_1_7</td>
+</tr>
+<tr>
+<td>2_7</td>
+<td>orxJOYSTICK_BUTTON_2_7</td>
+</tr>
+<tr>
+<td>3_7</td>
+<td>orxJOYSTICK_BUTTON_3_7</td>
+</tr>
+<tr>
+<td>4_7</td>
+<td>orxJOYSTICK_BUTTON_4_7</td>
+</tr>
+<tr>
+<td>5_7</td>
+<td>orxJOYSTICK_BUTTON_5_7</td>
+</tr>
+<tr>
+<td>6_7</td>
+<td>orxJOYSTICK_BUTTON_6_7</td>
+</tr>
+<tr>
+<td>7_7</td>
+<td>orxJOYSTICK_BUTTON_7_7</td>
+</tr>
+<tr>
+<td>8_7</td>
+<td>orxJOYSTICK_BUTTON_8_7</td>
+</tr>
+<tr>
+<td>9_7</td>
+<td>orxJOYSTICK_BUTTON_9_7</td>
+</tr>
+<tr>
+<td>10_7</td>
+<td>orxJOYSTICK_BUTTON_10_7</td>
+</tr>
+<tr>
+<td>11_7</td>
+<td>orxJOYSTICK_BUTTON_11_7</td>
+</tr>
+<tr>
+<td>12_7</td>
+<td>orxJOYSTICK_BUTTON_12_7</td>
+</tr>
+<tr>
+<td>13_7</td>
+<td>orxJOYSTICK_BUTTON_13_7</td>
+</tr>
+<tr>
+<td>14_7</td>
+<td>orxJOYSTICK_BUTTON_14_7</td>
+</tr>
+<tr>
+<td>15_7</td>
+<td>orxJOYSTICK_BUTTON_15_7</td>
+</tr>
+<tr>
+<td>16_7</td>
+<td>orxJOYSTICK_BUTTON_16_7</td>
+</tr>
+<tr>
+<td>17_7</td>
+<td>orxJOYSTICK_BUTTON_17_7</td>
+</tr>
+<tr>
+<td>18_7</td>
+<td>orxJOYSTICK_BUTTON_18_7</td>
+</tr>
+<tr>
+<td>19_7</td>
+<td>orxJOYSTICK_BUTTON_19_7</td>
+</tr>
+<tr>
+<td>20_7</td>
+<td>orxJOYSTICK_BUTTON_20_7</td>
+</tr>
+<tr>
+<td>21_7</td>
+<td>orxJOYSTICK_BUTTON_21_7</td>
+</tr>
+<tr>
+<td>22_7</td>
+<td>orxJOYSTICK_BUTTON_22_7</td>
+</tr>
+<tr>
+<td>23_7</td>
+<td>orxJOYSTICK_BUTTON_23_7</td>
+</tr>
+<tr>
+<td>24_7</td>
+<td>orxJOYSTICK_BUTTON_24_7</td>
+</tr>
+<tr>
+<td>25_7</td>
+<td>orxJOYSTICK_BUTTON_25_7</td>
+</tr>
+<tr>
+<td>a_8</td>
+<td>orxJOYSTICK_BUTTON_A_8</td>
+</tr>
+<tr>
+<td>b_8</td>
+<td>orxJOYSTICK_BUTTON_B_8</td>
+</tr>
+<tr>
+<td>x_8</td>
+<td>orxJOYSTICK_BUTTON_X_8</td>
+</tr>
+<tr>
+<td>y_8</td>
+<td>orxJOYSTICK_BUTTON_Y_8</td>
+</tr>
+<tr>
+<td>lbumper_8</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_8</td>
+</tr>
+<tr>
+<td>rbumper_8</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_8</td>
+</tr>
+<tr>
+<td>back_8</td>
+<td>orxJOYSTICK_BUTTON_BACK_8</td>
+</tr>
+<tr>
+<td>start_8</td>
+<td>orxJOYSTICK_BUTTON_START_8</td>
+</tr>
+<tr>
+<td>guide_8</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_8</td>
+</tr>
+<tr>
+<td>lthumb_8</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_8</td>
+</tr>
+<tr>
+<td>rthumb_8</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_8</td>
+</tr>
+<tr>
+<td>up_8</td>
+<td>orxJOYSTICK_BUTTON_UP_8</td>
+</tr>
+<tr>
+<td>right_8</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_8</td>
+</tr>
+<tr>
+<td>down_8</td>
+<td>orxJOYSTICK_BUTTON_DOWN_8</td>
+</tr>
+<tr>
+<td>left_8</td>
+<td>orxJOYSTICK_BUTTON_LEFT_8</td>
+</tr>
+<tr>
+<td>1_8</td>
+<td>orxJOYSTICK_BUTTON_1_8</td>
+</tr>
+<tr>
+<td>2_8</td>
+<td>orxJOYSTICK_BUTTON_2_8</td>
+</tr>
+<tr>
+<td>3_8</td>
+<td>orxJOYSTICK_BUTTON_3_8</td>
+</tr>
+<tr>
+<td>4_8</td>
+<td>orxJOYSTICK_BUTTON_4_8</td>
+</tr>
+<tr>
+<td>5_8</td>
+<td>orxJOYSTICK_BUTTON_5_8</td>
+</tr>
+<tr>
+<td>6_8</td>
+<td>orxJOYSTICK_BUTTON_6_8</td>
+</tr>
+<tr>
+<td>7_8</td>
+<td>orxJOYSTICK_BUTTON_7_8</td>
+</tr>
+<tr>
+<td>8_8</td>
+<td>orxJOYSTICK_BUTTON_8_8</td>
+</tr>
+<tr>
+<td>9_8</td>
+<td>orxJOYSTICK_BUTTON_9_8</td>
+</tr>
+<tr>
+<td>10_8</td>
+<td>orxJOYSTICK_BUTTON_10_8</td>
+</tr>
+<tr>
+<td>11_8</td>
+<td>orxJOYSTICK_BUTTON_11_8</td>
+</tr>
+<tr>
+<td>12_8</td>
+<td>orxJOYSTICK_BUTTON_12_8</td>
+</tr>
+<tr>
+<td>13_8</td>
+<td>orxJOYSTICK_BUTTON_13_8</td>
+</tr>
+<tr>
+<td>14_8</td>
+<td>orxJOYSTICK_BUTTON_14_8</td>
+</tr>
+<tr>
+<td>15_8</td>
+<td>orxJOYSTICK_BUTTON_15_8</td>
+</tr>
+<tr>
+<td>16_8</td>
+<td>orxJOYSTICK_BUTTON_16_8</td>
+</tr>
+<tr>
+<td>17_8</td>
+<td>orxJOYSTICK_BUTTON_17_8</td>
+</tr>
+<tr>
+<td>18_8</td>
+<td>orxJOYSTICK_BUTTON_18_8</td>
+</tr>
+<tr>
+<td>19_8</td>
+<td>orxJOYSTICK_BUTTON_19_8</td>
+</tr>
+<tr>
+<td>20_8</td>
+<td>orxJOYSTICK_BUTTON_20_8</td>
+</tr>
+<tr>
+<td>21_8</td>
+<td>orxJOYSTICK_BUTTON_21_8</td>
+</tr>
+<tr>
+<td>22_8</td>
+<td>orxJOYSTICK_BUTTON_22_8</td>
+</tr>
+<tr>
+<td>23_8</td>
+<td>orxJOYSTICK_BUTTON_23_8</td>
+</tr>
+<tr>
+<td>24_8</td>
+<td>orxJOYSTICK_BUTTON_24_8</td>
+</tr>
+<tr>
+<td>25_8</td>
+<td>orxJOYSTICK_BUTTON_25_8</td>
+</tr>
+<tr>
+<td>a_9</td>
+<td>orxJOYSTICK_BUTTON_A_9</td>
+</tr>
+<tr>
+<td>b_9</td>
+<td>orxJOYSTICK_BUTTON_B_9</td>
+</tr>
+<tr>
+<td>x_9</td>
+<td>orxJOYSTICK_BUTTON_X_9</td>
+</tr>
+<tr>
+<td>y_9</td>
+<td>orxJOYSTICK_BUTTON_Y_9</td>
+</tr>
+<tr>
+<td>lbumper_9</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_9</td>
+</tr>
+<tr>
+<td>rbumper_9</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_9</td>
+</tr>
+<tr>
+<td>back_9</td>
+<td>orxJOYSTICK_BUTTON_BACK_9</td>
+</tr>
+<tr>
+<td>start_9</td>
+<td>orxJOYSTICK_BUTTON_START_9</td>
+</tr>
+<tr>
+<td>guide_9</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_9</td>
+</tr>
+<tr>
+<td>lthumb_9</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_9</td>
+</tr>
+<tr>
+<td>rthumb_9</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_9</td>
+</tr>
+<tr>
+<td>up_9</td>
+<td>orxJOYSTICK_BUTTON_UP_9</td>
+</tr>
+<tr>
+<td>right_9</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_9</td>
+</tr>
+<tr>
+<td>down_9</td>
+<td>orxJOYSTICK_BUTTON_DOWN_9</td>
+</tr>
+<tr>
+<td>left_9</td>
+<td>orxJOYSTICK_BUTTON_LEFT_9</td>
+</tr>
+<tr>
+<td>1_9</td>
+<td>orxJOYSTICK_BUTTON_1_9</td>
+</tr>
+<tr>
+<td>2_9</td>
+<td>orxJOYSTICK_BUTTON_2_9</td>
+</tr>
+<tr>
+<td>3_9</td>
+<td>orxJOYSTICK_BUTTON_3_9</td>
+</tr>
+<tr>
+<td>4_9</td>
+<td>orxJOYSTICK_BUTTON_4_9</td>
+</tr>
+<tr>
+<td>5_9</td>
+<td>orxJOYSTICK_BUTTON_5_9</td>
+</tr>
+<tr>
+<td>6_9</td>
+<td>orxJOYSTICK_BUTTON_6_9</td>
+</tr>
+<tr>
+<td>7_9</td>
+<td>orxJOYSTICK_BUTTON_7_9</td>
+</tr>
+<tr>
+<td>8_9</td>
+<td>orxJOYSTICK_BUTTON_8_9</td>
+</tr>
+<tr>
+<td>9_9</td>
+<td>orxJOYSTICK_BUTTON_9_9</td>
+</tr>
+<tr>
+<td>10_9</td>
+<td>orxJOYSTICK_BUTTON_10_9</td>
+</tr>
+<tr>
+<td>11_9</td>
+<td>orxJOYSTICK_BUTTON_11_9</td>
+</tr>
+<tr>
+<td>12_9</td>
+<td>orxJOYSTICK_BUTTON_12_9</td>
+</tr>
+<tr>
+<td>13_9</td>
+<td>orxJOYSTICK_BUTTON_13_9</td>
+</tr>
+<tr>
+<td>14_9</td>
+<td>orxJOYSTICK_BUTTON_14_9</td>
+</tr>
+<tr>
+<td>15_9</td>
+<td>orxJOYSTICK_BUTTON_15_9</td>
+</tr>
+<tr>
+<td>16_9</td>
+<td>orxJOYSTICK_BUTTON_16_9</td>
+</tr>
+<tr>
+<td>17_9</td>
+<td>orxJOYSTICK_BUTTON_17_9</td>
+</tr>
+<tr>
+<td>18_9</td>
+<td>orxJOYSTICK_BUTTON_18_9</td>
+</tr>
+<tr>
+<td>19_9</td>
+<td>orxJOYSTICK_BUTTON_19_9</td>
+</tr>
+<tr>
+<td>20_9</td>
+<td>orxJOYSTICK_BUTTON_20_9</td>
+</tr>
+<tr>
+<td>21_9</td>
+<td>orxJOYSTICK_BUTTON_21_9</td>
+</tr>
+<tr>
+<td>22_9</td>
+<td>orxJOYSTICK_BUTTON_22_9</td>
+</tr>
+<tr>
+<td>23_9</td>
+<td>orxJOYSTICK_BUTTON_23_9</td>
+</tr>
+<tr>
+<td>24_9</td>
+<td>orxJOYSTICK_BUTTON_24_9</td>
+</tr>
+<tr>
+<td>25_9</td>
+<td>orxJOYSTICK_BUTTON_25_9</td>
+</tr>
+<tr>
+<td>a_10</td>
+<td>orxJOYSTICK_BUTTON_A_10</td>
+</tr>
+<tr>
+<td>b_10</td>
+<td>orxJOYSTICK_BUTTON_B_10</td>
+</tr>
+<tr>
+<td>x_10</td>
+<td>orxJOYSTICK_BUTTON_X_10</td>
+</tr>
+<tr>
+<td>y_10</td>
+<td>orxJOYSTICK_BUTTON_Y_10</td>
+</tr>
+<tr>
+<td>lbumper_10</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_10</td>
+</tr>
+<tr>
+<td>rbumper_10</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_10</td>
+</tr>
+<tr>
+<td>back_10</td>
+<td>orxJOYSTICK_BUTTON_BACK_10</td>
+</tr>
+<tr>
+<td>start_10</td>
+<td>orxJOYSTICK_BUTTON_START_10</td>
+</tr>
+<tr>
+<td>guide_10</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_10</td>
+</tr>
+<tr>
+<td>lthumb_10</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_10</td>
+</tr>
+<tr>
+<td>rthumb_10</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_10</td>
+</tr>
+<tr>
+<td>up_10</td>
+<td>orxJOYSTICK_BUTTON_UP_10</td>
+</tr>
+<tr>
+<td>right_10</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_10</td>
+</tr>
+<tr>
+<td>down_10</td>
+<td>orxJOYSTICK_BUTTON_DOWN_10</td>
+</tr>
+<tr>
+<td>left_10</td>
+<td>orxJOYSTICK_BUTTON_LEFT_10</td>
+</tr>
+<tr>
+<td>1_10</td>
+<td>orxJOYSTICK_BUTTON_1_10</td>
+</tr>
+<tr>
+<td>2_10</td>
+<td>orxJOYSTICK_BUTTON_2_10</td>
+</tr>
+<tr>
+<td>3_10</td>
+<td>orxJOYSTICK_BUTTON_3_10</td>
+</tr>
+<tr>
+<td>4_10</td>
+<td>orxJOYSTICK_BUTTON_4_10</td>
+</tr>
+<tr>
+<td>5_10</td>
+<td>orxJOYSTICK_BUTTON_5_10</td>
+</tr>
+<tr>
+<td>6_10</td>
+<td>orxJOYSTICK_BUTTON_6_10</td>
+</tr>
+<tr>
+<td>7_10</td>
+<td>orxJOYSTICK_BUTTON_7_10</td>
+</tr>
+<tr>
+<td>8_10</td>
+<td>orxJOYSTICK_BUTTON_8_10</td>
+</tr>
+<tr>
+<td>9_10</td>
+<td>orxJOYSTICK_BUTTON_9_10</td>
+</tr>
+<tr>
+<td>10_10</td>
+<td>orxJOYSTICK_BUTTON_10_10</td>
+</tr>
+<tr>
+<td>11_10</td>
+<td>orxJOYSTICK_BUTTON_11_10</td>
+</tr>
+<tr>
+<td>12_10</td>
+<td>orxJOYSTICK_BUTTON_12_10</td>
+</tr>
+<tr>
+<td>13_10</td>
+<td>orxJOYSTICK_BUTTON_13_10</td>
+</tr>
+<tr>
+<td>14_10</td>
+<td>orxJOYSTICK_BUTTON_14_10</td>
+</tr>
+<tr>
+<td>15_10</td>
+<td>orxJOYSTICK_BUTTON_15_10</td>
+</tr>
+<tr>
+<td>16_10</td>
+<td>orxJOYSTICK_BUTTON_16_10</td>
+</tr>
+<tr>
+<td>17_10</td>
+<td>orxJOYSTICK_BUTTON_17_10</td>
+</tr>
+<tr>
+<td>18_10</td>
+<td>orxJOYSTICK_BUTTON_18_10</td>
+</tr>
+<tr>
+<td>19_10</td>
+<td>orxJOYSTICK_BUTTON_19_10</td>
+</tr>
+<tr>
+<td>20_10</td>
+<td>orxJOYSTICK_BUTTON_20_10</td>
+</tr>
+<tr>
+<td>21_10</td>
+<td>orxJOYSTICK_BUTTON_21_10</td>
+</tr>
+<tr>
+<td>22_10</td>
+<td>orxJOYSTICK_BUTTON_22_10</td>
+</tr>
+<tr>
+<td>23_10</td>
+<td>orxJOYSTICK_BUTTON_23_10</td>
+</tr>
+<tr>
+<td>24_10</td>
+<td>orxJOYSTICK_BUTTON_24_10</td>
+</tr>
+<tr>
+<td>25_10</td>
+<td>orxJOYSTICK_BUTTON_25_10</td>
+</tr>
+<tr>
+<td>a_11</td>
+<td>orxJOYSTICK_BUTTON_A_11</td>
+</tr>
+<tr>
+<td>b_11</td>
+<td>orxJOYSTICK_BUTTON_B_11</td>
+</tr>
+<tr>
+<td>x_11</td>
+<td>orxJOYSTICK_BUTTON_X_11</td>
+</tr>
+<tr>
+<td>y_11</td>
+<td>orxJOYSTICK_BUTTON_Y_11</td>
+</tr>
+<tr>
+<td>lbumper_11</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_11</td>
+</tr>
+<tr>
+<td>rbumper_11</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_11</td>
+</tr>
+<tr>
+<td>back_11</td>
+<td>orxJOYSTICK_BUTTON_BACK_11</td>
+</tr>
+<tr>
+<td>start_11</td>
+<td>orxJOYSTICK_BUTTON_START_11</td>
+</tr>
+<tr>
+<td>guide_11</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_11</td>
+</tr>
+<tr>
+<td>lthumb_11</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_11</td>
+</tr>
+<tr>
+<td>rthumb_11</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_11</td>
+</tr>
+<tr>
+<td>up_11</td>
+<td>orxJOYSTICK_BUTTON_UP_11</td>
+</tr>
+<tr>
+<td>right_11</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_11</td>
+</tr>
+<tr>
+<td>down_11</td>
+<td>orxJOYSTICK_BUTTON_DOWN_11</td>
+</tr>
+<tr>
+<td>left_11</td>
+<td>orxJOYSTICK_BUTTON_LEFT_11</td>
+</tr>
+<tr>
+<td>1_11</td>
+<td>orxJOYSTICK_BUTTON_1_11</td>
+</tr>
+<tr>
+<td>2_11</td>
+<td>orxJOYSTICK_BUTTON_2_11</td>
+</tr>
+<tr>
+<td>3_11</td>
+<td>orxJOYSTICK_BUTTON_3_11</td>
+</tr>
+<tr>
+<td>4_11</td>
+<td>orxJOYSTICK_BUTTON_4_11</td>
+</tr>
+<tr>
+<td>5_11</td>
+<td>orxJOYSTICK_BUTTON_5_11</td>
+</tr>
+<tr>
+<td>6_11</td>
+<td>orxJOYSTICK_BUTTON_6_11</td>
+</tr>
+<tr>
+<td>7_11</td>
+<td>orxJOYSTICK_BUTTON_7_11</td>
+</tr>
+<tr>
+<td>8_11</td>
+<td>orxJOYSTICK_BUTTON_8_11</td>
+</tr>
+<tr>
+<td>9_11</td>
+<td>orxJOYSTICK_BUTTON_9_11</td>
+</tr>
+<tr>
+<td>10_11</td>
+<td>orxJOYSTICK_BUTTON_10_11</td>
+</tr>
+<tr>
+<td>11_11</td>
+<td>orxJOYSTICK_BUTTON_11_11</td>
+</tr>
+<tr>
+<td>12_11</td>
+<td>orxJOYSTICK_BUTTON_12_11</td>
+</tr>
+<tr>
+<td>13_11</td>
+<td>orxJOYSTICK_BUTTON_13_11</td>
+</tr>
+<tr>
+<td>14_11</td>
+<td>orxJOYSTICK_BUTTON_14_11</td>
+</tr>
+<tr>
+<td>15_11</td>
+<td>orxJOYSTICK_BUTTON_15_11</td>
+</tr>
+<tr>
+<td>16_11</td>
+<td>orxJOYSTICK_BUTTON_16_11</td>
+</tr>
+<tr>
+<td>17_11</td>
+<td>orxJOYSTICK_BUTTON_17_11</td>
+</tr>
+<tr>
+<td>18_11</td>
+<td>orxJOYSTICK_BUTTON_18_11</td>
+</tr>
+<tr>
+<td>19_11</td>
+<td>orxJOYSTICK_BUTTON_19_11</td>
+</tr>
+<tr>
+<td>20_11</td>
+<td>orxJOYSTICK_BUTTON_20_11</td>
+</tr>
+<tr>
+<td>21_11</td>
+<td>orxJOYSTICK_BUTTON_21_11</td>
+</tr>
+<tr>
+<td>22_11</td>
+<td>orxJOYSTICK_BUTTON_22_11</td>
+</tr>
+<tr>
+<td>23_11</td>
+<td>orxJOYSTICK_BUTTON_23_11</td>
+</tr>
+<tr>
+<td>24_11</td>
+<td>orxJOYSTICK_BUTTON_24_11</td>
+</tr>
+<tr>
+<td>25_11</td>
+<td>orxJOYSTICK_BUTTON_25_11</td>
+</tr>
+<tr>
+<td>a_12</td>
+<td>orxJOYSTICK_BUTTON_A_12</td>
+</tr>
+<tr>
+<td>b_12</td>
+<td>orxJOYSTICK_BUTTON_B_12</td>
+</tr>
+<tr>
+<td>x_12</td>
+<td>orxJOYSTICK_BUTTON_X_12</td>
+</tr>
+<tr>
+<td>y_12</td>
+<td>orxJOYSTICK_BUTTON_Y_12</td>
+</tr>
+<tr>
+<td>lbumper_12</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_12</td>
+</tr>
+<tr>
+<td>rbumper_12</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_12</td>
+</tr>
+<tr>
+<td>back_12</td>
+<td>orxJOYSTICK_BUTTON_BACK_12</td>
+</tr>
+<tr>
+<td>start_12</td>
+<td>orxJOYSTICK_BUTTON_START_12</td>
+</tr>
+<tr>
+<td>guide_12</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_12</td>
+</tr>
+<tr>
+<td>lthumb_12</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_12</td>
+</tr>
+<tr>
+<td>rthumb_12</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_12</td>
+</tr>
+<tr>
+<td>up_12</td>
+<td>orxJOYSTICK_BUTTON_UP_12</td>
+</tr>
+<tr>
+<td>right_12</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_12</td>
+</tr>
+<tr>
+<td>down_12</td>
+<td>orxJOYSTICK_BUTTON_DOWN_12</td>
+</tr>
+<tr>
+<td>left_12</td>
+<td>orxJOYSTICK_BUTTON_LEFT_12</td>
+</tr>
+<tr>
+<td>1_12</td>
+<td>orxJOYSTICK_BUTTON_1_12</td>
+</tr>
+<tr>
+<td>2_12</td>
+<td>orxJOYSTICK_BUTTON_2_12</td>
+</tr>
+<tr>
+<td>3_12</td>
+<td>orxJOYSTICK_BUTTON_3_12</td>
+</tr>
+<tr>
+<td>4_12</td>
+<td>orxJOYSTICK_BUTTON_4_12</td>
+</tr>
+<tr>
+<td>5_12</td>
+<td>orxJOYSTICK_BUTTON_5_12</td>
+</tr>
+<tr>
+<td>6_12</td>
+<td>orxJOYSTICK_BUTTON_6_12</td>
+</tr>
+<tr>
+<td>7_12</td>
+<td>orxJOYSTICK_BUTTON_7_12</td>
+</tr>
+<tr>
+<td>8_12</td>
+<td>orxJOYSTICK_BUTTON_8_12</td>
+</tr>
+<tr>
+<td>9_12</td>
+<td>orxJOYSTICK_BUTTON_9_12</td>
+</tr>
+<tr>
+<td>10_12</td>
+<td>orxJOYSTICK_BUTTON_10_12</td>
+</tr>
+<tr>
+<td>11_12</td>
+<td>orxJOYSTICK_BUTTON_11_12</td>
+</tr>
+<tr>
+<td>12_12</td>
+<td>orxJOYSTICK_BUTTON_12_12</td>
+</tr>
+<tr>
+<td>13_12</td>
+<td>orxJOYSTICK_BUTTON_13_12</td>
+</tr>
+<tr>
+<td>14_12</td>
+<td>orxJOYSTICK_BUTTON_14_12</td>
+</tr>
+<tr>
+<td>15_12</td>
+<td>orxJOYSTICK_BUTTON_15_12</td>
+</tr>
+<tr>
+<td>16_12</td>
+<td>orxJOYSTICK_BUTTON_16_12</td>
+</tr>
+<tr>
+<td>17_12</td>
+<td>orxJOYSTICK_BUTTON_17_12</td>
+</tr>
+<tr>
+<td>18_12</td>
+<td>orxJOYSTICK_BUTTON_18_12</td>
+</tr>
+<tr>
+<td>19_12</td>
+<td>orxJOYSTICK_BUTTON_19_12</td>
+</tr>
+<tr>
+<td>20_12</td>
+<td>orxJOYSTICK_BUTTON_20_12</td>
+</tr>
+<tr>
+<td>21_12</td>
+<td>orxJOYSTICK_BUTTON_21_12</td>
+</tr>
+<tr>
+<td>22_12</td>
+<td>orxJOYSTICK_BUTTON_22_12</td>
+</tr>
+<tr>
+<td>23_12</td>
+<td>orxJOYSTICK_BUTTON_23_12</td>
+</tr>
+<tr>
+<td>24_12</td>
+<td>orxJOYSTICK_BUTTON_24_12</td>
+</tr>
+<tr>
+<td>25_12</td>
+<td>orxJOYSTICK_BUTTON_25_12</td>
+</tr>
+<tr>
+<td>a_13</td>
+<td>orxJOYSTICK_BUTTON_A_13</td>
+</tr>
+<tr>
+<td>b_13</td>
+<td>orxJOYSTICK_BUTTON_B_13</td>
+</tr>
+<tr>
+<td>x_13</td>
+<td>orxJOYSTICK_BUTTON_X_13</td>
+</tr>
+<tr>
+<td>y_13</td>
+<td>orxJOYSTICK_BUTTON_Y_13</td>
+</tr>
+<tr>
+<td>lbumper_13</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_13</td>
+</tr>
+<tr>
+<td>rbumper_13</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_13</td>
+</tr>
+<tr>
+<td>back_13</td>
+<td>orxJOYSTICK_BUTTON_BACK_13</td>
+</tr>
+<tr>
+<td>start_13</td>
+<td>orxJOYSTICK_BUTTON_START_13</td>
+</tr>
+<tr>
+<td>guide_13</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_13</td>
+</tr>
+<tr>
+<td>lthumb_13</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_13</td>
+</tr>
+<tr>
+<td>rthumb_13</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_13</td>
+</tr>
+<tr>
+<td>up_13</td>
+<td>orxJOYSTICK_BUTTON_UP_13</td>
+</tr>
+<tr>
+<td>right_13</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_13</td>
+</tr>
+<tr>
+<td>down_13</td>
+<td>orxJOYSTICK_BUTTON_DOWN_13</td>
+</tr>
+<tr>
+<td>left_13</td>
+<td>orxJOYSTICK_BUTTON_LEFT_13</td>
+</tr>
+<tr>
+<td>1_13</td>
+<td>orxJOYSTICK_BUTTON_1_13</td>
+</tr>
+<tr>
+<td>2_13</td>
+<td>orxJOYSTICK_BUTTON_2_13</td>
+</tr>
+<tr>
+<td>3_13</td>
+<td>orxJOYSTICK_BUTTON_3_13</td>
+</tr>
+<tr>
+<td>4_13</td>
+<td>orxJOYSTICK_BUTTON_4_13</td>
+</tr>
+<tr>
+<td>5_13</td>
+<td>orxJOYSTICK_BUTTON_5_13</td>
+</tr>
+<tr>
+<td>6_13</td>
+<td>orxJOYSTICK_BUTTON_6_13</td>
+</tr>
+<tr>
+<td>7_13</td>
+<td>orxJOYSTICK_BUTTON_7_13</td>
+</tr>
+<tr>
+<td>8_13</td>
+<td>orxJOYSTICK_BUTTON_8_13</td>
+</tr>
+<tr>
+<td>9_13</td>
+<td>orxJOYSTICK_BUTTON_9_13</td>
+</tr>
+<tr>
+<td>10_13</td>
+<td>orxJOYSTICK_BUTTON_10_13</td>
+</tr>
+<tr>
+<td>11_13</td>
+<td>orxJOYSTICK_BUTTON_11_13</td>
+</tr>
+<tr>
+<td>12_13</td>
+<td>orxJOYSTICK_BUTTON_12_13</td>
+</tr>
+<tr>
+<td>13_13</td>
+<td>orxJOYSTICK_BUTTON_13_13</td>
+</tr>
+<tr>
+<td>14_13</td>
+<td>orxJOYSTICK_BUTTON_14_13</td>
+</tr>
+<tr>
+<td>15_13</td>
+<td>orxJOYSTICK_BUTTON_15_13</td>
+</tr>
+<tr>
+<td>16_13</td>
+<td>orxJOYSTICK_BUTTON_16_13</td>
+</tr>
+<tr>
+<td>17_13</td>
+<td>orxJOYSTICK_BUTTON_17_13</td>
+</tr>
+<tr>
+<td>18_13</td>
+<td>orxJOYSTICK_BUTTON_18_13</td>
+</tr>
+<tr>
+<td>19_13</td>
+<td>orxJOYSTICK_BUTTON_19_13</td>
+</tr>
+<tr>
+<td>20_13</td>
+<td>orxJOYSTICK_BUTTON_20_13</td>
+</tr>
+<tr>
+<td>21_13</td>
+<td>orxJOYSTICK_BUTTON_21_13</td>
+</tr>
+<tr>
+<td>22_13</td>
+<td>orxJOYSTICK_BUTTON_22_13</td>
+</tr>
+<tr>
+<td>23_13</td>
+<td>orxJOYSTICK_BUTTON_23_13</td>
+</tr>
+<tr>
+<td>24_13</td>
+<td>orxJOYSTICK_BUTTON_24_13</td>
+</tr>
+<tr>
+<td>25_13</td>
+<td>orxJOYSTICK_BUTTON_25_13</td>
+</tr>
+<tr>
+<td>a_14</td>
+<td>orxJOYSTICK_BUTTON_A_14</td>
+</tr>
+<tr>
+<td>b_14</td>
+<td>orxJOYSTICK_BUTTON_B_14</td>
+</tr>
+<tr>
+<td>x_14</td>
+<td>orxJOYSTICK_BUTTON_X_14</td>
+</tr>
+<tr>
+<td>y_14</td>
+<td>orxJOYSTICK_BUTTON_Y_14</td>
+</tr>
+<tr>
+<td>lbumper_14</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_14</td>
+</tr>
+<tr>
+<td>rbumper_14</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_14</td>
+</tr>
+<tr>
+<td>back_14</td>
+<td>orxJOYSTICK_BUTTON_BACK_14</td>
+</tr>
+<tr>
+<td>start_14</td>
+<td>orxJOYSTICK_BUTTON_START_14</td>
+</tr>
+<tr>
+<td>guide_14</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_14</td>
+</tr>
+<tr>
+<td>lthumb_14</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_14</td>
+</tr>
+<tr>
+<td>rthumb_14</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_14</td>
+</tr>
+<tr>
+<td>up_14</td>
+<td>orxJOYSTICK_BUTTON_UP_14</td>
+</tr>
+<tr>
+<td>right_14</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_14</td>
+</tr>
+<tr>
+<td>down_14</td>
+<td>orxJOYSTICK_BUTTON_DOWN_14</td>
+</tr>
+<tr>
+<td>left_14</td>
+<td>orxJOYSTICK_BUTTON_LEFT_14</td>
+</tr>
+<tr>
+<td>1_14</td>
+<td>orxJOYSTICK_BUTTON_1_14</td>
+</tr>
+<tr>
+<td>2_14</td>
+<td>orxJOYSTICK_BUTTON_2_14</td>
+</tr>
+<tr>
+<td>3_14</td>
+<td>orxJOYSTICK_BUTTON_3_14</td>
+</tr>
+<tr>
+<td>4_14</td>
+<td>orxJOYSTICK_BUTTON_4_14</td>
+</tr>
+<tr>
+<td>5_14</td>
+<td>orxJOYSTICK_BUTTON_5_14</td>
+</tr>
+<tr>
+<td>6_14</td>
+<td>orxJOYSTICK_BUTTON_6_14</td>
+</tr>
+<tr>
+<td>7_14</td>
+<td>orxJOYSTICK_BUTTON_7_14</td>
+</tr>
+<tr>
+<td>8_14</td>
+<td>orxJOYSTICK_BUTTON_8_14</td>
+</tr>
+<tr>
+<td>9_14</td>
+<td>orxJOYSTICK_BUTTON_9_14</td>
+</tr>
+<tr>
+<td>10_14</td>
+<td>orxJOYSTICK_BUTTON_10_14</td>
+</tr>
+<tr>
+<td>11_14</td>
+<td>orxJOYSTICK_BUTTON_11_14</td>
+</tr>
+<tr>
+<td>12_14</td>
+<td>orxJOYSTICK_BUTTON_12_14</td>
+</tr>
+<tr>
+<td>13_14</td>
+<td>orxJOYSTICK_BUTTON_13_14</td>
+</tr>
+<tr>
+<td>14_14</td>
+<td>orxJOYSTICK_BUTTON_14_14</td>
+</tr>
+<tr>
+<td>15_14</td>
+<td>orxJOYSTICK_BUTTON_15_14</td>
+</tr>
+<tr>
+<td>16_14</td>
+<td>orxJOYSTICK_BUTTON_16_14</td>
+</tr>
+<tr>
+<td>17_14</td>
+<td>orxJOYSTICK_BUTTON_17_14</td>
+</tr>
+<tr>
+<td>18_14</td>
+<td>orxJOYSTICK_BUTTON_18_14</td>
+</tr>
+<tr>
+<td>19_14</td>
+<td>orxJOYSTICK_BUTTON_19_14</td>
+</tr>
+<tr>
+<td>20_14</td>
+<td>orxJOYSTICK_BUTTON_20_14</td>
+</tr>
+<tr>
+<td>21_14</td>
+<td>orxJOYSTICK_BUTTON_21_14</td>
+</tr>
+<tr>
+<td>22_14</td>
+<td>orxJOYSTICK_BUTTON_22_14</td>
+</tr>
+<tr>
+<td>23_14</td>
+<td>orxJOYSTICK_BUTTON_23_14</td>
+</tr>
+<tr>
+<td>24_14</td>
+<td>orxJOYSTICK_BUTTON_24_14</td>
+</tr>
+<tr>
+<td>25_14</td>
+<td>orxJOYSTICK_BUTTON_25_14</td>
+</tr>
+<tr>
+<td>a_15</td>
+<td>orxJOYSTICK_BUTTON_A_15</td>
+</tr>
+<tr>
+<td>b_15</td>
+<td>orxJOYSTICK_BUTTON_B_15</td>
+</tr>
+<tr>
+<td>x_15</td>
+<td>orxJOYSTICK_BUTTON_X_15</td>
+</tr>
+<tr>
+<td>y_15</td>
+<td>orxJOYSTICK_BUTTON_Y_15</td>
+</tr>
+<tr>
+<td>lbumper_15</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_15</td>
+</tr>
+<tr>
+<td>rbumper_15</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_15</td>
+</tr>
+<tr>
+<td>back_15</td>
+<td>orxJOYSTICK_BUTTON_BACK_15</td>
+</tr>
+<tr>
+<td>start_15</td>
+<td>orxJOYSTICK_BUTTON_START_15</td>
+</tr>
+<tr>
+<td>guide_15</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_15</td>
+</tr>
+<tr>
+<td>lthumb_15</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_15</td>
+</tr>
+<tr>
+<td>rthumb_15</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_15</td>
+</tr>
+<tr>
+<td>up_15</td>
+<td>orxJOYSTICK_BUTTON_UP_15</td>
+</tr>
+<tr>
+<td>right_15</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_15</td>
+</tr>
+<tr>
+<td>down_15</td>
+<td>orxJOYSTICK_BUTTON_DOWN_15</td>
+</tr>
+<tr>
+<td>left_15</td>
+<td>orxJOYSTICK_BUTTON_LEFT_15</td>
+</tr>
+<tr>
+<td>1_15</td>
+<td>orxJOYSTICK_BUTTON_1_15</td>
+</tr>
+<tr>
+<td>2_15</td>
+<td>orxJOYSTICK_BUTTON_2_15</td>
+</tr>
+<tr>
+<td>3_15</td>
+<td>orxJOYSTICK_BUTTON_3_15</td>
+</tr>
+<tr>
+<td>4_15</td>
+<td>orxJOYSTICK_BUTTON_4_15</td>
+</tr>
+<tr>
+<td>5_15</td>
+<td>orxJOYSTICK_BUTTON_5_15</td>
+</tr>
+<tr>
+<td>6_15</td>
+<td>orxJOYSTICK_BUTTON_6_15</td>
+</tr>
+<tr>
+<td>7_15</td>
+<td>orxJOYSTICK_BUTTON_7_15</td>
+</tr>
+<tr>
+<td>8_15</td>
+<td>orxJOYSTICK_BUTTON_8_15</td>
+</tr>
+<tr>
+<td>9_15</td>
+<td>orxJOYSTICK_BUTTON_9_15</td>
+</tr>
+<tr>
+<td>10_15</td>
+<td>orxJOYSTICK_BUTTON_10_15</td>
+</tr>
+<tr>
+<td>11_15</td>
+<td>orxJOYSTICK_BUTTON_11_15</td>
+</tr>
+<tr>
+<td>12_15</td>
+<td>orxJOYSTICK_BUTTON_12_15</td>
+</tr>
+<tr>
+<td>13_15</td>
+<td>orxJOYSTICK_BUTTON_13_15</td>
+</tr>
+<tr>
+<td>14_15</td>
+<td>orxJOYSTICK_BUTTON_14_15</td>
+</tr>
+<tr>
+<td>15_15</td>
+<td>orxJOYSTICK_BUTTON_15_15</td>
+</tr>
+<tr>
+<td>16_15</td>
+<td>orxJOYSTICK_BUTTON_16_15</td>
+</tr>
+<tr>
+<td>17_15</td>
+<td>orxJOYSTICK_BUTTON_17_15</td>
+</tr>
+<tr>
+<td>18_15</td>
+<td>orxJOYSTICK_BUTTON_18_15</td>
+</tr>
+<tr>
+<td>19_15</td>
+<td>orxJOYSTICK_BUTTON_19_15</td>
+</tr>
+<tr>
+<td>20_15</td>
+<td>orxJOYSTICK_BUTTON_20_15</td>
+</tr>
+<tr>
+<td>21_15</td>
+<td>orxJOYSTICK_BUTTON_21_15</td>
+</tr>
+<tr>
+<td>22_15</td>
+<td>orxJOYSTICK_BUTTON_22_15</td>
+</tr>
+<tr>
+<td>23_15</td>
+<td>orxJOYSTICK_BUTTON_23_15</td>
+</tr>
+<tr>
+<td>24_15</td>
+<td>orxJOYSTICK_BUTTON_24_15</td>
+</tr>
+<tr>
+<td>25_15</td>
+<td>orxJOYSTICK_BUTTON_25_15</td>
+</tr>
+<tr>
+<td>a_16</td>
+<td>orxJOYSTICK_BUTTON_A_16</td>
+</tr>
+<tr>
+<td>b_16</td>
+<td>orxJOYSTICK_BUTTON_B_16</td>
+</tr>
+<tr>
+<td>x_16</td>
+<td>orxJOYSTICK_BUTTON_X_16</td>
+</tr>
+<tr>
+<td>y_16</td>
+<td>orxJOYSTICK_BUTTON_Y_16</td>
+</tr>
+<tr>
+<td>lbumper_16</td>
+<td>orxJOYSTICK_BUTTON_LBUMPER_16</td>
+</tr>
+<tr>
+<td>rbumper_16</td>
+<td>orxJOYSTICK_BUTTON_RBUMPER_16</td>
+</tr>
+<tr>
+<td>back_16</td>
+<td>orxJOYSTICK_BUTTON_BACK_16</td>
+</tr>
+<tr>
+<td>start_16</td>
+<td>orxJOYSTICK_BUTTON_START_16</td>
+</tr>
+<tr>
+<td>guide_16</td>
+<td>orxJOYSTICK_BUTTON_GUIDE_16</td>
+</tr>
+<tr>
+<td>lthumb_16</td>
+<td>orxJOYSTICK_BUTTON_LTHUMB_16</td>
+</tr>
+<tr>
+<td>rthumb_16</td>
+<td>orxJOYSTICK_BUTTON_RTHUMB_16</td>
+</tr>
+<tr>
+<td>up_16</td>
+<td>orxJOYSTICK_BUTTON_UP_16</td>
+</tr>
+<tr>
+<td>right_16</td>
+<td>orxJOYSTICK_BUTTON_RIGHT_16</td>
+</tr>
+<tr>
+<td>down_16</td>
+<td>orxJOYSTICK_BUTTON_DOWN_16</td>
+</tr>
+<tr>
+<td>left_16</td>
+<td>orxJOYSTICK_BUTTON_LEFT_16</td>
+</tr>
+<tr>
+<td>1_16</td>
+<td>orxJOYSTICK_BUTTON_1_16</td>
+</tr>
+<tr>
+<td>2_16</td>
+<td>orxJOYSTICK_BUTTON_2_16</td>
+</tr>
+<tr>
+<td>3_16</td>
+<td>orxJOYSTICK_BUTTON_3_16</td>
+</tr>
+<tr>
+<td>4_16</td>
+<td>orxJOYSTICK_BUTTON_4_16</td>
+</tr>
+<tr>
+<td>5_16</td>
+<td>orxJOYSTICK_BUTTON_5_16</td>
+</tr>
+<tr>
+<td>6_16</td>
+<td>orxJOYSTICK_BUTTON_6_16</td>
+</tr>
+<tr>
+<td>7_16</td>
+<td>orxJOYSTICK_BUTTON_7_16</td>
+</tr>
+<tr>
+<td>8_16</td>
+<td>orxJOYSTICK_BUTTON_8_16</td>
+</tr>
+<tr>
+<td>9_16</td>
+<td>orxJOYSTICK_BUTTON_9_16</td>
+</tr>
+<tr>
+<td>10_16</td>
+<td>orxJOYSTICK_BUTTON_10_16</td>
+</tr>
+<tr>
+<td>11_16</td>
+<td>orxJOYSTICK_BUTTON_11_16</td>
+</tr>
+<tr>
+<td>12_16</td>
+<td>orxJOYSTICK_BUTTON_12_16</td>
+</tr>
+<tr>
+<td>13_16</td>
+<td>orxJOYSTICK_BUTTON_13_16</td>
+</tr>
+<tr>
+<td>14_16</td>
+<td>orxJOYSTICK_BUTTON_14_16</td>
+</tr>
+<tr>
+<td>15_16</td>
+<td>orxJOYSTICK_BUTTON_15_16</td>
+</tr>
+<tr>
+<td>16_16</td>
+<td>orxJOYSTICK_BUTTON_16_16</td>
+</tr>
+<tr>
+<td>17_16</td>
+<td>orxJOYSTICK_BUTTON_17_16</td>
+</tr>
+<tr>
+<td>18_16</td>
+<td>orxJOYSTICK_BUTTON_18_16</td>
+</tr>
+<tr>
+<td>19_16</td>
+<td>orxJOYSTICK_BUTTON_19_16</td>
+</tr>
+<tr>
+<td>20_16</td>
+<td>orxJOYSTICK_BUTTON_20_16</td>
+</tr>
+<tr>
+<td>21_16</td>
+<td>orxJOYSTICK_BUTTON_21_16</td>
+</tr>
+<tr>
+<td>22_16</td>
+<td>orxJOYSTICK_BUTTON_22_16</td>
+</tr>
+<tr>
+<td>23_16</td>
+<td>orxJOYSTICK_BUTTON_23_16</td>
+</tr>
+<tr>
+<td>24_16</td>
+<td>orxJOYSTICK_BUTTON_24_16</td>
+</tr>
+<tr>
+<td>25_16</td>
+<td>orxJOYSTICK_BUTTON_25_16</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxJOYSTICK_BUTTON_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxkeyboard_key">orxKEYBOARD_KEY<a class="headerlink" href="#orxkeyboard_key" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>orxKEYBOARD_KEY_0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>orxKEYBOARD_KEY_1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>orxKEYBOARD_KEY_2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>orxKEYBOARD_KEY_3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>orxKEYBOARD_KEY_4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>orxKEYBOARD_KEY_5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>orxKEYBOARD_KEY_6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>orxKEYBOARD_KEY_7</td>
+</tr>
+<tr>
+<td>8</td>
+<td>orxKEYBOARD_KEY_8</td>
+</tr>
+<tr>
+<td>9</td>
+<td>orxKEYBOARD_KEY_9</td>
+</tr>
+<tr>
+<td>a</td>
+<td>orxKEYBOARD_KEY_A</td>
+</tr>
+<tr>
+<td>b</td>
+<td>orxKEYBOARD_KEY_B</td>
+</tr>
+<tr>
+<td>c</td>
+<td>orxKEYBOARD_KEY_C</td>
+</tr>
+<tr>
+<td>d</td>
+<td>orxKEYBOARD_KEY_D</td>
+</tr>
+<tr>
+<td>e</td>
+<td>orxKEYBOARD_KEY_E</td>
+</tr>
+<tr>
+<td>f</td>
+<td>orxKEYBOARD_KEY_F</td>
+</tr>
+<tr>
+<td>g</td>
+<td>orxKEYBOARD_KEY_G</td>
+</tr>
+<tr>
+<td>h</td>
+<td>orxKEYBOARD_KEY_H</td>
+</tr>
+<tr>
+<td>i</td>
+<td>orxKEYBOARD_KEY_I</td>
+</tr>
+<tr>
+<td>j</td>
+<td>orxKEYBOARD_KEY_J</td>
+</tr>
+<tr>
+<td>k</td>
+<td>orxKEYBOARD_KEY_K</td>
+</tr>
+<tr>
+<td>l</td>
+<td>orxKEYBOARD_KEY_L</td>
+</tr>
+<tr>
+<td>m</td>
+<td>orxKEYBOARD_KEY_M</td>
+</tr>
+<tr>
+<td>n</td>
+<td>orxKEYBOARD_KEY_N</td>
+</tr>
+<tr>
+<td>o</td>
+<td>orxKEYBOARD_KEY_O</td>
+</tr>
+<tr>
+<td>p</td>
+<td>orxKEYBOARD_KEY_P</td>
+</tr>
+<tr>
+<td>q</td>
+<td>orxKEYBOARD_KEY_Q</td>
+</tr>
+<tr>
+<td>r</td>
+<td>orxKEYBOARD_KEY_R</td>
+</tr>
+<tr>
+<td>s</td>
+<td>orxKEYBOARD_KEY_S</td>
+</tr>
+<tr>
+<td>t</td>
+<td>orxKEYBOARD_KEY_T</td>
+</tr>
+<tr>
+<td>u</td>
+<td>orxKEYBOARD_KEY_U</td>
+</tr>
+<tr>
+<td>v</td>
+<td>orxKEYBOARD_KEY_V</td>
+</tr>
+<tr>
+<td>w</td>
+<td>orxKEYBOARD_KEY_W</td>
+</tr>
+<tr>
+<td>x</td>
+<td>orxKEYBOARD_KEY_X</td>
+</tr>
+<tr>
+<td>y</td>
+<td>orxKEYBOARD_KEY_Y</td>
+</tr>
+<tr>
+<td>z</td>
+<td>orxKEYBOARD_KEY_Z</td>
+</tr>
+<tr>
+<td>space</td>
+<td>orxKEYBOARD_KEY_SPACE</td>
+</tr>
+<tr>
+<td>quote</td>
+<td>orxKEYBOARD_KEY_QUOTE</td>
+</tr>
+<tr>
+<td>comma</td>
+<td>orxKEYBOARD_KEY_COMMA</td>
+</tr>
+<tr>
+<td>dash</td>
+<td>orxKEYBOARD_KEY_DASH</td>
+</tr>
+<tr>
+<td>period</td>
+<td>orxKEYBOARD_KEY_PERIOD</td>
+</tr>
+<tr>
+<td>slash</td>
+<td>orxKEYBOARD_KEY_SLASH</td>
+</tr>
+<tr>
+<td>semicolon</td>
+<td>orxKEYBOARD_KEY_SEMICOLON</td>
+</tr>
+<tr>
+<td>equal</td>
+<td>orxKEYBOARD_KEY_EQUAL</td>
+</tr>
+<tr>
+<td>lbracket</td>
+<td>orxKEYBOARD_KEY_LBRACKET</td>
+</tr>
+<tr>
+<td>backslash</td>
+<td>orxKEYBOARD_KEY_BACKSLASH</td>
+</tr>
+<tr>
+<td>rbracket</td>
+<td>orxKEYBOARD_KEY_RBRACKET</td>
+</tr>
+<tr>
+<td>backquote</td>
+<td>orxKEYBOARD_KEY_BACKQUOTE</td>
+</tr>
+<tr>
+<td>world_1</td>
+<td>orxKEYBOARD_KEY_WORLD_1</td>
+</tr>
+<tr>
+<td>world_2</td>
+<td>orxKEYBOARD_KEY_WORLD_2</td>
+</tr>
+<tr>
+<td>escape</td>
+<td>orxKEYBOARD_KEY_ESCAPE</td>
+</tr>
+<tr>
+<td>enter</td>
+<td>orxKEYBOARD_KEY_ENTER</td>
+</tr>
+<tr>
+<td>tab</td>
+<td>orxKEYBOARD_KEY_TAB</td>
+</tr>
+<tr>
+<td>backspace</td>
+<td>orxKEYBOARD_KEY_BACKSPACE</td>
+</tr>
+<tr>
+<td>insert</td>
+<td>orxKEYBOARD_KEY_INSERT</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>orxKEYBOARD_KEY_DELETE</td>
+</tr>
+<tr>
+<td>right</td>
+<td>orxKEYBOARD_KEY_RIGHT</td>
+</tr>
+<tr>
+<td>left</td>
+<td>orxKEYBOARD_KEY_LEFT</td>
+</tr>
+<tr>
+<td>down</td>
+<td>orxKEYBOARD_KEY_DOWN</td>
+</tr>
+<tr>
+<td>up</td>
+<td>orxKEYBOARD_KEY_UP</td>
+</tr>
+<tr>
+<td>page_up</td>
+<td>orxKEYBOARD_KEY_PAGE_UP</td>
+</tr>
+<tr>
+<td>page_down</td>
+<td>orxKEYBOARD_KEY_PAGE_DOWN</td>
+</tr>
+<tr>
+<td>home</td>
+<td>orxKEYBOARD_KEY_HOME</td>
+</tr>
+<tr>
+<td>end</td>
+<td>orxKEYBOARD_KEY_END</td>
+</tr>
+<tr>
+<td>caps_lock</td>
+<td>orxKEYBOARD_KEY_CAPS_LOCK</td>
+</tr>
+<tr>
+<td>scroll_lock</td>
+<td>orxKEYBOARD_KEY_SCROLL_LOCK</td>
+</tr>
+<tr>
+<td>num_lock</td>
+<td>orxKEYBOARD_KEY_NUM_LOCK</td>
+</tr>
+<tr>
+<td>print_screen</td>
+<td>orxKEYBOARD_KEY_PRINT_SCREEN</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>orxKEYBOARD_KEY_PAUSE</td>
+</tr>
+<tr>
+<td>volume_down</td>
+<td>orxKEYBOARD_KEY_VOLUME_DOWN</td>
+</tr>
+<tr>
+<td>volume_up</td>
+<td>orxKEYBOARD_KEY_VOLUME_UP</td>
+</tr>
+<tr>
+<td>f1</td>
+<td>orxKEYBOARD_KEY_F1</td>
+</tr>
+<tr>
+<td>f2</td>
+<td>orxKEYBOARD_KEY_F2</td>
+</tr>
+<tr>
+<td>f3</td>
+<td>orxKEYBOARD_KEY_F3</td>
+</tr>
+<tr>
+<td>f4</td>
+<td>orxKEYBOARD_KEY_F4</td>
+</tr>
+<tr>
+<td>f5</td>
+<td>orxKEYBOARD_KEY_F5</td>
+</tr>
+<tr>
+<td>f6</td>
+<td>orxKEYBOARD_KEY_F6</td>
+</tr>
+<tr>
+<td>f7</td>
+<td>orxKEYBOARD_KEY_F7</td>
+</tr>
+<tr>
+<td>f8</td>
+<td>orxKEYBOARD_KEY_F8</td>
+</tr>
+<tr>
+<td>f9</td>
+<td>orxKEYBOARD_KEY_F9</td>
+</tr>
+<tr>
+<td>f10</td>
+<td>orxKEYBOARD_KEY_F10</td>
+</tr>
+<tr>
+<td>f11</td>
+<td>orxKEYBOARD_KEY_F11</td>
+</tr>
+<tr>
+<td>f12</td>
+<td>orxKEYBOARD_KEY_F12</td>
+</tr>
+<tr>
+<td>f13</td>
+<td>orxKEYBOARD_KEY_F13</td>
+</tr>
+<tr>
+<td>f14</td>
+<td>orxKEYBOARD_KEY_F14</td>
+</tr>
+<tr>
+<td>f15</td>
+<td>orxKEYBOARD_KEY_F15</td>
+</tr>
+<tr>
+<td>f16</td>
+<td>orxKEYBOARD_KEY_F16</td>
+</tr>
+<tr>
+<td>f17</td>
+<td>orxKEYBOARD_KEY_F17</td>
+</tr>
+<tr>
+<td>f18</td>
+<td>orxKEYBOARD_KEY_F18</td>
+</tr>
+<tr>
+<td>f19</td>
+<td>orxKEYBOARD_KEY_F19</td>
+</tr>
+<tr>
+<td>f20</td>
+<td>orxKEYBOARD_KEY_F20</td>
+</tr>
+<tr>
+<td>f21</td>
+<td>orxKEYBOARD_KEY_F21</td>
+</tr>
+<tr>
+<td>f22</td>
+<td>orxKEYBOARD_KEY_F22</td>
+</tr>
+<tr>
+<td>f23</td>
+<td>orxKEYBOARD_KEY_F23</td>
+</tr>
+<tr>
+<td>f24</td>
+<td>orxKEYBOARD_KEY_F24</td>
+</tr>
+<tr>
+<td>f25</td>
+<td>orxKEYBOARD_KEY_F25</td>
+</tr>
+<tr>
+<td>numpad_0</td>
+<td>orxKEYBOARD_KEY_NUMPAD_0</td>
+</tr>
+<tr>
+<td>numpad_1</td>
+<td>orxKEYBOARD_KEY_NUMPAD_1</td>
+</tr>
+<tr>
+<td>numpad_2</td>
+<td>orxKEYBOARD_KEY_NUMPAD_2</td>
+</tr>
+<tr>
+<td>numpad_3</td>
+<td>orxKEYBOARD_KEY_NUMPAD_3</td>
+</tr>
+<tr>
+<td>numpad_4</td>
+<td>orxKEYBOARD_KEY_NUMPAD_4</td>
+</tr>
+<tr>
+<td>numpad_5</td>
+<td>orxKEYBOARD_KEY_NUMPAD_5</td>
+</tr>
+<tr>
+<td>numpad_6</td>
+<td>orxKEYBOARD_KEY_NUMPAD_6</td>
+</tr>
+<tr>
+<td>numpad_7</td>
+<td>orxKEYBOARD_KEY_NUMPAD_7</td>
+</tr>
+<tr>
+<td>numpad_8</td>
+<td>orxKEYBOARD_KEY_NUMPAD_8</td>
+</tr>
+<tr>
+<td>numpad_9</td>
+<td>orxKEYBOARD_KEY_NUMPAD_9</td>
+</tr>
+<tr>
+<td>numpad_decimal</td>
+<td>orxKEYBOARD_KEY_NUMPAD_DECIMAL</td>
+</tr>
+<tr>
+<td>numpad_divide</td>
+<td>orxKEYBOARD_KEY_NUMPAD_DIVIDE</td>
+</tr>
+<tr>
+<td>numpad_multiply</td>
+<td>orxKEYBOARD_KEY_NUMPAD_MULTIPLY</td>
+</tr>
+<tr>
+<td>numpad_subtract</td>
+<td>orxKEYBOARD_KEY_NUMPAD_SUBTRACT</td>
+</tr>
+<tr>
+<td>numpad_add</td>
+<td>orxKEYBOARD_KEY_NUMPAD_ADD</td>
+</tr>
+<tr>
+<td>numpad_enter</td>
+<td>orxKEYBOARD_KEY_NUMPAD_ENTER</td>
+</tr>
+<tr>
+<td>numpad_equal</td>
+<td>orxKEYBOARD_KEY_NUMPAD_EQUAL</td>
+</tr>
+<tr>
+<td>lshift</td>
+<td>orxKEYBOARD_KEY_LSHIFT</td>
+</tr>
+<tr>
+<td>lctrl</td>
+<td>orxKEYBOARD_KEY_LCTRL</td>
+</tr>
+<tr>
+<td>lalt</td>
+<td>orxKEYBOARD_KEY_LALT</td>
+</tr>
+<tr>
+<td>lsystem</td>
+<td>orxKEYBOARD_KEY_LSYSTEM</td>
+</tr>
+<tr>
+<td>rshift</td>
+<td>orxKEYBOARD_KEY_RSHIFT</td>
+</tr>
+<tr>
+<td>rctrl</td>
+<td>orxKEYBOARD_KEY_RCTRL</td>
+</tr>
+<tr>
+<td>ralt</td>
+<td>orxKEYBOARD_KEY_RALT</td>
+</tr>
+<tr>
+<td>rsystem</td>
+<td>orxKEYBOARD_KEY_RSYSTEM</td>
+</tr>
+<tr>
+<td>menu</td>
+<td>orxKEYBOARD_KEY_MENU</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxKEYBOARD_KEY_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxlocale_event">orxLOCALE_EVENT<a class="headerlink" href="#orxlocale_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>select_language</td>
+<td>orxLOCALE_EVENT_SELECT_LANGUAGE</td>
+</tr>
+<tr>
+<td>set_string</td>
+<td>orxLOCALE_EVENT_SET_STRING</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxLOCALE_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxmodule_id">orxMODULE_ID<a class="headerlink" href="#orxmodule_id" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>anim</td>
+<td>orxMODULE_ID_ANIM</td>
+</tr>
+<tr>
+<td>animpointer</td>
+<td>orxMODULE_ID_ANIMPOINTER</td>
+</tr>
+<tr>
+<td>animset</td>
+<td>orxMODULE_ID_ANIMSET</td>
+</tr>
+<tr>
+<td>bank</td>
+<td>orxMODULE_ID_BANK</td>
+</tr>
+<tr>
+<td>body</td>
+<td>orxMODULE_ID_BODY</td>
+</tr>
+<tr>
+<td>camera</td>
+<td>orxMODULE_ID_CAMERA</td>
+</tr>
+<tr>
+<td>clock</td>
+<td>orxMODULE_ID_CLOCK</td>
+</tr>
+<tr>
+<td>command</td>
+<td>orxMODULE_ID_COMMAND</td>
+</tr>
+<tr>
+<td>config</td>
+<td>orxMODULE_ID_CONFIG</td>
+</tr>
+<tr>
+<td>console</td>
+<td>orxMODULE_ID_CONSOLE</td>
+</tr>
+<tr>
+<td>display</td>
+<td>orxMODULE_ID_DISPLAY</td>
+</tr>
+<tr>
+<td>event</td>
+<td>orxMODULE_ID_EVENT</td>
+</tr>
+<tr>
+<td>file</td>
+<td>orxMODULE_ID_FILE</td>
+</tr>
+<tr>
+<td>font</td>
+<td>orxMODULE_ID_FONT</td>
+</tr>
+<tr>
+<td>fps</td>
+<td>orxMODULE_ID_FPS</td>
+</tr>
+<tr>
+<td>frame</td>
+<td>orxMODULE_ID_FRAME</td>
+</tr>
+<tr>
+<td>fx</td>
+<td>orxMODULE_ID_FX</td>
+</tr>
+<tr>
+<td>fxpointer</td>
+<td>orxMODULE_ID_FXPOINTER</td>
+</tr>
+<tr>
+<td>graphic</td>
+<td>orxMODULE_ID_GRAPHIC</td>
+</tr>
+<tr>
+<td>input</td>
+<td>orxMODULE_ID_INPUT</td>
+</tr>
+<tr>
+<td>joystick</td>
+<td>orxMODULE_ID_JOYSTICK</td>
+</tr>
+<tr>
+<td>keyboard</td>
+<td>orxMODULE_ID_KEYBOARD</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>orxMODULE_ID_LOCALE</td>
+</tr>
+<tr>
+<td>main</td>
+<td>orxMODULE_ID_MAIN</td>
+</tr>
+<tr>
+<td>memory</td>
+<td>orxMODULE_ID_MEMORY</td>
+</tr>
+<tr>
+<td>mouse</td>
+<td>orxMODULE_ID_MOUSE</td>
+</tr>
+<tr>
+<td>object</td>
+<td>orxMODULE_ID_OBJECT</td>
+</tr>
+<tr>
+<td>param</td>
+<td>orxMODULE_ID_PARAM</td>
+</tr>
+<tr>
+<td>physics</td>
+<td>orxMODULE_ID_PHYSICS</td>
+</tr>
+<tr>
+<td>plugin</td>
+<td>orxMODULE_ID_PLUGIN</td>
+</tr>
+<tr>
+<td>profiler</td>
+<td>orxMODULE_ID_PROFILER</td>
+</tr>
+<tr>
+<td>render</td>
+<td>orxMODULE_ID_RENDER</td>
+</tr>
+<tr>
+<td>resource</td>
+<td>orxMODULE_ID_RESOURCE</td>
+</tr>
+<tr>
+<td>screenshot</td>
+<td>orxMODULE_ID_SCREENSHOT</td>
+</tr>
+<tr>
+<td>shader</td>
+<td>orxMODULE_ID_SHADER</td>
+</tr>
+<tr>
+<td>shaderpointer</td>
+<td>orxMODULE_ID_SHADERPOINTER</td>
+</tr>
+<tr>
+<td>sound</td>
+<td>orxMODULE_ID_SOUND</td>
+</tr>
+<tr>
+<td>soundpointer</td>
+<td>orxMODULE_ID_SOUNDPOINTER</td>
+</tr>
+<tr>
+<td>soundsystem</td>
+<td>orxMODULE_ID_SOUNDSYSTEM</td>
+</tr>
+<tr>
+<td>spawner</td>
+<td>orxMODULE_ID_SPAWNER</td>
+</tr>
+<tr>
+<td>string</td>
+<td>orxMODULE_ID_STRING</td>
+</tr>
+<tr>
+<td>structure</td>
+<td>orxMODULE_ID_STRUCTURE</td>
+</tr>
+<tr>
+<td>system</td>
+<td>orxMODULE_ID_SYSTEM</td>
+</tr>
+<tr>
+<td>text</td>
+<td>orxMODULE_ID_TEXT</td>
+</tr>
+<tr>
+<td>texture</td>
+<td>orxMODULE_ID_TEXTURE</td>
+</tr>
+<tr>
+<td>thread</td>
+<td>orxMODULE_ID_THREAD</td>
+</tr>
+<tr>
+<td>timeline</td>
+<td>orxMODULE_ID_TIMELINE</td>
+</tr>
+<tr>
+<td>viewport</td>
+<td>orxMODULE_ID_VIEWPORT</td>
+</tr>
+<tr>
+<td>user_defined</td>
+<td>orxMODULE_ID_USER_DEFINED</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxMODULE_ID_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxmouse_axis">orxMOUSE_AXIS<a class="headerlink" href="#orxmouse_axis" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>orxMOUSE_AXIS_X</td>
+</tr>
+<tr>
+<td>y</td>
+<td>orxMOUSE_AXIS_Y</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxMOUSE_AXIS_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxmouse_button">orxMOUSE_BUTTON<a class="headerlink" href="#orxmouse_button" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>left</td>
+<td>orxMOUSE_BUTTON_LEFT</td>
+</tr>
+<tr>
+<td>right</td>
+<td>orxMOUSE_BUTTON_RIGHT</td>
+</tr>
+<tr>
+<td>middle</td>
+<td>orxMOUSE_BUTTON_MIDDLE</td>
+</tr>
+<tr>
+<td>extra_1</td>
+<td>orxMOUSE_BUTTON_EXTRA_1</td>
+</tr>
+<tr>
+<td>extra_2</td>
+<td>orxMOUSE_BUTTON_EXTRA_2</td>
+</tr>
+<tr>
+<td>extra_3</td>
+<td>orxMOUSE_BUTTON_EXTRA_3</td>
+</tr>
+<tr>
+<td>extra_4</td>
+<td>orxMOUSE_BUTTON_EXTRA_4</td>
+</tr>
+<tr>
+<td>extra_5</td>
+<td>orxMOUSE_BUTTON_EXTRA_5</td>
+</tr>
+<tr>
+<td>wheel_up</td>
+<td>orxMOUSE_BUTTON_WHEEL_UP</td>
+</tr>
+<tr>
+<td>wheel_down</td>
+<td>orxMOUSE_BUTTON_WHEEL_DOWN</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxMOUSE_BUTTON_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxobject_event">orxOBJECT_EVENT<a class="headerlink" href="#orxobject_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create</td>
+<td>orxOBJECT_EVENT_CREATE</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>orxOBJECT_EVENT_DELETE</td>
+</tr>
+<tr>
+<td>prepare</td>
+<td>orxOBJECT_EVENT_PREPARE</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>orxOBJECT_EVENT_ENABLE</td>
+</tr>
+<tr>
+<td>disable</td>
+<td>orxOBJECT_EVENT_DISABLE</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>orxOBJECT_EVENT_PAUSE</td>
+</tr>
+<tr>
+<td>unpause</td>
+<td>orxOBJECT_EVENT_UNPAUSE</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxOBJECT_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxphysics_event">orxPHYSICS_EVENT<a class="headerlink" href="#orxphysics_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contact_add</td>
+<td>orxPHYSICS_EVENT_CONTACT_ADD</td>
+</tr>
+<tr>
+<td>contact_remove</td>
+<td>orxPHYSICS_EVENT_CONTACT_REMOVE</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxPHYSICS_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxrender_event">orxRENDER_EVENT<a class="headerlink" href="#orxrender_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>orxRENDER_EVENT_START</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>orxRENDER_EVENT_STOP</td>
+</tr>
+<tr>
+<td>viewport_start</td>
+<td>orxRENDER_EVENT_VIEWPORT_START</td>
+</tr>
+<tr>
+<td>viewport_stop</td>
+<td>orxRENDER_EVENT_VIEWPORT_STOP</td>
+</tr>
+<tr>
+<td>object_start</td>
+<td>orxRENDER_EVENT_OBJECT_START</td>
+</tr>
+<tr>
+<td>object_stop</td>
+<td>orxRENDER_EVENT_OBJECT_STOP</td>
+</tr>
+<tr>
+<td>console_start</td>
+<td>orxRENDER_EVENT_CONSOLE_START</td>
+</tr>
+<tr>
+<td>console_stop</td>
+<td>orxRENDER_EVENT_CONSOLE_STOP</td>
+</tr>
+<tr>
+<td>profiler_start</td>
+<td>orxRENDER_EVENT_PROFILER_START</td>
+</tr>
+<tr>
+<td>profiler_stop</td>
+<td>orxRENDER_EVENT_PROFILER_STOP</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxRENDER_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxresource_event">orxRESOURCE_EVENT<a class="headerlink" href="#orxresource_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>update</td>
+<td>orxRESOURCE_EVENT_UPDATE</td>
+</tr>
+<tr>
+<td>add</td>
+<td>orxRESOURCE_EVENT_ADD</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>orxRESOURCE_EVENT_REMOVE</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxRESOURCE_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxseek_offset_whence">orxSEEK_OFFSET_WHENCE<a class="headerlink" href="#orxseek_offset_whence" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>orxSEEK_OFFSET_WHENCE_START</td>
+</tr>
+<tr>
+<td>current</td>
+<td>orxSEEK_OFFSET_WHENCE_CURRENT</td>
+</tr>
+<tr>
+<td>end</td>
+<td>orxSEEK_OFFSET_WHENCE_END</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxSEEK_OFFSET_WHENCE_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxshader_event">orxSHADER_EVENT<a class="headerlink" href="#orxshader_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>set_param</td>
+<td>orxSHADER_EVENT_SET_PARAM</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxSHADER_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxshader_param_type">orxSHADER_PARAM_TYPE<a class="headerlink" href="#orxshader_param_type" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>orxSHADER_PARAM_TYPE_FLOAT</td>
+</tr>
+<tr>
+<td>texture</td>
+<td>orxSHADER_PARAM_TYPE_TEXTURE</td>
+</tr>
+<tr>
+<td>vector</td>
+<td>orxSHADER_PARAM_TYPE_VECTOR</td>
+</tr>
+<tr>
+<td>time</td>
+<td>orxSHADER_PARAM_TYPE_TIME</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxSHADER_PARAM_TYPE_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxsoundsystem_status">orxSOUNDSYSTEM_STATUS<a class="headerlink" href="#orxsoundsystem_status" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>play</td>
+<td>orxSOUNDSYSTEM_STATUS_PLAY</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>orxSOUNDSYSTEM_STATUS_PAUSE</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>orxSOUNDSYSTEM_STATUS_STOP</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxSOUNDSYSTEM_STATUS_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxsound_event">orxSOUND_EVENT<a class="headerlink" href="#orxsound_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>orxSOUND_EVENT_START</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>orxSOUND_EVENT_STOP</td>
+</tr>
+<tr>
+<td>add</td>
+<td>orxSOUND_EVENT_ADD</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>orxSOUND_EVENT_REMOVE</td>
+</tr>
+<tr>
+<td>packet</td>
+<td>orxSOUND_EVENT_PACKET</td>
+</tr>
+<tr>
+<td>recording_start</td>
+<td>orxSOUND_EVENT_RECORDING_START</td>
+</tr>
+<tr>
+<td>recording_stop</td>
+<td>orxSOUND_EVENT_RECORDING_STOP</td>
+</tr>
+<tr>
+<td>recording_packet</td>
+<td>orxSOUND_EVENT_RECORDING_PACKET</td>
+</tr>
+<tr>
+<td>set_filter_param</td>
+<td>orxSOUND_EVENT_SET_FILTER_PARAM</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxSOUND_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxsound_filter_type">orxSOUND_FILTER_TYPE<a class="headerlink" href="#orxsound_filter_type" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>biquad</td>
+<td>orxSOUND_FILTER_TYPE_BIQUAD</td>
+</tr>
+<tr>
+<td>low_pass</td>
+<td>orxSOUND_FILTER_TYPE_LOW_PASS</td>
+</tr>
+<tr>
+<td>high_pass</td>
+<td>orxSOUND_FILTER_TYPE_HIGH_PASS</td>
+</tr>
+<tr>
+<td>band_pass</td>
+<td>orxSOUND_FILTER_TYPE_BAND_PASS</td>
+</tr>
+<tr>
+<td>low_shelf</td>
+<td>orxSOUND_FILTER_TYPE_LOW_SHELF</td>
+</tr>
+<tr>
+<td>high_shelf</td>
+<td>orxSOUND_FILTER_TYPE_HIGH_SHELF</td>
+</tr>
+<tr>
+<td>notch</td>
+<td>orxSOUND_FILTER_TYPE_NOTCH</td>
+</tr>
+<tr>
+<td>peaking</td>
+<td>orxSOUND_FILTER_TYPE_PEAKING</td>
+</tr>
+<tr>
+<td>delay</td>
+<td>orxSOUND_FILTER_TYPE_DELAY</td>
+</tr>
+<tr>
+<td>custom</td>
+<td>orxSOUND_FILTER_TYPE_CUSTOM</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxSOUND_FILTER_TYPE_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxsound_status">orxSOUND_STATUS<a class="headerlink" href="#orxsound_status" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>play</td>
+<td>orxSOUND_STATUS_PLAY</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>orxSOUND_STATUS_PAUSE</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>orxSOUND_STATUS_STOP</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxSOUND_STATUS_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxspawner_event">orxSPAWNER_EVENT<a class="headerlink" href="#orxspawner_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>spawn</td>
+<td>orxSPAWNER_EVENT_SPAWN</td>
+</tr>
+<tr>
+<td>create</td>
+<td>orxSPAWNER_EVENT_CREATE</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>orxSPAWNER_EVENT_DELETE</td>
+</tr>
+<tr>
+<td>reset</td>
+<td>orxSPAWNER_EVENT_RESET</td>
+</tr>
+<tr>
+<td>empty</td>
+<td>orxSPAWNER_EVENT_EMPTY</td>
+</tr>
+<tr>
+<td>wave_start</td>
+<td>orxSPAWNER_EVENT_WAVE_START</td>
+</tr>
+<tr>
+<td>wave_stop</td>
+<td>orxSPAWNER_EVENT_WAVE_STOP</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxSPAWNER_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxstatus">orxSTATUS<a class="headerlink" href="#orxstatus" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>failure</td>
+<td>orxSTATUS_FAILURE</td>
+</tr>
+<tr>
+<td>success</td>
+<td>orxSTATUS_SUCCESS</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxSTATUS_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxstructure_id">orxSTRUCTURE_ID<a class="headerlink" href="#orxstructure_id" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>animpointer</td>
+<td>orxSTRUCTURE_ID_ANIMPOINTER</td>
+</tr>
+<tr>
+<td>body</td>
+<td>orxSTRUCTURE_ID_BODY</td>
+</tr>
+<tr>
+<td>clock</td>
+<td>orxSTRUCTURE_ID_CLOCK</td>
+</tr>
+<tr>
+<td>frame</td>
+<td>orxSTRUCTURE_ID_FRAME</td>
+</tr>
+<tr>
+<td>fxpointer</td>
+<td>orxSTRUCTURE_ID_FXPOINTER</td>
+</tr>
+<tr>
+<td>graphic</td>
+<td>orxSTRUCTURE_ID_GRAPHIC</td>
+</tr>
+<tr>
+<td>shaderpointer</td>
+<td>orxSTRUCTURE_ID_SHADERPOINTER</td>
+</tr>
+<tr>
+<td>soundpointer</td>
+<td>orxSTRUCTURE_ID_SOUNDPOINTER</td>
+</tr>
+<tr>
+<td>spawner</td>
+<td>orxSTRUCTURE_ID_SPAWNER</td>
+</tr>
+<tr>
+<td>timeline</td>
+<td>orxSTRUCTURE_ID_TIMELINE</td>
+</tr>
+<tr>
+<td>anim</td>
+<td>orxSTRUCTURE_ID_ANIM</td>
+</tr>
+<tr>
+<td>animset</td>
+<td>orxSTRUCTURE_ID_ANIMSET</td>
+</tr>
+<tr>
+<td>camera</td>
+<td>orxSTRUCTURE_ID_CAMERA</td>
+</tr>
+<tr>
+<td>font</td>
+<td>orxSTRUCTURE_ID_FONT</td>
+</tr>
+<tr>
+<td>fx</td>
+<td>orxSTRUCTURE_ID_FX</td>
+</tr>
+<tr>
+<td>object</td>
+<td>orxSTRUCTURE_ID_OBJECT</td>
+</tr>
+<tr>
+<td>shader</td>
+<td>orxSTRUCTURE_ID_SHADER</td>
+</tr>
+<tr>
+<td>sound</td>
+<td>orxSTRUCTURE_ID_SOUND</td>
+</tr>
+<tr>
+<td>text</td>
+<td>orxSTRUCTURE_ID_TEXT</td>
+</tr>
+<tr>
+<td>texture</td>
+<td>orxSTRUCTURE_ID_TEXTURE</td>
+</tr>
+<tr>
+<td>viewport</td>
+<td>orxSTRUCTURE_ID_VIEWPORT</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxSTRUCTURE_ID_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxstructure_storage_type">orxSTRUCTURE_STORAGE_TYPE<a class="headerlink" href="#orxstructure_storage_type" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>linklist</td>
+<td>orxSTRUCTURE_STORAGE_TYPE_LINKLIST</td>
+</tr>
+<tr>
+<td>tree</td>
+<td>orxSTRUCTURE_STORAGE_TYPE_TREE</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxSTRUCTURE_STORAGE_TYPE_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxsystem_event">orxSYSTEM_EVENT<a class="headerlink" href="#orxsystem_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>close</td>
+<td>orxSYSTEM_EVENT_CLOSE</td>
+</tr>
+<tr>
+<td>focus_gained</td>
+<td>orxSYSTEM_EVENT_FOCUS_GAINED</td>
+</tr>
+<tr>
+<td>focus_lost</td>
+<td>orxSYSTEM_EVENT_FOCUS_LOST</td>
+</tr>
+<tr>
+<td>background</td>
+<td>orxSYSTEM_EVENT_BACKGROUND</td>
+</tr>
+<tr>
+<td>foreground</td>
+<td>orxSYSTEM_EVENT_FOREGROUND</td>
+</tr>
+<tr>
+<td>game_loop_start</td>
+<td>orxSYSTEM_EVENT_GAME_LOOP_START</td>
+</tr>
+<tr>
+<td>game_loop_stop</td>
+<td>orxSYSTEM_EVENT_GAME_LOOP_STOP</td>
+</tr>
+<tr>
+<td>touch_begin</td>
+<td>orxSYSTEM_EVENT_TOUCH_BEGIN</td>
+</tr>
+<tr>
+<td>touch_move</td>
+<td>orxSYSTEM_EVENT_TOUCH_MOVE</td>
+</tr>
+<tr>
+<td>touch_end</td>
+<td>orxSYSTEM_EVENT_TOUCH_END</td>
+</tr>
+<tr>
+<td>accelerate</td>
+<td>orxSYSTEM_EVENT_ACCELERATE</td>
+</tr>
+<tr>
+<td>motion_shake</td>
+<td>orxSYSTEM_EVENT_MOTION_SHAKE</td>
+</tr>
+<tr>
+<td>drop</td>
+<td>orxSYSTEM_EVENT_DROP</td>
+</tr>
+<tr>
+<td>clipboard</td>
+<td>orxSYSTEM_EVENT_CLIPBOARD</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxSYSTEM_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxtexture_event">orxTEXTURE_EVENT<a class="headerlink" href="#orxtexture_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>create</td>
+<td>orxTEXTURE_EVENT_CREATE</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>orxTEXTURE_EVENT_DELETE</td>
+</tr>
+<tr>
+<td>load</td>
+<td>orxTEXTURE_EVENT_LOAD</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxTEXTURE_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxtimeline_event">orxTIMELINE_EVENT<a class="headerlink" href="#orxtimeline_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>track_start</td>
+<td>orxTIMELINE_EVENT_TRACK_START</td>
+</tr>
+<tr>
+<td>track_stop</td>
+<td>orxTIMELINE_EVENT_TRACK_STOP</td>
+</tr>
+<tr>
+<td>track_add</td>
+<td>orxTIMELINE_EVENT_TRACK_ADD</td>
+</tr>
+<tr>
+<td>track_remove</td>
+<td>orxTIMELINE_EVENT_TRACK_REMOVE</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>orxTIMELINE_EVENT_LOOP</td>
+</tr>
+<tr>
+<td>trigger</td>
+<td>orxTIMELINE_EVENT_TRIGGER</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxTIMELINE_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="orxviewport_event">orxVIEWPORT_EVENT<a class="headerlink" href="#orxviewport_event" title="Permanent link">#</a></h2>
+<table>
+<thead>
+<tr>
+<th>lua string</th>
+<th>orx enum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>resize</td>
+<td>orxVIEWPORT_EVENT_RESIZE</td>
+</tr>
+<tr>
+<td>none</td>
+<td>orxVIEWPORT_EVENT_NONE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="types/orxVIEWPORT.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: orxVIEWPORT" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              orxVIEWPORT
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="constants.html" class="md-footer__link md-footer__link--next" aria-label="Next: Constants" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Constants
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+<script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+
+<script src="assets/javascripts/iframe-worker.js"></script>
+<script src="search/search_index.js"></script>
+
+
+    
+      <script src="assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

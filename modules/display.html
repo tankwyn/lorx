@@ -1,0 +1,5260 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://changeme.foo.bar/modules/display.html">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>display - LORX</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-display" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="LORX" class="md-header__button md-logo" aria-label="LORX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LORX
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              display
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      Overview
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../root.html" class="md-tabs__link">
+      Root Module
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="constants.html" class="md-tabs__link md-tabs__link--active">
+        Modules
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../types/orxAABOX.html" class="md-tabs__link">
+        Types
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../enums.html" class="md-tabs__link">
+      Enums
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../constants.html" class="md-tabs__link">
+      Constants
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../callbacks.html" class="md-tabs__link">
+      Callbacks
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="LORX" class="md-nav__button md-logo" aria-label="LORX" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    LORX
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../root.html" class="md-nav__link">
+        Root Module
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Modules
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Modules" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Modules
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="constants.html" class="md-nav__link">
+        constants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="aabox.html" class="md-nav__link">
+        aabox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="anim.html" class="md-nav__link">
+        anim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="animpointer.html" class="md-nav__link">
+        animpointer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="animset.html" class="md-nav__link">
+        animset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="body.html" class="md-nav__link">
+        body
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="camera.html" class="md-nav__link">
+        camera
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="clock.html" class="md-nav__link">
+        clock
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="command.html" class="md-nav__link">
+        command
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="config.html" class="md-nav__link">
+        config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="console.html" class="md-nav__link">
+        console
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="debug.html" class="md-nav__link">
+        debug
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          display
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="display.html" class="md-nav__link md-nav__link--active">
+        display
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    functions
+  </a>
+  
+    <nav class="md-nav" aria-label="functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characterglyph" class="md-nav__link">
+    characterGlyph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearbitmap" class="md-nav__link">
+    clearBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color" class="md-nav__link">
+    color
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createbitmap" class="md-nav__link">
+    createBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleteshader" class="md-nav__link">
+    deleteShader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displaytransform" class="md-nav__link">
+    displayTransform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displayvideomode" class="md-nav__link">
+    displayVideoMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawcircle" class="md-nav__link">
+    drawCircle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawline" class="md-nav__link">
+    drawLine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawmesh" class="md-nav__link">
+    drawMesh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawobox" class="md-nav__link">
+    drawOBox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawpolygon" class="md-nav__link">
+    drawPolygon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawpolyline" class="md-nav__link">
+    drawPolyline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enablevsync" class="md-nav__link">
+    enableVSync
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit" class="md-nav__link">
+    exit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getblendmodefromstring" class="md-nav__link">
+    getBlendModeFromString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getparameterid" class="md-nav__link">
+    getParameterID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getscreenbitmap" class="md-nav__link">
+    getScreenBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getscreensize" class="md-nav__link">
+    getScreenSize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getshaderid" class="md-nav__link">
+    getShaderID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettempbitmapconst" class="md-nav__link">
+    getTempBitmapConst
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvideomode" class="md-nav__link">
+    getVideoMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvideomodecount" class="md-nav__link">
+    getVideoModeCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasshadersupport" class="md-nav__link">
+    hasShaderSupport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isfullscreen" class="md-nav__link">
+    isFullScreen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isvsyncenabled" class="md-nav__link">
+    isVSyncEnabled
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isvideomodeavailable" class="md-nav__link">
+    isVideoModeAvailable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadbitmap" class="md-nav__link">
+    loadBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rgba" class="md-nav__link">
+    rgba
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rgbaset" class="md-nav__link">
+    rgbaSet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setbitmapclipping" class="md-nav__link">
+    setBitmapClipping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setblendmode" class="md-nav__link">
+    setBlendMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdestinationbitmaps" class="md-nav__link">
+    setDestinationBitmaps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setfullscreen" class="md-nav__link">
+    setFullScreen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setshaderbitmap" class="md-nav__link">
+    setShaderBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setshaderfloat" class="md-nav__link">
+    setShaderFloat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setshadervector" class="md-nav__link">
+    setShaderVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settempbitmap" class="md-nav__link">
+    setTempBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setvideomode" class="md-nav__link">
+    setVideoMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startshader" class="md-nav__link">
+    startShader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopshader" class="md-nav__link">
+    stopShader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swap" class="md-nav__link">
+    swap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformbitmap" class="md-nav__link">
+    transformBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformtext" class="md-nav__link">
+    transformText
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="event.html" class="md-nav__link">
+        event
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="file.html" class="md-nav__link">
+        file
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="font.html" class="md-nav__link">
+        font
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fps.html" class="md-nav__link">
+        fps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="frame.html" class="md-nav__link">
+        frame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fx.html" class="md-nav__link">
+        fx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fxpointer.html" class="md-nav__link">
+        fxpointer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graphic.html" class="md-nav__link">
+        graphic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="input.html" class="md-nav__link">
+        input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="joystick.html" class="md-nav__link">
+        joystick
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="keyboard.html" class="md-nav__link">
+        keyboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="locale.html" class="md-nav__link">
+        locale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="math.html" class="md-nav__link">
+        math
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="module.html" class="md-nav__link">
+        module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mouse.html" class="md-nav__link">
+        mouse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="object.html" class="md-nav__link">
+        object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="obox.html" class="md-nav__link">
+        obox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="physics.html" class="md-nav__link">
+        physics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="profiler.html" class="md-nav__link">
+        profiler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="render.html" class="md-nav__link">
+        render
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="resource.html" class="md-nav__link">
+        resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="screenshot.html" class="md-nav__link">
+        screenshot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="shader.html" class="md-nav__link">
+        shader
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="shaderpointer.html" class="md-nav__link">
+        shaderpointer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sound.html" class="md-nav__link">
+        sound
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="soundpointer.html" class="md-nav__link">
+        soundpointer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="soundsystem.html" class="md-nav__link">
+        soundsystem
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="spawner.html" class="md-nav__link">
+        spawner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="string.html" class="md-nav__link">
+        string
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="structure.html" class="md-nav__link">
+        structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="system.html" class="md-nav__link">
+        system
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="text.html" class="md-nav__link">
+        text
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="texture.html" class="md-nav__link">
+        texture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="thread.html" class="md-nav__link">
+        thread
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="timeline.html" class="md-nav__link">
+        timeline
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vector.html" class="md-nav__link">
+        vector
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="viewport.html" class="md-nav__link">
+        viewport
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Types
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Types" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Types
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxAABOX.html" class="md-nav__link">
+        orxAABOX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxANIM.html" class="md-nav__link">
+        orxANIM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxANIMPOINTER.html" class="md-nav__link">
+        orxANIMPOINTER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxANIMSET.html" class="md-nav__link">
+        orxANIMSET
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxANIMSET_LINK_TABLE.html" class="md-nav__link">
+        orxANIMSET_LINK_TABLE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxANIM_CUSTOM_EVENT.html" class="md-nav__link">
+        orxANIM_CUSTOM_EVENT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxBITMAP.html" class="md-nav__link">
+        orxBITMAP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxBODY.html" class="md-nav__link">
+        orxBODY
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxBODY_JOINT.html" class="md-nav__link">
+        orxBODY_JOINT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxBODY_PART.html" class="md-nav__link">
+        orxBODY_PART
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCAMERA.html" class="md-nav__link">
+        orxCAMERA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCHARACTER_GLYPH.html" class="md-nav__link">
+        orxCHARACTER_GLYPH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCHARACTER_MAP.html" class="md-nav__link">
+        orxCHARACTER_MAP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCLOCK.html" class="md-nav__link">
+        orxCLOCK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCLOCK_INFO.html" class="md-nav__link">
+        orxCLOCK_INFO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCOLOR.html" class="md-nav__link">
+        orxCOLOR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxCOMMAND_VAR.html" class="md-nav__link">
+        orxCOMMAND_VAR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxDISPLAY_MESH.html" class="md-nav__link">
+        orxDISPLAY_MESH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxDISPLAY_TRANSFORM.html" class="md-nav__link">
+        orxDISPLAY_TRANSFORM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxDISPLAY_VIDEO_MODE.html" class="md-nav__link">
+        orxDISPLAY_VIDEO_MODE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxFILE.html" class="md-nav__link">
+        orxFILE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxFILE_INFO.html" class="md-nav__link">
+        orxFILE_INFO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxFONT.html" class="md-nav__link">
+        orxFONT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxFRAME.html" class="md-nav__link">
+        orxFRAME
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxFX.html" class="md-nav__link">
+        orxFX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxFXPOINTER.html" class="md-nav__link">
+        orxFXPOINTER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxGRAPHIC.html" class="md-nav__link">
+        orxGRAPHIC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxOBJECT.html" class="md-nav__link">
+        orxOBJECT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxOBOX.html" class="md-nav__link">
+        orxOBOX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxPHYSICS_BODY.html" class="md-nav__link">
+        orxPHYSICS_BODY
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxPHYSICS_BODY_JOINT.html" class="md-nav__link">
+        orxPHYSICS_BODY_JOINT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxPHYSICS_BODY_PART.html" class="md-nav__link">
+        orxPHYSICS_BODY_PART
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxRGBA.html" class="md-nav__link">
+        orxRGBA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSHADER.html" class="md-nav__link">
+        orxSHADER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSHADERPOINTER.html" class="md-nav__link">
+        orxSHADERPOINTER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUND.html" class="md-nav__link">
+        orxSOUND
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUNDPOINTER.html" class="md-nav__link">
+        orxSOUNDPOINTER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUNDSYSTEM_SAMPLE.html" class="md-nav__link">
+        orxSOUNDSYSTEM_SAMPLE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUNDSYSTEM_SOUND.html" class="md-nav__link">
+        orxSOUNDSYSTEM_SOUND
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUND_FILTER_DATA.html" class="md-nav__link">
+        orxSOUND_FILTER_DATA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUND_STREAM_INFO.html" class="md-nav__link">
+        orxSOUND_STREAM_INFO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSOUND_STREAM_PACKET.html" class="md-nav__link">
+        orxSOUND_STREAM_PACKET
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSPAWNER.html" class="md-nav__link">
+        orxSPAWNER
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxSTRUCTURE.html" class="md-nav__link">
+        orxSTRUCTURE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxTEXT.html" class="md-nav__link">
+        orxTEXT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxTEXTURE.html" class="md-nav__link">
+        orxTEXTURE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxTHREAD_SEMAPHORE.html" class="md-nav__link">
+        orxTHREAD_SEMAPHORE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxTIMELINE.html" class="md-nav__link">
+        orxTIMELINE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxVECTOR.html" class="md-nav__link">
+        orxVECTOR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/orxVIEWPORT.html" class="md-nav__link">
+        orxVIEWPORT
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums.html" class="md-nav__link">
+        Enums
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../constants.html" class="md-nav__link">
+        Constants
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../callbacks.html" class="md-nav__link">
+        Callbacks
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    functions
+  </a>
+  
+    <nav class="md-nav" aria-label="functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characterglyph" class="md-nav__link">
+    characterGlyph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clearbitmap" class="md-nav__link">
+    clearBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color" class="md-nav__link">
+    color
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createbitmap" class="md-nav__link">
+    createBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleteshader" class="md-nav__link">
+    deleteShader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displaytransform" class="md-nav__link">
+    displayTransform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displayvideomode" class="md-nav__link">
+    displayVideoMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawcircle" class="md-nav__link">
+    drawCircle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawline" class="md-nav__link">
+    drawLine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawmesh" class="md-nav__link">
+    drawMesh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawobox" class="md-nav__link">
+    drawOBox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawpolygon" class="md-nav__link">
+    drawPolygon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawpolyline" class="md-nav__link">
+    drawPolyline
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enablevsync" class="md-nav__link">
+    enableVSync
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit" class="md-nav__link">
+    exit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getblendmodefromstring" class="md-nav__link">
+    getBlendModeFromString
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getparameterid" class="md-nav__link">
+    getParameterID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getscreenbitmap" class="md-nav__link">
+    getScreenBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getscreensize" class="md-nav__link">
+    getScreenSize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getshaderid" class="md-nav__link">
+    getShaderID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gettempbitmapconst" class="md-nav__link">
+    getTempBitmapConst
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvideomode" class="md-nav__link">
+    getVideoMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getvideomodecount" class="md-nav__link">
+    getVideoModeCount
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasshadersupport" class="md-nav__link">
+    hasShaderSupport
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isfullscreen" class="md-nav__link">
+    isFullScreen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isvsyncenabled" class="md-nav__link">
+    isVSyncEnabled
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isvideomodeavailable" class="md-nav__link">
+    isVideoModeAvailable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loadbitmap" class="md-nav__link">
+    loadBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rgba" class="md-nav__link">
+    rgba
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rgbaset" class="md-nav__link">
+    rgbaSet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setbitmapclipping" class="md-nav__link">
+    setBitmapClipping
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setblendmode" class="md-nav__link">
+    setBlendMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdestinationbitmaps" class="md-nav__link">
+    setDestinationBitmaps
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setfullscreen" class="md-nav__link">
+    setFullScreen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setshaderbitmap" class="md-nav__link">
+    setShaderBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setshaderfloat" class="md-nav__link">
+    setShaderFloat
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setshadervector" class="md-nav__link">
+    setShaderVector
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settempbitmap" class="md-nav__link">
+    setTempBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setvideomode" class="md-nav__link">
+    setVideoMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startshader" class="md-nav__link">
+    startShader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stopshader" class="md-nav__link">
+    stopShader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swap" class="md-nav__link">
+    swap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformbitmap" class="md-nav__link">
+    transformBitmap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transformtext" class="md-nav__link">
+    transformText
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="module-display">module display<a class="headerlink" href="#module-display" title="Permanent link">#</a></h1>
+<h2 id="functions">functions<a class="headerlink" href="#functions" title="Permanent link">#</a></h2>
+<h3 id="characterglyph"><strong><code>characterGlyph</code></strong><a class="headerlink" href="#characterglyph" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">characterGlyph</span><span class="p">(</span><span class="n">fX</span><span class="p">,</span> <span class="n">fY</span><span class="p">,</span> <span class="n">fWidth</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Create a new <a href="../types/orxCHARACTER_GLYPH.html">orxCHARACTER_GLYPH</a> </p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fX</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>fY</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>fWidth</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxCHARACTER_GLYPH.html">orxCHARACTER_GLYPH</a></td>
+<td>The new instance</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="clearbitmap"><strong><code>clearBitmap</code></strong><a class="headerlink" href="#clearbitmap" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">clearBitmap</span><span class="p">(</span><span class="n">bitmap</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Clears a bitmap</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bitmap</td>
+<td><a href="../types/orxBITMAP.html">orxBITMAP</a></td>
+<td>Concerned bitmap, if nil all the current destination bitmaps will be cleared instead</td>
+</tr>
+<tr>
+<td>color</td>
+<td><a href="../types/orxRGBA.html">orxRGBA</a></td>
+<td>Color to clear the bitmap with</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_ClearBitmap</span><span class="p">(</span><span class="n">orxBITMAP</span><span class="w"> </span><span class="o">*</span><span class="n">_pstBitmap</span><span class="p">,</span><span class="w"> </span><span class="n">orxRGBA</span><span class="w"> </span><span class="n">_stColor</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="color"><strong><code>color</code></strong><a class="headerlink" href="#color" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">color</span><span class="p">(</span><span class="n">vRGB</span><span class="p">,</span> <span class="n">fAlpha</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Create a new <a href="../types/orxCOLOR.html">orxCOLOR</a> </p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vRGB</td>
+<td><a href="../types/orxVECTOR.html">orxVECTOR</a></td>
+<td></td>
+</tr>
+<tr>
+<td>fAlpha</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxCOLOR.html">orxCOLOR</a></td>
+<td>The new instance</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="createbitmap"><strong><code>createBitmap</code></strong><a class="headerlink" href="#createbitmap" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">createBitmap</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Creates a bitmap</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td>integer</td>
+<td>Bitmap width</td>
+</tr>
+<tr>
+<td>height</td>
+<td>integer</td>
+<td>Bitmap height</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxBITMAP.html">orxBITMAP</a></td>
+<td><a href="../types/orxBITMAP.html">orxBITMAP</a> / nil</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">  </span><span class="n">orxBITMAP</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">orxDisplay_CreateBitmap</span><span class="p">(</span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32Width</span><span class="p">,</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32Height</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="deleteshader"><strong><code>deleteShader</code></strong><a class="headerlink" href="#deleteshader" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">deleteShader</span><span class="p">(</span><span class="n">shader</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Deletes a compiled shader</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shader</td>
+<td>orxHANDLE</td>
+<td>Shader to delete</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>Returns:</p>
+</li>
+<li>
+<p>C signature:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">  </span><span class="kt">void</span><span class="w">  </span><span class="n">orxDisplay_DeleteShader</span><span class="p">(</span><span class="n">orxHANDLE</span><span class="w"> </span><span class="n">_hShader</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="displaytransform"><strong><code>displayTransform</code></strong><a class="headerlink" href="#displaytransform" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">displayTransform</span><span class="p">(</span><span class="n">fSrcX</span><span class="p">,</span> <span class="n">fSrcY</span><span class="p">,</span> <span class="n">fDstX</span><span class="p">,</span> <span class="n">fDstY</span><span class="p">,</span> <span class="n">fRepeatX</span><span class="p">,</span> <span class="n">fRepeatY</span><span class="p">,</span> <span class="n">fScaleX</span><span class="p">,</span> <span class="n">fScaleY</span><span class="p">,</span> <span class="n">fRotation</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Create a new <a href="../types/orxDISPLAY_TRANSFORM.html">orxDISPLAY_TRANSFORM</a> </p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fSrcX</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>fSrcY</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>fDstX</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>fDstY</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>fRepeatX</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>fRepeatY</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>fScaleX</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>fScaleY</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>fRotation</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxDISPLAY_TRANSFORM.html">orxDISPLAY_TRANSFORM</a></td>
+<td>The new instance</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="displayvideomode"><strong><code>displayVideoMode</code></strong><a class="headerlink" href="#displayvideomode" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">displayVideoMode</span><span class="p">(</span><span class="n">u32Width</span><span class="p">,</span> <span class="n">u32Height</span><span class="p">,</span> <span class="n">u32Depth</span><span class="p">,</span> <span class="n">u32RefreshRate</span><span class="p">,</span> <span class="n">bFullScreen</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Create a new <a href="../types/orxDISPLAY_VIDEO_MODE.html">orxDISPLAY_VIDEO_MODE</a> </p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u32Width</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>u32Height</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>u32Depth</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>u32RefreshRate</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>bFullScreen</td>
+<td>boolean</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxDISPLAY_VIDEO_MODE.html">orxDISPLAY_VIDEO_MODE</a></td>
+<td>The new instance</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="drawcircle"><strong><code>drawCircle</code></strong><a class="headerlink" href="#drawcircle" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">drawCircle</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">fill</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Draws a circle</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>center</td>
+<td><a href="../types/orxVECTOR.html">orxVECTOR#</a></td>
+<td>Center</td>
+</tr>
+<tr>
+<td>radius</td>
+<td>number</td>
+<td>Radius</td>
+</tr>
+<tr>
+<td>color</td>
+<td><a href="../types/orxRGBA.html">orxRGBA</a></td>
+<td>Color</td>
+</tr>
+<tr>
+<td>fill</td>
+<td>boolean</td>
+<td>If true, the polygon will be filled otherwise only its outline will be drawn</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_DrawCircle</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxVECTOR</span><span class="w"> </span><span class="o">*</span><span class="n">_pvCenter</span><span class="p">,</span><span class="w"> </span><span class="n">orxFLOAT</span><span class="w"> </span><span class="n">_fRadius</span><span class="p">,</span><span class="w"> </span><span class="n">orxRGBA</span><span class="w"> </span><span class="n">_stColor</span><span class="p">,</span><span class="w"> </span><span class="n">orxBOOL</span><span class="w"> </span><span class="n">_bFill</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="drawline"><strong><code>drawLine</code></strong><a class="headerlink" href="#drawline" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">drawLine</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="kr">end</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Draws a line</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td><a href="../types/orxVECTOR.html">orxVECTOR#</a></td>
+<td>Start point</td>
+</tr>
+<tr>
+<td>end</td>
+<td><a href="../types/orxVECTOR.html">orxVECTOR#</a></td>
+<td>End point</td>
+</tr>
+<tr>
+<td>color</td>
+<td><a href="../types/orxRGBA.html">orxRGBA</a></td>
+<td>Color</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_DrawLine</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxVECTOR</span><span class="w"> </span><span class="o">*</span><span class="n">_pvStart</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxVECTOR</span><span class="w"> </span><span class="o">*</span><span class="n">_pvEnd</span><span class="p">,</span><span class="w"> </span><span class="n">orxRGBA</span><span class="w"> </span><span class="n">_stColor</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="drawmesh"><strong><code>drawMesh</code></strong><a class="headerlink" href="#drawmesh" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">drawMesh</span><span class="p">(</span><span class="n">mesh</span><span class="p">,</span> <span class="n">bitmap</span><span class="p">,</span> <span class="n">smoothing</span><span class="p">,</span> <span class="n">blendmode</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Draws a textured mesh</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mesh</td>
+<td><a href="../types/orxDISPLAY_MESH.html">orxDISPLAY_MESH#</a></td>
+<td>Mesh to draw, if no primitive and no index buffer is given, separate quads arrangement will be assumed</td>
+</tr>
+<tr>
+<td>bitmap</td>
+<td><a href="../types/orxBITMAP.html">orxBITMAP#</a></td>
+<td>Bitmap to use for texturing, nil to use the current one</td>
+</tr>
+<tr>
+<td>smoothing</td>
+<td><a href="../enums.html#orxdisplay_smoothing">orxDISPLAY_SMOOTHING</a></td>
+<td>Bitmap smoothing type</td>
+</tr>
+<tr>
+<td>blendmode</td>
+<td><a href="../enums.html#orxdisplay_blend_mode">orxDISPLAY_BLEND_MODE</a></td>
+<td>Blend mode</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_DrawMesh</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxDISPLAY_MESH</span><span class="w"> </span><span class="o">*</span><span class="n">_pstMesh</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxBITMAP</span><span class="w"> </span><span class="o">*</span><span class="n">_pstBitmap</span><span class="p">,</span><span class="w"> </span><span class="n">orxDISPLAY_SMOOTHING</span><span class="w"> </span><span class="n">_eSmoothing</span><span class="p">,</span><span class="w"> </span><span class="n">orxDISPLAY_BLEND_MODE</span><span class="w"> </span><span class="n">_eBlendMode</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="drawobox"><strong><code>drawOBox</code></strong><a class="headerlink" href="#drawobox" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">drawOBox</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">fill</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Draws an oriented box</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>box</td>
+<td><a href="../types/orxOBOX.html">orxOBOX#</a></td>
+<td>Box to draw</td>
+</tr>
+<tr>
+<td>color</td>
+<td><a href="../types/orxRGBA.html">orxRGBA</a></td>
+<td>Color</td>
+</tr>
+<tr>
+<td>fill</td>
+<td>boolean</td>
+<td>If true, the polygon will be filled otherwise only its outline will be drawn</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_DrawOBox</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxOBOX</span><span class="w"> </span><span class="o">*</span><span class="n">_pstBox</span><span class="p">,</span><span class="w"> </span><span class="n">orxRGBA</span><span class="w"> </span><span class="n">_stColor</span><span class="p">,</span><span class="w"> </span><span class="n">orxBOOL</span><span class="w"> </span><span class="n">_bFill</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="drawpolygon"><strong><code>drawPolygon</code></strong><a class="headerlink" href="#drawpolygon" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">drawPolygon</span><span class="p">(</span><span class="n">vertexlist</span><span class="p">,</span> <span class="n">vertexnumber</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">fill</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Draws a (closed) polygon; filled polygons *need* to be either convex or star-shaped concave with the first vertex part of the polygon's kernel</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vertexlist</td>
+<td>table of <a href="../types/orxVECTOR.html">orxVECTOR</a></td>
+<td>List of vertices</td>
+</tr>
+<tr>
+<td>vertexnumber</td>
+<td>integer</td>
+<td>Number of vertices in the list</td>
+</tr>
+<tr>
+<td>color</td>
+<td><a href="../types/orxRGBA.html">orxRGBA</a></td>
+<td>Color</td>
+</tr>
+<tr>
+<td>fill</td>
+<td>boolean</td>
+<td>If true, the polygon will be filled otherwise only its outline will be drawn</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_DrawPolygon</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxVECTOR</span><span class="w"> </span><span class="o">*</span><span class="n">_avVertexList</span><span class="p">,</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32VertexNumber</span><span class="p">,</span><span class="w"> </span><span class="n">orxRGBA</span><span class="w"> </span><span class="n">_stColor</span><span class="p">,</span><span class="w"> </span><span class="n">orxBOOL</span><span class="w"> </span><span class="n">_bFill</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="drawpolyline"><strong><code>drawPolyline</code></strong><a class="headerlink" href="#drawpolyline" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">drawPolyline</span><span class="p">(</span><span class="n">vertexlist</span><span class="p">,</span> <span class="n">vertexnumber</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Draws a polyline (aka open polygon)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vertexlist</td>
+<td>table of <a href="../types/orxVECTOR.html">orxVECTOR</a></td>
+<td>List of vertices</td>
+</tr>
+<tr>
+<td>vertexnumber</td>
+<td>integer</td>
+<td>Number of vertices in the list</td>
+</tr>
+<tr>
+<td>color</td>
+<td><a href="../types/orxRGBA.html">orxRGBA</a></td>
+<td>Color</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_DrawPolyline</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxVECTOR</span><span class="w"> </span><span class="o">*</span><span class="n">_avVertexList</span><span class="p">,</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32VertexNumber</span><span class="p">,</span><span class="w"> </span><span class="n">orxRGBA</span><span class="w"> </span><span class="n">_stColor</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="enablevsync"><strong><code>enableVSync</code></strong><a class="headerlink" href="#enablevsync" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">enableVSync</span><span class="p">(</span><span class="n">enable</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Enables / disables vertical synchro</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enable</td>
+<td>boolean</td>
+<td>Enable / disable</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_EnableVSync</span><span class="p">(</span><span class="n">orxBOOL</span><span class="w"> </span><span class="n">_bEnable</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="exit"><strong><code>exit</code></strong><a class="headerlink" href="#exit" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">exit</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Exits from the display module</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+<li>
+<p>C signature:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="w">  </span><span class="kt">void</span><span class="w">  </span><span class="n">orxDisplay_Exit</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getblendmodefromstring"><strong><code>getBlendModeFromString</code></strong><a class="headerlink" href="#getblendmodefromstring" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getBlendModeFromString</span><span class="p">(</span><span class="n">blendmode</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets blend mode from a string</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>blendmode</td>
+<td>string</td>
+<td>String to evaluate</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxdisplay_blend_mode">orxDISPLAY_BLEND_MODE</a></td>
+<td><a href="../enums.html#orxdisplay_blend_mode">orxDISPLAY_BLEND_MODE</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="w">  </span><span class="n">orxDISPLAY_BLEND_MODE</span><span class="w">  </span><span class="n">orxDisplay_GetBlendModeFromString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zBlendMode</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getparameterid"><strong><code>getParameterID</code></strong><a class="headerlink" href="#getparameterid" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getParameterID</span><span class="p">(</span><span class="n">shader</span><span class="p">,</span> <span class="n">param</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">istexture</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets a shader parameter's ID</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shader</td>
+<td>orxHANDLE</td>
+<td>Concerned shader</td>
+</tr>
+<tr>
+<td>param</td>
+<td>string</td>
+<td>Parameter name</td>
+</tr>
+<tr>
+<td>index</td>
+<td>integer</td>
+<td>Parameter index, -1 for non-array types</td>
+</tr>
+<tr>
+<td>istexture</td>
+<td>boolean</td>
+<td>Is parameter a texture?</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>Parameter ID</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="w">  </span><span class="n">orxS32</span><span class="w">  </span><span class="n">orxDisplay_GetParameterID</span><span class="p">(</span><span class="n">orxHANDLE</span><span class="w"> </span><span class="n">_hShader</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zParam</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32Index</span><span class="p">,</span><span class="w"> </span><span class="n">orxBOOL</span><span class="w"> </span><span class="n">_bIsTexture</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getscreenbitmap"><strong><code>getScreenBitmap</code></strong><a class="headerlink" href="#getscreenbitmap" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getScreenBitmap</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets screen bitmap</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxBITMAP.html">orxBITMAP</a></td>
+<td><a href="../types/orxBITMAP.html">orxBITMAP</a> / nil</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="w">  </span><span class="n">orxBITMAP</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">orxDisplay_GetScreenBitmap</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getscreensize"><strong><code>getScreenSize</code></strong><a class="headerlink" href="#getscreensize" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">r1</span><span class="p">,</span> <span class="n">r2</span><span class="p">,</span> <span class="n">r3</span> <span class="o">=</span> <span class="n">getScreenSize</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets screen size</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+<tr>
+<td>number</td>
+<td>Screen width</td>
+</tr>
+<tr>
+<td>number</td>
+<td>Screen height</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_GetScreenSize</span><span class="p">(</span><span class="n">orxFLOAT</span><span class="w"> </span><span class="o">*</span><span class="n">_pfWidth</span><span class="p">,</span><span class="w"> </span><span class="n">orxFLOAT</span><span class="w"> </span><span class="o">*</span><span class="n">_pfHeight</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getshaderid"><strong><code>getShaderID</code></strong><a class="headerlink" href="#getshaderid" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getShaderID</span><span class="p">(</span><span class="n">shader</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets a shader (internal) ID</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shader</td>
+<td>orxHANDLE</td>
+<td>Concerned bitmap</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>integer (u32)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="w">  </span><span class="n">orxU32</span><span class="w">  </span><span class="n">orxDisplay_GetShaderID</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxHANDLE</span><span class="w"> </span><span class="n">_hShader</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="gettempbitmapconst"><strong><code>getTempBitmapConst</code></strong><a class="headerlink" href="#gettempbitmapconst" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getTempBitmapConst</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets current temp bitmap</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxBITMAP.html">orxBITMAP#</a></td>
+<td>orxBITMAP, if non-null, load operations are currently asynchronous, otherwise they're synchronous</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">orxBITMAP</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">orxDisplay_GetTempBitmap</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getvideomode"><strong><code>getVideoMode</code></strong><a class="headerlink" href="#getvideomode" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getVideoMode</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets an available video mode</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>integer</td>
+<td>Video mode index, pass _u32Index &lt; orxDisplay_GetVideoModeCount() for an available listed mode, <a href="constants.html#orxu32_undefined">orxU32_UNDEFINED</a> for the the default (desktop) mode and any other value for current mode</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxDISPLAY_VIDEO_MODE.html">orxDISPLAY_VIDEO_MODE</a></td>
+<td><a href="../types/orxDISPLAY_VIDEO_MODE.html">orxDISPLAY_VIDEO_MODE</a> / nil if invalid</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="w">  </span><span class="n">orxDISPLAY_VIDEO_MODE</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">orxDisplay_GetVideoMode</span><span class="p">(</span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32Index</span><span class="p">,</span><span class="w"> </span><span class="n">orxDISPLAY_VIDEO_MODE</span><span class="w"> </span><span class="o">*</span><span class="n">_pstVideoMode</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="getvideomodecount"><strong><code>getVideoModeCount</code></strong><a class="headerlink" href="#getvideomodecount" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">getVideoModeCount</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Gets available video mode count</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>integer</td>
+<td>Available video mode count</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="w">  </span><span class="n">orxU32</span><span class="w">  </span><span class="n">orxDisplay_GetVideoModeCount</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="hasshadersupport"><strong><code>hasShaderSupport</code></strong><a class="headerlink" href="#hasshadersupport" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">hasShaderSupport</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Has shader support?</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true / false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxDisplay_HasShaderSupport</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="init"><strong><code>init</code></strong><a class="headerlink" href="#init" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">init</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Inits the display module</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_Init</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="isfullscreen"><strong><code>isFullScreen</code></strong><a class="headerlink" href="#isfullscreen" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">isFullScreen</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Is in full screen mode?</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true if full screen, false otherwise</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxDisplay_IsFullScreen</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="isvsyncenabled"><strong><code>isVSyncEnabled</code></strong><a class="headerlink" href="#isvsyncenabled" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">isVSyncEnabled</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Is vertical synchro enabled?</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true if enabled, false otherwise</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxDisplay_IsVSyncEnabled</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="isvideomodeavailable"><strong><code>isVideoModeAvailable</code></strong><a class="headerlink" href="#isvideomodeavailable" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">isVideoModeAvailable</span><span class="p">(</span><span class="n">videomode</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Is video mode available</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>videomode</td>
+<td><a href="../types/orxDISPLAY_VIDEO_MODE.html">orxDISPLAY_VIDEO_MODE#</a></td>
+<td>Video mode to test</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>true is available, false otherwise</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="w">  </span><span class="n">orxBOOL</span><span class="w">  </span><span class="n">orxDisplay_IsVideoModeAvailable</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxDISPLAY_VIDEO_MODE</span><span class="w"> </span><span class="o">*</span><span class="n">_pstVideoMode</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="loadbitmap"><strong><code>loadBitmap</code></strong><a class="headerlink" href="#loadbitmap" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">loadBitmap</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Loads a bitmap from file (an event of ID orxDISPLAY_EVENT_BITMAP_LOAD will be sent upon completion, whether the loading is asynchronous or not)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename</td>
+<td>string</td>
+<td>Name of the file to load</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxBITMAP.html">orxBITMAP</a></td>
+<td><a href="../types/orxBITMAP.html">orxBITMAP</a> * / nil</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="w">  </span><span class="n">orxBITMAP</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">orxDisplay_LoadBitmap</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zFileName</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="rgba"><strong><code>rgba</code></strong><a class="headerlink" href="#rgba" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">rgba</span><span class="p">(</span><span class="n">u8R</span><span class="p">,</span> <span class="n">u8G</span><span class="p">,</span> <span class="n">u8B</span><span class="p">,</span> <span class="n">u8A</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Create a new <a href="../types/orxRGBA.html">orxRGBA</a> </p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u8R</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>u8G</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>u8B</td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td>u8A</td>
+<td>integer</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxRGBA.html">orxRGBA</a></td>
+<td>The new instance</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="rgbaset"><strong><code>rgbaSet</code></strong><a class="headerlink" href="#rgbaset" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">rgbaSet</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets all components of an <a href="../types/orxRGBA.html">orxRGBA</a> </p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>integer</td>
+<td>Red value to set</td>
+</tr>
+<tr>
+<td>g</td>
+<td>integer</td>
+<td>Green value to set</td>
+</tr>
+<tr>
+<td>b</td>
+<td>integer</td>
+<td>Blue value to set</td>
+</tr>
+<tr>
+<td>a</td>
+<td>integer</td>
+<td>Alpha value to set</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../types/orxRGBA.html">orxRGBA</a></td>
+<td><a href="../types/orxRGBA.html">orxRGBA</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="w">  </span><span class="n">orxRGBA</span><span class="w"> </span><span class="n">orxRGBA_Set</span><span class="p">(</span><span class="n">orxU8</span><span class="w"> </span><span class="n">_u8R</span><span class="p">,</span><span class="w"> </span><span class="n">orxU8</span><span class="w"> </span><span class="n">_u8G</span><span class="p">,</span><span class="w"> </span><span class="n">orxU8</span><span class="w"> </span><span class="n">_u8B</span><span class="p">,</span><span class="w"> </span><span class="n">orxU8</span><span class="w"> </span><span class="n">_u8A</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setbitmapclipping"><strong><code>setBitmapClipping</code></strong><a class="headerlink" href="#setbitmapclipping" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setBitmapClipping</span><span class="p">(</span><span class="n">bitmap</span><span class="p">,</span> <span class="n">tlx</span><span class="p">,</span> <span class="n">tly</span><span class="p">,</span> <span class="n">brx</span><span class="p">,</span> <span class="n">bry</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets a bitmap clipping for blitting (both as source and destination)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bitmap</td>
+<td><a href="../types/orxBITMAP.html">orxBITMAP</a></td>
+<td>Concerned bitmap, nil to target the first destination bitmap</td>
+</tr>
+<tr>
+<td>tlx</td>
+<td>integer</td>
+<td>Top left X coord in pixels</td>
+</tr>
+<tr>
+<td>tly</td>
+<td>integer</td>
+<td>Top left Y coord in pixels</td>
+</tr>
+<tr>
+<td>brx</td>
+<td>integer</td>
+<td>Bottom right X coord in pixels</td>
+</tr>
+<tr>
+<td>bry</td>
+<td>integer</td>
+<td>Bottom right Y coord in pixels</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_SetBitmapClipping</span><span class="p">(</span><span class="n">orxBITMAP</span><span class="w"> </span><span class="o">*</span><span class="n">_pstBitmap</span><span class="p">,</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32TLX</span><span class="p">,</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32TLY</span><span class="p">,</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32BRX</span><span class="p">,</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32BRY</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setblendmode"><strong><code>setBlendMode</code></strong><a class="headerlink" href="#setblendmode" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setBlendMode</span><span class="p">(</span><span class="n">blendmode</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets current blend mode</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>blendmode</td>
+<td><a href="../enums.html#orxdisplay_blend_mode">orxDISPLAY_BLEND_MODE</a></td>
+<td>Blend mode to set</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_SetBlendMode</span><span class="p">(</span><span class="n">orxDISPLAY_BLEND_MODE</span><span class="w"> </span><span class="n">_eBlendMode</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setdestinationbitmaps"><strong><code>setDestinationBitmaps</code></strong><a class="headerlink" href="#setdestinationbitmaps" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setDestinationBitmaps</span><span class="p">(</span><span class="n">bitmaplist</span><span class="p">,</span> <span class="n">number</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets destination bitmaps</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bitmaplist</td>
+<td>table of <a href="../types/orxBITMAP.html">orxBITMAP</a></td>
+<td>Destination bitmap list</td>
+</tr>
+<tr>
+<td>number</td>
+<td>integer</td>
+<td>Number of destination bitmaps</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_SetDestinationBitmaps</span><span class="p">(</span><span class="n">orxBITMAP</span><span class="w"> </span><span class="o">**</span><span class="n">_apstBitmapList</span><span class="p">,</span><span class="w"> </span><span class="n">orxU32</span><span class="w"> </span><span class="n">_u32Number</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setfullscreen"><strong><code>setFullScreen</code></strong><a class="headerlink" href="#setfullscreen" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setFullScreen</span><span class="p">(</span><span class="n">fullscreen</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets full screen mode</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fullscreen</td>
+<td>boolean</td>
+<td>true / false</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_SetFullScreen</span><span class="p">(</span><span class="n">orxBOOL</span><span class="w"> </span><span class="n">_bFullScreen</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setshaderbitmap"><strong><code>setShaderBitmap</code></strong><a class="headerlink" href="#setshaderbitmap" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setShaderBitmap</span><span class="p">(</span><span class="n">shader</span><span class="p">,</span> <span class="n">id</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets a shader parameter (orxBITMAP)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shader</td>
+<td>orxHANDLE</td>
+<td>Concerned shader</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>ID of parameter to set</td>
+</tr>
+<tr>
+<td>value</td>
+<td><a href="../types/orxBITMAP.html">orxBITMAP#</a></td>
+<td>Value (orxBITMAP) for this parameter</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_SetShaderBitmap</span><span class="p">(</span><span class="n">orxHANDLE</span><span class="w"> </span><span class="n">_hShader</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32ID</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxBITMAP</span><span class="w"> </span><span class="o">*</span><span class="n">_pstValue</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setshaderfloat"><strong><code>setShaderFloat</code></strong><a class="headerlink" href="#setshaderfloat" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setShaderFloat</span><span class="p">(</span><span class="n">shader</span><span class="p">,</span> <span class="n">id</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets a shader parameter (orxFLOAT)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shader</td>
+<td>orxHANDLE</td>
+<td>Concerned shader</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>ID of parameter to set</td>
+</tr>
+<tr>
+<td>value</td>
+<td>number</td>
+<td>Value (orxFLOAT) for this parameter</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_SetShaderFloat</span><span class="p">(</span><span class="n">orxHANDLE</span><span class="w"> </span><span class="n">_hShader</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32ID</span><span class="p">,</span><span class="w"> </span><span class="n">orxFLOAT</span><span class="w"> </span><span class="n">_fValue</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setshadervector"><strong><code>setShaderVector</code></strong><a class="headerlink" href="#setshadervector" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setShaderVector</span><span class="p">(</span><span class="n">shader</span><span class="p">,</span> <span class="n">id</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets a shader parameter (orxVECTOR)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shader</td>
+<td>orxHANDLE</td>
+<td>Concerned shader</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>ID of parameter to set</td>
+</tr>
+<tr>
+<td>value</td>
+<td><a href="../types/orxVECTOR.html">orxVECTOR#</a></td>
+<td>Value (orxVECTOR) for this parameter</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_SetShaderVector</span><span class="p">(</span><span class="n">orxHANDLE</span><span class="w"> </span><span class="n">_hShader</span><span class="p">,</span><span class="w"> </span><span class="n">orxS32</span><span class="w"> </span><span class="n">_s32ID</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxVECTOR</span><span class="w"> </span><span class="o">*</span><span class="n">_pvValue</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="settempbitmap"><strong><code>setTempBitmap</code></strong><a class="headerlink" href="#settempbitmap" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setTempBitmap</span><span class="p">(</span><span class="n">bitmap</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets temp bitmap, if a valid temp bitmap is given, load operations will be asynchronous</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bitmap</td>
+<td><a href="../types/orxBITMAP.html">orxBITMAP#</a></td>
+<td>Concerned bitmap, nil for forcing synchronous load operations</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_SetTempBitmap</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxBITMAP</span><span class="w"> </span><span class="o">*</span><span class="n">_pstBitmap</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setvideomode"><strong><code>setVideoMode</code></strong><a class="headerlink" href="#setvideomode" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">setVideoMode</span><span class="p">(</span><span class="n">videomode</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Sets a video mode</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>videomode</td>
+<td><a href="../types/orxDISPLAY_VIDEO_MODE.html">orxDISPLAY_VIDEO_MODE#</a></td>
+<td>Video mode to set, if width, height, depth or refresh rate are 0, the monitor's default values will be used instead</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_SetVideoMode</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxDISPLAY_VIDEO_MODE</span><span class="w"> </span><span class="o">*</span><span class="n">_pstVideoMode</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="setup"><strong><code>setup</code></strong><a class="headerlink" href="#setup" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="n">setup</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Display module setup</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+<li>
+<p>C signature:</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="w">  </span><span class="kt">void</span><span class="w">  </span><span class="n">orxDisplay_Setup</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="startshader"><strong><code>startShader</code></strong><a class="headerlink" href="#startshader" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">startShader</span><span class="p">(</span><span class="n">shader</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Starts a shader rendering</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shader</td>
+<td>orxHANDLE</td>
+<td>Shader to start</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_StartShader</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxHANDLE</span><span class="w"> </span><span class="n">_hShader</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="stopshader"><strong><code>stopShader</code></strong><a class="headerlink" href="#stopshader" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">stopShader</span><span class="p">(</span><span class="n">shader</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Stops a shader rendering</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shader</td>
+<td>orxHANDLE</td>
+<td>Shader to stop</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_StopShader</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxHANDLE</span><span class="w"> </span><span class="n">_hShader</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="swap"><strong><code>swap</code></strong><a class="headerlink" href="#swap" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">swap</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Swaps/flips bufers (display on screen the current frame)</p>
+</blockquote>
+<ul>
+<li>
+<p>Params:</p>
+</li>
+<li>
+<p>Returns:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_Swap</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="transformbitmap"><strong><code>transformBitmap</code></strong><a class="headerlink" href="#transformbitmap" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">transformBitmap</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">smoothing</span><span class="p">,</span> <span class="n">blendmode</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Transforms (and blits onto another) a bitmap</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td><a href="../types/orxBITMAP.html">orxBITMAP#</a></td>
+<td>Bitmap to transform and draw</td>
+</tr>
+<tr>
+<td>transform</td>
+<td><a href="../types/orxDISPLAY_TRANSFORM.html">orxDISPLAY_TRANSFORM#</a></td>
+<td>Transformation info (position, scale, rotation, ...)</td>
+</tr>
+<tr>
+<td>color</td>
+<td><a href="../types/orxRGBA.html">orxRGBA</a></td>
+<td>Color</td>
+</tr>
+<tr>
+<td>smoothing</td>
+<td><a href="../enums.html#orxdisplay_smoothing">orxDISPLAY_SMOOTHING</a></td>
+<td>Bitmap smoothing type</td>
+</tr>
+<tr>
+<td>blendmode</td>
+<td><a href="../enums.html#orxdisplay_blend_mode">orxDISPLAY_BLEND_MODE</a></td>
+<td>Blend mode</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_TransformBitmap</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxBITMAP</span><span class="w"> </span><span class="o">*</span><span class="n">_pstSrc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxDISPLAY_TRANSFORM</span><span class="w"> </span><span class="o">*</span><span class="n">_pstTransform</span><span class="p">,</span><span class="w"> </span><span class="n">orxRGBA</span><span class="w"> </span><span class="n">_stColor</span><span class="p">,</span><span class="w"> </span><span class="n">orxDISPLAY_SMOOTHING</span><span class="w"> </span><span class="n">_eSmoothing</span><span class="p">,</span><span class="w"> </span><span class="n">orxDISPLAY_BLEND_MODE</span><span class="w"> </span><span class="n">_eBlendMode</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+<h3 id="transformtext"><strong><code>transformText</code></strong><a class="headerlink" href="#transformtext" title="Permanent link">#</a></h3>
+<ul>
+<li>Signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="n">r1</span> <span class="o">=</span> <span class="n">transformText</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">map</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">smoothing</span><span class="p">,</span> <span class="n">blendmode</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Description:</li>
+</ul>
+<blockquote>
+<p>Transforms a text (onto a bitmap)</p>
+</blockquote>
+<ul>
+<li>Params:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string</td>
+<td>string</td>
+<td>String to display</td>
+</tr>
+<tr>
+<td>font</td>
+<td><a href="../types/orxBITMAP.html">orxBITMAP#</a></td>
+<td>Font bitmap</td>
+</tr>
+<tr>
+<td>map</td>
+<td><a href="../types/orxCHARACTER_MAP.html">orxCHARACTER_MAP#</a></td>
+<td>Character map</td>
+</tr>
+<tr>
+<td>transform</td>
+<td><a href="../types/orxDISPLAY_TRANSFORM.html">orxDISPLAY_TRANSFORM#</a></td>
+<td>Transformation info (position, scale, rotation, ...)</td>
+</tr>
+<tr>
+<td>color</td>
+<td><a href="../types/orxRGBA.html">orxRGBA</a></td>
+<td>Color</td>
+</tr>
+<tr>
+<td>smoothing</td>
+<td><a href="../enums.html#orxdisplay_smoothing">orxDISPLAY_SMOOTHING</a></td>
+<td>Bitmap smoothing type</td>
+</tr>
+<tr>
+<td>blendmode</td>
+<td><a href="../enums.html#orxdisplay_blend_mode">orxDISPLAY_BLEND_MODE</a></td>
+<td>Blend mode</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Returns:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../enums.html#orxstatus">orxSTATUS</a></td>
+<td>success / failure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C signature:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a><span class="w">  </span><span class="n">orxSTATUS</span><span class="w">  </span><span class="n">orxDisplay_TransformText</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">orxSTRING</span><span class="w"> </span><span class="n">_zString</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxBITMAP</span><span class="w"> </span><span class="o">*</span><span class="n">_pstFont</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxCHARACTER_MAP</span><span class="w"> </span><span class="o">*</span><span class="n">_pstMap</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">orxDISPLAY_TRANSFORM</span><span class="w"> </span><span class="o">*</span><span class="n">_pstTransform</span><span class="p">,</span><span class="w"> </span><span class="n">orxRGBA</span><span class="w"> </span><span class="n">_stColor</span><span class="p">,</span><span class="w"> </span><span class="n">orxDISPLAY_SMOOTHING</span><span class="w"> </span><span class="n">_eSmoothing</span><span class="p">,</span><span class="w"> </span><span class="n">orxDISPLAY_BLEND_MODE</span><span class="w"> </span><span class="n">_eBlendMode</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<hr />
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="debug.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: debug" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              debug
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="event.html" class="md-footer__link md-footer__link--next" aria-label="Next: event" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              event
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+
+<script src="../assets/javascripts/iframe-worker.js"></script>
+<script src="../search/search_index.js"></script>
+
+
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
