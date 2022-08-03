@@ -19,7 +19,7 @@ View online documentation at [https://tankwyn.github.io/lorx](https://tankwyn.gi
 * Orx is a very performant game engine written in C. It runs very fast and it's memory efficient.
 * Orx has many advanced features that are missing even in many established engines (e.g. multiple viewports, object aging).
 * Lorx has covered almost all of Orx's functionalities.
-* Lorx runs nearly as fast as native Orx. Lua won't slow you down since Orx has done most of the heavy work for you.
+* Lorx runs nearly as fast as native Orx. Lua won't slow you down when Orx has done most of the heavy work for you.
 * Lorx is simple, you can get started in minutes if you are already familiar with Orx.
 
 ## Get started
@@ -90,14 +90,14 @@ end
 lorx.execute(init, update, function() print('exit!') end)
 ```
 
-To run a game, provide the game directory as the sole arg to lorx.sh or lorx.exe: `<path-to-lorx> <game-directory>`.
+To run a game, provide the game directory as the sole command line argument to lorx.sh or lorx.exe: `<path-to-lorx> <game-directory>`.
 
 There are some examples shipped with the source code, you can view them to learn more about Lorx. (Before you try any of these, it is strongly advised that you get familiar with [Orx's config system](https://wiki.orx-project.org/en/orx/config) first.)
 
-In addition, there is some advices about setting up a development environment:
+In addition, there is some advices for setting up a development environment:
 
 * Auto-completion and linting: If your editor/IDE (vscode, vim, ...) supports LSP, you can install the [sumneoko](https://github.com/sumneko/lua-language-server) Lua language server, download the Emmy annotations for Lorx and set the `api` path as an external library path for your project.
-* Debugging: use a debugger plugin that supports custom Lua environments (e.g. [Local Lua Debugger](https://github.com/tomblind/local-lua-debugger-vscode.git) for vscode).
+* Debugging: Use a debugger plugin that supports custom Lua environments (e.g. [Local Lua Debugger](https://github.com/tomblind/local-lua-debugger-vscode.git) for vscode).
 
 ## Build
 
@@ -109,9 +109,9 @@ In addition, there is some advices about setting up a development environment:
 
 1. Compile Lua and Orx.
 2. Copy `Makefile.linux` to `Makefile`
-3. set `LUA` in the makefile and make sure the environment variable `ORX` is set to the right path.
+3. Set `LUA` in the makefile and make sure the environment variable `ORX` is set to the right path.
 4. Run `make` to build 64 bit binary; run `make arch=x86` to build 32 bit binary.
-5. Run `make clean` and `make config=debug` or `make config=profile` if you wish to build debug or profile config.
+5. Run `make clean` and `make config=debug` or `make config=profile` if you wish to build debug or profile targets.
 
 ### Windows
 
@@ -121,7 +121,7 @@ The recommended way to build on Windows is using NMake/cl (need to install Visua
 2. Copy `Makefile.nmake` or `Makefile.mingw` to `Makefile`.
 3. Set `LUA`, `LUA_INC` and `LUA_LIB` in the makefile; Make sure the environment variable `ORX` is set correctly (which should contain `include` and `lib`).
 4. Open VS command prompt (x86 or x86_64), cd to `src` and run `nmake` to build.
-5. Run `nmake clean` and `nmake config=debug` or `nmake config=profile` if you wish to build debug or profile config.
+5. Run `nmake clean` and `nmake config=debug` or `nmake config=profile` if you wish to build debug or profile targets.
 6. For MinGW, take similar steps as on Linux.
 
 ### Bind to another Orx version
@@ -164,7 +164,7 @@ Luajit has better performance in most cases. However, unlike a Lua game framewor
 
 Here are some advices about performance:
 
-1. Strings. Passing strings between Lua and Orx will result in memory duplication. Store the string IDs in Lua (rather than the strings) for strings that will be heavily.
+1. Strings. Passing strings between Lua and Orx will result in memory duplication. Store the string IDs in Lua (rather than the strings) for those that would be used heavily.
 2. Arrays. Passing arrays in Orx API calls will induce memory allocation/deallocation. Avoid doing this too frequently.
 3. GC. Avoid generating too much garbage in a short time.
 4. Don't think too much about performance until you really have to :).

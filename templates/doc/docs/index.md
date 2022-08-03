@@ -88,14 +88,14 @@ end
 lorx.execute(init, update, function() print('exit!') end)
 ```
 
-To run a game, provide the game directory as the sole arg to lorx.sh or lorx.exe: `<path-to-lorx> <game-directory>`.
+To run a game, provide the game directory as the sole command line argument to lorx.sh or lorx.exe: `<path-to-lorx> <game-directory>`.
 
 There are some examples shipped with the source code, you can view them to learn more about Lorx. (Before you try any of these, it is strongly advised that you get familiar with [Orx's config system](https://wiki.orx-project.org/en/orx/config) first.)
 
 In addition, there is some advices about setting up a development environment:
 
-* Auto-completion and linting: If your editor/IDE (vscode, vim, ...) supports LSP, you can install the [sumneoko](https://github.com/sumneko/lua-language-server) Lua language server, download the emmy annotations for Lorx and set the `api` path as an external library path for your project.
-* Debugging: use a debugger plugin that supports custom Lua environments (e.g. [Local Lua Debugger](https://github.com/tomblind/local-lua-debugger-vscode.git) for vscode).
+* Auto-completion and linting: If your editor/IDE (vscode, vim, ...) supports LSP, you can install the [sumneoko](https://github.com/sumneko/lua-language-server) Lua language server, download the Emmy annotations for Lorx and set the `api` path as an external library path for your project.
+* Debugging: Use a debugger plugin that supports custom Lua environments (e.g. [Local Lua Debugger](https://github.com/tomblind/local-lua-debugger-vscode.git) for vscode).
 
 ## How is everything mapped to Lua
 
@@ -119,7 +119,7 @@ char | string | single char string
 orxCHAR* | string |
 char* | string |
 orxHANDLE | userdata |
-void* | userdata |
+void\* | userdata |
 orxSTRINGID | integer | u64
 orxENUM | string | depends on the type of the enum
 orxSTRING | string |
@@ -130,35 +130,35 @@ orxSTRING | string |
 
 **Note:**
 
-* All strings are immutable (const), string APIs defined in orxString.h with non-const char sequence params are prohibited.
+* All strings are immutable (const), string APIs defined in orxString.h with non-const char sequence params are not binded.
 * Every conversion from Lua string to C string will cause caching in Orx (`orxString_Store`), so you must avoid immoderate generation of C strings.
-* void* is stored as a userdata in Lorx (lorx.void* or lorx.void*#, '#' stands for 'const').
+* void\* is stored as a userdata in Lorx (lorx.void\* or lorx.void\*\#, '\#' stands for 'const').
 
 ### Enums
 
-Enums are converted to lowercase strings: `orxEVENT_TYPE_PHYSICS -> 'physics'`.
+Enums are lowercase strings in Lua: `orxEVENT_TYPE_PHYSICS -> 'physics'`.
 
 ### Utypes (structs)
 
-Structs are stored as userdata. However, there is no difference between a struct and a pointer to struct in Lorx, so I like to call them 'utypes'.
+Structs are stored as userdata. However, there is no difference between a struct and a pointer to a struct in Lorx, so I like to call them 'utypes'.
 
-There are two types of utypes in Lorx, one is private structs, the other is public structs. 
+There are two types of utypes in Lorx, one is the private structs, the other is the public structs. 
 
-For private structs, only the pointer to the struct is stored and they can only be created by Orx through an API call.
+For the private structs, only the pointer to the struct is stored and they can only be created by Orx through an Orx call.
 
-For public structs, both the pointer and the memory block are stored and you can create them through a constructor function. As a result, these utypes are totally managed by Lua GC.
+For the public structs, both the pointer and the memory block are stored and you can create them through a constructor function. As a result, these utypes are totally managed by the Lua GC.
 
-When passing utypes between Lua and Orx, they will be duplicated (pass by value) rather than referenced. Obviously, only the pointers are duplicated for private types, while the whole data are duplicated for public types. Avoiding referencing makes things a lot easier.
+When passing utypes between Lua and Orx, they will be duplicated (pass by value) rather than referenced. Obviously, only the pointers are duplicated for the private types, while the whole data are duplicated for public types. Avoiding referencing makes things a lot easier.
 
 For the sake of simplicity, complex data structures are dealt with differently. (e.g. events related types, see [Events](index.md#events) for details).
 
 **Note:**
 
-There are a few cases where a const pointer is returned, Lorx marks these APIs with a 'Const' suffix and distinguish const utypes with a '#' suffix in the tname or type name. Const objects cannot be passed to the APIs asking for a non-const param.
+There are a few cases where a const pointer is returned, Lorx marks these APIs with a 'Const' suffix and distinguish const utypes with a '#' suffix in the tname or type name. Const objects cannot be passed to the APIs requiring for non-const params.
 
 ### Arrays
 
-Arrays are Lua tables in Lorx. Every Orx API call with array param will cause memory allocation and deallocation.
+Arrays are Lua tables in Lorx. Every Orx API call with array params will cause memory allocation and deallocation.
 
 This won't be very performant, so don't do arrays too heavily in Lua.
 
@@ -172,9 +172,9 @@ This won't be very performant, so don't do arrays too heavily in Lua.
 
 1. Compile Lua and Orx.
 2. Copy `Makefile.linux` to `Makefile`
-3. set `LUA` in the makefile and make sure the environment variable `ORX` is set to the right path.
+3. Set `LUA` in the makefile and make sure the environment variable `ORX` is set to the right path.
 4. Run `make` to build 64 bit binary; run `make arch=x86` to build 32 bit binary.
-5. Run `make clean` and `make config=debug` or `make config=profile` if you wish to build debug or profile config.
+5. Run `make clean` and `make config=debug` or `make config=profile` if you wish to build debug or profile targets.
 
 ### Windows
 
@@ -184,7 +184,7 @@ The recommended way to build on Windows is using NMake/cl (need to install Visua
 2. Copy `Makefile.nmake` or `Makefile.mingw` to `Makefile`.
 3. Set `LUA`, `LUA_INC` and `LUA_LIB` in the makefile; Make sure the environment variable `ORX` is set correctly (which should contain `include` and `lib`).
 4. Open VS command prompt (x86 or x86_64), cd to `src` and run `nmake` to build.
-5. Run `nmake clean` and `nmake config=debug` or `nmake config=profile` if you wish to build debug or profile config.
+5. Run `nmake clean` and `nmake config=debug` or `nmake config=profile` if you wish to build debug or profile targets.
 6. For MinGW, take similar steps as on Linux.
 
 ### Bind to another Orx version
@@ -251,7 +251,7 @@ if lorx.command.sIsRegistered('MyCmd') then
 end
 ```
 
-To add comments to a sub-command, you can use [lorx.command.sComment](modules/command.md#scomment). To get help message, use the `LorxHelp` command. Example:
+To add comments to a sub-command, you can use [lorx.command.sComment](modules/command.md#scomment). To get help messages, use the `LorxHelp` command. Example:
 
 ```lua
 lorx.command.sComment("MyCmd", "Help me, help you", "OutVector", "InVector")
@@ -261,7 +261,7 @@ print(lorx.command.evaluate('LorxHelp MyCmd'))
 ## What's not implemented
 
 * Threading (`orxThread_Start`, `orxThread_RunTask` and `orxThread_SetCallbacks`). Lua is not thread safe and there's little benefit in supporting it.
-* Low-level resource reading/writting (`orxResource_Read` and `orxResource_Write`).
+* Low-level resource reading/writing (`orxResource_Read` and `orxResource_Write`).
 * Body, part and joint definition structs (`orxBODY_DEF`, `orxBODY_PART_DEF` and `orxBODY_JOINT_DEF`). Please use configuration instead.
 * Meshes. Lorx supports drawing meshes, but does not support creating or reading meshes from files. However, you can write your own code to get meshes read in C and store the pointer in a userdata with the tname of 'lorx.orxDISPLAY_MESH', then you will be able to draw meshes in Lua.
 
@@ -270,7 +270,7 @@ print(lorx.command.evaluate('LorxHelp MyCmd'))
 1. Android support.
 2. Loading pre-compiled chunks (and maybe basic chunk encryption).
 3. Reflect event data modification to Orx.
-4. Maybe support setting lua tables as the usredata of orxObject. So that we can easily attach data (health, mana, ...) to objects.
+4. Maybe support setting lua tables as the userdata of orxObject. So that we can easily attach data (health, mana, ...) to objects.
 
 ## FAQ
 
@@ -282,7 +282,7 @@ Luajit has better performance in most cases. However, unlike a Lua game framewor
 
 Here are some advices about performance:
 
-1. Strings. Passing strings between Lua and Orx will result in memory duplication. Store the string IDs in Lua (rather than the strings) for strings that will be heavily.
+1. Strings. Passing strings between Lua and Orx will result in memory duplication. Store the string IDs in Lua (rather than the strings) for those that would be used heavily.
 2. Arrays. Passing arrays in Orx API calls will induce memory allocation/deallocation. Avoid doing this too frequently.
 3. GC. Avoid generating too much garbage in a short time.
 4. Don't think too much about performance until you really have to :).
