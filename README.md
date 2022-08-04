@@ -28,7 +28,7 @@ The Lorx executable (lorx.sh if you are on Linux) accepts a game directory as ar
 
     boot.lua      # Load on initializing.
     main.lua      # Load after initialized.
-    settings.lua  # Settings.
+    settings.ini  # Settings.
     data/
         config/   # Configuration files.
         texture/  # Textures.
@@ -41,7 +41,7 @@ If you want to do something before Orx is fully initialized, `boot.lua` is the p
 lorx.config.load("settings.ini")
 ```
 
-If you only need to load some settings, you can create a `settings.ini` in the root directory, Lorx will detect and load it automatically. Example `settings.lua`:
+If you only need to load some settings, you can create a `settings.ini` in the root directory, Lorx will detect and load it automatically. Example `settings.ini`:
 
 ```ini
 [Display]
