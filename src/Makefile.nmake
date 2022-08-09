@@ -76,7 +76,8 @@ $(DLL_NAME): $(LIB_DEPS)
 
 $(EXE_NAME): $(DLL_NAME) $(EXE_DEPS)
     $(LINK) $(ALL_LDFLAGS) /OUT:$(EXE_NAME) $(ALL_LIB) $(LIB_NAME) $(EXE_DEPS)
-    @IF exist $(ORX)\lib\dynamic (copy $(ORX)\lib\dynamic\$(ORX_LIBNAME).dll $(MAKEDIR)\..\bin) ELSE (copy $(ORX)\lib\$(ORX_LIBNAME).dll $(MAKEDIR)\..\bin)
+    @IF !EXIST ..\bin (mkdir ..\bin)
+    @IF EXIST $(ORX)\lib\dynamic (copy $(ORX)\lib\dynamic\$(ORX_LIBNAME).dll $(MAKEDIR)\..\bin) ELSE (copy $(ORX)\lib\$(ORX_LIBNAME).dll $(MAKEDIR)\..\bin)
     @copy $(LUA)\lua53.dll $(MAKEDIR)\..\bin
     @copy $(LIB_NAME) $(MAKEDIR)\..\bin
     @copy $(DLL_NAME) $(MAKEDIR)\..\bin

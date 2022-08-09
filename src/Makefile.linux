@@ -65,6 +65,9 @@ all: exe
 
 exe: lib main.o
 	$(CC) main.o -o $(EXE_NAME) -L. -l$(EXE_NAME) $(ALL_LDFLAGS) $(LIBS)
+ifeq (,$(wildcard ../bin))
+	mkdir ../bin
+endif
 	cp $(EXE_NAME) ../bin
 ifneq (,$(wildcard /lib/dynamic/lib$(ORX_LIBNAME).so))
 	cp -f $(ORX)/lib/dynamic/lib$(ORX_LIBNAME).so ../bin
