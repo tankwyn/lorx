@@ -594,7 +594,7 @@ local orxAABOX = {}
 function orxAABOX:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -693,7 +693,7 @@ function orxANIM:addKey(_data, _timestamp) end
 function orxANIM:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -920,7 +920,7 @@ local orxANIMPOINTER = {}
 function orxANIMPOINTER:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -1178,7 +1178,7 @@ function orxANIMSET:addReference() end
 function orxANIMSET:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -1427,7 +1427,7 @@ local orxANIMSET_LINK_TABLE = {}
 function orxANIMSET_LINK_TABLE:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -1463,7 +1463,7 @@ local orxANIM_CUSTOM_EVENT = {}
 function orxANIM_CUSTOM_EVENT:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -1491,7 +1491,7 @@ local orxBITMAP = {}
 function orxBITMAP:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -1587,7 +1587,7 @@ function orxBODY:addPartFromConfig(_configid) end
 function orxBODY:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -1962,7 +1962,7 @@ local orxBODY_JOINT = {}
 function orxBODY_JOINT:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -2035,7 +2035,7 @@ local orxBODY_PART = {}
 function orxBODY_PART:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -2174,7 +2174,7 @@ function orxCAMERA:addGroupID(_groupid, _addfirst) end
 function orxCAMERA:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -2406,7 +2406,7 @@ local orxCHARACTER_GLYPH = {}
 function orxCHARACTER_GLYPH:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -2435,7 +2435,7 @@ local orxCHARACTER_MAP = {}
 function orxCHARACTER_MAP:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -2472,7 +2472,7 @@ function orxCLOCK:addTimer(_func, _delay, _repetition) end
 function orxCLOCK:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -2704,7 +2704,7 @@ local orxCLOCK_INFO = {}
 function orxCLOCK_INFO:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -2736,7 +2736,7 @@ local orxCOLOR = {}
 function orxCOLOR:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -2838,7 +2838,7 @@ local orxCOMMAND_VAR = {}
 function orxCOMMAND_VAR:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -2866,7 +2866,7 @@ local orxDISPLAY_MESH = {}
 function orxDISPLAY_MESH:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -2903,7 +2903,7 @@ local orxDISPLAY_TRANSFORM = {}
 function orxDISPLAY_TRANSFORM:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -2936,7 +2936,7 @@ local orxDISPLAY_VIDEO_MODE = {}
 function orxDISPLAY_VIDEO_MODE:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -2964,7 +2964,7 @@ local orxFILE = {}
 function orxFILE:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -3039,7 +3039,7 @@ local orxFILE_INFO = {}
 function orxFILE_INFO:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -3078,7 +3078,7 @@ local orxFONT = {}
 function orxFONT:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -3324,7 +3324,7 @@ local orxFRAME = {}
 function orxFRAME:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -3712,7 +3712,7 @@ function orxFX:addVolume(_starttime, _endtime, _cycleperiod, _cyclephase, _ampli
 function orxFX:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -3959,7 +3959,7 @@ function orxFXPOINTER:addUniqueFXFromConfig(_fxconfigid) end
 function orxFXPOINTER:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -4171,7 +4171,7 @@ local orxGRAPHIC = {}
 function orxGRAPHIC:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -4552,7 +4552,7 @@ function orxOBJECT:addUniqueFXRecursive(_fxconfigid, _propagationdelay) end
 function orxOBJECT:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -5573,7 +5573,7 @@ function orxOBOX:_2DSet(_worldposition, _pivot, _size, _angle) end
 function orxOBOX:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -5634,7 +5634,7 @@ local orxPHYSICS_BODY = {}
 function orxPHYSICS_BODY:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -5827,7 +5827,7 @@ local orxPHYSICS_BODY_JOINT = {}
 function orxPHYSICS_BODY_JOINT:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -5890,7 +5890,7 @@ local orxPHYSICS_BODY_PART = {}
 function orxPHYSICS_BODY_PART:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -6013,7 +6013,7 @@ local orxRGBA = {}
 function orxRGBA:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -6075,7 +6075,7 @@ function orxSHADER:addVectorParam(_name, _arraysize, _valuelist) end
 function orxSHADER:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -6296,7 +6296,7 @@ function orxSHADERPOINTER:addShaderFromConfig(_shaderconfigid) end
 function orxSHADERPOINTER:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -6497,7 +6497,7 @@ function orxSOUND:addFilterFromConfig(_filterconfigid) end
 function orxSOUND:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -6850,7 +6850,7 @@ function orxSOUNDPOINTER:addSoundFromConfig(_soundconfigid) end
 function orxSOUNDPOINTER:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -7087,7 +7087,7 @@ local orxSOUNDSYSTEM_SAMPLE = {}
 function orxSOUNDSYSTEM_SAMPLE:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -7146,7 +7146,7 @@ function orxSOUNDSYSTEM_SOUND:addFilter(_filterdata, _usecustomparam) end
 function orxSOUNDSYSTEM_SOUND:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -7346,7 +7346,7 @@ local orxSOUND_FILTER_DATA = {}
 function orxSOUND_FILTER_DATA:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -7377,7 +7377,7 @@ local orxSOUND_STREAM_INFO = {}
 function orxSOUND_STREAM_INFO:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -7412,7 +7412,7 @@ local orxSOUND_STREAM_PACKET = {}
 function orxSOUND_STREAM_PACKET:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -7440,7 +7440,7 @@ local orxSPAWNER = {}
 function orxSPAWNER:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -7765,7 +7765,7 @@ local orxSTRUCTURE = {}
 function orxSTRUCTURE:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -8045,7 +8045,7 @@ local orxTEXT = {}
 function orxTEXT:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -8256,7 +8256,7 @@ local orxTEXTURE = {}
 function orxTEXTURE:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -8432,7 +8432,7 @@ local orxTHREAD_SEMAPHORE = {}
 function orxTHREAD_SEMAPHORE:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -8485,7 +8485,7 @@ function orxTIMELINE:addTrackFromConfig(_trackid) end
 function orxTIMELINE:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -8671,7 +8671,7 @@ function orxVECTOR:_2DRotate(_angle) end
 function orxVECTOR:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false
@@ -8816,7 +8816,7 @@ function orxVIEWPORT:addShader(_shaderconfigid) end
 function orxVIEWPORT:addr() end
 
 ---
----check if the c memory address of this lorx userdata equals to another
+---check if the memory address of this lorx userdata equals to another
 ---
 ---@param _u any lorx utype # another lorx userdata
 ---@return boolean # true or false

@@ -36,7 +36,7 @@ r1 = aeq(u)
 
 * Description:
 
-> check if the c memory address of this lorx userdata equals to another
+> check if the memory address of this lorx userdata equals to another
 
 * Params:
 
