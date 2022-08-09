@@ -735,10 +735,10 @@ def gen_conenum():
     header += f"\n#endif /* {hg} */"
     src = src0 + src1
 
-    with open('src/' + hfn, 'w') as f:
+    with open('src/' + hfn, 'w', newline='\n') as f:
         f.write(header)
 
-    with open('src/' + sfn, 'w') as f:
+    with open('src/' + sfn, 'w', newline='\n') as f:
         f.write(src)
 
 
@@ -851,8 +851,8 @@ def gen_conutype():
     header += f'\n#endif /* {hg} */'
     src = src0 + src00 + src01 + src1 + src10 + src11
 
-    with open('src/' + hfn, 'w') as f:
+    with open('src/' + hfn, 'w', newline='\n') as f:
         f.write(header)
 
-    with open('src/' + sfn, 'w') as f:
+    with open('src/' + sfn, 'w', newline='\n') as f:
         f.write(src)

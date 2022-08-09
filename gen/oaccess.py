@@ -214,7 +214,7 @@ luaL_setmetatable(L, "{tname}");
 
     header += f"\n#endif /* {hg} */"
 
-    with open('src/' + hfn, 'w') as f:
+    with open('src/' + hfn, 'w', newline='\n') as f:
         f.write(header)
 
     return constructors, constructors_docs
@@ -426,7 +426,7 @@ static const luaL_Reg l_lorx_{oname}_const_mm[] = {{
 
     header += f"\n#endif /* {hg} */"
 
-    with open('src/' + hfn, 'w') as f:
+    with open('src/' + hfn, 'w', newline='\n') as f:
         f.write(header)
 
 

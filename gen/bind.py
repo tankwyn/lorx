@@ -399,9 +399,9 @@ LORX_API int l_{lname}(lua_State *L)
 #endif /* {hg} */
 """
 
-    with open('src/' + hfn, 'w') as f:
+    with open('src/' + hfn, 'w', newline='\n') as f:
         f.write(header)
-    with open('src/' + sfn, 'w') as f:
+    with open('src/' + sfn, 'w', newline='\n') as f:
         f.write(src)
 
     return bind_map

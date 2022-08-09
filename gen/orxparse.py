@@ -568,11 +568,9 @@ def _parse_header(h):
     """parse a header file"""
 
     # read
-    f = open(h)
-    content = f.read()
-    f.seek(0)
-    lines = f.readlines()
-    f.close()
+    with open(h, newline='\n') as f:
+        content = f.read().replace('\r\n', '\n')
+        lines = [x for x in content.split('\n')]
 
     # extern functions
     p0 = re.compile(r'^[\ \t]*extern\s[\s\S\(]+?\);', re.MULTILINE)

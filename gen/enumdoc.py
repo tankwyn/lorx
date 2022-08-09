@@ -5,7 +5,7 @@ def gen_enum_doc():
 
     elist = list(enums.keys())
     elist.sort()
-    with open('doc/docs/enums.md', 'w') as f:
+    with open('doc/docs/enums.md', 'w', newline='\n') as f:
         for et in elist:
             edict = enums[et]
             f.write(f'## {et}\n\n')

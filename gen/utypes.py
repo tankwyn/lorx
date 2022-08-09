@@ -213,7 +213,7 @@ def gen_utypes(mdict, bmap, mmlist, propdocs):
 
 """ + s + f"\n#endif /* {hg} */"
 
-    with open('src/' + hfn, 'w') as f:
+    with open('src/' + hfn, 'w', newline='\n') as f:
         f.write(h)
 
     mdoc = collections.OrderedDict()
@@ -302,7 +302,7 @@ def gen_utype_docs(mdoc, cinfo):
             }
 
         fp = f'doc/docs/types/{t}.md'
-        with open(fp, 'w') as f:
+        with open(fp, 'w', newline='\n') as f:
             props = docdict['properties']
             methods = copy.deepcopy(docdict['methods']) + gmdoclist
             methods.sort(key=(lambda m: m['name']))

@@ -245,9 +245,9 @@ static const size_t lorx_orx_module_number = {n};
 
     h = header + hd + submodlist + f'\n#endif /* {hg} */'
     s = head + sd + src_mr
-    with open('src/' + hfn, 'w') as f:
+    with open('src/' + hfn, 'w', newline='\n') as f:
         f.write(h)
-    with open('src/' + sfn, 'w') as f:
+    with open('src/' + sfn, 'w', newline='\n') as f:
         f.write(s)
 
     return moddoc, cinfo
@@ -287,7 +287,7 @@ def gen_module_doc(moddoc):
 
         doclist.sort(key=(lambda d: d['name']))
         fp = f'doc/docs/modules/{m}.md'
-        with open(fp, 'w') as f:
+        with open(fp, 'w', newline='\n') as f:
             f.write(f'# module {m}\n\n')
             f.write('## functions\n\n')
             for doc in doclist:
@@ -328,7 +328,7 @@ def gen_module_doc(moddoc):
     # add lorx.constants
     modules_str = f'        - constants: modules/constants.md\n' + modules_str
     fp = f'doc/docs/modules/constants.md'
-    with open(fp, 'w') as f:
+    with open(fp, 'w', newline='\n') as f:
         f.write(f'# module constants\n\n')
         f.write('## constants\n\n')
         f.write('name | type | value\n')
@@ -370,7 +370,7 @@ def gen_module_emmy(moddoc):
         doclist.sort(key=(lambda d: d['name']))
 
         fp = f'api/library/lorx.{m}.lua'
-        with open(fp, 'w') as f:
+        with open(fp, 'w', newline='\n') as f:
             f.write('---@meta\n\n')
             f.write(f'---@class lorx.{m}\n')
             f.write(f"lorx.{m} = {{}}\n\n")
@@ -405,7 +405,7 @@ def gen_module_emmy(moddoc):
                 f.write(f'function {sig} end\n\n')
 
     fp = f'api/library/lorx.constants.lua'
-    with open(fp, 'w') as f:
+    with open(fp, 'w', newline='\n') as f:
         f.write('---@meta\n\n')
         f.write(f'---@class lorx.constants\n')
         for k,info in mdefs.items():

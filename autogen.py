@@ -29,7 +29,7 @@ if len(sys.argv) > 1 and sys.argv[1] == 'clean':
 verbose = 1
 if len(sys.argv) > 2 and sys.argv[1] == '-v':
     verbose = int(sys.argv[2])
-with open('gen/verbose.py', 'w') as f:
+with open('gen/verbose.py', 'w', newline='\n') as f:
     f.write(f'verbose = {verbose}')
 del f
 
@@ -41,7 +41,7 @@ def get_orx_version():
 
     ORX_CODE_PATH = os.getenv("ORX").replace('"', '').replace('\\', '/').replace(' ', '\ ')
     fp = ORX_CODE_PATH + '/include/base/orxBuild.h'
-    with open(fp) as f:
+    with open(fp, newline='\n') as f:
         content = f.read()
     res = re.findall(r'#define __orxVERSION_BUILD__\s+(\d+)', content, flags=re.M)
     if res and len(res) >= 1:
@@ -51,7 +51,7 @@ def get_orx_version():
     del fp, content
 
     fp = ORX_CODE_PATH + '/include/base/orxVersion.h'
-    with open(fp) as f:
+    with open(fp, newline='\n') as f:
         content = f.read()
     res = re.findall(r'#define __orxVERSION_MAJOR__\s+(\d+)', content, flags=re.M)
     assert(res and len(res) == 1)
@@ -69,7 +69,7 @@ def get_orx_version():
 
 orx_major, orx_minor, orx_build = get_orx_version()
 print(f'working with orx {orx_major}.{orx_minor}.{orx_build}\n')
-with open('src/orxver.h', 'w') as f:
+with open('src/orxver.h', 'w', newline='\n') as f:
     f.write(f"""#ifndef __LORX_ORXVER_H__
 #define __LORX_ORXVER_H__
 
@@ -144,7 +144,7 @@ shutil.copytree('templates/doc', 'doc')
 os.mkdir('doc/docs/modules')
 os.mkdir('doc/docs/types')
 
-with open('doc/mkdocs.yml.template', 'r') as f:
+with open('doc/mkdocs.yml.template', 'r', newline='\n') as f:
     content = f.read()
 del f
 
@@ -161,7 +161,7 @@ content = content.replace('${TYPES}', types_str)
 print("\n>> generate enums documentation")
 gen_enum_doc()
 
-with open('doc/mkdocs.yml', 'w') as f:
+with open('doc/mkdocs.yml', 'w', newline='\n') as f:
     f.write(content)
 
 os.remove('doc/mkdocs.yml.template')
@@ -175,7 +175,7 @@ if os.path.isdir('api'):
     shutil.rmtree('api')
 shutil.copytree('templates/api', 'api')
 
-with open('api/library/lorx.lua.template', 'r') as f:
+with open('api/library/lorx.lua.template', 'r', newline='\n') as f:
     content = f.read()
 del f
 
@@ -188,7 +188,7 @@ s = gen_utype_emmy(typedoc)
 print("\n>> generate enums emmy")
 s1 = gen_enum_emmy()
 
-with open(f'api/library/lorx.lua', 'w') as f:
+with open(f'api/library/lorx.lua', 'w', newline='\n') as f:
     f.write(content + f"""
 {s1}
 
