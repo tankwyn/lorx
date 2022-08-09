@@ -6,7 +6,7 @@ The goal of Lorx is to provide a set of APIs in Lua that is as complete as possi
 
 Lorx is created with a bunch of scripts for auto-generating code, and some manually written code. The bindings are currently built for Orx 1.13.0, but the scripts can also work with Orx 1.14. 
 
-The current version, 0.1.0, is built with Orx 1.13.0 and Lua 5.3.6. Binaries are available for Windows and Linux, you can download them in [the release page](https://github.com/tankwyn/lorx/releases)
+The current version, 0.1.0, is built with Orx 1.13.6051 and Lua 5.3.6. Binaries are available for Windows and Linux, you can download them in [the release page](https://github.com/tankwyn/lorx/releases)
 
 View online documentation at [https://tankwyn.github.io/lorx](https://tankwyn.github.io/lorx).
 
