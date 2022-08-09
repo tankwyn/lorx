@@ -13,6 +13,78 @@
 #include "conutype.h"
 #include "conenum.h"
 
+static int l_lorx_orxAABOX___index(lua_State *L)
+{
+  const orxAABOX* self = lorx_luserdata_to_orxAABOX(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "tl") == 0)
+  {
+    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vTL));
+  }
+  else if (strcmp(key, "br") == 0)
+  {
+    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vBR));
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxAABOX");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxAABOX_const___index(lua_State *L)
+{
+  const orxAABOX* self = lorx_luserdata_to_orxAABOX_const(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "tl") == 0)
+  {
+    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vTL));
+  }
+  else if (strcmp(key, "br") == 0)
+  {
+    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vBR));
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxAABOX#");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxAABOX___newindex(lua_State *L)
+{
+  orxAABOX* self = lorx_luserdata_to_orxAABOX(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "tl") == 0)
+  {
+    self->vTL = lorx_luserdata_to_orxVECTOR_struct(L, 3);
+  }
+  else if (strcmp(key, "br") == 0)
+  {
+    self->vBR = lorx_luserdata_to_orxVECTOR_struct(L, 3);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxAABOX");
+    lua_pushvalue(L, 2);
+    lua_pushvalue(L, 3);
+    lua_rawset(L, -3);
+  }
+  return 0;
+}
+
+static const luaL_Reg l_lorx_aabox_mm[] = {
+  { "__index", l_lorx_orxAABOX___index },
+  { "__newindex", l_lorx_orxAABOX___newindex },
+  { NULL, NULL }
+};
+
+static const luaL_Reg l_lorx_aabox_const_mm[] = {
+  { "__index", l_lorx_orxAABOX_const___index },
+  { NULL, NULL }
+};
 static int l_lorx_orxANIM_CUSTOM_EVENT___index(lua_State *L)
 {
   const orxANIM_CUSTOM_EVENT* self = lorx_luserdata_to_orxANIM_CUSTOM_EVENT(L, 1);
@@ -95,6 +167,352 @@ static const luaL_Reg l_lorx_anim_custom_event_mm[] = {
 
 static const luaL_Reg l_lorx_anim_custom_event_const_mm[] = {
   { "__index", l_lorx_orxANIM_CUSTOM_EVENT_const___index },
+  { NULL, NULL }
+};
+static int l_lorx_orxCHARACTER_GLYPH___index(lua_State *L)
+{
+  const orxCHARACTER_GLYPH* self = lorx_luserdata_to_orxCHARACTER_GLYPH(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "x") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fX);
+  }
+  else if (strcmp(key, "y") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fY);
+  }
+  else if (strcmp(key, "width") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fWidth);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxCHARACTER_GLYPH");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxCHARACTER_GLYPH_const___index(lua_State *L)
+{
+  const orxCHARACTER_GLYPH* self = lorx_luserdata_to_orxCHARACTER_GLYPH_const(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "x") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fX);
+  }
+  else if (strcmp(key, "y") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fY);
+  }
+  else if (strcmp(key, "width") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fWidth);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxCHARACTER_GLYPH#");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxCHARACTER_GLYPH___newindex(lua_State *L)
+{
+  orxCHARACTER_GLYPH* self = lorx_luserdata_to_orxCHARACTER_GLYPH(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "x") == 0)
+  {
+    self->fX = lorx_lnumber_to_orxFLOAT(L, 3);
+  }
+  else if (strcmp(key, "y") == 0)
+  {
+    self->fY = lorx_lnumber_to_orxFLOAT(L, 3);
+  }
+  else if (strcmp(key, "width") == 0)
+  {
+    self->fWidth = lorx_lnumber_to_orxFLOAT(L, 3);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxCHARACTER_GLYPH");
+    lua_pushvalue(L, 2);
+    lua_pushvalue(L, 3);
+    lua_rawset(L, -3);
+  }
+  return 0;
+}
+
+static const luaL_Reg l_lorx_character_glyph_mm[] = {
+  { "__index", l_lorx_orxCHARACTER_GLYPH___index },
+  { "__newindex", l_lorx_orxCHARACTER_GLYPH___newindex },
+  { NULL, NULL }
+};
+
+static const luaL_Reg l_lorx_character_glyph_const_mm[] = {
+  { "__index", l_lorx_orxCHARACTER_GLYPH_const___index },
+  { NULL, NULL }
+};
+static int l_lorx_orxCHARACTER_MAP___index(lua_State *L)
+{
+  const orxCHARACTER_MAP* self = lorx_luserdata_to_orxCHARACTER_MAP(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "characterheight") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fCharacterHeight);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxCHARACTER_MAP");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxCHARACTER_MAP_const___index(lua_State *L)
+{
+  const orxCHARACTER_MAP* self = lorx_luserdata_to_orxCHARACTER_MAP_const(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "characterheight") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fCharacterHeight);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxCHARACTER_MAP#");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxCHARACTER_MAP___newindex(lua_State *L)
+{
+  orxCHARACTER_MAP* self = lorx_luserdata_to_orxCHARACTER_MAP(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "characterheight") == 0)
+  {
+    self->fCharacterHeight = lorx_lnumber_to_orxFLOAT(L, 3);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxCHARACTER_MAP");
+    lua_pushvalue(L, 2);
+    lua_pushvalue(L, 3);
+    lua_rawset(L, -3);
+  }
+  return 0;
+}
+
+static const luaL_Reg l_lorx_character_map_mm[] = {
+  { "__index", l_lorx_orxCHARACTER_MAP___index },
+  { "__newindex", l_lorx_orxCHARACTER_MAP___newindex },
+  { NULL, NULL }
+};
+
+static const luaL_Reg l_lorx_character_map_const_mm[] = {
+  { "__index", l_lorx_orxCHARACTER_MAP_const___index },
+  { NULL, NULL }
+};
+static int l_lorx_orxCLOCK_INFO___index(lua_State *L)
+{
+  const orxCLOCK_INFO* self = lorx_luserdata_to_orxCLOCK_INFO(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "ticksize") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fTickSize);
+  }
+  else if (strcmp(key, "dt") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fDT);
+  }
+  else if (strcmp(key, "time") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fTime);
+  }
+  else if (strcmp(key, "modifierlistlist") == 0)
+  {
+    lua_createtable(L, orxCLOCK_MODIFIER_NUMBER, 0);
+    for (size_t i = 0; i < orxCLOCK_MODIFIER_NUMBER; i++)
+    {
+      lorx_orxFLOAT_to_lnumber(L, self->afModifierList[i]);
+      lua_seti(L, -2, i+1);
+    }
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxCLOCK_INFO");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxCLOCK_INFO_const___index(lua_State *L)
+{
+  const orxCLOCK_INFO* self = lorx_luserdata_to_orxCLOCK_INFO_const(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "ticksize") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fTickSize);
+  }
+  else if (strcmp(key, "dt") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fDT);
+  }
+  else if (strcmp(key, "time") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fTime);
+  }
+  else if (strcmp(key, "modifierlistlist") == 0)
+  {
+    lua_createtable(L, orxCLOCK_MODIFIER_NUMBER, 0);
+    for (size_t i = 0; i < orxCLOCK_MODIFIER_NUMBER; i++)
+    {
+      lorx_orxFLOAT_to_lnumber(L, self->afModifierList[i]);
+      lua_seti(L, -2, i+1);
+    }
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxCLOCK_INFO#");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxCLOCK_INFO___newindex(lua_State *L)
+{
+  orxCLOCK_INFO* self = lorx_luserdata_to_orxCLOCK_INFO(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "ticksize") == 0)
+  {
+    self->fTickSize = lorx_lnumber_to_orxFLOAT(L, 3);
+  }
+  else if (strcmp(key, "dt") == 0)
+  {
+    self->fDT = lorx_lnumber_to_orxFLOAT(L, 3);
+  }
+  else if (strcmp(key, "time") == 0)
+  {
+    self->fTime = lorx_lnumber_to_orxFLOAT(L, 3);
+  }
+  else if (strcmp(key, "modifierlistlist") == 0)
+  {
+    luaL_checktype(L, 3, LUA_TTABLE);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxCLOCK_INFO");
+    lua_pushvalue(L, 2);
+    lua_pushvalue(L, 3);
+    lua_rawset(L, -3);
+  }
+  return 0;
+}
+
+static const luaL_Reg l_lorx_clock_info_mm[] = {
+  { "__index", l_lorx_orxCLOCK_INFO___index },
+  { "__newindex", l_lorx_orxCLOCK_INFO___newindex },
+  { NULL, NULL }
+};
+
+static const luaL_Reg l_lorx_clock_info_const_mm[] = {
+  { "__index", l_lorx_orxCLOCK_INFO_const___index },
+  { NULL, NULL }
+};
+static int l_lorx_orxCOLOR___index(lua_State *L)
+{
+  const orxCOLOR* self = lorx_luserdata_to_orxCOLOR(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "rgb") == 0)
+  {
+    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vRGB));
+  }
+  else if (strcmp(key, "hsl") == 0)
+  {
+    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vHSL));
+  }
+  else if (strcmp(key, "hsv") == 0)
+  {
+    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vHSV));
+  }
+  else if (strcmp(key, "alpha") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fAlpha);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxCOLOR");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxCOLOR_const___index(lua_State *L)
+{
+  const orxCOLOR* self = lorx_luserdata_to_orxCOLOR_const(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "rgb") == 0)
+  {
+    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vRGB));
+  }
+  else if (strcmp(key, "hsl") == 0)
+  {
+    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vHSL));
+  }
+  else if (strcmp(key, "hsv") == 0)
+  {
+    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vHSV));
+  }
+  else if (strcmp(key, "alpha") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fAlpha);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxCOLOR#");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxCOLOR___newindex(lua_State *L)
+{
+  orxCOLOR* self = lorx_luserdata_to_orxCOLOR(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "rgb") == 0)
+  {
+    self->vRGB = lorx_luserdata_to_orxVECTOR_struct(L, 3);
+  }
+  else if (strcmp(key, "hsl") == 0)
+  {
+    self->vHSL = lorx_luserdata_to_orxVECTOR_struct(L, 3);
+  }
+  else if (strcmp(key, "hsv") == 0)
+  {
+    self->vHSV = lorx_luserdata_to_orxVECTOR_struct(L, 3);
+  }
+  else if (strcmp(key, "alpha") == 0)
+  {
+    self->fAlpha = lorx_lnumber_to_orxFLOAT(L, 3);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxCOLOR");
+    lua_pushvalue(L, 2);
+    lua_pushvalue(L, 3);
+    lua_rawset(L, -3);
+  }
+  return 0;
+}
+
+static const luaL_Reg l_lorx_color_mm[] = {
+  { "__index", l_lorx_orxCOLOR___index },
+  { "__newindex", l_lorx_orxCOLOR___newindex },
+  { NULL, NULL }
+};
+
+static const luaL_Reg l_lorx_color_const_mm[] = {
+  { "__index", l_lorx_orxCOLOR_const___index },
   { NULL, NULL }
 };
 static int l_lorx_orxCOMMAND_VAR___index(lua_State *L)
@@ -251,114 +669,6 @@ static const luaL_Reg l_lorx_command_var_mm[] = {
 
 static const luaL_Reg l_lorx_command_var_const_mm[] = {
   { "__index", l_lorx_orxCOMMAND_VAR_const___index },
-  { NULL, NULL }
-};
-static int l_lorx_orxRGBA___index(lua_State *L)
-{
-  const orxRGBA* self = lorx_luserdata_to_orxRGBA(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "r") == 0)
-  {
-    lorx_orxU8_to_linteger(L, self->u8R);
-  }
-  else if (strcmp(key, "g") == 0)
-  {
-    lorx_orxU8_to_linteger(L, self->u8G);
-  }
-  else if (strcmp(key, "b") == 0)
-  {
-    lorx_orxU8_to_linteger(L, self->u8B);
-  }
-  else if (strcmp(key, "a") == 0)
-  {
-    lorx_orxU8_to_linteger(L, self->u8A);
-  }
-  else if (strcmp(key, "rgba") == 0)
-  {
-    lorx_orxU32_to_linteger(L, self->u32RGBA);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxRGBA");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxRGBA_const___index(lua_State *L)
-{
-  const orxRGBA* self = lorx_luserdata_to_orxRGBA_const(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "r") == 0)
-  {
-    lorx_orxU8_to_linteger(L, self->u8R);
-  }
-  else if (strcmp(key, "g") == 0)
-  {
-    lorx_orxU8_to_linteger(L, self->u8G);
-  }
-  else if (strcmp(key, "b") == 0)
-  {
-    lorx_orxU8_to_linteger(L, self->u8B);
-  }
-  else if (strcmp(key, "a") == 0)
-  {
-    lorx_orxU8_to_linteger(L, self->u8A);
-  }
-  else if (strcmp(key, "rgba") == 0)
-  {
-    lorx_orxU32_to_linteger(L, self->u32RGBA);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxRGBA#");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxRGBA___newindex(lua_State *L)
-{
-  orxRGBA* self = lorx_luserdata_to_orxRGBA(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "r") == 0)
-  {
-    self->u8R = lorx_linteger_to_orxU8(L, 3);
-  }
-  else if (strcmp(key, "g") == 0)
-  {
-    self->u8G = lorx_linteger_to_orxU8(L, 3);
-  }
-  else if (strcmp(key, "b") == 0)
-  {
-    self->u8B = lorx_linteger_to_orxU8(L, 3);
-  }
-  else if (strcmp(key, "a") == 0)
-  {
-    self->u8A = lorx_linteger_to_orxU8(L, 3);
-  }
-  else if (strcmp(key, "rgba") == 0)
-  {
-    self->u32RGBA = lorx_linteger_to_orxU32(L, 3);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxRGBA");
-    lua_pushvalue(L, 2);
-    lua_pushvalue(L, 3);
-    lua_rawset(L, -3);
-  }
-  return 0;
-}
-
-static const luaL_Reg l_lorx_rgba_mm[] = {
-  { "__index", l_lorx_orxRGBA___index },
-  { "__newindex", l_lorx_orxRGBA___newindex },
-  { NULL, NULL }
-};
-
-static const luaL_Reg l_lorx_rgba_const_mm[] = {
-  { "__index", l_lorx_orxRGBA_const___index },
   { NULL, NULL }
 };
 static int l_lorx_orxDISPLAY_TRANSFORM___index(lua_State *L)
@@ -625,186 +935,6 @@ static const luaL_Reg l_lorx_display_video_mode_const_mm[] = {
   { "__index", l_lorx_orxDISPLAY_VIDEO_MODE_const___index },
   { NULL, NULL }
 };
-static int l_lorx_orxCHARACTER_GLYPH___index(lua_State *L)
-{
-  const orxCHARACTER_GLYPH* self = lorx_luserdata_to_orxCHARACTER_GLYPH(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "x") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fX);
-  }
-  else if (strcmp(key, "y") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fY);
-  }
-  else if (strcmp(key, "width") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fWidth);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxCHARACTER_GLYPH");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxCHARACTER_GLYPH_const___index(lua_State *L)
-{
-  const orxCHARACTER_GLYPH* self = lorx_luserdata_to_orxCHARACTER_GLYPH_const(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "x") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fX);
-  }
-  else if (strcmp(key, "y") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fY);
-  }
-  else if (strcmp(key, "width") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fWidth);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxCHARACTER_GLYPH#");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxCHARACTER_GLYPH___newindex(lua_State *L)
-{
-  orxCHARACTER_GLYPH* self = lorx_luserdata_to_orxCHARACTER_GLYPH(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "x") == 0)
-  {
-    self->fX = lorx_lnumber_to_orxFLOAT(L, 3);
-  }
-  else if (strcmp(key, "y") == 0)
-  {
-    self->fY = lorx_lnumber_to_orxFLOAT(L, 3);
-  }
-  else if (strcmp(key, "width") == 0)
-  {
-    self->fWidth = lorx_lnumber_to_orxFLOAT(L, 3);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxCHARACTER_GLYPH");
-    lua_pushvalue(L, 2);
-    lua_pushvalue(L, 3);
-    lua_rawset(L, -3);
-  }
-  return 0;
-}
-
-static const luaL_Reg l_lorx_character_glyph_mm[] = {
-  { "__index", l_lorx_orxCHARACTER_GLYPH___index },
-  { "__newindex", l_lorx_orxCHARACTER_GLYPH___newindex },
-  { NULL, NULL }
-};
-
-static const luaL_Reg l_lorx_character_glyph_const_mm[] = {
-  { "__index", l_lorx_orxCHARACTER_GLYPH_const___index },
-  { NULL, NULL }
-};
-static int l_lorx_orxCOLOR___index(lua_State *L)
-{
-  const orxCOLOR* self = lorx_luserdata_to_orxCOLOR(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "rgb") == 0)
-  {
-    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vRGB));
-  }
-  else if (strcmp(key, "hsl") == 0)
-  {
-    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vHSL));
-  }
-  else if (strcmp(key, "hsv") == 0)
-  {
-    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vHSV));
-  }
-  else if (strcmp(key, "alpha") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fAlpha);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxCOLOR");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxCOLOR_const___index(lua_State *L)
-{
-  const orxCOLOR* self = lorx_luserdata_to_orxCOLOR_const(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "rgb") == 0)
-  {
-    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vRGB));
-  }
-  else if (strcmp(key, "hsl") == 0)
-  {
-    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vHSL));
-  }
-  else if (strcmp(key, "hsv") == 0)
-  {
-    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vHSV));
-  }
-  else if (strcmp(key, "alpha") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fAlpha);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxCOLOR#");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxCOLOR___newindex(lua_State *L)
-{
-  orxCOLOR* self = lorx_luserdata_to_orxCOLOR(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "rgb") == 0)
-  {
-    self->vRGB = lorx_luserdata_to_orxVECTOR_struct(L, 3);
-  }
-  else if (strcmp(key, "hsl") == 0)
-  {
-    self->vHSL = lorx_luserdata_to_orxVECTOR_struct(L, 3);
-  }
-  else if (strcmp(key, "hsv") == 0)
-  {
-    self->vHSV = lorx_luserdata_to_orxVECTOR_struct(L, 3);
-  }
-  else if (strcmp(key, "alpha") == 0)
-  {
-    self->fAlpha = lorx_lnumber_to_orxFLOAT(L, 3);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxCOLOR");
-    lua_pushvalue(L, 2);
-    lua_pushvalue(L, 3);
-    lua_rawset(L, -3);
-  }
-  return 0;
-}
-
-static const luaL_Reg l_lorx_color_mm[] = {
-  { "__index", l_lorx_orxCOLOR___index },
-  { "__newindex", l_lorx_orxCOLOR___newindex },
-  { NULL, NULL }
-};
-
-static const luaL_Reg l_lorx_color_const_mm[] = {
-  { "__index", l_lorx_orxCOLOR_const___index },
-  { NULL, NULL }
-};
 static int l_lorx_orxFILE_INFO___index(lua_State *L)
 {
   const orxFILE_INFO* self = lorx_luserdata_to_orxFILE_INFO(L, 1);
@@ -977,78 +1107,6 @@ static const luaL_Reg l_lorx_file_info_const_mm[] = {
   { "__index", l_lorx_orxFILE_INFO_const___index },
   { NULL, NULL }
 };
-static int l_lorx_orxAABOX___index(lua_State *L)
-{
-  const orxAABOX* self = lorx_luserdata_to_orxAABOX(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "tl") == 0)
-  {
-    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vTL));
-  }
-  else if (strcmp(key, "br") == 0)
-  {
-    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vBR));
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxAABOX");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxAABOX_const___index(lua_State *L)
-{
-  const orxAABOX* self = lorx_luserdata_to_orxAABOX_const(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "tl") == 0)
-  {
-    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vTL));
-  }
-  else if (strcmp(key, "br") == 0)
-  {
-    lorx_orxVECTOR_to_luserdata_struct(L, &(self->vBR));
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxAABOX#");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxAABOX___newindex(lua_State *L)
-{
-  orxAABOX* self = lorx_luserdata_to_orxAABOX(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "tl") == 0)
-  {
-    self->vTL = lorx_luserdata_to_orxVECTOR_struct(L, 3);
-  }
-  else if (strcmp(key, "br") == 0)
-  {
-    self->vBR = lorx_luserdata_to_orxVECTOR_struct(L, 3);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxAABOX");
-    lua_pushvalue(L, 2);
-    lua_pushvalue(L, 3);
-    lua_rawset(L, -3);
-  }
-  return 0;
-}
-
-static const luaL_Reg l_lorx_aabox_mm[] = {
-  { "__index", l_lorx_orxAABOX___index },
-  { "__newindex", l_lorx_orxAABOX___newindex },
-  { NULL, NULL }
-};
-
-static const luaL_Reg l_lorx_aabox_const_mm[] = {
-  { "__index", l_lorx_orxAABOX_const___index },
-  { NULL, NULL }
-};
 static int l_lorx_orxOBOX___index(lua_State *L)
 {
   const orxOBOX* self = lorx_luserdata_to_orxOBOX(L, 1);
@@ -1155,6 +1213,355 @@ static const luaL_Reg l_lorx_obox_mm[] = {
 
 static const luaL_Reg l_lorx_obox_const_mm[] = {
   { "__index", l_lorx_orxOBOX_const___index },
+  { NULL, NULL }
+};
+static int l_lorx_orxRGBA___index(lua_State *L)
+{
+  const orxRGBA* self = lorx_luserdata_to_orxRGBA(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "r") == 0)
+  {
+    lorx_orxU8_to_linteger(L, self->u8R);
+  }
+  else if (strcmp(key, "g") == 0)
+  {
+    lorx_orxU8_to_linteger(L, self->u8G);
+  }
+  else if (strcmp(key, "b") == 0)
+  {
+    lorx_orxU8_to_linteger(L, self->u8B);
+  }
+  else if (strcmp(key, "a") == 0)
+  {
+    lorx_orxU8_to_linteger(L, self->u8A);
+  }
+  else if (strcmp(key, "rgba") == 0)
+  {
+    lorx_orxU32_to_linteger(L, self->u32RGBA);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxRGBA");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxRGBA_const___index(lua_State *L)
+{
+  const orxRGBA* self = lorx_luserdata_to_orxRGBA_const(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "r") == 0)
+  {
+    lorx_orxU8_to_linteger(L, self->u8R);
+  }
+  else if (strcmp(key, "g") == 0)
+  {
+    lorx_orxU8_to_linteger(L, self->u8G);
+  }
+  else if (strcmp(key, "b") == 0)
+  {
+    lorx_orxU8_to_linteger(L, self->u8B);
+  }
+  else if (strcmp(key, "a") == 0)
+  {
+    lorx_orxU8_to_linteger(L, self->u8A);
+  }
+  else if (strcmp(key, "rgba") == 0)
+  {
+    lorx_orxU32_to_linteger(L, self->u32RGBA);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxRGBA#");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxRGBA___newindex(lua_State *L)
+{
+  orxRGBA* self = lorx_luserdata_to_orxRGBA(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "r") == 0)
+  {
+    self->u8R = lorx_linteger_to_orxU8(L, 3);
+  }
+  else if (strcmp(key, "g") == 0)
+  {
+    self->u8G = lorx_linteger_to_orxU8(L, 3);
+  }
+  else if (strcmp(key, "b") == 0)
+  {
+    self->u8B = lorx_linteger_to_orxU8(L, 3);
+  }
+  else if (strcmp(key, "a") == 0)
+  {
+    self->u8A = lorx_linteger_to_orxU8(L, 3);
+  }
+  else if (strcmp(key, "rgba") == 0)
+  {
+    self->u32RGBA = lorx_linteger_to_orxU32(L, 3);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxRGBA");
+    lua_pushvalue(L, 2);
+    lua_pushvalue(L, 3);
+    lua_rawset(L, -3);
+  }
+  return 0;
+}
+
+static const luaL_Reg l_lorx_rgba_mm[] = {
+  { "__index", l_lorx_orxRGBA___index },
+  { "__newindex", l_lorx_orxRGBA___newindex },
+  { NULL, NULL }
+};
+
+static const luaL_Reg l_lorx_rgba_const_mm[] = {
+  { "__index", l_lorx_orxRGBA_const___index },
+  { NULL, NULL }
+};
+
+static const luaL_Reg l_lorx_sound_filter_data_mm[] = {
+  { NULL, NULL }
+};
+
+static const luaL_Reg l_lorx_sound_filter_data_const_mm[] = {
+  { NULL, NULL }
+};
+static int l_lorx_orxSOUND_STREAM_INFO___index(lua_State *L)
+{
+  const orxSOUND_STREAM_INFO* self = lorx_luserdata_to_orxSOUND_STREAM_INFO(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "name") == 0)
+  {
+    lorx_orxSTRING_to_lstring(L, self->zName);
+  }
+  else if (strcmp(key, "samplerate") == 0)
+  {
+    lorx_orxU32_to_linteger(L, self->u32SampleRate);
+  }
+  else if (strcmp(key, "channelnumber") == 0)
+  {
+    lorx_orxU32_to_linteger(L, self->u32ChannelNumber);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxSOUND_STREAM_INFO");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxSOUND_STREAM_INFO_const___index(lua_State *L)
+{
+  const orxSOUND_STREAM_INFO* self = lorx_luserdata_to_orxSOUND_STREAM_INFO_const(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "name") == 0)
+  {
+    lorx_orxSTRING_to_lstring(L, self->zName);
+  }
+  else if (strcmp(key, "samplerate") == 0)
+  {
+    lorx_orxU32_to_linteger(L, self->u32SampleRate);
+  }
+  else if (strcmp(key, "channelnumber") == 0)
+  {
+    lorx_orxU32_to_linteger(L, self->u32ChannelNumber);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxSOUND_STREAM_INFO#");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxSOUND_STREAM_INFO___newindex(lua_State *L)
+{
+  orxSOUND_STREAM_INFO* self = lorx_luserdata_to_orxSOUND_STREAM_INFO(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "name") == 0)
+  {
+    self->zName = lorx_lstring_to_orxSTRING(L, 3);
+  }
+  else if (strcmp(key, "samplerate") == 0)
+  {
+    self->u32SampleRate = lorx_linteger_to_orxU32(L, 3);
+  }
+  else if (strcmp(key, "channelnumber") == 0)
+  {
+    self->u32ChannelNumber = lorx_linteger_to_orxU32(L, 3);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxSOUND_STREAM_INFO");
+    lua_pushvalue(L, 2);
+    lua_pushvalue(L, 3);
+    lua_rawset(L, -3);
+  }
+  return 0;
+}
+
+static const luaL_Reg l_lorx_sound_stream_info_mm[] = {
+  { "__index", l_lorx_orxSOUND_STREAM_INFO___index },
+  { "__newindex", l_lorx_orxSOUND_STREAM_INFO___newindex },
+  { NULL, NULL }
+};
+
+static const luaL_Reg l_lorx_sound_stream_info_const_mm[] = {
+  { "__index", l_lorx_orxSOUND_STREAM_INFO_const___index },
+  { NULL, NULL }
+};
+static int l_lorx_orxSOUND_STREAM_PACKET___index(lua_State *L)
+{
+  const orxSOUND_STREAM_PACKET* self = lorx_luserdata_to_orxSOUND_STREAM_PACKET(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "samplelistlist") == 0)
+  {
+    lua_createtable(L, self->u32SampleNumber, 0);
+    for (size_t i = 0; i < self->u32SampleNumber; i++)
+    {
+      lorx_orxFLOAT_to_lnumber(L, self->afSampleList[i]);
+      lua_seti(L, -2, i+1);
+    }
+  }
+  else if (strcmp(key, "samplenumber") == 0)
+  {
+    lorx_orxU32_to_linteger(L, self->u32SampleNumber);
+  }
+  else if (strcmp(key, "timestamp") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fTimeStamp);
+  }
+  else if (strcmp(key, "time") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fTime);
+  }
+  else if (strcmp(key, "id") == 0)
+  {
+    lorx_orxS32_to_linteger(L, self->s32ID);
+  }
+  else if (strcmp(key, "discard") == 0)
+  {
+    lorx_orxBOOL_to_lboolean(L, self->bDiscard);
+  }
+  else if (strcmp(key, "last") == 0)
+  {
+    lorx_orxBOOL_to_lboolean(L, self->bLast);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxSOUND_STREAM_PACKET");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxSOUND_STREAM_PACKET_const___index(lua_State *L)
+{
+  const orxSOUND_STREAM_PACKET* self = lorx_luserdata_to_orxSOUND_STREAM_PACKET_const(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "samplelistlist") == 0)
+  {
+    lua_createtable(L, self->u32SampleNumber, 0);
+    for (size_t i = 0; i < self->u32SampleNumber; i++)
+    {
+      lorx_orxFLOAT_to_lnumber(L, self->afSampleList[i]);
+      lua_seti(L, -2, i+1);
+    }
+  }
+  else if (strcmp(key, "samplenumber") == 0)
+  {
+    lorx_orxU32_to_linteger(L, self->u32SampleNumber);
+  }
+  else if (strcmp(key, "timestamp") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fTimeStamp);
+  }
+  else if (strcmp(key, "time") == 0)
+  {
+    lorx_orxFLOAT_to_lnumber(L, self->fTime);
+  }
+  else if (strcmp(key, "id") == 0)
+  {
+    lorx_orxS32_to_linteger(L, self->s32ID);
+  }
+  else if (strcmp(key, "discard") == 0)
+  {
+    lorx_orxBOOL_to_lboolean(L, self->bDiscard);
+  }
+  else if (strcmp(key, "last") == 0)
+  {
+    lorx_orxBOOL_to_lboolean(L, self->bLast);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxSOUND_STREAM_PACKET#");
+    lua_pushvalue(L, 2);
+    lua_rawget(L, -2);
+  }
+  return 1;
+}
+static int l_lorx_orxSOUND_STREAM_PACKET___newindex(lua_State *L)
+{
+  orxSOUND_STREAM_PACKET* self = lorx_luserdata_to_orxSOUND_STREAM_PACKET(L, 1);
+  const char* key = luaL_checkstring(L, 2);
+  if (strcmp(key, "samplelistlist") == 0)
+  {
+    luaL_checktype(L, 3, LUA_TTABLE);
+    
+    if (self->afSampleList != NULL)
+    {
+      for (size_t i = 0; i < self->u32SampleNumber; i++)
+      {
+        lua_geti(L, 3, i+1);
+        self->afSampleList[i] = lorx_lnumber_to_orxFLOAT(L, -1);
+        lua_pop(L, 1);
+      }
+      
+    }
+  }
+  else if (strcmp(key, "timestamp") == 0)
+  {
+    self->fTimeStamp = lorx_lnumber_to_orxFLOAT(L, 3);
+  }
+  else if (strcmp(key, "time") == 0)
+  {
+    self->fTime = lorx_lnumber_to_orxFLOAT(L, 3);
+  }
+  else if (strcmp(key, "id") == 0)
+  {
+    self->s32ID = lorx_linteger_to_orxS32(L, 3);
+  }
+  else if (strcmp(key, "discard") == 0)
+  {
+    self->bDiscard = lorx_lboolean_to_orxBOOL(L, 3);
+  }
+  else if (strcmp(key, "last") == 0)
+  {
+    self->bLast = lorx_lboolean_to_orxBOOL(L, 3);
+  }
+  else
+  {
+    luaL_getmetatable(L, "lorx.orxSOUND_STREAM_PACKET");
+    lua_pushvalue(L, 2);
+    lua_pushvalue(L, 3);
+    lua_rawset(L, -3);
+  }
+  return 0;
+}
+
+static const luaL_Reg l_lorx_sound_stream_packet_mm[] = {
+  { "__index", l_lorx_orxSOUND_STREAM_PACKET___index },
+  { "__newindex", l_lorx_orxSOUND_STREAM_PACKET___newindex },
+  { NULL, NULL }
+};
+
+static const luaL_Reg l_lorx_sound_stream_packet_const_mm[] = {
+  { "__index", l_lorx_orxSOUND_STREAM_PACKET_const___index },
   { NULL, NULL }
 };
 static int l_lorx_orxVECTOR___index(lua_State *L)
@@ -1359,413 +1766,6 @@ static const luaL_Reg l_lorx_vector_mm[] = {
 
 static const luaL_Reg l_lorx_vector_const_mm[] = {
   { "__index", l_lorx_orxVECTOR_const___index },
-  { NULL, NULL }
-};
-
-static const luaL_Reg l_lorx_sound_filter_data_mm[] = {
-  { NULL, NULL }
-};
-
-static const luaL_Reg l_lorx_sound_filter_data_const_mm[] = {
-  { NULL, NULL }
-};
-static int l_lorx_orxCHARACTER_MAP___index(lua_State *L)
-{
-  const orxCHARACTER_MAP* self = lorx_luserdata_to_orxCHARACTER_MAP(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "characterheight") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fCharacterHeight);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxCHARACTER_MAP");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxCHARACTER_MAP_const___index(lua_State *L)
-{
-  const orxCHARACTER_MAP* self = lorx_luserdata_to_orxCHARACTER_MAP_const(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "characterheight") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fCharacterHeight);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxCHARACTER_MAP#");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxCHARACTER_MAP___newindex(lua_State *L)
-{
-  orxCHARACTER_MAP* self = lorx_luserdata_to_orxCHARACTER_MAP(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "characterheight") == 0)
-  {
-    self->fCharacterHeight = lorx_lnumber_to_orxFLOAT(L, 3);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxCHARACTER_MAP");
-    lua_pushvalue(L, 2);
-    lua_pushvalue(L, 3);
-    lua_rawset(L, -3);
-  }
-  return 0;
-}
-
-static const luaL_Reg l_lorx_character_map_mm[] = {
-  { "__index", l_lorx_orxCHARACTER_MAP___index },
-  { "__newindex", l_lorx_orxCHARACTER_MAP___newindex },
-  { NULL, NULL }
-};
-
-static const luaL_Reg l_lorx_character_map_const_mm[] = {
-  { "__index", l_lorx_orxCHARACTER_MAP_const___index },
-  { NULL, NULL }
-};
-static int l_lorx_orxCLOCK_INFO___index(lua_State *L)
-{
-  const orxCLOCK_INFO* self = lorx_luserdata_to_orxCLOCK_INFO(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "ticksize") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fTickSize);
-  }
-  else if (strcmp(key, "dt") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fDT);
-  }
-  else if (strcmp(key, "time") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fTime);
-  }
-  else if (strcmp(key, "modifierlistlist") == 0)
-  {
-    lua_createtable(L, orxCLOCK_MODIFIER_NUMBER, 0);
-    for (size_t i = 0; i < orxCLOCK_MODIFIER_NUMBER; i++)
-    {
-      lorx_orxFLOAT_to_lnumber(L, self->afModifierList[i]);
-      lua_seti(L, -2, i+1);
-    }
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxCLOCK_INFO");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxCLOCK_INFO_const___index(lua_State *L)
-{
-  const orxCLOCK_INFO* self = lorx_luserdata_to_orxCLOCK_INFO_const(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "ticksize") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fTickSize);
-  }
-  else if (strcmp(key, "dt") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fDT);
-  }
-  else if (strcmp(key, "time") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fTime);
-  }
-  else if (strcmp(key, "modifierlistlist") == 0)
-  {
-    lua_createtable(L, orxCLOCK_MODIFIER_NUMBER, 0);
-    for (size_t i = 0; i < orxCLOCK_MODIFIER_NUMBER; i++)
-    {
-      lorx_orxFLOAT_to_lnumber(L, self->afModifierList[i]);
-      lua_seti(L, -2, i+1);
-    }
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxCLOCK_INFO#");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxCLOCK_INFO___newindex(lua_State *L)
-{
-  orxCLOCK_INFO* self = lorx_luserdata_to_orxCLOCK_INFO(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "ticksize") == 0)
-  {
-    self->fTickSize = lorx_lnumber_to_orxFLOAT(L, 3);
-  }
-  else if (strcmp(key, "dt") == 0)
-  {
-    self->fDT = lorx_lnumber_to_orxFLOAT(L, 3);
-  }
-  else if (strcmp(key, "time") == 0)
-  {
-    self->fTime = lorx_lnumber_to_orxFLOAT(L, 3);
-  }
-  else if (strcmp(key, "modifierlistlist") == 0)
-  {
-    luaL_checktype(L, 3, LUA_TTABLE);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxCLOCK_INFO");
-    lua_pushvalue(L, 2);
-    lua_pushvalue(L, 3);
-    lua_rawset(L, -3);
-  }
-  return 0;
-}
-
-static const luaL_Reg l_lorx_clock_info_mm[] = {
-  { "__index", l_lorx_orxCLOCK_INFO___index },
-  { "__newindex", l_lorx_orxCLOCK_INFO___newindex },
-  { NULL, NULL }
-};
-
-static const luaL_Reg l_lorx_clock_info_const_mm[] = {
-  { "__index", l_lorx_orxCLOCK_INFO_const___index },
-  { NULL, NULL }
-};
-static int l_lorx_orxSOUND_STREAM_PACKET___index(lua_State *L)
-{
-  const orxSOUND_STREAM_PACKET* self = lorx_luserdata_to_orxSOUND_STREAM_PACKET(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "samplelistlist") == 0)
-  {
-    lua_createtable(L, self->u32SampleNumber, 0);
-    for (size_t i = 0; i < self->u32SampleNumber; i++)
-    {
-      lorx_orxFLOAT_to_lnumber(L, self->afSampleList[i]);
-      lua_seti(L, -2, i+1);
-    }
-  }
-  else if (strcmp(key, "samplenumber") == 0)
-  {
-    lorx_orxU32_to_linteger(L, self->u32SampleNumber);
-  }
-  else if (strcmp(key, "timestamp") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fTimeStamp);
-  }
-  else if (strcmp(key, "time") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fTime);
-  }
-  else if (strcmp(key, "id") == 0)
-  {
-    lorx_orxS32_to_linteger(L, self->s32ID);
-  }
-  else if (strcmp(key, "discard") == 0)
-  {
-    lorx_orxBOOL_to_lboolean(L, self->bDiscard);
-  }
-  else if (strcmp(key, "last") == 0)
-  {
-    lorx_orxBOOL_to_lboolean(L, self->bLast);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxSOUND_STREAM_PACKET");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxSOUND_STREAM_PACKET_const___index(lua_State *L)
-{
-  const orxSOUND_STREAM_PACKET* self = lorx_luserdata_to_orxSOUND_STREAM_PACKET_const(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "samplelistlist") == 0)
-  {
-    lua_createtable(L, self->u32SampleNumber, 0);
-    for (size_t i = 0; i < self->u32SampleNumber; i++)
-    {
-      lorx_orxFLOAT_to_lnumber(L, self->afSampleList[i]);
-      lua_seti(L, -2, i+1);
-    }
-  }
-  else if (strcmp(key, "samplenumber") == 0)
-  {
-    lorx_orxU32_to_linteger(L, self->u32SampleNumber);
-  }
-  else if (strcmp(key, "timestamp") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fTimeStamp);
-  }
-  else if (strcmp(key, "time") == 0)
-  {
-    lorx_orxFLOAT_to_lnumber(L, self->fTime);
-  }
-  else if (strcmp(key, "id") == 0)
-  {
-    lorx_orxS32_to_linteger(L, self->s32ID);
-  }
-  else if (strcmp(key, "discard") == 0)
-  {
-    lorx_orxBOOL_to_lboolean(L, self->bDiscard);
-  }
-  else if (strcmp(key, "last") == 0)
-  {
-    lorx_orxBOOL_to_lboolean(L, self->bLast);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxSOUND_STREAM_PACKET#");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxSOUND_STREAM_PACKET___newindex(lua_State *L)
-{
-  orxSOUND_STREAM_PACKET* self = lorx_luserdata_to_orxSOUND_STREAM_PACKET(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "samplelistlist") == 0)
-  {
-    luaL_checktype(L, 3, LUA_TTABLE);
-    
-    if (self->afSampleList != NULL)
-    {
-      for (size_t i = 0; i < self->u32SampleNumber; i++)
-      {
-        lua_geti(L, 3, i+1);
-        self->afSampleList[i] = lorx_lnumber_to_orxFLOAT(L, -1);
-        lua_pop(L, 1);
-      }
-      
-    }
-  }
-  else if (strcmp(key, "timestamp") == 0)
-  {
-    self->fTimeStamp = lorx_lnumber_to_orxFLOAT(L, 3);
-  }
-  else if (strcmp(key, "time") == 0)
-  {
-    self->fTime = lorx_lnumber_to_orxFLOAT(L, 3);
-  }
-  else if (strcmp(key, "id") == 0)
-  {
-    self->s32ID = lorx_linteger_to_orxS32(L, 3);
-  }
-  else if (strcmp(key, "discard") == 0)
-  {
-    self->bDiscard = lorx_lboolean_to_orxBOOL(L, 3);
-  }
-  else if (strcmp(key, "last") == 0)
-  {
-    self->bLast = lorx_lboolean_to_orxBOOL(L, 3);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxSOUND_STREAM_PACKET");
-    lua_pushvalue(L, 2);
-    lua_pushvalue(L, 3);
-    lua_rawset(L, -3);
-  }
-  return 0;
-}
-
-static const luaL_Reg l_lorx_sound_stream_packet_mm[] = {
-  { "__index", l_lorx_orxSOUND_STREAM_PACKET___index },
-  { "__newindex", l_lorx_orxSOUND_STREAM_PACKET___newindex },
-  { NULL, NULL }
-};
-
-static const luaL_Reg l_lorx_sound_stream_packet_const_mm[] = {
-  { "__index", l_lorx_orxSOUND_STREAM_PACKET_const___index },
-  { NULL, NULL }
-};
-static int l_lorx_orxSOUND_STREAM_INFO___index(lua_State *L)
-{
-  const orxSOUND_STREAM_INFO* self = lorx_luserdata_to_orxSOUND_STREAM_INFO(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "name") == 0)
-  {
-    lorx_orxSTRING_to_lstring(L, self->zName);
-  }
-  else if (strcmp(key, "samplerate") == 0)
-  {
-    lorx_orxU32_to_linteger(L, self->u32SampleRate);
-  }
-  else if (strcmp(key, "channelnumber") == 0)
-  {
-    lorx_orxU32_to_linteger(L, self->u32ChannelNumber);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxSOUND_STREAM_INFO");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxSOUND_STREAM_INFO_const___index(lua_State *L)
-{
-  const orxSOUND_STREAM_INFO* self = lorx_luserdata_to_orxSOUND_STREAM_INFO_const(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "name") == 0)
-  {
-    lorx_orxSTRING_to_lstring(L, self->zName);
-  }
-  else if (strcmp(key, "samplerate") == 0)
-  {
-    lorx_orxU32_to_linteger(L, self->u32SampleRate);
-  }
-  else if (strcmp(key, "channelnumber") == 0)
-  {
-    lorx_orxU32_to_linteger(L, self->u32ChannelNumber);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxSOUND_STREAM_INFO#");
-    lua_pushvalue(L, 2);
-    lua_rawget(L, -2);
-  }
-  return 1;
-}
-static int l_lorx_orxSOUND_STREAM_INFO___newindex(lua_State *L)
-{
-  orxSOUND_STREAM_INFO* self = lorx_luserdata_to_orxSOUND_STREAM_INFO(L, 1);
-  const char* key = luaL_checkstring(L, 2);
-  if (strcmp(key, "name") == 0)
-  {
-    self->zName = lorx_lstring_to_orxSTRING(L, 3);
-  }
-  else if (strcmp(key, "samplerate") == 0)
-  {
-    self->u32SampleRate = lorx_linteger_to_orxU32(L, 3);
-  }
-  else if (strcmp(key, "channelnumber") == 0)
-  {
-    self->u32ChannelNumber = lorx_linteger_to_orxU32(L, 3);
-  }
-  else
-  {
-    luaL_getmetatable(L, "lorx.orxSOUND_STREAM_INFO");
-    lua_pushvalue(L, 2);
-    lua_pushvalue(L, 3);
-    lua_rawset(L, -3);
-  }
-  return 0;
-}
-
-static const luaL_Reg l_lorx_sound_stream_info_mm[] = {
-  { "__index", l_lorx_orxSOUND_STREAM_INFO___index },
-  { "__newindex", l_lorx_orxSOUND_STREAM_INFO___newindex },
-  { NULL, NULL }
-};
-
-static const luaL_Reg l_lorx_sound_stream_info_const_mm[] = {
-  { "__index", l_lorx_orxSOUND_STREAM_INFO_const___index },
   { NULL, NULL }
 };
 

@@ -1,5 +1,7 @@
 # -*- encoding: utf-8 -*-
 
+import collections
+
 # map basic orx types to lua types
 typemap = {
     "orxFLOAT" : "number",
@@ -30,7 +32,7 @@ typemap = {
 }
 
 # map lua types to basic orx types
-typemaprev = {}
+typemaprev = collections.OrderedDict()
 for k, v in typemap.items():
     if v in typemaprev.keys():
         typemaprev[v].append(k)

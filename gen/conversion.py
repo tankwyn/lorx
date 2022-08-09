@@ -714,7 +714,9 @@ def gen_conenum():
  */
 """
 
-    for oet in enums.keys():
+    elist = list(enums.keys())
+    elist.sort()
+    for oet in elist:
         fname0 = fn_l2oenum(oet)
         fname1 = fn_o2lenum(oet)
 
@@ -750,6 +752,7 @@ def gen_conutype():
 
     # utype names
     utypes = list(otdict.keys()) + list(qtdict.keys())
+    utypes.sort()
 
     header = """/*
 ** Orx struct types conversions
@@ -808,6 +811,7 @@ def gen_conutype():
  * Conversion functions for converting from lua userdata to Orx types (structs) (non-const only)
  */
 """
+
     for ut in utypes:
         if ut in qtdict.keys(): # pointer to userdata is only for opaque types
             fname0 = fn_o2lutype(ut, False)

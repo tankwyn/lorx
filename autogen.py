@@ -2,6 +2,7 @@ import shutil
 import sys
 import os
 import re
+import collections
 
 
 #################### args ####################
@@ -112,7 +113,7 @@ print(f"{len(bmap)} functions are binded")
 mlist = []
 for v in methoddict.values():
     mlist += v
-modfuncs = {}
+modfuncs = collections.OrderedDict()
 for k, v in bmap.items():
     if k not in mlist:
         modfuncs[k] = v

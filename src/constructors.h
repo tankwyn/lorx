@@ -14,6 +14,18 @@
 #include "conenum.h"
 #include "conutype.h"
 
+static int l_lorx_orxAABOX_create(lua_State *L)
+{
+  orxAABOX** pself = lua_newuserdata(L, sizeof(orxAABOX*)+sizeof(orxAABOX));
+  orxAABOX* self = (orxAABOX*)(pself + 1);
+  luaL_setmetatable(L, "lorx.orxAABOX");
+  *pself = self;
+  self->vTL = lorx_luserdata_to_orxVECTOR_struct(L, 1);
+  self->vBR = lorx_luserdata_to_orxVECTOR_struct(L, 2);
+  
+  return 1;
+}
+
 static int l_lorx_orxANIM_CUSTOM_EVENT_create(lua_State *L)
 {
   orxANIM_CUSTOM_EVENT** pself = lua_newuserdata(L, sizeof(orxANIM_CUSTOM_EVENT*)+sizeof(orxANIM_CUSTOM_EVENT));
@@ -24,26 +36,37 @@ static int l_lorx_orxANIM_CUSTOM_EVENT_create(lua_State *L)
   return 1;
 }
 
+static int l_lorx_orxCHARACTER_GLYPH_create(lua_State *L)
+{
+  orxCHARACTER_GLYPH** pself = lua_newuserdata(L, sizeof(orxCHARACTER_GLYPH*)+sizeof(orxCHARACTER_GLYPH));
+  orxCHARACTER_GLYPH* self = (orxCHARACTER_GLYPH*)(pself + 1);
+  luaL_setmetatable(L, "lorx.orxCHARACTER_GLYPH");
+  *pself = self;
+  self->fX = lorx_lnumber_to_orxFLOAT(L, 1);
+  self->fY = lorx_lnumber_to_orxFLOAT(L, 2);
+  self->fWidth = lorx_lnumber_to_orxFLOAT(L, 3);
+  
+  return 1;
+}
+
+static int l_lorx_orxCOLOR_create(lua_State *L)
+{
+  orxCOLOR** pself = lua_newuserdata(L, sizeof(orxCOLOR*)+sizeof(orxCOLOR));
+  orxCOLOR* self = (orxCOLOR*)(pself + 1);
+  luaL_setmetatable(L, "lorx.orxCOLOR");
+  *pself = self;
+  self->vRGB = lorx_luserdata_to_orxVECTOR_struct(L, 1);
+  self->fAlpha = lorx_lnumber_to_orxFLOAT(L, 2);
+  
+  return 1;
+}
+
 static int l_lorx_orxCOMMAND_VAR_create(lua_State *L)
 {
   orxCOMMAND_VAR** pself = lua_newuserdata(L, sizeof(orxCOMMAND_VAR*)+sizeof(orxCOMMAND_VAR));
   orxCOMMAND_VAR* self = (orxCOMMAND_VAR*)(pself + 1);
   luaL_setmetatable(L, "lorx.orxCOMMAND_VAR");
   *pself = self;
-  
-  return 1;
-}
-
-static int l_lorx_orxRGBA_create(lua_State *L)
-{
-  orxRGBA** pself = lua_newuserdata(L, sizeof(orxRGBA*)+sizeof(orxRGBA));
-  orxRGBA* self = (orxRGBA*)(pself + 1);
-  luaL_setmetatable(L, "lorx.orxRGBA");
-  *pself = self;
-  self->u8R = lorx_linteger_to_orxU8(L, 1);
-  self->u8G = lorx_linteger_to_orxU8(L, 2);
-  self->u8B = lorx_linteger_to_orxU8(L, 3);
-  self->u8A = lorx_linteger_to_orxU8(L, 4);
   
   return 1;
 }
@@ -78,31 +101,6 @@ static int l_lorx_orxDISPLAY_VIDEO_MODE_create(lua_State *L)
   self->u32Depth = lorx_linteger_to_orxU32(L, 3);
   self->u32RefreshRate = lorx_linteger_to_orxU32(L, 4);
   self->bFullScreen = lorx_lboolean_to_orxBOOL(L, 5);
-  
-  return 1;
-}
-
-static int l_lorx_orxCHARACTER_GLYPH_create(lua_State *L)
-{
-  orxCHARACTER_GLYPH** pself = lua_newuserdata(L, sizeof(orxCHARACTER_GLYPH*)+sizeof(orxCHARACTER_GLYPH));
-  orxCHARACTER_GLYPH* self = (orxCHARACTER_GLYPH*)(pself + 1);
-  luaL_setmetatable(L, "lorx.orxCHARACTER_GLYPH");
-  *pself = self;
-  self->fX = lorx_lnumber_to_orxFLOAT(L, 1);
-  self->fY = lorx_lnumber_to_orxFLOAT(L, 2);
-  self->fWidth = lorx_lnumber_to_orxFLOAT(L, 3);
-  
-  return 1;
-}
-
-static int l_lorx_orxCOLOR_create(lua_State *L)
-{
-  orxCOLOR** pself = lua_newuserdata(L, sizeof(orxCOLOR*)+sizeof(orxCOLOR));
-  orxCOLOR* self = (orxCOLOR*)(pself + 1);
-  luaL_setmetatable(L, "lorx.orxCOLOR");
-  *pself = self;
-  self->vRGB = lorx_luserdata_to_orxVECTOR_struct(L, 1);
-  self->fAlpha = lorx_lnumber_to_orxFLOAT(L, 2);
   
   return 1;
 }
@@ -153,18 +151,6 @@ static int l_lorx_orxFILE_INFO_create(lua_State *L)
   return 1;
 }
 
-static int l_lorx_orxAABOX_create(lua_State *L)
-{
-  orxAABOX** pself = lua_newuserdata(L, sizeof(orxAABOX*)+sizeof(orxAABOX));
-  orxAABOX* self = (orxAABOX*)(pself + 1);
-  luaL_setmetatable(L, "lorx.orxAABOX");
-  *pself = self;
-  self->vTL = lorx_luserdata_to_orxVECTOR_struct(L, 1);
-  self->vBR = lorx_luserdata_to_orxVECTOR_struct(L, 2);
-  
-  return 1;
-}
-
 static int l_lorx_orxOBOX_create(lua_State *L)
 {
   orxOBOX** pself = lua_newuserdata(L, sizeof(orxOBOX*)+sizeof(orxOBOX));
@@ -176,6 +162,20 @@ static int l_lorx_orxOBOX_create(lua_State *L)
   self->vX = lorx_luserdata_to_orxVECTOR_struct(L, 3);
   self->vY = lorx_luserdata_to_orxVECTOR_struct(L, 4);
   self->vZ = lorx_luserdata_to_orxVECTOR_struct(L, 5);
+  
+  return 1;
+}
+
+static int l_lorx_orxRGBA_create(lua_State *L)
+{
+  orxRGBA** pself = lua_newuserdata(L, sizeof(orxRGBA*)+sizeof(orxRGBA));
+  orxRGBA* self = (orxRGBA*)(pself + 1);
+  luaL_setmetatable(L, "lorx.orxRGBA");
+  *pself = self;
+  self->u8R = lorx_linteger_to_orxU8(L, 1);
+  self->u8G = lorx_linteger_to_orxU8(L, 2);
+  self->u8B = lorx_linteger_to_orxU8(L, 3);
+  self->u8A = lorx_linteger_to_orxU8(L, 4);
   
   return 1;
 }

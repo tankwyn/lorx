@@ -16,50 +16,6 @@
 */
 
 
-static const struct luaL_Reg l_lorx_anim_custom_event_m[] = {
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_command_var_m[] = {
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_rgba_m[] = {
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_display_transform_m[] = {
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_display_video_mode_m[] = {
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_character_glyph_m[] = {
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_color_m[] = {
-  { "setRGBA", l_Color_SetRGBA },
-  { "set", l_Color_Set },
-  { "setRGB", l_Color_SetRGB },
-  { "setAlpha", l_Color_SetAlpha },
-  { "toRGBA", l_Color_ToRGBA },
-  { "copy", l_Color_Copy },
-  { "fromRGBToHSL", l_Color_FromRGBToHSL },
-  { "fromHSLToRGB", l_Color_FromHSLToRGB },
-  { "fromRGBToHSV", l_Color_FromRGBToHSV },
-  { "fromHSVToRGB", l_Color_FromHSVToRGB },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_file_info_m[] = {
-  { "findNext", l_File_FindNext },
-  { "findClose", l_File_FindClose },
-  
-  { NULL, NULL }
-};
 static const struct luaL_Reg l_lorx_aabox_m[] = {
   { "reorder", l_AABox_Reorder },
   { "isInside", l_AABox_IsInside },
@@ -69,43 +25,6 @@ static const struct luaL_Reg l_lorx_aabox_m[] = {
   { "copy", l_AABox_Copy },
   { "move", l_AABox_Move },
   { "set", l_AABox_Set },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_obox_m[] = {
-  { "getCenter", l_OBox_GetCenter },
-  { "isInside", l_OBox_IsInside },
-  { "_2DIsInside", l_OBox_2DIsInside },
-  { "zAlignedTestIntersection", l_OBox_ZAlignedTestIntersection },
-  { "_2DSet", l_OBox_2DSet },
-  { "copy", l_OBox_Copy },
-  { "move", l_OBox_Move },
-  { "_2DRotate", l_OBox_2DRotate },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_vector_m[] = {
-  { "set", l_Vector_Set },
-  { "setAll", l_Vector_SetAll },
-  { "copy", l_Vector_Copy },
-  { "getSquareSize", l_Vector_GetSquareSize },
-  { "getSize", l_Vector_GetSize },
-  { "isNull", l_Vector_IsNull },
-  { "bezier", l_Vector_Bezier },
-  { "catmullRom", l_Vector_CatmullRom },
-  { "clamp", l_Vector_Clamp },
-  { "neg", l_Vector_Neg },
-  { "rec", l_Vector_Rec },
-  { "floor", l_Vector_Floor },
-  { "round", l_Vector_Round },
-  { "normalize", l_Vector_Normalize },
-  { "_2DRotate", l_Vector_2DRotate },
-  { "fromCartesianToSpherical", l_Vector_FromCartesianToSpherical },
-  { "fromSphericalToCartesian", l_Vector_FromSphericalToCartesian },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_sound_filter_data_m[] = {
   
   { NULL, NULL }
 };
@@ -232,6 +151,157 @@ static const struct luaL_Reg l_lorx_animset_link_table_m[] = {
   
   { NULL, NULL }
 };
+static const struct luaL_Reg l_lorx_anim_custom_event_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_bitmap_m[] = {
+  { "delete", l_Display_DeleteBitmap },
+  { "save", l_Display_SaveBitmap },
+  { "setData", l_Display_SetBitmapData },
+  { "getData", l_Display_GetBitmapData },
+  { "setPartialData", l_Display_SetPartialBitmapData },
+  { "getSize", l_Display_GetBitmapSize },
+  { "getID", l_Display_GetBitmapID },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_body_m[] = {
+  { "delete", l_Body_Delete },
+  { "getName", l_Body_GetName },
+  { "testDefFlags", l_Body_TestDefFlags },
+  { "testAllDefFlags", l_Body_TestAllDefFlags },
+  { "getDefFlags", l_Body_GetDefFlags },
+  { "addPartFromConfig", l_Body_AddPartFromConfig },
+  { "removePartFromConfig", l_Body_RemovePartFromConfig },
+  { "getNextPart", l_Body_GetNextPart },
+  { "addJointFromConfig", l_Body_AddJointFromConfig },
+  { "getNextJoint", l_Body_GetNextJoint },
+  { "setPosition", l_Body_SetPosition },
+  { "setRotation", l_Body_SetRotation },
+  { "setScale", l_Body_SetScale },
+  { "setSpeed", l_Body_SetSpeed },
+  { "setAngularVelocity", l_Body_SetAngularVelocity },
+  { "setCustomGravity", l_Body_SetCustomGravity },
+  { "setFixedRotation", l_Body_SetFixedRotation },
+  { "setDynamic", l_Body_SetDynamic },
+  { "setAllowMoving", l_Body_SetAllowMoving },
+  { "getPosition", l_Body_GetPosition },
+  { "getRotation", l_Body_GetRotation },
+  { "getSpeed", l_Body_GetSpeed },
+  { "getSpeedAtWorldPosition", l_Body_GetSpeedAtWorldPosition },
+  { "getAngularVelocity", l_Body_GetAngularVelocity },
+  { "getCustomGravity", l_Body_GetCustomGravity },
+  { "isFixedRotation", l_Body_IsFixedRotation },
+  { "isDynamic", l_Body_IsDynamic },
+  { "getAllowMoving", l_Body_GetAllowMoving },
+  { "getMass", l_Body_GetMass },
+  { "getMassCenter", l_Body_GetMassCenter },
+  { "setLinearDamping", l_Body_SetLinearDamping },
+  { "setAngularDamping", l_Body_SetAngularDamping },
+  { "getLinearDamping", l_Body_GetLinearDamping },
+  { "getAngularDamping", l_Body_GetAngularDamping },
+  { "isInside", l_Body_IsInside },
+  { "applyTorque", l_Body_ApplyTorque },
+  { "applyForce", l_Body_ApplyForce },
+  { "applyImpulse", l_Body_ApplyImpulse },
+  { "update", l_Structure_Update },
+  { "getOwner", l_Structure_GetOwner },
+  { "setOwner", l_Structure_SetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "setParent", l_Structure_SetParent },
+  { "increaseCount", l_Structure_IncreaseCount },
+  { "decreaseCount", l_Structure_DecreaseCount },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  { "setFlags", l_Structure_SetFlags },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_body_joint_m[] = {
+  { "getName", l_Body_GetJointName },
+  { "remove", l_Body_RemoveJoint },
+  { "enableMotor", l_Body_EnableMotor },
+  { "setMotorSpeed", l_Body_SetJointMotorSpeed },
+  { "setMaxMotorTorque", l_Body_SetJointMaxMotorTorque },
+  { "getReactionForce", l_Body_GetJointReactionForce },
+  { "getReactionTorque", l_Body_GetJointReactionTorque },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_body_part_m[] = {
+  { "getName", l_Body_GetPartName },
+  { "getBody", l_Body_GetPartBody },
+  { "remove", l_Body_RemovePart },
+  { "setSelfFlags", l_Body_SetPartSelfFlags },
+  { "setCheckMask", l_Body_SetPartCheckMask },
+  { "getSelfFlags", l_Body_GetPartSelfFlags },
+  { "getCheckMask", l_Body_GetPartCheckMask },
+  { "setSolid", l_Body_SetPartSolid },
+  { "isSolid", l_Body_IsPartSolid },
+  { "setFriction", l_Body_SetPartFriction },
+  { "getFriction", l_Body_GetPartFriction },
+  { "setRestitution", l_Body_SetPartRestitution },
+  { "getRestitution", l_Body_GetPartRestitution },
+  { "setDensity", l_Body_SetPartDensity },
+  { "getDensity", l_Body_GetPartDensity },
+  { "isInside", l_Body_IsInsidePart },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_camera_m[] = {
+  { "delete", l_Camera_Delete },
+  { "addGroupID", l_Camera_AddGroupID },
+  { "removeGroupID", l_Camera_RemoveGroupID },
+  { "getGroupIDCount", l_Camera_GetGroupIDCount },
+  { "getGroupID", l_Camera_GetGroupID },
+  { "setFrustum", l_Camera_SetFrustum },
+  { "setPosition", l_Camera_SetPosition },
+  { "setRotation", l_Camera_SetRotation },
+  { "setZoom", l_Camera_SetZoom },
+  { "getFrustum", l_Camera_GetFrustum },
+  { "getPosition", l_Camera_GetPosition },
+  { "getRotation", l_Camera_GetRotation },
+  { "getZoom", l_Camera_GetZoom },
+  { "getName", l_Camera_GetName },
+  { "getFrame", l_Camera_GetFrame },
+  { "setParent", l_Camera_SetParent },
+  { "getParent", l_Camera_GetParent },
+  { "update", l_Structure_Update },
+  { "getOwner", l_Structure_GetOwner },
+  { "setOwner", l_Structure_SetOwner },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "increaseCount", l_Structure_IncreaseCount },
+  { "decreaseCount", l_Structure_DecreaseCount },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  { "setFlags", l_Structure_SetFlags },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_character_glyph_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_character_map_m[] = {
+  
+  { NULL, NULL }
+};
 static const struct luaL_Reg l_lorx_clock_m[] = {
   { "delete", l_Clock_Delete },
   { "resync", l_Clock_Resync },
@@ -269,21 +339,21 @@ static const struct luaL_Reg l_lorx_clock_info_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_thread_semaphore_m[] = {
-  { "delete", l_Thread_DeleteSemaphore },
-  { "wait", l_Thread_WaitSemaphore },
-  { "signal", l_Thread_SignalSemaphore },
+static const struct luaL_Reg l_lorx_color_m[] = {
+  { "setRGBA", l_Color_SetRGBA },
+  { "set", l_Color_Set },
+  { "setRGB", l_Color_SetRGB },
+  { "setAlpha", l_Color_SetAlpha },
+  { "toRGBA", l_Color_ToRGBA },
+  { "copy", l_Color_Copy },
+  { "fromRGBToHSL", l_Color_FromRGBToHSL },
+  { "fromHSLToRGB", l_Color_FromHSLToRGB },
+  { "fromRGBToHSV", l_Color_FromRGBToHSV },
+  { "fromHSVToRGB", l_Color_FromHSVToRGB },
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_bitmap_m[] = {
-  { "delete", l_Display_DeleteBitmap },
-  { "save", l_Display_SaveBitmap },
-  { "setData", l_Display_SetBitmapData },
-  { "getData", l_Display_GetBitmapData },
-  { "setPartialData", l_Display_SetPartialBitmapData },
-  { "getSize", l_Display_GetBitmapSize },
-  { "getID", l_Display_GetBitmapID },
+static const struct luaL_Reg l_lorx_command_var_m[] = {
   
   { NULL, NULL }
 };
@@ -291,7 +361,27 @@ static const struct luaL_Reg l_lorx_display_mesh_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_character_map_m[] = {
+static const struct luaL_Reg l_lorx_display_transform_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_display_video_mode_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_file_m[] = {
+  { "seek", l_File_Seek },
+  { "tell", l_File_Tell },
+  { "getSize", l_File_GetSize },
+  { "getTime", l_File_GetTime },
+  { "print", l_File_Print },
+  { "close", l_File_Close },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_file_info_m[] = {
+  { "findNext", l_File_FindNext },
+  { "findClose", l_File_FindClose },
   
   { NULL, NULL }
 };
@@ -331,126 +421,6 @@ static const struct luaL_Reg l_lorx_font_m[] = {
   { "testAllFlags", l_Structure_TestAllFlags },
   { "getFlags", l_Structure_GetFlags },
   { "setFlags", l_Structure_SetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_graphic_m[] = {
-  { "delete", l_Graphic_Delete },
-  { "clone", l_Graphic_Clone },
-  { "getName", l_Graphic_GetName },
-  { "setData", l_Graphic_SetData },
-  { "getData", l_Graphic_GetData },
-  { "setFlip", l_Graphic_SetFlip },
-  { "getFlip", l_Graphic_GetFlip },
-  { "setPivot", l_Graphic_SetPivot },
-  { "setRelativePivot", l_Graphic_SetRelativePivot },
-  { "getPivot", l_Graphic_GetPivot },
-  { "setSize", l_Graphic_SetSize },
-  { "getSize", l_Graphic_GetSize },
-  { "setColor", l_Graphic_SetColor },
-  { "setRepeat", l_Graphic_SetRepeat },
-  { "clearColor", l_Graphic_ClearColor },
-  { "hasColor", l_Graphic_HasColor },
-  { "getColor", l_Graphic_GetColor },
-  { "getRepeat", l_Graphic_GetRepeat },
-  { "setOrigin", l_Graphic_SetOrigin },
-  { "getOrigin", l_Graphic_GetOrigin },
-  { "updateSize", l_Graphic_UpdateSize },
-  { "setSmoothing", l_Graphic_SetSmoothing },
-  { "getSmoothing", l_Graphic_GetSmoothing },
-  { "setBlendMode", l_Graphic_SetBlendMode },
-  { "clearBlendMode", l_Graphic_ClearBlendMode },
-  { "hasBlendMode", l_Graphic_HasBlendMode },
-  { "getBlendMode", l_Graphic_GetBlendMode },
-  { "update", l_Structure_Update },
-  { "getOwner", l_Structure_GetOwner },
-  { "setOwner", l_Structure_SetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "setParent", l_Structure_SetParent },
-  { "increaseCount", l_Structure_IncreaseCount },
-  { "decreaseCount", l_Structure_DecreaseCount },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  { "setFlags", l_Structure_SetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_text_m[] = {
-  { "delete", l_Text_Delete },
-  { "getName", l_Text_GetName },
-  { "getLineCount", l_Text_GetLineCount },
-  { "getLineSize", l_Text_GetLineSize },
-  { "isFixedSize", l_Text_IsFixedSize },
-  { "getSize", l_Text_GetSize },
-  { "getString", l_Text_GetString },
-  { "getFont", l_Text_GetFont },
-  { "setSize", l_Text_SetSize },
-  { "setString", l_Text_SetString },
-  { "setFont", l_Text_SetFont },
-  { "update", l_Structure_Update },
-  { "getOwner", l_Structure_GetOwner },
-  { "setOwner", l_Structure_SetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "setParent", l_Structure_SetParent },
-  { "increaseCount", l_Structure_IncreaseCount },
-  { "decreaseCount", l_Structure_DecreaseCount },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  { "setFlags", l_Structure_SetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_texture_m[] = {
-  { "delete", l_Texture_Delete },
-  { "linkBitmap", l_Texture_LinkBitmap },
-  { "unlinkBitmap", l_Texture_UnlinkBitmap },
-  { "getBitmap", l_Texture_GetBitmap },
-  { "getSize", l_Texture_GetSize },
-  { "getName", l_Texture_GetName },
-  { "update", l_Structure_Update },
-  { "getOwner", l_Structure_GetOwner },
-  { "setOwner", l_Structure_SetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "setParent", l_Structure_SetParent },
-  { "increaseCount", l_Structure_IncreaseCount },
-  { "decreaseCount", l_Structure_DecreaseCount },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  { "setFlags", l_Structure_SetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_file_m[] = {
-  { "seek", l_File_Seek },
-  { "tell", l_File_Tell },
-  { "getSize", l_File_GetSize },
-  { "getTime", l_File_GetTime },
-  { "print", l_File_Print },
-  { "close", l_File_Close },
   
   { NULL, NULL }
 };
@@ -549,6 +519,55 @@ static const struct luaL_Reg l_lorx_fxpointer_m[] = {
   { "getFrequency", l_FXPointer_GetFrequency },
   { "setTime", l_FXPointer_SetTime },
   { "setFrequency", l_FXPointer_SetFrequency },
+  { "update", l_Structure_Update },
+  { "getOwner", l_Structure_GetOwner },
+  { "setOwner", l_Structure_SetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "setParent", l_Structure_SetParent },
+  { "increaseCount", l_Structure_IncreaseCount },
+  { "decreaseCount", l_Structure_DecreaseCount },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  { "setFlags", l_Structure_SetFlags },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_graphic_m[] = {
+  { "delete", l_Graphic_Delete },
+  { "clone", l_Graphic_Clone },
+  { "getName", l_Graphic_GetName },
+  { "setData", l_Graphic_SetData },
+  { "getData", l_Graphic_GetData },
+  { "setFlip", l_Graphic_SetFlip },
+  { "getFlip", l_Graphic_GetFlip },
+  { "setPivot", l_Graphic_SetPivot },
+  { "setRelativePivot", l_Graphic_SetRelativePivot },
+  { "getPivot", l_Graphic_GetPivot },
+  { "setSize", l_Graphic_SetSize },
+  { "getSize", l_Graphic_GetSize },
+  { "setColor", l_Graphic_SetColor },
+  { "setRepeat", l_Graphic_SetRepeat },
+  { "clearColor", l_Graphic_ClearColor },
+  { "hasColor", l_Graphic_HasColor },
+  { "getColor", l_Graphic_GetColor },
+  { "getRepeat", l_Graphic_GetRepeat },
+  { "setOrigin", l_Graphic_SetOrigin },
+  { "getOrigin", l_Graphic_GetOrigin },
+  { "updateSize", l_Graphic_UpdateSize },
+  { "setSmoothing", l_Graphic_SetSmoothing },
+  { "getSmoothing", l_Graphic_GetSmoothing },
+  { "setBlendMode", l_Graphic_SetBlendMode },
+  { "clearBlendMode", l_Graphic_ClearBlendMode },
+  { "hasBlendMode", l_Graphic_HasBlendMode },
+  { "getBlendMode", l_Graphic_GetBlendMode },
   { "update", l_Structure_Update },
   { "getOwner", l_Structure_GetOwner },
   { "setOwner", l_Structure_SetOwner },
@@ -726,178 +745,15 @@ static const struct luaL_Reg l_lorx_object_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_spawner_m[] = {
-  { "delete", l_Spawner_Delete },
-  { "enable", l_Spawner_Enable },
-  { "isEnabled", l_Spawner_IsEnabled },
-  { "reset", l_Spawner_Reset },
-  { "setTotalObjectLimit", l_Spawner_SetTotalObjectLimit },
-  { "setActiveObjectLimit", l_Spawner_SetActiveObjectLimit },
-  { "getTotalObjectLimit", l_Spawner_GetTotalObjectLimit },
-  { "getActiveObjectLimit", l_Spawner_GetActiveObjectLimit },
-  { "getTotalObjectCount", l_Spawner_GetTotalObjectCount },
-  { "getActiveObjectCount", l_Spawner_GetActiveObjectCount },
-  { "setWaveSize", l_Spawner_SetWaveSize },
-  { "setWaveDelay", l_Spawner_SetWaveDelay },
-  { "setNextWaveDelay", l_Spawner_SetNextWaveDelay },
-  { "getWaveSize", l_Spawner_GetWaveSize },
-  { "getWaveDelay", l_Spawner_GetWaveDelay },
-  { "getNextWaveDelay", l_Spawner_GetNextWaveDelay },
-  { "setObjectSpeed", l_Spawner_SetObjectSpeed },
-  { "getObjectSpeed", l_Spawner_GetObjectSpeed },
-  { "spawn", l_Spawner_Spawn },
-  { "getFrame", l_Spawner_GetFrame },
-  { "setPosition", l_Spawner_SetPosition },
-  { "setRotation", l_Spawner_SetRotation },
-  { "setScale", l_Spawner_SetScale },
-  { "getPosition", l_Spawner_GetPosition },
-  { "getWorldPosition", l_Spawner_GetWorldPosition },
-  { "getRotation", l_Spawner_GetRotation },
-  { "getWorldRotation", l_Spawner_GetWorldRotation },
-  { "getScale", l_Spawner_GetScale },
-  { "getWorldScale", l_Spawner_GetWorldScale },
-  { "setParent", l_Spawner_SetParent },
-  { "getParent", l_Spawner_GetParent },
-  { "getName", l_Spawner_GetName },
-  { "update", l_Structure_Update },
-  { "getOwner", l_Structure_GetOwner },
-  { "setOwner", l_Structure_SetOwner },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "increaseCount", l_Structure_IncreaseCount },
-  { "decreaseCount", l_Structure_DecreaseCount },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  { "setFlags", l_Structure_SetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_structure_m[] = {
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_timeline_m[] = {
-  { "delete", l_TimeLine_Delete },
-  { "enable", l_TimeLine_Enable },
-  { "isEnabled", l_TimeLine_IsEnabled },
-  { "addTrackFromConfig", l_TimeLine_AddTrackFromConfig },
-  { "removeTrackFromConfig", l_TimeLine_RemoveTrackFromConfig },
-  { "getCount", l_TimeLine_GetCount },
-  { "update", l_Structure_Update },
-  { "getOwner", l_Structure_GetOwner },
-  { "setOwner", l_Structure_SetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "setParent", l_Structure_SetParent },
-  { "increaseCount", l_Structure_IncreaseCount },
-  { "decreaseCount", l_Structure_DecreaseCount },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  { "setFlags", l_Structure_SetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_body_m[] = {
-  { "delete", l_Body_Delete },
-  { "getName", l_Body_GetName },
-  { "testDefFlags", l_Body_TestDefFlags },
-  { "testAllDefFlags", l_Body_TestAllDefFlags },
-  { "getDefFlags", l_Body_GetDefFlags },
-  { "addPartFromConfig", l_Body_AddPartFromConfig },
-  { "removePartFromConfig", l_Body_RemovePartFromConfig },
-  { "getNextPart", l_Body_GetNextPart },
-  { "addJointFromConfig", l_Body_AddJointFromConfig },
-  { "getNextJoint", l_Body_GetNextJoint },
-  { "setPosition", l_Body_SetPosition },
-  { "setRotation", l_Body_SetRotation },
-  { "setScale", l_Body_SetScale },
-  { "setSpeed", l_Body_SetSpeed },
-  { "setAngularVelocity", l_Body_SetAngularVelocity },
-  { "setCustomGravity", l_Body_SetCustomGravity },
-  { "setFixedRotation", l_Body_SetFixedRotation },
-  { "setDynamic", l_Body_SetDynamic },
-  { "setAllowMoving", l_Body_SetAllowMoving },
-  { "getPosition", l_Body_GetPosition },
-  { "getRotation", l_Body_GetRotation },
-  { "getSpeed", l_Body_GetSpeed },
-  { "getSpeedAtWorldPosition", l_Body_GetSpeedAtWorldPosition },
-  { "getAngularVelocity", l_Body_GetAngularVelocity },
-  { "getCustomGravity", l_Body_GetCustomGravity },
-  { "isFixedRotation", l_Body_IsFixedRotation },
-  { "isDynamic", l_Body_IsDynamic },
-  { "getAllowMoving", l_Body_GetAllowMoving },
-  { "getMass", l_Body_GetMass },
-  { "getMassCenter", l_Body_GetMassCenter },
-  { "setLinearDamping", l_Body_SetLinearDamping },
-  { "setAngularDamping", l_Body_SetAngularDamping },
-  { "getLinearDamping", l_Body_GetLinearDamping },
-  { "getAngularDamping", l_Body_GetAngularDamping },
-  { "isInside", l_Body_IsInside },
-  { "applyTorque", l_Body_ApplyTorque },
-  { "applyForce", l_Body_ApplyForce },
-  { "applyImpulse", l_Body_ApplyImpulse },
-  { "update", l_Structure_Update },
-  { "getOwner", l_Structure_GetOwner },
-  { "setOwner", l_Structure_SetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "setParent", l_Structure_SetParent },
-  { "increaseCount", l_Structure_IncreaseCount },
-  { "decreaseCount", l_Structure_DecreaseCount },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  { "setFlags", l_Structure_SetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_body_part_m[] = {
-  { "getName", l_Body_GetPartName },
-  { "getBody", l_Body_GetPartBody },
-  { "remove", l_Body_RemovePart },
-  { "setSelfFlags", l_Body_SetPartSelfFlags },
-  { "setCheckMask", l_Body_SetPartCheckMask },
-  { "getSelfFlags", l_Body_GetPartSelfFlags },
-  { "getCheckMask", l_Body_GetPartCheckMask },
-  { "setSolid", l_Body_SetPartSolid },
-  { "isSolid", l_Body_IsPartSolid },
-  { "setFriction", l_Body_SetPartFriction },
-  { "getFriction", l_Body_GetPartFriction },
-  { "setRestitution", l_Body_SetPartRestitution },
-  { "getRestitution", l_Body_GetPartRestitution },
-  { "setDensity", l_Body_SetPartDensity },
-  { "getDensity", l_Body_GetPartDensity },
-  { "isInside", l_Body_IsInsidePart },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_body_joint_m[] = {
-  { "getName", l_Body_GetJointName },
-  { "remove", l_Body_RemoveJoint },
-  { "enableMotor", l_Body_EnableMotor },
-  { "setMotorSpeed", l_Body_SetJointMotorSpeed },
-  { "setMaxMotorTorque", l_Body_SetJointMaxMotorTorque },
-  { "getReactionForce", l_Body_GetJointReactionForce },
-  { "getReactionTorque", l_Body_GetJointReactionTorque },
+static const struct luaL_Reg l_lorx_obox_m[] = {
+  { "getCenter", l_OBox_GetCenter },
+  { "isInside", l_OBox_IsInside },
+  { "_2DIsInside", l_OBox_2DIsInside },
+  { "zAlignedTestIntersection", l_OBox_ZAlignedTestIntersection },
+  { "_2DSet", l_OBox_2DSet },
+  { "copy", l_OBox_Copy },
+  { "move", l_OBox_Move },
+  { "_2DRotate", l_OBox_2DRotate },
   
   { NULL, NULL }
 };
@@ -930,6 +786,16 @@ static const struct luaL_Reg l_lorx_physics_body_m[] = {
   
   { NULL, NULL }
 };
+static const struct luaL_Reg l_lorx_physics_body_joint_m[] = {
+  { "delete", l_Physics_DeleteJoint },
+  { "enableMotor", l_Physics_EnableMotor },
+  { "setMotorSpeed", l_Physics_SetJointMotorSpeed },
+  { "setMaxMotorTorque", l_Physics_SetJointMaxMotorTorque },
+  { "getReactionForce", l_Physics_GetJointReactionForce },
+  { "getReactionTorque", l_Physics_GetJointReactionTorque },
+  
+  { NULL, NULL }
+};
 static const struct luaL_Reg l_lorx_physics_body_part_m[] = {
   { "delete", l_Physics_DeletePart },
   { "setSelfFlags", l_Physics_SetPartSelfFlags },
@@ -948,50 +814,7 @@ static const struct luaL_Reg l_lorx_physics_body_part_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_physics_body_joint_m[] = {
-  { "delete", l_Physics_DeleteJoint },
-  { "enableMotor", l_Physics_EnableMotor },
-  { "setMotorSpeed", l_Physics_SetJointMotorSpeed },
-  { "setMaxMotorTorque", l_Physics_SetJointMaxMotorTorque },
-  { "getReactionForce", l_Physics_GetJointReactionForce },
-  { "getReactionTorque", l_Physics_GetJointReactionTorque },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_camera_m[] = {
-  { "delete", l_Camera_Delete },
-  { "addGroupID", l_Camera_AddGroupID },
-  { "removeGroupID", l_Camera_RemoveGroupID },
-  { "getGroupIDCount", l_Camera_GetGroupIDCount },
-  { "getGroupID", l_Camera_GetGroupID },
-  { "setFrustum", l_Camera_SetFrustum },
-  { "setPosition", l_Camera_SetPosition },
-  { "setRotation", l_Camera_SetRotation },
-  { "setZoom", l_Camera_SetZoom },
-  { "getFrustum", l_Camera_GetFrustum },
-  { "getPosition", l_Camera_GetPosition },
-  { "getRotation", l_Camera_GetRotation },
-  { "getZoom", l_Camera_GetZoom },
-  { "getName", l_Camera_GetName },
-  { "getFrame", l_Camera_GetFrame },
-  { "setParent", l_Camera_SetParent },
-  { "getParent", l_Camera_GetParent },
-  { "update", l_Structure_Update },
-  { "getOwner", l_Structure_GetOwner },
-  { "setOwner", l_Structure_SetOwner },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "increaseCount", l_Structure_IncreaseCount },
-  { "decreaseCount", l_Structure_DecreaseCount },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  { "setFlags", l_Structure_SetFlags },
+static const struct luaL_Reg l_lorx_rgba_m[] = {
   
   { NULL, NULL }
 };
@@ -1042,57 +865,6 @@ static const struct luaL_Reg l_lorx_shaderpointer_m[] = {
   { "getShader", l_ShaderPointer_GetShader },
   { "addShaderFromConfig", l_ShaderPointer_AddShaderFromConfig },
   { "removeShaderFromConfig", l_ShaderPointer_RemoveShaderFromConfig },
-  { "update", l_Structure_Update },
-  { "getOwner", l_Structure_GetOwner },
-  { "setOwner", l_Structure_SetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "setParent", l_Structure_SetParent },
-  { "increaseCount", l_Structure_IncreaseCount },
-  { "decreaseCount", l_Structure_DecreaseCount },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  { "setFlags", l_Structure_SetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_viewport_m[] = {
-  { "delete", l_Viewport_Delete },
-  { "setTextureList", l_Viewport_SetTextureList },
-  { "getTextureList", l_Viewport_GetTextureList },
-  { "getTextureCount", l_Viewport_GetTextureCount },
-  { "setBackgroundColor", l_Viewport_SetBackgroundColor },
-  { "clearBackgroundColor", l_Viewport_ClearBackgroundColor },
-  { "hasBackgroundColor", l_Viewport_HasBackgroundColor },
-  { "getBackgroundColor", l_Viewport_GetBackgroundColor },
-  { "enable", l_Viewport_Enable },
-  { "isEnabled", l_Viewport_IsEnabled },
-  { "setCamera", l_Viewport_SetCamera },
-  { "getCamera", l_Viewport_GetCamera },
-  { "addShader", l_Viewport_AddShader },
-  { "removeShader", l_Viewport_RemoveShader },
-  { "enableShader", l_Viewport_EnableShader },
-  { "isShaderEnabled", l_Viewport_IsShaderEnabled },
-  { "getShaderPointer", l_Viewport_GetShaderPointer },
-  { "setBlendMode", l_Viewport_SetBlendMode },
-  { "getBlendMode", l_Viewport_GetBlendMode },
-  { "setPosition", l_Viewport_SetPosition },
-  { "setRelativePosition", l_Viewport_SetRelativePosition },
-  { "getPosition", l_Viewport_GetPosition },
-  { "setSize", l_Viewport_SetSize },
-  { "setRelativeSize", l_Viewport_SetRelativeSize },
-  { "getSize", l_Viewport_GetSize },
-  { "getRelativeSize", l_Viewport_GetRelativeSize },
-  { "getBox", l_Viewport_GetBox },
-  { "getCorrectionRatio", l_Viewport_GetCorrectionRatio },
-  { "getName", l_Viewport_GetName },
   { "update", l_Structure_Update },
   { "getOwner", l_Structure_GetOwner },
   { "setOwner", l_Structure_SetOwner },
@@ -1166,14 +938,6 @@ static const struct luaL_Reg l_lorx_sound_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_sound_stream_info_m[] = {
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_sound_stream_packet_m[] = {
-  
-  { NULL, NULL }
-};
 static const struct luaL_Reg l_lorx_soundpointer_m[] = {
   { "delete", l_SoundPointer_Delete },
   { "enable", l_SoundPointer_Enable },
@@ -1216,6 +980,13 @@ static const struct luaL_Reg l_lorx_soundpointer_m[] = {
   
   { NULL, NULL }
 };
+static const struct luaL_Reg l_lorx_soundsystem_sample_m[] = {
+  { "delete", l_SoundSystem_DeleteSample },
+  { "getInfo", l_SoundSystem_GetSampleInfo },
+  { "setData", l_SoundSystem_SetSampleData },
+  
+  { NULL, NULL }
+};
 static const struct luaL_Reg l_lorx_soundsystem_sound_m[] = {
   { "addFilter", l_SoundSystem_AddFilter },
   { "delete", l_SoundSystem_Delete },
@@ -1244,78 +1015,173 @@ static const struct luaL_Reg l_lorx_soundsystem_sound_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_soundsystem_sample_m[] = {
-  { "delete", l_SoundSystem_DeleteSample },
-  { "getInfo", l_SoundSystem_GetSampleInfo },
-  { "setData", l_SoundSystem_SetSampleData },
+static const struct luaL_Reg l_lorx_sound_filter_data_m[] = {
   
   { NULL, NULL }
 };
-/*
-** Userdata types generated with utypes.py
-*/
-
-
-static const struct luaL_Reg l_lorx_anim_custom_event_const_m[] = {
+static const struct luaL_Reg l_lorx_sound_stream_info_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_command_var_const_m[] = {
+static const struct luaL_Reg l_lorx_sound_stream_packet_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_rgba_const_m[] = {
+static const struct luaL_Reg l_lorx_spawner_m[] = {
+  { "delete", l_Spawner_Delete },
+  { "enable", l_Spawner_Enable },
+  { "isEnabled", l_Spawner_IsEnabled },
+  { "reset", l_Spawner_Reset },
+  { "setTotalObjectLimit", l_Spawner_SetTotalObjectLimit },
+  { "setActiveObjectLimit", l_Spawner_SetActiveObjectLimit },
+  { "getTotalObjectLimit", l_Spawner_GetTotalObjectLimit },
+  { "getActiveObjectLimit", l_Spawner_GetActiveObjectLimit },
+  { "getTotalObjectCount", l_Spawner_GetTotalObjectCount },
+  { "getActiveObjectCount", l_Spawner_GetActiveObjectCount },
+  { "setWaveSize", l_Spawner_SetWaveSize },
+  { "setWaveDelay", l_Spawner_SetWaveDelay },
+  { "setNextWaveDelay", l_Spawner_SetNextWaveDelay },
+  { "getWaveSize", l_Spawner_GetWaveSize },
+  { "getWaveDelay", l_Spawner_GetWaveDelay },
+  { "getNextWaveDelay", l_Spawner_GetNextWaveDelay },
+  { "setObjectSpeed", l_Spawner_SetObjectSpeed },
+  { "getObjectSpeed", l_Spawner_GetObjectSpeed },
+  { "spawn", l_Spawner_Spawn },
+  { "getFrame", l_Spawner_GetFrame },
+  { "setPosition", l_Spawner_SetPosition },
+  { "setRotation", l_Spawner_SetRotation },
+  { "setScale", l_Spawner_SetScale },
+  { "getPosition", l_Spawner_GetPosition },
+  { "getWorldPosition", l_Spawner_GetWorldPosition },
+  { "getRotation", l_Spawner_GetRotation },
+  { "getWorldRotation", l_Spawner_GetWorldRotation },
+  { "getScale", l_Spawner_GetScale },
+  { "getWorldScale", l_Spawner_GetWorldScale },
+  { "setParent", l_Spawner_SetParent },
+  { "getParent", l_Spawner_GetParent },
+  { "getName", l_Spawner_GetName },
+  { "update", l_Structure_Update },
+  { "getOwner", l_Structure_GetOwner },
+  { "setOwner", l_Structure_SetOwner },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "increaseCount", l_Structure_IncreaseCount },
+  { "decreaseCount", l_Structure_DecreaseCount },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  { "setFlags", l_Structure_SetFlags },
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_display_transform_const_m[] = {
+static const struct luaL_Reg l_lorx_structure_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_display_video_mode_const_m[] = {
+static const struct luaL_Reg l_lorx_text_m[] = {
+  { "delete", l_Text_Delete },
+  { "getName", l_Text_GetName },
+  { "getLineCount", l_Text_GetLineCount },
+  { "getLineSize", l_Text_GetLineSize },
+  { "isFixedSize", l_Text_IsFixedSize },
+  { "getSize", l_Text_GetSize },
+  { "getString", l_Text_GetString },
+  { "getFont", l_Text_GetFont },
+  { "setSize", l_Text_SetSize },
+  { "setString", l_Text_SetString },
+  { "setFont", l_Text_SetFont },
+  { "update", l_Structure_Update },
+  { "getOwner", l_Structure_GetOwner },
+  { "setOwner", l_Structure_SetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "setParent", l_Structure_SetParent },
+  { "increaseCount", l_Structure_IncreaseCount },
+  { "decreaseCount", l_Structure_DecreaseCount },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  { "setFlags", l_Structure_SetFlags },
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_character_glyph_const_m[] = {
+static const struct luaL_Reg l_lorx_texture_m[] = {
+  { "delete", l_Texture_Delete },
+  { "linkBitmap", l_Texture_LinkBitmap },
+  { "unlinkBitmap", l_Texture_UnlinkBitmap },
+  { "getBitmap", l_Texture_GetBitmap },
+  { "getSize", l_Texture_GetSize },
+  { "getName", l_Texture_GetName },
+  { "update", l_Structure_Update },
+  { "getOwner", l_Structure_GetOwner },
+  { "setOwner", l_Structure_SetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "setParent", l_Structure_SetParent },
+  { "increaseCount", l_Structure_IncreaseCount },
+  { "decreaseCount", l_Structure_DecreaseCount },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  { "setFlags", l_Structure_SetFlags },
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_color_const_m[] = {
-  { "toRGBA", l_Color_ToRGBA },
-  { "copy", l_Color_Copy },
-  { "fromRGBToHSL", l_Color_FromRGBToHSL },
-  { "fromHSLToRGB", l_Color_FromHSLToRGB },
-  { "fromRGBToHSV", l_Color_FromRGBToHSV },
-  { "fromHSVToRGB", l_Color_FromHSVToRGB },
+static const struct luaL_Reg l_lorx_thread_semaphore_m[] = {
+  { "delete", l_Thread_DeleteSemaphore },
+  { "wait", l_Thread_WaitSemaphore },
+  { "signal", l_Thread_SignalSemaphore },
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_file_info_const_m[] = {
+static const struct luaL_Reg l_lorx_timeline_m[] = {
+  { "delete", l_TimeLine_Delete },
+  { "enable", l_TimeLine_Enable },
+  { "isEnabled", l_TimeLine_IsEnabled },
+  { "addTrackFromConfig", l_TimeLine_AddTrackFromConfig },
+  { "removeTrackFromConfig", l_TimeLine_RemoveTrackFromConfig },
+  { "getCount", l_TimeLine_GetCount },
+  { "update", l_Structure_Update },
+  { "getOwner", l_Structure_GetOwner },
+  { "setOwner", l_Structure_SetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "setParent", l_Structure_SetParent },
+  { "increaseCount", l_Structure_IncreaseCount },
+  { "decreaseCount", l_Structure_DecreaseCount },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  { "setFlags", l_Structure_SetFlags },
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_aabox_const_m[] = {
-  { "isInside", l_AABox_IsInside },
-  { "testIntersection", l_AABox_TestIntersection },
-  { "test2DIntersection", l_AABox_Test2DIntersection },
-  { "getCenter", l_AABox_GetCenter },
-  { "copy", l_AABox_Copy },
-  { "move", l_AABox_Move },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_obox_const_m[] = {
-  { "getCenter", l_OBox_GetCenter },
-  { "isInside", l_OBox_IsInside },
-  { "_2DIsInside", l_OBox_2DIsInside },
-  { "zAlignedTestIntersection", l_OBox_ZAlignedTestIntersection },
-  { "copy", l_OBox_Copy },
-  { "move", l_OBox_Move },
-  { "_2DRotate", l_OBox_2DRotate },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_vector_const_m[] = {
+static const struct luaL_Reg l_lorx_vector_m[] = {
+  { "set", l_Vector_Set },
+  { "setAll", l_Vector_SetAll },
   { "copy", l_Vector_Copy },
   { "getSquareSize", l_Vector_GetSquareSize },
   { "getSize", l_Vector_GetSize },
@@ -1334,7 +1200,69 @@ static const struct luaL_Reg l_lorx_vector_const_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_sound_filter_data_const_m[] = {
+static const struct luaL_Reg l_lorx_viewport_m[] = {
+  { "delete", l_Viewport_Delete },
+  { "setTextureList", l_Viewport_SetTextureList },
+  { "getTextureList", l_Viewport_GetTextureList },
+  { "getTextureCount", l_Viewport_GetTextureCount },
+  { "setBackgroundColor", l_Viewport_SetBackgroundColor },
+  { "clearBackgroundColor", l_Viewport_ClearBackgroundColor },
+  { "hasBackgroundColor", l_Viewport_HasBackgroundColor },
+  { "getBackgroundColor", l_Viewport_GetBackgroundColor },
+  { "enable", l_Viewport_Enable },
+  { "isEnabled", l_Viewport_IsEnabled },
+  { "setCamera", l_Viewport_SetCamera },
+  { "getCamera", l_Viewport_GetCamera },
+  { "addShader", l_Viewport_AddShader },
+  { "removeShader", l_Viewport_RemoveShader },
+  { "enableShader", l_Viewport_EnableShader },
+  { "isShaderEnabled", l_Viewport_IsShaderEnabled },
+  { "getShaderPointer", l_Viewport_GetShaderPointer },
+  { "setBlendMode", l_Viewport_SetBlendMode },
+  { "getBlendMode", l_Viewport_GetBlendMode },
+  { "setPosition", l_Viewport_SetPosition },
+  { "setRelativePosition", l_Viewport_SetRelativePosition },
+  { "getPosition", l_Viewport_GetPosition },
+  { "setSize", l_Viewport_SetSize },
+  { "setRelativeSize", l_Viewport_SetRelativeSize },
+  { "getSize", l_Viewport_GetSize },
+  { "getRelativeSize", l_Viewport_GetRelativeSize },
+  { "getBox", l_Viewport_GetBox },
+  { "getCorrectionRatio", l_Viewport_GetCorrectionRatio },
+  { "getName", l_Viewport_GetName },
+  { "update", l_Structure_Update },
+  { "getOwner", l_Structure_GetOwner },
+  { "setOwner", l_Structure_SetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "setParent", l_Structure_SetParent },
+  { "increaseCount", l_Structure_IncreaseCount },
+  { "decreaseCount", l_Structure_DecreaseCount },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  { "setFlags", l_Structure_SetFlags },
+  
+  { NULL, NULL }
+};
+/*
+** Userdata types generated with utypes.py
+*/
+
+
+static const struct luaL_Reg l_lorx_aabox_const_m[] = {
+  { "isInside", l_AABox_IsInside },
+  { "testIntersection", l_AABox_TestIntersection },
+  { "test2DIntersection", l_AABox_Test2DIntersection },
+  { "getCenter", l_AABox_GetCenter },
+  { "copy", l_AABox_Copy },
+  { "move", l_AABox_Move },
   
   { NULL, NULL }
 };
@@ -1416,6 +1344,106 @@ static const struct luaL_Reg l_lorx_animset_link_table_const_m[] = {
   
   { NULL, NULL }
 };
+static const struct luaL_Reg l_lorx_anim_custom_event_const_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_bitmap_const_m[] = {
+  { "save", l_Display_SaveBitmap },
+  { "getData", l_Display_GetBitmapData },
+  { "getSize", l_Display_GetBitmapSize },
+  { "getID", l_Display_GetBitmapID },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_body_const_m[] = {
+  { "getName", l_Body_GetName },
+  { "testDefFlags", l_Body_TestDefFlags },
+  { "testAllDefFlags", l_Body_TestAllDefFlags },
+  { "getDefFlags", l_Body_GetDefFlags },
+  { "getNextPart", l_Body_GetNextPart },
+  { "getNextJoint", l_Body_GetNextJoint },
+  { "getPosition", l_Body_GetPosition },
+  { "getRotation", l_Body_GetRotation },
+  { "getSpeed", l_Body_GetSpeed },
+  { "getSpeedAtWorldPosition", l_Body_GetSpeedAtWorldPosition },
+  { "getAngularVelocity", l_Body_GetAngularVelocity },
+  { "getCustomGravity", l_Body_GetCustomGravity },
+  { "isFixedRotation", l_Body_IsFixedRotation },
+  { "isDynamic", l_Body_IsDynamic },
+  { "getAllowMoving", l_Body_GetAllowMoving },
+  { "getMass", l_Body_GetMass },
+  { "getMassCenter", l_Body_GetMassCenter },
+  { "getLinearDamping", l_Body_GetLinearDamping },
+  { "getAngularDamping", l_Body_GetAngularDamping },
+  { "isInside", l_Body_IsInside },
+  { "getOwner", l_Structure_GetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_body_joint_const_m[] = {
+  { "getName", l_Body_GetJointName },
+  { "getReactionForce", l_Body_GetJointReactionForce },
+  { "getReactionTorque", l_Body_GetJointReactionTorque },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_body_part_const_m[] = {
+  { "getName", l_Body_GetPartName },
+  { "getBody", l_Body_GetPartBody },
+  { "getSelfFlags", l_Body_GetPartSelfFlags },
+  { "getCheckMask", l_Body_GetPartCheckMask },
+  { "isSolid", l_Body_IsPartSolid },
+  { "getFriction", l_Body_GetPartFriction },
+  { "getRestitution", l_Body_GetPartRestitution },
+  { "getDensity", l_Body_GetPartDensity },
+  { "isInside", l_Body_IsInsidePart },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_camera_const_m[] = {
+  { "getGroupIDCount", l_Camera_GetGroupIDCount },
+  { "getGroupID", l_Camera_GetGroupID },
+  { "getFrustum", l_Camera_GetFrustum },
+  { "getPosition", l_Camera_GetPosition },
+  { "getRotation", l_Camera_GetRotation },
+  { "getZoom", l_Camera_GetZoom },
+  { "getName", l_Camera_GetName },
+  { "getFrame", l_Camera_GetFrame },
+  { "getParent", l_Camera_GetParent },
+  { "getOwner", l_Structure_GetOwner },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_character_glyph_const_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_character_map_const_m[] = {
+  
+  { NULL, NULL }
+};
 static const struct luaL_Reg l_lorx_clock_const_m[] = {
   { "isPaused", l_Clock_IsPaused },
   { "getInfo", l_Clock_GetInfo },
@@ -1439,15 +1467,17 @@ static const struct luaL_Reg l_lorx_clock_info_const_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_thread_semaphore_const_m[] = {
+static const struct luaL_Reg l_lorx_color_const_m[] = {
+  { "toRGBA", l_Color_ToRGBA },
+  { "copy", l_Color_Copy },
+  { "fromRGBToHSL", l_Color_FromRGBToHSL },
+  { "fromHSLToRGB", l_Color_FromHSLToRGB },
+  { "fromRGBToHSV", l_Color_FromRGBToHSV },
+  { "fromHSVToRGB", l_Color_FromHSVToRGB },
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_bitmap_const_m[] = {
-  { "save", l_Display_SaveBitmap },
-  { "getData", l_Display_GetBitmapData },
-  { "getSize", l_Display_GetBitmapSize },
-  { "getID", l_Display_GetBitmapID },
+static const struct luaL_Reg l_lorx_command_var_const_m[] = {
   
   { NULL, NULL }
 };
@@ -1455,7 +1485,22 @@ static const struct luaL_Reg l_lorx_display_mesh_const_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_character_map_const_m[] = {
+static const struct luaL_Reg l_lorx_display_transform_const_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_display_video_mode_const_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_file_const_m[] = {
+  { "tell", l_File_Tell },
+  { "getSize", l_File_GetSize },
+  { "getTime", l_File_GetTime },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_file_info_const_m[] = {
   
   { NULL, NULL }
 };
@@ -1481,84 +1526,6 @@ static const struct luaL_Reg l_lorx_font_const_m[] = {
   { "testFlags", l_Structure_TestFlags },
   { "testAllFlags", l_Structure_TestAllFlags },
   { "getFlags", l_Structure_GetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_graphic_const_m[] = {
-  { "clone", l_Graphic_Clone },
-  { "getName", l_Graphic_GetName },
-  { "getData", l_Graphic_GetData },
-  { "getFlip", l_Graphic_GetFlip },
-  { "getPivot", l_Graphic_GetPivot },
-  { "getSize", l_Graphic_GetSize },
-  { "hasColor", l_Graphic_HasColor },
-  { "getColor", l_Graphic_GetColor },
-  { "getRepeat", l_Graphic_GetRepeat },
-  { "getOrigin", l_Graphic_GetOrigin },
-  { "getSmoothing", l_Graphic_GetSmoothing },
-  { "hasBlendMode", l_Graphic_HasBlendMode },
-  { "getBlendMode", l_Graphic_GetBlendMode },
-  { "getOwner", l_Structure_GetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_text_const_m[] = {
-  { "getName", l_Text_GetName },
-  { "getLineCount", l_Text_GetLineCount },
-  { "getLineSize", l_Text_GetLineSize },
-  { "isFixedSize", l_Text_IsFixedSize },
-  { "getSize", l_Text_GetSize },
-  { "getString", l_Text_GetString },
-  { "getFont", l_Text_GetFont },
-  { "getOwner", l_Structure_GetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_texture_const_m[] = {
-  { "getBitmap", l_Texture_GetBitmap },
-  { "getSize", l_Texture_GetSize },
-  { "getName", l_Texture_GetName },
-  { "getOwner", l_Structure_GetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_file_const_m[] = {
-  { "tell", l_File_Tell },
-  { "getSize", l_File_GetSize },
-  { "getTime", l_File_GetTime },
   
   { NULL, NULL }
 };
@@ -1606,6 +1573,35 @@ static const struct luaL_Reg l_lorx_fxpointer_const_m[] = {
   { "getTime", l_FXPointer_GetTime },
   { "getCount", l_FXPointer_GetCount },
   { "getFrequency", l_FXPointer_GetFrequency },
+  { "getOwner", l_Structure_GetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_graphic_const_m[] = {
+  { "clone", l_Graphic_Clone },
+  { "getName", l_Graphic_GetName },
+  { "getData", l_Graphic_GetData },
+  { "getFlip", l_Graphic_GetFlip },
+  { "getPivot", l_Graphic_GetPivot },
+  { "getSize", l_Graphic_GetSize },
+  { "hasColor", l_Graphic_HasColor },
+  { "getColor", l_Graphic_GetColor },
+  { "getRepeat", l_Graphic_GetRepeat },
+  { "getOrigin", l_Graphic_GetOrigin },
+  { "getSmoothing", l_Graphic_GetSmoothing },
+  { "hasBlendMode", l_Graphic_HasBlendMode },
+  { "getBlendMode", l_Graphic_GetBlendMode },
   { "getOwner", l_Structure_GetOwner },
   { "getParent", l_Structure_GetParent },
   { "getChild", l_Structure_GetChild },
@@ -1685,114 +1681,14 @@ static const struct luaL_Reg l_lorx_object_const_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_spawner_const_m[] = {
-  { "isEnabled", l_Spawner_IsEnabled },
-  { "getTotalObjectLimit", l_Spawner_GetTotalObjectLimit },
-  { "getActiveObjectLimit", l_Spawner_GetActiveObjectLimit },
-  { "getTotalObjectCount", l_Spawner_GetTotalObjectCount },
-  { "getActiveObjectCount", l_Spawner_GetActiveObjectCount },
-  { "getWaveSize", l_Spawner_GetWaveSize },
-  { "getWaveDelay", l_Spawner_GetWaveDelay },
-  { "getNextWaveDelay", l_Spawner_GetNextWaveDelay },
-  { "getObjectSpeed", l_Spawner_GetObjectSpeed },
-  { "getFrame", l_Spawner_GetFrame },
-  { "getPosition", l_Spawner_GetPosition },
-  { "getWorldPosition", l_Spawner_GetWorldPosition },
-  { "getRotation", l_Spawner_GetRotation },
-  { "getWorldRotation", l_Spawner_GetWorldRotation },
-  { "getScale", l_Spawner_GetScale },
-  { "getWorldScale", l_Spawner_GetWorldScale },
-  { "getParent", l_Spawner_GetParent },
-  { "getName", l_Spawner_GetName },
-  { "getOwner", l_Structure_GetOwner },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_structure_const_m[] = {
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_timeline_const_m[] = {
-  { "isEnabled", l_TimeLine_IsEnabled },
-  { "getCount", l_TimeLine_GetCount },
-  { "getOwner", l_Structure_GetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_body_const_m[] = {
-  { "getName", l_Body_GetName },
-  { "testDefFlags", l_Body_TestDefFlags },
-  { "testAllDefFlags", l_Body_TestAllDefFlags },
-  { "getDefFlags", l_Body_GetDefFlags },
-  { "getNextPart", l_Body_GetNextPart },
-  { "getNextJoint", l_Body_GetNextJoint },
-  { "getPosition", l_Body_GetPosition },
-  { "getRotation", l_Body_GetRotation },
-  { "getSpeed", l_Body_GetSpeed },
-  { "getSpeedAtWorldPosition", l_Body_GetSpeedAtWorldPosition },
-  { "getAngularVelocity", l_Body_GetAngularVelocity },
-  { "getCustomGravity", l_Body_GetCustomGravity },
-  { "isFixedRotation", l_Body_IsFixedRotation },
-  { "isDynamic", l_Body_IsDynamic },
-  { "getAllowMoving", l_Body_GetAllowMoving },
-  { "getMass", l_Body_GetMass },
-  { "getMassCenter", l_Body_GetMassCenter },
-  { "getLinearDamping", l_Body_GetLinearDamping },
-  { "getAngularDamping", l_Body_GetAngularDamping },
-  { "isInside", l_Body_IsInside },
-  { "getOwner", l_Structure_GetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_body_part_const_m[] = {
-  { "getName", l_Body_GetPartName },
-  { "getBody", l_Body_GetPartBody },
-  { "getSelfFlags", l_Body_GetPartSelfFlags },
-  { "getCheckMask", l_Body_GetPartCheckMask },
-  { "isSolid", l_Body_IsPartSolid },
-  { "getFriction", l_Body_GetPartFriction },
-  { "getRestitution", l_Body_GetPartRestitution },
-  { "getDensity", l_Body_GetPartDensity },
-  { "isInside", l_Body_IsInsidePart },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_body_joint_const_m[] = {
-  { "getName", l_Body_GetJointName },
-  { "getReactionForce", l_Body_GetJointReactionForce },
-  { "getReactionTorque", l_Body_GetJointReactionTorque },
+static const struct luaL_Reg l_lorx_obox_const_m[] = {
+  { "getCenter", l_OBox_GetCenter },
+  { "isInside", l_OBox_IsInside },
+  { "_2DIsInside", l_OBox_2DIsInside },
+  { "zAlignedTestIntersection", l_OBox_ZAlignedTestIntersection },
+  { "copy", l_OBox_Copy },
+  { "move", l_OBox_Move },
+  { "_2DRotate", l_OBox_2DRotate },
   
   { NULL, NULL }
 };
@@ -1811,6 +1707,12 @@ static const struct luaL_Reg l_lorx_physics_body_const_m[] = {
   
   { NULL, NULL }
 };
+static const struct luaL_Reg l_lorx_physics_body_joint_const_m[] = {
+  { "getReactionForce", l_Physics_GetJointReactionForce },
+  { "getReactionTorque", l_Physics_GetJointReactionTorque },
+  
+  { NULL, NULL }
+};
 static const struct luaL_Reg l_lorx_physics_body_part_const_m[] = {
   { "getSelfFlags", l_Physics_GetPartSelfFlags },
   { "getCheckMask", l_Physics_GetPartCheckMask },
@@ -1822,33 +1724,7 @@ static const struct luaL_Reg l_lorx_physics_body_part_const_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_physics_body_joint_const_m[] = {
-  { "getReactionForce", l_Physics_GetJointReactionForce },
-  { "getReactionTorque", l_Physics_GetJointReactionTorque },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_camera_const_m[] = {
-  { "getGroupIDCount", l_Camera_GetGroupIDCount },
-  { "getGroupID", l_Camera_GetGroupID },
-  { "getFrustum", l_Camera_GetFrustum },
-  { "getPosition", l_Camera_GetPosition },
-  { "getRotation", l_Camera_GetRotation },
-  { "getZoom", l_Camera_GetZoom },
-  { "getName", l_Camera_GetName },
-  { "getFrame", l_Camera_GetFrame },
-  { "getParent", l_Camera_GetParent },
-  { "getOwner", l_Structure_GetOwner },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
+static const struct luaL_Reg l_lorx_rgba_const_m[] = {
   
   { NULL, NULL }
 };
@@ -1895,6 +1771,202 @@ static const struct luaL_Reg l_lorx_shaderpointer_const_m[] = {
   
   { NULL, NULL }
 };
+static const struct luaL_Reg l_lorx_sound_const_m[] = {
+  { "getVolume", l_Sound_GetVolume },
+  { "getPitch", l_Sound_GetPitch },
+  { "getTime", l_Sound_GetTime },
+  { "getPosition", l_Sound_GetPosition },
+  { "getSpatialization", l_Sound_GetSpatialization },
+  { "getPanning", l_Sound_GetPanning },
+  { "isLooping", l_Sound_IsLooping },
+  { "getDuration", l_Sound_GetDuration },
+  { "getStatus", l_Sound_GetStatus },
+  { "getName", l_Sound_GetName },
+  { "getBusID", l_Sound_GetBusID },
+  { "getOwner", l_Structure_GetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_soundpointer_const_m[] = {
+  { "isEnabled", l_SoundPointer_IsEnabled },
+  { "getLastAddedSound", l_SoundPointer_GetLastAddedSound },
+  { "getCount", l_SoundPointer_GetCount },
+  { "getOwner", l_Structure_GetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_soundsystem_sample_const_m[] = {
+  { "getInfo", l_SoundSystem_GetSampleInfo },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_soundsystem_sound_const_m[] = {
+  { "getVolume", l_SoundSystem_GetVolume },
+  { "getPitch", l_SoundSystem_GetPitch },
+  { "getTime", l_SoundSystem_GetTime },
+  { "getPosition", l_SoundSystem_GetPosition },
+  { "getSpatialization", l_SoundSystem_GetSpatialization },
+  { "getPanning", l_SoundSystem_GetPanning },
+  { "isLooping", l_SoundSystem_IsLooping },
+  { "getDuration", l_SoundSystem_GetDuration },
+  { "getStatus", l_SoundSystem_GetStatus },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_sound_filter_data_const_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_sound_stream_info_const_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_sound_stream_packet_const_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_spawner_const_m[] = {
+  { "isEnabled", l_Spawner_IsEnabled },
+  { "getTotalObjectLimit", l_Spawner_GetTotalObjectLimit },
+  { "getActiveObjectLimit", l_Spawner_GetActiveObjectLimit },
+  { "getTotalObjectCount", l_Spawner_GetTotalObjectCount },
+  { "getActiveObjectCount", l_Spawner_GetActiveObjectCount },
+  { "getWaveSize", l_Spawner_GetWaveSize },
+  { "getWaveDelay", l_Spawner_GetWaveDelay },
+  { "getNextWaveDelay", l_Spawner_GetNextWaveDelay },
+  { "getObjectSpeed", l_Spawner_GetObjectSpeed },
+  { "getFrame", l_Spawner_GetFrame },
+  { "getPosition", l_Spawner_GetPosition },
+  { "getWorldPosition", l_Spawner_GetWorldPosition },
+  { "getRotation", l_Spawner_GetRotation },
+  { "getWorldRotation", l_Spawner_GetWorldRotation },
+  { "getScale", l_Spawner_GetScale },
+  { "getWorldScale", l_Spawner_GetWorldScale },
+  { "getParent", l_Spawner_GetParent },
+  { "getName", l_Spawner_GetName },
+  { "getOwner", l_Structure_GetOwner },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_structure_const_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_text_const_m[] = {
+  { "getName", l_Text_GetName },
+  { "getLineCount", l_Text_GetLineCount },
+  { "getLineSize", l_Text_GetLineSize },
+  { "isFixedSize", l_Text_IsFixedSize },
+  { "getSize", l_Text_GetSize },
+  { "getString", l_Text_GetString },
+  { "getFont", l_Text_GetFont },
+  { "getOwner", l_Structure_GetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_texture_const_m[] = {
+  { "getBitmap", l_Texture_GetBitmap },
+  { "getSize", l_Texture_GetSize },
+  { "getName", l_Texture_GetName },
+  { "getOwner", l_Structure_GetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_thread_semaphore_const_m[] = {
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_timeline_const_m[] = {
+  { "isEnabled", l_TimeLine_IsEnabled },
+  { "getCount", l_TimeLine_GetCount },
+  { "getOwner", l_Structure_GetOwner },
+  { "getParent", l_Structure_GetParent },
+  { "getChild", l_Structure_GetChild },
+  { "getSibling", l_Structure_GetSibling },
+  { "getPrevious", l_Structure_GetPrevious },
+  { "getNext", l_Structure_GetNext },
+  { "getRefCount", l_Structure_GetRefCount },
+  { "getGUID", l_Structure_GetGUID },
+  { "getID", l_Structure_GetID },
+  { "testFlags", l_Structure_TestFlags },
+  { "testAllFlags", l_Structure_TestAllFlags },
+  { "getFlags", l_Structure_GetFlags },
+  
+  { NULL, NULL }
+};
+static const struct luaL_Reg l_lorx_vector_const_m[] = {
+  { "copy", l_Vector_Copy },
+  { "getSquareSize", l_Vector_GetSquareSize },
+  { "getSize", l_Vector_GetSize },
+  { "isNull", l_Vector_IsNull },
+  { "bezier", l_Vector_Bezier },
+  { "catmullRom", l_Vector_CatmullRom },
+  { "clamp", l_Vector_Clamp },
+  { "neg", l_Vector_Neg },
+  { "rec", l_Vector_Rec },
+  { "floor", l_Vector_Floor },
+  { "round", l_Vector_Round },
+  { "normalize", l_Vector_Normalize },
+  { "_2DRotate", l_Vector_2DRotate },
+  { "fromCartesianToSpherical", l_Vector_FromCartesianToSpherical },
+  { "fromSphericalToCartesian", l_Vector_FromSphericalToCartesian },
+  
+  { NULL, NULL }
+};
 static const struct luaL_Reg l_lorx_viewport_const_m[] = {
   { "getTextureList", l_Viewport_GetTextureList },
   { "getTextureCount", l_Viewport_GetTextureCount },
@@ -1926,106 +1998,12 @@ static const struct luaL_Reg l_lorx_viewport_const_m[] = {
   
   { NULL, NULL }
 };
-static const struct luaL_Reg l_lorx_sound_const_m[] = {
-  { "getVolume", l_Sound_GetVolume },
-  { "getPitch", l_Sound_GetPitch },
-  { "getTime", l_Sound_GetTime },
-  { "getPosition", l_Sound_GetPosition },
-  { "getSpatialization", l_Sound_GetSpatialization },
-  { "getPanning", l_Sound_GetPanning },
-  { "isLooping", l_Sound_IsLooping },
-  { "getDuration", l_Sound_GetDuration },
-  { "getStatus", l_Sound_GetStatus },
-  { "getName", l_Sound_GetName },
-  { "getBusID", l_Sound_GetBusID },
-  { "getOwner", l_Structure_GetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_sound_stream_info_const_m[] = {
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_sound_stream_packet_const_m[] = {
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_soundpointer_const_m[] = {
-  { "isEnabled", l_SoundPointer_IsEnabled },
-  { "getLastAddedSound", l_SoundPointer_GetLastAddedSound },
-  { "getCount", l_SoundPointer_GetCount },
-  { "getOwner", l_Structure_GetOwner },
-  { "getParent", l_Structure_GetParent },
-  { "getChild", l_Structure_GetChild },
-  { "getSibling", l_Structure_GetSibling },
-  { "getPrevious", l_Structure_GetPrevious },
-  { "getNext", l_Structure_GetNext },
-  { "getRefCount", l_Structure_GetRefCount },
-  { "getGUID", l_Structure_GetGUID },
-  { "getID", l_Structure_GetID },
-  { "testFlags", l_Structure_TestFlags },
-  { "testAllFlags", l_Structure_TestAllFlags },
-  { "getFlags", l_Structure_GetFlags },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_soundsystem_sound_const_m[] = {
-  { "getVolume", l_SoundSystem_GetVolume },
-  { "getPitch", l_SoundSystem_GetPitch },
-  { "getTime", l_SoundSystem_GetTime },
-  { "getPosition", l_SoundSystem_GetPosition },
-  { "getSpatialization", l_SoundSystem_GetSpatialization },
-  { "getPanning", l_SoundSystem_GetPanning },
-  { "isLooping", l_SoundSystem_IsLooping },
-  { "getDuration", l_SoundSystem_GetDuration },
-  { "getStatus", l_SoundSystem_GetStatus },
-  
-  { NULL, NULL }
-};
-static const struct luaL_Reg l_lorx_soundsystem_sample_const_m[] = {
-  { "getInfo", l_SoundSystem_GetSampleInfo },
-  
-  { NULL, NULL }
-};
 
 // utype registration
 static void lorx_register_orx_utypes(lua_State *L)
 {
-  lorx_register_type(L, "lorx.orxANIM_CUSTOM_EVENT", 2, l_lorx_anim_custom_event_m, l_lorx_anim_custom_event_mm);
-  lorx_register_type(L, "lorx.orxANIM_CUSTOM_EVENT#", 2, l_lorx_anim_custom_event_const_m, l_lorx_anim_custom_event_const_mm);
-  lorx_register_type(L, "lorx.orxCOMMAND_VAR", 2, l_lorx_command_var_m, l_lorx_command_var_mm);
-  lorx_register_type(L, "lorx.orxCOMMAND_VAR#", 2, l_lorx_command_var_const_m, l_lorx_command_var_const_mm);
-  lorx_register_type(L, "lorx.orxRGBA", 2, l_lorx_rgba_m, l_lorx_rgba_mm);
-  lorx_register_type(L, "lorx.orxRGBA#", 2, l_lorx_rgba_const_m, l_lorx_rgba_const_mm);
-  lorx_register_type(L, "lorx.orxDISPLAY_TRANSFORM", 2, l_lorx_display_transform_m, l_lorx_display_transform_mm);
-  lorx_register_type(L, "lorx.orxDISPLAY_TRANSFORM#", 2, l_lorx_display_transform_const_m, l_lorx_display_transform_const_mm);
-  lorx_register_type(L, "lorx.orxDISPLAY_VIDEO_MODE", 2, l_lorx_display_video_mode_m, l_lorx_display_video_mode_mm);
-  lorx_register_type(L, "lorx.orxDISPLAY_VIDEO_MODE#", 2, l_lorx_display_video_mode_const_m, l_lorx_display_video_mode_const_mm);
-  lorx_register_type(L, "lorx.orxCHARACTER_GLYPH", 2, l_lorx_character_glyph_m, l_lorx_character_glyph_mm);
-  lorx_register_type(L, "lorx.orxCHARACTER_GLYPH#", 2, l_lorx_character_glyph_const_m, l_lorx_character_glyph_const_mm);
-  lorx_register_type(L, "lorx.orxCOLOR", 2, l_lorx_color_m, l_lorx_color_mm);
-  lorx_register_type(L, "lorx.orxCOLOR#", 2, l_lorx_color_const_m, l_lorx_color_const_mm);
-  lorx_register_type(L, "lorx.orxFILE_INFO", 2, l_lorx_file_info_m, l_lorx_file_info_mm);
-  lorx_register_type(L, "lorx.orxFILE_INFO#", 2, l_lorx_file_info_const_m, l_lorx_file_info_const_mm);
   lorx_register_type(L, "lorx.orxAABOX", 2, l_lorx_aabox_m, l_lorx_aabox_mm);
   lorx_register_type(L, "lorx.orxAABOX#", 2, l_lorx_aabox_const_m, l_lorx_aabox_const_mm);
-  lorx_register_type(L, "lorx.orxOBOX", 2, l_lorx_obox_m, l_lorx_obox_mm);
-  lorx_register_type(L, "lorx.orxOBOX#", 2, l_lorx_obox_const_m, l_lorx_obox_const_mm);
-  lorx_register_type(L, "lorx.orxVECTOR", 2, l_lorx_vector_m, l_lorx_vector_mm);
-  lorx_register_type(L, "lorx.orxVECTOR#", 2, l_lorx_vector_const_m, l_lorx_vector_const_mm);
-  lorx_register_type(L, "lorx.orxSOUND_FILTER_DATA", 2, l_lorx_sound_filter_data_m, l_lorx_sound_filter_data_mm);
-  lorx_register_type(L, "lorx.orxSOUND_FILTER_DATA#", 2, l_lorx_sound_filter_data_const_m, l_lorx_sound_filter_data_const_mm);
   lorx_register_type(L, "lorx.orxANIM", 1, l_lorx_anim_m);
   lorx_register_type(L, "lorx.orxANIM#", 1, l_lorx_anim_const_m);
   lorx_register_type(L, "lorx.orxANIMPOINTER", 1, l_lorx_animpointer_m);
@@ -2034,74 +2012,96 @@ static void lorx_register_orx_utypes(lua_State *L)
   lorx_register_type(L, "lorx.orxANIMSET#", 1, l_lorx_animset_const_m);
   lorx_register_type(L, "lorx.orxANIMSET_LINK_TABLE", 1, l_lorx_animset_link_table_m);
   lorx_register_type(L, "lorx.orxANIMSET_LINK_TABLE#", 1, l_lorx_animset_link_table_const_m);
+  lorx_register_type(L, "lorx.orxANIM_CUSTOM_EVENT", 2, l_lorx_anim_custom_event_m, l_lorx_anim_custom_event_mm);
+  lorx_register_type(L, "lorx.orxANIM_CUSTOM_EVENT#", 2, l_lorx_anim_custom_event_const_m, l_lorx_anim_custom_event_const_mm);
+  lorx_register_type(L, "lorx.orxBITMAP", 1, l_lorx_bitmap_m);
+  lorx_register_type(L, "lorx.orxBITMAP#", 1, l_lorx_bitmap_const_m);
+  lorx_register_type(L, "lorx.orxBODY", 1, l_lorx_body_m);
+  lorx_register_type(L, "lorx.orxBODY#", 1, l_lorx_body_const_m);
+  lorx_register_type(L, "lorx.orxBODY_JOINT", 1, l_lorx_body_joint_m);
+  lorx_register_type(L, "lorx.orxBODY_JOINT#", 1, l_lorx_body_joint_const_m);
+  lorx_register_type(L, "lorx.orxBODY_PART", 1, l_lorx_body_part_m);
+  lorx_register_type(L, "lorx.orxBODY_PART#", 1, l_lorx_body_part_const_m);
+  lorx_register_type(L, "lorx.orxCAMERA", 1, l_lorx_camera_m);
+  lorx_register_type(L, "lorx.orxCAMERA#", 1, l_lorx_camera_const_m);
+  lorx_register_type(L, "lorx.orxCHARACTER_GLYPH", 2, l_lorx_character_glyph_m, l_lorx_character_glyph_mm);
+  lorx_register_type(L, "lorx.orxCHARACTER_GLYPH#", 2, l_lorx_character_glyph_const_m, l_lorx_character_glyph_const_mm);
+  lorx_register_type(L, "lorx.orxCHARACTER_MAP", 2, l_lorx_character_map_m, l_lorx_character_map_mm);
+  lorx_register_type(L, "lorx.orxCHARACTER_MAP#", 2, l_lorx_character_map_const_m, l_lorx_character_map_const_mm);
   lorx_register_type(L, "lorx.orxCLOCK", 1, l_lorx_clock_m);
   lorx_register_type(L, "lorx.orxCLOCK#", 1, l_lorx_clock_const_m);
   lorx_register_type(L, "lorx.orxCLOCK_INFO", 2, l_lorx_clock_info_m, l_lorx_clock_info_mm);
   lorx_register_type(L, "lorx.orxCLOCK_INFO#", 2, l_lorx_clock_info_const_m, l_lorx_clock_info_const_mm);
-  lorx_register_type(L, "lorx.orxTHREAD_SEMAPHORE", 1, l_lorx_thread_semaphore_m);
-  lorx_register_type(L, "lorx.orxTHREAD_SEMAPHORE#", 1, l_lorx_thread_semaphore_const_m);
-  lorx_register_type(L, "lorx.orxBITMAP", 1, l_lorx_bitmap_m);
-  lorx_register_type(L, "lorx.orxBITMAP#", 1, l_lorx_bitmap_const_m);
+  lorx_register_type(L, "lorx.orxCOLOR", 2, l_lorx_color_m, l_lorx_color_mm);
+  lorx_register_type(L, "lorx.orxCOLOR#", 2, l_lorx_color_const_m, l_lorx_color_const_mm);
+  lorx_register_type(L, "lorx.orxCOMMAND_VAR", 2, l_lorx_command_var_m, l_lorx_command_var_mm);
+  lorx_register_type(L, "lorx.orxCOMMAND_VAR#", 2, l_lorx_command_var_const_m, l_lorx_command_var_const_mm);
   lorx_register_type(L, "lorx.orxDISPLAY_MESH", 1, l_lorx_display_mesh_m);
   lorx_register_type(L, "lorx.orxDISPLAY_MESH#", 1, l_lorx_display_mesh_const_m);
-  lorx_register_type(L, "lorx.orxCHARACTER_MAP", 2, l_lorx_character_map_m, l_lorx_character_map_mm);
-  lorx_register_type(L, "lorx.orxCHARACTER_MAP#", 2, l_lorx_character_map_const_m, l_lorx_character_map_const_mm);
-  lorx_register_type(L, "lorx.orxFONT", 1, l_lorx_font_m);
-  lorx_register_type(L, "lorx.orxFONT#", 1, l_lorx_font_const_m);
-  lorx_register_type(L, "lorx.orxGRAPHIC", 1, l_lorx_graphic_m);
-  lorx_register_type(L, "lorx.orxGRAPHIC#", 1, l_lorx_graphic_const_m);
-  lorx_register_type(L, "lorx.orxTEXT", 1, l_lorx_text_m);
-  lorx_register_type(L, "lorx.orxTEXT#", 1, l_lorx_text_const_m);
-  lorx_register_type(L, "lorx.orxTEXTURE", 1, l_lorx_texture_m);
-  lorx_register_type(L, "lorx.orxTEXTURE#", 1, l_lorx_texture_const_m);
+  lorx_register_type(L, "lorx.orxDISPLAY_TRANSFORM", 2, l_lorx_display_transform_m, l_lorx_display_transform_mm);
+  lorx_register_type(L, "lorx.orxDISPLAY_TRANSFORM#", 2, l_lorx_display_transform_const_m, l_lorx_display_transform_const_mm);
+  lorx_register_type(L, "lorx.orxDISPLAY_VIDEO_MODE", 2, l_lorx_display_video_mode_m, l_lorx_display_video_mode_mm);
+  lorx_register_type(L, "lorx.orxDISPLAY_VIDEO_MODE#", 2, l_lorx_display_video_mode_const_m, l_lorx_display_video_mode_const_mm);
   lorx_register_type(L, "lorx.orxFILE", 1, l_lorx_file_m);
   lorx_register_type(L, "lorx.orxFILE#", 1, l_lorx_file_const_m);
+  lorx_register_type(L, "lorx.orxFILE_INFO", 2, l_lorx_file_info_m, l_lorx_file_info_mm);
+  lorx_register_type(L, "lorx.orxFILE_INFO#", 2, l_lorx_file_info_const_m, l_lorx_file_info_const_mm);
+  lorx_register_type(L, "lorx.orxFONT", 1, l_lorx_font_m);
+  lorx_register_type(L, "lorx.orxFONT#", 1, l_lorx_font_const_m);
   lorx_register_type(L, "lorx.orxFRAME", 1, l_lorx_frame_m);
   lorx_register_type(L, "lorx.orxFRAME#", 1, l_lorx_frame_const_m);
   lorx_register_type(L, "lorx.orxFX", 1, l_lorx_fx_m);
   lorx_register_type(L, "lorx.orxFX#", 1, l_lorx_fx_const_m);
   lorx_register_type(L, "lorx.orxFXPOINTER", 1, l_lorx_fxpointer_m);
   lorx_register_type(L, "lorx.orxFXPOINTER#", 1, l_lorx_fxpointer_const_m);
+  lorx_register_type(L, "lorx.orxGRAPHIC", 1, l_lorx_graphic_m);
+  lorx_register_type(L, "lorx.orxGRAPHIC#", 1, l_lorx_graphic_const_m);
   lorx_register_type(L, "lorx.orxOBJECT", 1, l_lorx_object_m);
   lorx_register_type(L, "lorx.orxOBJECT#", 1, l_lorx_object_const_m);
-  lorx_register_type(L, "lorx.orxSPAWNER", 1, l_lorx_spawner_m);
-  lorx_register_type(L, "lorx.orxSPAWNER#", 1, l_lorx_spawner_const_m);
-  lorx_register_type(L, "lorx.orxSTRUCTURE", 1, l_lorx_structure_m);
-  lorx_register_type(L, "lorx.orxSTRUCTURE#", 1, l_lorx_structure_const_m);
-  lorx_register_type(L, "lorx.orxTIMELINE", 1, l_lorx_timeline_m);
-  lorx_register_type(L, "lorx.orxTIMELINE#", 1, l_lorx_timeline_const_m);
-  lorx_register_type(L, "lorx.orxBODY", 1, l_lorx_body_m);
-  lorx_register_type(L, "lorx.orxBODY#", 1, l_lorx_body_const_m);
-  lorx_register_type(L, "lorx.orxBODY_PART", 1, l_lorx_body_part_m);
-  lorx_register_type(L, "lorx.orxBODY_PART#", 1, l_lorx_body_part_const_m);
-  lorx_register_type(L, "lorx.orxBODY_JOINT", 1, l_lorx_body_joint_m);
-  lorx_register_type(L, "lorx.orxBODY_JOINT#", 1, l_lorx_body_joint_const_m);
+  lorx_register_type(L, "lorx.orxOBOX", 2, l_lorx_obox_m, l_lorx_obox_mm);
+  lorx_register_type(L, "lorx.orxOBOX#", 2, l_lorx_obox_const_m, l_lorx_obox_const_mm);
   lorx_register_type(L, "lorx.orxPHYSICS_BODY", 1, l_lorx_physics_body_m);
   lorx_register_type(L, "lorx.orxPHYSICS_BODY#", 1, l_lorx_physics_body_const_m);
-  lorx_register_type(L, "lorx.orxPHYSICS_BODY_PART", 1, l_lorx_physics_body_part_m);
-  lorx_register_type(L, "lorx.orxPHYSICS_BODY_PART#", 1, l_lorx_physics_body_part_const_m);
   lorx_register_type(L, "lorx.orxPHYSICS_BODY_JOINT", 1, l_lorx_physics_body_joint_m);
   lorx_register_type(L, "lorx.orxPHYSICS_BODY_JOINT#", 1, l_lorx_physics_body_joint_const_m);
-  lorx_register_type(L, "lorx.orxCAMERA", 1, l_lorx_camera_m);
-  lorx_register_type(L, "lorx.orxCAMERA#", 1, l_lorx_camera_const_m);
+  lorx_register_type(L, "lorx.orxPHYSICS_BODY_PART", 1, l_lorx_physics_body_part_m);
+  lorx_register_type(L, "lorx.orxPHYSICS_BODY_PART#", 1, l_lorx_physics_body_part_const_m);
+  lorx_register_type(L, "lorx.orxRGBA", 2, l_lorx_rgba_m, l_lorx_rgba_mm);
+  lorx_register_type(L, "lorx.orxRGBA#", 2, l_lorx_rgba_const_m, l_lorx_rgba_const_mm);
   lorx_register_type(L, "lorx.orxSHADER", 1, l_lorx_shader_m);
   lorx_register_type(L, "lorx.orxSHADER#", 1, l_lorx_shader_const_m);
   lorx_register_type(L, "lorx.orxSHADERPOINTER", 1, l_lorx_shaderpointer_m);
   lorx_register_type(L, "lorx.orxSHADERPOINTER#", 1, l_lorx_shaderpointer_const_m);
-  lorx_register_type(L, "lorx.orxVIEWPORT", 1, l_lorx_viewport_m);
-  lorx_register_type(L, "lorx.orxVIEWPORT#", 1, l_lorx_viewport_const_m);
   lorx_register_type(L, "lorx.orxSOUND", 1, l_lorx_sound_m);
   lorx_register_type(L, "lorx.orxSOUND#", 1, l_lorx_sound_const_m);
+  lorx_register_type(L, "lorx.orxSOUNDPOINTER", 1, l_lorx_soundpointer_m);
+  lorx_register_type(L, "lorx.orxSOUNDPOINTER#", 1, l_lorx_soundpointer_const_m);
+  lorx_register_type(L, "lorx.orxSOUNDSYSTEM_SAMPLE", 1, l_lorx_soundsystem_sample_m);
+  lorx_register_type(L, "lorx.orxSOUNDSYSTEM_SAMPLE#", 1, l_lorx_soundsystem_sample_const_m);
+  lorx_register_type(L, "lorx.orxSOUNDSYSTEM_SOUND", 1, l_lorx_soundsystem_sound_m);
+  lorx_register_type(L, "lorx.orxSOUNDSYSTEM_SOUND#", 1, l_lorx_soundsystem_sound_const_m);
+  lorx_register_type(L, "lorx.orxSOUND_FILTER_DATA", 2, l_lorx_sound_filter_data_m, l_lorx_sound_filter_data_mm);
+  lorx_register_type(L, "lorx.orxSOUND_FILTER_DATA#", 2, l_lorx_sound_filter_data_const_m, l_lorx_sound_filter_data_const_mm);
   lorx_register_type(L, "lorx.orxSOUND_STREAM_INFO", 2, l_lorx_sound_stream_info_m, l_lorx_sound_stream_info_mm);
   lorx_register_type(L, "lorx.orxSOUND_STREAM_INFO#", 2, l_lorx_sound_stream_info_const_m, l_lorx_sound_stream_info_const_mm);
   lorx_register_type(L, "lorx.orxSOUND_STREAM_PACKET", 2, l_lorx_sound_stream_packet_m, l_lorx_sound_stream_packet_mm);
   lorx_register_type(L, "lorx.orxSOUND_STREAM_PACKET#", 2, l_lorx_sound_stream_packet_const_m, l_lorx_sound_stream_packet_const_mm);
-  lorx_register_type(L, "lorx.orxSOUNDPOINTER", 1, l_lorx_soundpointer_m);
-  lorx_register_type(L, "lorx.orxSOUNDPOINTER#", 1, l_lorx_soundpointer_const_m);
-  lorx_register_type(L, "lorx.orxSOUNDSYSTEM_SOUND", 1, l_lorx_soundsystem_sound_m);
-  lorx_register_type(L, "lorx.orxSOUNDSYSTEM_SOUND#", 1, l_lorx_soundsystem_sound_const_m);
-  lorx_register_type(L, "lorx.orxSOUNDSYSTEM_SAMPLE", 1, l_lorx_soundsystem_sample_m);
-  lorx_register_type(L, "lorx.orxSOUNDSYSTEM_SAMPLE#", 1, l_lorx_soundsystem_sample_const_m);
+  lorx_register_type(L, "lorx.orxSPAWNER", 1, l_lorx_spawner_m);
+  lorx_register_type(L, "lorx.orxSPAWNER#", 1, l_lorx_spawner_const_m);
+  lorx_register_type(L, "lorx.orxSTRUCTURE", 1, l_lorx_structure_m);
+  lorx_register_type(L, "lorx.orxSTRUCTURE#", 1, l_lorx_structure_const_m);
+  lorx_register_type(L, "lorx.orxTEXT", 1, l_lorx_text_m);
+  lorx_register_type(L, "lorx.orxTEXT#", 1, l_lorx_text_const_m);
+  lorx_register_type(L, "lorx.orxTEXTURE", 1, l_lorx_texture_m);
+  lorx_register_type(L, "lorx.orxTEXTURE#", 1, l_lorx_texture_const_m);
+  lorx_register_type(L, "lorx.orxTHREAD_SEMAPHORE", 1, l_lorx_thread_semaphore_m);
+  lorx_register_type(L, "lorx.orxTHREAD_SEMAPHORE#", 1, l_lorx_thread_semaphore_const_m);
+  lorx_register_type(L, "lorx.orxTIMELINE", 1, l_lorx_timeline_m);
+  lorx_register_type(L, "lorx.orxTIMELINE#", 1, l_lorx_timeline_const_m);
+  lorx_register_type(L, "lorx.orxVECTOR", 2, l_lorx_vector_m, l_lorx_vector_mm);
+  lorx_register_type(L, "lorx.orxVECTOR#", 2, l_lorx_vector_const_m, l_lorx_vector_const_mm);
+  lorx_register_type(L, "lorx.orxVIEWPORT", 1, l_lorx_viewport_m);
+  lorx_register_type(L, "lorx.orxVIEWPORT#", 1, l_lorx_viewport_const_m);
 
 }
 

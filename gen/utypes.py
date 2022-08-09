@@ -2,6 +2,7 @@
 
 import copy
 import os
+import collections
 
 from gen.orxparse import otdict, qtdict
 from gen.conversion import maketname
@@ -22,11 +23,13 @@ def _generate_regarr(mdict, const, bmap):
 
 """.format(os.path.basename(__file__))
 
-    mregs = {}
+    mregs = collections.OrderedDict()
 
-    o2ldict = {}
+    o2ldict = collections.OrderedDict()
 
-    for sn in list(otdict.keys()) + list(qtdict.keys()):
+    strcs = (list(otdict.keys()) + list(qtdict.keys()))
+    strcs.sort()
+    for sn in strcs:
         assert(sn.startswith('orx'))
         oname = sn[3:].lower()
 
@@ -119,7 +122,9 @@ def _gen_register_alltypes(mregs_nc, mregs_c, mmlist):
 {{
 """
     # for sn,oname in mregs_nc.items():
-    for sn in list(otdict.keys()) + list(qtdict.keys()):
+    strcs = (list(otdict.keys()) + list(qtdict.keys()))
+    strcs.sort()
+    for sn in strcs:
         assert(sn.startswith('orx'))
         oname = sn[3:].lower()
 
@@ -211,9 +216,11 @@ def gen_utypes(mdict, bmap, mmlist, propdocs):
     with open('src/' + hfn, 'w') as f:
         f.write(h)
 
-    mdoc = {}
-    for t in list(set(list(mdict.keys()) + mmlist + sslist)):
-        mdoc[t] = {}
+    mdoc = collections.OrderedDict()
+    strcs = list(set(list(mdict.keys()) + mmlist + sslist))
+    strcs.sort()
+    for t in strcs:
+        mdoc[t] = collections.OrderedDict()
         if t in mmlist and t in propdocs:
             mdoc[t]['properties'] = propdocs[t]
         else:

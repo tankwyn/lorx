@@ -8,6 +8,7 @@
 
 import os
 import re
+import collections
 
 from gen.typemapping import typemap
 from gen.verbose import *
@@ -242,7 +243,7 @@ def _parse_sig(rawstr, content):
     tmp = tmp[0].split(',')  # splited args
     for i in tmp:
         if i != "":
-            a = {}
+            a = collections.OrderedDict()
             items = i.split() # split words for one arg
             if items[0].strip() == 'const':
                 a['const'] = True
@@ -793,13 +794,13 @@ def setup(verbose=1):
 
     verbose = verbose
 
-    enums = {}
+    enums = collections.OrderedDict()
     flist = []
-    fdict = {}
-    otdict = {}
-    qtdict = {}
-    mdefs = {}
-    doxygen = {}
+    fdict = collections.OrderedDict()
+    otdict = collections.OrderedDict()
+    qtdict = collections.OrderedDict()
+    mdefs = collections.OrderedDict()
+    doxygen = collections.OrderedDict()
 
     parse()
     print("parsing completed")
@@ -851,7 +852,8 @@ def setup(verbose=1):
         otdict[x["name"]] = x
 
     flist += efuncs0 + sfuncs0
-
+    flist.sort(key=(lambda x: x['name']))
+    
     # filter out functions with un-recorded types (includes those which has a function callback as parameter) and non-const string params
     deleted_funcs = []
     for i in range(len(flist)-1, -1, -1):
@@ -883,7 +885,7 @@ def setup(verbose=1):
 
         # index params' doxygen
         if not deleted:
-            pdict = {}
+            pdict = collections.OrderedDict()
             for p in f["doxparam"]:
                 pdict[p["name"]] = p
             doxygen[f["name"]] = [ pdict, f["doxreturn"], f['description'] ]
@@ -895,7 +897,7 @@ def setup(verbose=1):
     for item in enums0:
         name = item["name"]
         fields = item["fields"]
-        edict = {}
+        edict = collections.OrderedDict()
         for f in fields:
             orx_name = f
             lua_name = f[len(name)+1:].lower()
@@ -903,7 +905,7 @@ def setup(verbose=1):
         enums[name] = edict
 
     # index macro defines
-    _mdefs = {}
+    _mdefs = collections.OrderedDict()
     for item in defines0:
         key = item['define'][0]
         value = item['define'][1]

@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 import os
+import collections
 
 from gen.orxparse import otdict
 from gen.conversion import fn_l2o, fn_o2l, l2oarr_in, fn_l2outype, lstring2orx_chararr, maketname, o2larr
@@ -121,8 +122,8 @@ def gen_constructors():
 
     hg = '__LORX_' + hfn.replace('.', '_').upper() + '__'
 
-    constructors = {}
-    constructors_docs = {}
+    constructors = collections.OrderedDict()
+    constructors_docs = collections.OrderedDict()
     header = """/*
 ** Constructors for open data structures (generated with {})
 */
@@ -141,7 +142,10 @@ def gen_constructors():
 
 """.format(os.path.basename(__file__), hg, hg)
 
-    for sn,strc in otdict.items():
+    olist = list(otdict.keys())
+    olist.sort()
+    for sn in olist:
+        strc = otdict[sn]
         fields = strc['fields']
 
         if len(fields) == 0:
@@ -367,8 +371,9 @@ def gen_properties():
 """.format(os.path.basename(__file__), hg, hg)
 
     strcs_with_mm = list(otdict.keys()) + list(fieldsdict.keys())
-
-    propdocs = {}
+    strcs_with_mm.sort()
+    
+    propdocs = collections.OrderedDict()
 
     # __index and __newindex
     for sn in strcs_with_mm:

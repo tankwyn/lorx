@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 
+import collections
 import copy
 import os
 
@@ -17,7 +18,10 @@ def _generate_defs_submodule():
     header = ''
     src = ''
     body = ''
-    for k,x in mdefs.items():
+    deflist = list(mdefs.keys())
+    deflist.sort()
+    for k in deflist:
+        x = mdefs[k]
         t = x['type']
         d = typemap[t]
         v = x['value']
@@ -45,7 +49,7 @@ def _generate_defs_submodule():
 
 
 
-def gen_modules(bind_map, creators, creatordocs):
+def gen_modules(bind_map, constructors, cdocs):
     def _make_camel(s):
         """make a camel-style name"""
 
@@ -79,8 +83,8 @@ def gen_modules(bind_map, creators, creatordocs):
 """
 
     # build submodules from api bindings
-    submodules = {}
-    moddoc = {}
+    submodules = collections.OrderedDict()
+    moddoc = collections.OrderedDict()
     for ofn, lf in bind_map.items():
         lfn = lf['name']
 
@@ -127,7 +131,7 @@ def gen_modules(bind_map, creators, creatordocs):
             mfname = '_' + mfname
         
         if modname not in submodules.keys():
-            submodules[modname] = {}
+            submodules[modname] = collections.OrderedDict()
         else:
             if mfname in submodules[modname].keys():
                 raise Exception(f"module {modname} already has a function call '{mfname}'!")
@@ -144,9 +148,13 @@ def gen_modules(bind_map, creators, creatordocs):
             'csig' : lf['csig'],
         })
 
-    # add creators
-    cinfo = {}
-    for sn,fname in creators.items():
+    # add constructors
+    cinfo = collections.OrderedDict()
+    
+    strcs = list(constructors.keys())
+    strcs.sort()
+    for sn in strcs:
+        fname = constructors[sn]
         tmp = os.path.splitext(os.path.basename(otdict[sn]['file']))[0]
         assert(tmp.startswith('orx'))
         tmp = tmp[3:]
@@ -155,7 +163,7 @@ def gen_modules(bind_map, creators, creatordocs):
         mfname = _make_camel(sn[3:])
 
         if modname not in submodules.keys():
-            submodules[modname] = {}
+            submodules[modname] = collections.OrderedDict()
         else:
             if mfname in submodules[modname].keys():
                 raise Exception(f"module {modname} already has a function called '{mfname}'!")
@@ -170,9 +178,9 @@ def gen_modules(bind_map, creators, creatordocs):
             moddoc[modname] = []
         moddoc[modname].append({
             'name' : mfname,
-            'description' : creatordocs[sn]['description'],
-            'params' : creatordocs[sn]['params'],
-            'returns' : creatordocs[sn]['returns'],
+            'description' : cdocs[sn]['description'],
+            'params' : cdocs[sn]['params'],
+            'returns' : cdocs[sn]['returns'],
             'csig' : None,
         })
 
@@ -224,6 +232,7 @@ static const struct luaL_Reg lorx_orx_modules[] = {
     
     hd, sd = _generate_defs_submodule()
     submodnames = list(submodules.keys()) + ['constants',]
+    submodnames.sort()
 
     n = len(submodnames)
     for m in submodnames:

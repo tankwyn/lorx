@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 import os
+import collections
 
 from gen.orxparse import enums, flist, doxygen, otdict, qtdict
 from gen.typemapping import typemap
@@ -177,7 +178,7 @@ def gen_bindings():
 
     hg = '__LORX_' + hfn.replace('.', '_').upper() + '__'
 
-    bind_map = {}
+    bind_map = collections.OrderedDict({})
 
     header = """/*
 ** Lua function bindings to Orx C API
