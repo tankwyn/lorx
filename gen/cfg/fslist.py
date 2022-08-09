@@ -1,6 +1,6 @@
 # ignore these structs when parsing
 fslist = [
-    # event and all event payloads are implemented manually without explicitly creating types
+    # events and all event payloads are implemented manually without explicitly creating types
     'orxPHYSICS_EVENT_PAYLOAD',
     'orxINPUT_EVENT_PAYLOAD',
     'orxTIMELINE_EVENT_PAYLOAD',

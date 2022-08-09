@@ -1,4 +1,4 @@
-# public fields for force-opaque structs
+# public fields for forced-opaque structs
 fieldsdict = {
     'orxCHARACTER_MAP' : [
         { 'name': 'fCharacterHeight', 'type': 'orxFLOAT', 'const': False, 'alen': None },

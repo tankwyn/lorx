@@ -3,7 +3,7 @@ fqlist = [
     'orxSTRUCTURE',
     'orxDISPLAY_MESH',
 
-    # will have rw properties but no creators (see fieldsdict.py)
+    # will have rw properties but no constructors (see fieldsdict.py)
     'orxCHARACTER_MAP',
     'orxSOUND_STREAM_PACKET',
     'orxSOUND_STREAM_INFO',

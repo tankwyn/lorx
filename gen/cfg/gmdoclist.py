@@ -4,7 +4,7 @@ gmdoclist = [
         'name': 'asVoid',
         'description': 'convert to a void*',
         'params': [
-            {}, # dummpy
+            {}, # dummy
         ],
         'returns': [
             { 'type': 'void*', 'description': 'the converted void*' }
@@ -16,7 +16,7 @@ gmdoclist = [
         'name': 'type',
         'description': 'get the type name of the lorx userdata',
         'params': [
-            {}, # dummpy
+            {}, # dummy
         ],
         'returns': [
             { 'type': 'string', 'description': 'the type name' }
@@ -26,9 +26,9 @@ gmdoclist = [
     },
     {
         'name': 'aeq',
-        'description': 'check if the c memory address of this lorx userdata equals to another',
+        'description': 'check if the memory address of this lorx userdata equals to another',
         'params': [
-            {}, # dummpy
+            {}, # dummy
             { 'name': 'u', 'type': 'any lorx utype', 'dir': '', 'description': 'another lorx userdata' }
         ],
         'returns': [
@@ -41,7 +41,7 @@ gmdoclist = [
         'name': 'addr',
         'description': 'get the c memory address of the lorx userdata',
         'params': [
-            {}, # dummpy
+            {}, # dummy
         ],
         'returns': [
             { 'type': 'string', 'description': 'address string' }
