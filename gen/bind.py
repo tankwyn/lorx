@@ -178,7 +178,7 @@ def gen_bindings():
 
     hg = '__LORX_' + hfn.replace('.', '_').upper() + '__'
 
-    bind_map = collections.OrderedDict({})
+    bind_map = collections.OrderedDict()
 
     header = """/*
 ** Lua function bindings to Orx C API
