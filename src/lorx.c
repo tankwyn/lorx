@@ -3418,7 +3418,7 @@ static int l_lorx_execute(lua_State *L)
   orx_Execute(argc, argv, lorx_init, lorx_run, lorx_exit);
 
   // free argv[]
-  for (int i = 1; i < argc; i++)
+  for (int i = 0; i < argc; i++)
   {
     free(argv[i]);
   }
