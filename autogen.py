@@ -141,8 +141,8 @@ if os.path.isdir('doc'):
     shutil.rmtree('doc')
 shutil.copytree('templates/doc', 'doc')
 
-os.mkdir('doc/modules')
-os.mkdir('doc/types')
+os.mkdir('doc/docs/modules')
+os.mkdir('doc/docs/types')
 
 with open('doc/mkdocs.yml.template', 'r') as f:
     content = f.read()
