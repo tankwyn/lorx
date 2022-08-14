@@ -66,7 +66,9 @@ all: exe
 
 exe: lib main.o
 	$(CC) main.o -o $(EXE_NAME).exe -L. -l$(EXE_NAME) $(ALL_LDFLAGS) $(LIBS)
-	@IF !EXIST ..\bin (mkdir ..\bin)
+!IF !EXIST(..\bin)
+	mkdir ..\bin
+!ENDIF
 	copy $(EXE_NAME).exe ..\bin
 	copy $(LIB_NAME).dll ..\bin
 	copy $(LUA)\lua53.dll ..\bin
