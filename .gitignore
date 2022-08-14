@@ -14,8 +14,8 @@
 *.o
 *.exp
 *.bk
-/compile_commands.json
-/compile_flags.txt
+compile_commands.json
+compile_flags.txt
 __pycache__
 /release
 /bin
